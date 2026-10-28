@@ -4,94 +4,200 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Trabalhos CONBRATRI 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700;900&display=swap" rel="stylesheet">
 <style>
 :root {
-  color-scheme: light dark;
-  --fundo: #f6f7f9; --superficie: #ffffff; --texto: #1d2330; --suave: #5b6474;
-  --borda: #d9dee7; --destaque: #2f6fb0; --barra: #5b8fc7; --sucesso: #2e7d4f;
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --fundo: #14171d; --superficie: #1d222b; --texto: #e6e9ef; --suave: #9aa3b2;
-    --borda: #323a47; --destaque: #7fb2e6; --barra: #5b8fc7; --sucesso: #6fc292;
-  }
-}
-:root[data-theme="dark"] {
-  --fundo: #14171d; --superficie: #1d222b; --texto: #e6e9ef; --suave: #9aa3b2;
-  --borda: #323a47; --destaque: #7fb2e6; --barra: #5b8fc7; --sucesso: #6fc292;
+  --navy: #2a3a66;
+  --navy-escuro: #1d2947;
+  --ciano: #09c1da;
+  --azul-claro: #6dcff6;
+  --oliva: #9ab33a;
+  --ink: #1f2430;
+  --cinza: #4d4e53;
+  --suave: #6b7280;
+  --linha: #dfe5ef;
+  --fundo: #ffffff;
+  --fundo-suave: #f4f7fb;
+  font-family: "Source Sans 3", "Source Sans Pro", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 }
 * { box-sizing: border-box; }
-body { margin: 0; background: var(--fundo); color: var(--texto);
-  font: 15px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
-main { max-width: 1100px; margin: 0 auto; padding: 24px 16px 48px; }
-h1 { font-size: 1.6rem; margin: 0 0 4px; }
-h2 { font-size: 1.15rem; margin: 28px 0 12px; }
-.sub { color: var(--suave); margin: 0 0 20px; }
-.kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; }
-.kpi, .painel, .cartao { background: var(--superficie); border: 1px solid var(--borda); border-radius: 10px; }
-.kpi { padding: 14px 16px; }
-.kpi b { display: block; font-size: 1.6rem; }
-.kpi span { color: var(--suave); font-size: .9rem; }
-.painel { padding: 16px; }
-.barra-linha { display: grid; grid-template-columns: minmax(120px, 1fr) 3fr 40px; gap: 10px; align-items: center; margin: 6px 0; cursor: pointer; }
-.barra-linha button { all: unset; cursor: pointer; display: contents; }
-.barra-linha:focus-within .rotulo { text-decoration: underline; }
-.rotulo { font-size: .9rem; }
-.trilho { background: var(--borda); border-radius: 4px; height: 14px; overflow: hidden; }
-.preench { display: block; background: var(--barra); height: 100%; border-radius: 4px; }
-.valor { text-align: right; font-variant-numeric: tabular-nums; font-size: .9rem; }
-.filtros { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 10px; margin: 16px 0; }
-@media (max-width: 720px) { .filtros { grid-template-columns: 1fr; } .barra-linha { grid-template-columns: 1fr 2fr 36px; } }
-input, select { width: 100%; padding: 9px 10px; border: 1px solid var(--borda); border-radius: 8px;
-  background: var(--superficie); color: var(--texto); font: inherit; }
-.contagem { color: var(--suave); font-size: .9rem; margin: 4px 0 10px; }
-.cartao { margin-bottom: 10px; }
-.cartao summary { list-style: none; cursor: pointer; padding: 14px 16px; }
-.cartao summary::-webkit-details-marker { display: none; }
-.cartao summary::before { content: "▸"; color: var(--suave); margin-right: 8px; display: inline-block; transition: transform .15s; }
-.cartao[open] summary::before { transform: rotate(90deg); }
-.cabeca { display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: baseline; }
-.tit { font-weight: 600; }
-.etiqueta { font-size: .8rem; border: 1px solid var(--borda); border-radius: 999px; padding: 1px 8px; color: var(--suave); }
-.corpo { padding: 0 16px 16px; border-top: 1px solid var(--borda); }
-.corpo dt { font-weight: 600; margin-top: 12px; color: var(--destaque); }
-.corpo dd { margin: 2px 0 0; }
-.downloads { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
-.downloads a { color: var(--destaque); text-decoration: none; border: 1px solid var(--destaque);
-  border-radius: 8px; padding: 6px 12px; font-size: .9rem; }
-.downloads a:hover, .downloads a:focus-visible { background: var(--destaque); color: var(--superficie); }
-.acoes { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px; }
-.acoes a { font-size: .9rem; }
-.vazio { color: var(--suave); padding: 24px; text-align: center; }
-.rodape { color: var(--suave); font-size: .85rem; margin-top: 32px; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--fundo); color: var(--ink); font-size: 17px; line-height: 1.55; }
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--ciano); outline-offset: 3px; border-radius: 4px; }
+
+.container { max-width: 1160px; margin: 0 auto; padding: 0 20px; }
+
+/* Cabeçalho e hero */
+.hero { background: var(--navy); color: #fff; position: relative; overflow: hidden; padding: 56px 0 48px; }
+.hero::before, .hero::after { content: ""; position: absolute; border-radius: 50%; pointer-events: none; }
+.hero::before { width: 380px; height: 380px; right: -120px; top: -140px; background: var(--ciano); opacity: .18; }
+.hero::after { width: 240px; height: 240px; right: 14%; bottom: -150px; background: var(--oliva); opacity: .28; }
+.rotulo-topo { font-size: .85rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--azul-claro); margin: 0 0 14px; position: relative; }
+.hero h1 { font-size: clamp(2.2rem, 5.5vw, 3.6rem); line-height: 1.02; font-weight: 900; text-transform: uppercase; margin: 0 0 16px; position: relative; max-width: 14ch; }
+.hero p.lead { font-size: 1.15rem; max-width: 60ch; margin: 0 0 32px; color: #e4ebf7; position: relative; }
+.indicadores { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; position: relative; }
+.indicador { background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.18); border-radius: 14px; padding: 18px 18px 16px; }
+.indicador b { display: block; font-size: 2.3rem; font-weight: 900; line-height: 1; }
+.indicador span { font-size: .92rem; color: #dbe4f5; }
+.indicador:nth-child(1) { border-top: 4px solid var(--ciano); }
+.indicador:nth-child(2) { border-top: 4px solid var(--oliva); }
+.indicador:nth-child(3) { border-top: 4px solid var(--azul-claro); }
+.indicador:nth-child(4) { border-top: 4px solid #f25071; }
+
+/* Seções */
+section.bloco { padding: 56px 0 8px; }
+.titulo-secao { font-size: clamp(1.6rem, 3.4vw, 2.2rem); font-weight: 900; text-transform: uppercase; color: var(--navy); margin: 0 0 8px; line-height: 1.1; }
+.subtitulo { color: var(--cinza); margin: 0 0 26px; max-width: 70ch; }
+
+/* Clusters como blocos de cor */
+.clusters { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 16px; }
+.cluster { --cor: var(--navy); --texto: #fff; appearance: none; border: 0; cursor: pointer; text-align: left; font: inherit; color: var(--texto);
+  background: var(--cor); border-radius: 14px; padding: 20px 20px 18px; min-height: 176px; display: flex; flex-direction: column; justify-content: space-between;
+  transition: transform .15s ease, box-shadow .15s ease; box-shadow: 0 1px 0 rgba(0,0,0,.04); }
+.cluster:hover { transform: translateY(-3px); box-shadow: 0 10px 24px rgba(31,36,48,.18); }
+.cluster[aria-pressed="true"] { outline: 3px solid var(--ink); outline-offset: 3px; }
+.cluster .numero { font-size: 3rem; font-weight: 900; line-height: 1; }
+.cluster .nome { font-size: 1.12rem; font-weight: 600; line-height: 1.25; margin-top: 10px; }
+.cluster .acao { font-size: .85rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; margin-top: 12px; display: inline-flex; gap: 6px; align-items: center; }
+.cluster .acao::after { content: "→"; }
+.cluster .trilho { height: 6px; border-radius: 3px; background: rgba(255,255,255,.28); margin-top: 14px; overflow: hidden; }
+.cluster .trilho i { display: block; height: 100%; background: currentColor; border-radius: 3px; }
+.cluster[data-claro="1"] { --texto: #142033; }
+.cluster[data-claro="1"] .trilho { background: rgba(20,32,51,.18); }
+
+/* Filtros */
+.barra-filtros { display: grid; grid-template-columns: 2fr 1fr 1fr auto; gap: 10px; align-items: center; margin-bottom: 8px; }
+.campo { width: 100%; font: inherit; color: var(--ink); background: #fff; border: 1.5px solid #c9d2e3; border-radius: 999px; padding: 11px 18px; }
+.campo:focus { border-color: var(--navy); outline: none; box-shadow: 0 0 0 3px rgba(9,193,218,.35); }
+select.campo { appearance: none; background-image: linear-gradient(45deg, transparent 50%, var(--navy) 50%), linear-gradient(135deg, var(--navy) 50%, transparent 50%);
+  background-position: calc(100% - 20px) 52%, calc(100% - 14px) 52%; background-size: 6px 6px; background-repeat: no-repeat; padding-right: 38px; }
+.limpar { font: inherit; font-weight: 600; color: var(--navy); background: none; border: 0; cursor: pointer; padding: 10px 6px; text-decoration: underline; text-underline-offset: 4px; }
+.contagem { color: var(--suave); font-size: .95rem; margin: 10px 0 18px; }
+
+/* Cartões de trabalho */
+.lista { display: grid; gap: 14px; }
+.trabalho { --cor: var(--navy); display: grid; grid-template-columns: 8px minmax(0, 1fr); background: #fff; border: 1px solid var(--linha); border-radius: 14px; overflow: hidden; }
+.faixa { background: var(--cor); }
+.corpo { padding: 20px 24px 18px; min-width: 0; }
+.meta { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 10px; font-size: .85rem; }
+.chip { border-radius: 999px; padding: 3px 11px; font-weight: 600; background: var(--fundo-suave); color: var(--cinza); border: 1px solid var(--linha); }
+.chip.tema { background: var(--cor); color: var(--texto, #fff); border-color: transparent; }
+.chip.tema[data-claro="1"] { --texto: #142033; }
+.id { color: var(--suave); font-weight: 600; margin-left: auto; letter-spacing: .04em; }
+.trabalho h3 { font-size: 1.22rem; line-height: 1.3; margin: 0 0 8px; color: var(--navy); font-weight: 700; }
+.resumo { margin: 0 0 14px; color: var(--cinza); }
+details summary { list-style: none; cursor: pointer; display: inline-flex; align-items: center; gap: 10px; font-weight: 600; color: var(--navy);
+  border: 1.5px solid var(--navy); border-radius: 999px; padding: 7px 16px; font-size: .92rem; text-transform: uppercase; letter-spacing: .06em; }
+details summary::-webkit-details-marker { display: none; }
+details summary::after { content: "→"; transition: transform .15s; }
+details[open] summary::after { transform: rotate(90deg); }
+details summary:hover { background: var(--navy); color: #fff; }
+details[open] summary { margin-bottom: 4px; }
+.detalhes { border-top: 1px solid var(--linha); margin-top: 16px; padding-top: 16px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px 24px; }
+.detalhes .bloco-campo h4 { margin: 0 0 4px; font-size: .8rem; letter-spacing: .12em; text-transform: uppercase; color: var(--cor); font-weight: 700; }
+.detalhes .bloco-campo p { margin: 0; color: var(--ink); font-size: .97rem; }
+.detalhes .bloco-campo.largo { grid-column: 1 / -1; }
+.downloads { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 10px; margin-top: 4px; }
+.pill { display: inline-flex; gap: 8px; align-items: center; text-decoration: none; font-weight: 600; font-size: .92rem; color: var(--navy); border: 1.5px solid var(--navy); border-radius: 999px; padding: 8px 16px; }
+.pill::after { content: "↓"; }
+.pill:hover, .pill:focus-visible { background: var(--navy); color: #fff; }
+.vazio { border: 1.5px dashed #c9d2e3; border-radius: 14px; padding: 36px 20px; text-align: center; color: var(--cinza); }
+
+/* Passos da metodologia */
+.passos { list-style: none; counter-reset: passo; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.passos li { counter-increment: passo; background: var(--fundo-suave); border: 1px solid var(--linha); border-radius: 14px; padding: 20px 22px 20px 70px; position: relative; }
+.passos li::before { content: counter(passo); position: absolute; left: 20px; top: 18px; width: 36px; height: 36px; border-radius: 50%; background: var(--navy); color: #fff; font-weight: 900; display: grid; place-items: center; }
+.passos h3 { margin: 0 0 6px; font-size: 1.1rem; color: var(--navy); text-transform: uppercase; letter-spacing: .04em; }
+.passos p { margin: 0; color: var(--cinza); font-size: .97rem; }
+@media (max-width: 620px) { .passos { grid-template-columns: minmax(0, 1fr); } }
+
+/* Rodapé */
+footer { margin-top: 64px; background: var(--navy-escuro); color: #dbe4f5; padding: 36px 0; }
+footer p { margin: 0 0 10px; max-width: 80ch; }
+footer a { color: var(--azul-claro); font-weight: 600; }
+
+/* Responsivo */
+@media (max-width: 900px) {
+  .indicadores { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .barra-filtros { grid-template-columns: 1fr 1fr; }
+  .barra-filtros input { grid-column: 1 / -1; }
+}
+@media (max-width: 620px) {
+  body { font-size: 16px; }
+  .container { padding: 0 16px; }
+  .hero { padding: 40px 0 36px; }
+  .indicadores { gap: 10px; }
+  .indicador b { font-size: 1.9rem; }
+  .barra-filtros { grid-template-columns: 1fr; }
+  .detalhes { grid-template-columns: 1fr; }
+  .corpo { padding: 18px 18px 16px; }
+  .id { margin-left: 0; }
+  .clusters { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  .cluster { min-height: 150px; padding: 16px; }
+  .cluster .numero { font-size: 2.4rem; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .cluster { transition: none; } }
 </style>
 </head>
 <body>
-<main>
-  <h1>Trabalhos do CONBRATRI 2026</h1>
-  <p class="sub">Organização dos trabalhos por cluster temático, com objetivo, técnica, dados, resultados e conclusões.</p>
 
-  <section class="kpis" aria-label="Resumo">
-    <div class="kpi"><b id="kpi-total"></b><span>trabalhos</span></div>
-    <div class="kpi"><b id="kpi-clusters"></b><span>clusters temáticos</span></div>
-    <div class="kpi"><b id="kpi-sessoes"></b><span>sessões e pôster</span></div>
-    <div class="kpi"><b id="kpi-downloads"></b><span>arquivos originais disponíveis</span></div>
+<header class="hero">
+  <div class="container">
+    <p class="rotulo-topo">CONBRATRI 2026 · Teoria de Resposta ao Item</p>
+    <h1>Trabalhos do encontro</h1>
+    <p class="lead">Os trabalhos apresentados, organizados por tema. Em cada um: objetivo, técnica, dados, resultados e conclusões, com os arquivos originais para download.</p>
+    <div class="indicadores" aria-label="Resumo">
+      <div class="indicador"><b id="kpi-total"></b><span>trabalhos</span></div>
+      <div class="indicador"><b id="kpi-clusters"></b><span>temas</span></div>
+      <div class="indicador"><b id="kpi-sessoes"></b><span>sessões e pôster</span></div>
+      <div class="indicador"><b id="kpi-downloads"></b><span>originais para download</span></div>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+  <section class="bloco" aria-labelledby="t-clusters">
+    <h2 class="titulo-secao" id="t-clusters">Temas</h2>
+    <p class="subtitulo">Escolha um tema para ver os trabalhos correspondentes. Os blocos mostram quantos trabalhos cada tema reúne.</p>
+    <div class="clusters" id="clusters"></div>
   </section>
 
-  <h2>Trabalhos por cluster</h2>
-  <section class="painel" id="grafico" aria-label="Quantidade de trabalhos por cluster"></section>
+  <section class="bloco" aria-labelledby="t-explorar">
+    <h2 class="titulo-secao" id="t-explorar">Explorar</h2>
+    <p class="subtitulo">Combine busca livre, tema e sessão.</p>
+    <div class="barra-filtros">
+      <input id="busca" class="campo" type="search" placeholder="Buscar por título, objetivo, técnica, dados ou resultados" aria-label="Buscar trabalhos">
+      <select id="filtro-cluster" class="campo" aria-label="Filtrar por tema"></select>
+      <select id="filtro-sessao" class="campo" aria-label="Filtrar por sessão"></select>
+      <button id="limpar" class="limpar" type="button">Limpar filtros</button>
+    </div>
+    <p class="contagem" id="contagem" aria-live="polite"></p>
+    <div class="lista" id="lista"></div>
+  </section>
 
-  <h2>Explorar</h2>
-  <div class="filtros">
-    <input id="busca" type="search" placeholder="Buscar em título, objetivo, técnica, dados ou resultados" aria-label="Buscar">
-    <select id="filtro-cluster" aria-label="Filtrar por cluster"></select>
-    <select id="filtro-sessao" aria-label="Filtrar por sessão"></select>
-  </div>
-  <p class="contagem" id="contagem" aria-live="polite"></p>
-  <section id="lista" aria-label="Lista de trabalhos"></section>
-
-  <p class="rodape">Os textos de análise foram extraídos dos arquivos originais publicados no encontro. Os downloads trazem o arquivo original e o texto extraído (.txt); a classificação completa está em <a href="downloads/classificacao.csv">classificacao.csv</a> e <a href="downloads/classificacao.json">classificacao.json</a>.</p>
+  <section class="bloco" aria-labelledby="t-metodo">
+    <h2 class="titulo-secao" id="t-metodo">Como foi feita a análise</h2>
+    <p class="subtitulo">Os passos seguidos, do arquivo original ao dashboard. A descrição completa está no README do repositório.</p>
+    <ol class="passos">
+      <li><h3>Catalogação</h3><p>A lista de trabalhos e sessões (CSV) foi casada com os arquivos baixados pelo título. Cópias idênticas foram removidas, restando 44 trabalhos únicos.</p></li>
+      <li><h3>Extração do texto</h3><p>PDFs foram convertidos com pdftotext; DOCX foram lidos do XML do arquivo; DOC foi lido por um leitor próprio, porque o LibreOffice não abriu esses arquivos.</p></li>
+      <li><h3>Leitura e registro</h3><p>Para cada trabalho, o resumo e a conclusão foram lidos e os campos objetivo, técnica, dados, resultados e conclusões foram registrados. Dados que o trabalho não informa são indicados como tal.</p></li>
+      <li><h3>Temas</h3><p>Os trabalhos foram agrupados em 8 temas a partir dos resumos. Cada trabalho pertence a um único tema. A divisão é uma leitura, não o resultado de um algoritmo de agrupamento.</p></li>
+      <li><h3>Dashboard e downloads</h3><p>Os originais, os textos extraídos e a classificação (CSV e JSON) foram organizados para download, e os dados foram publicados nesta página.</p></li>
+      <li><h3>Verificação</h3><p>Conferimos as contagens e a renderização da página. Filtros e busca não foram testados em navegador real.</p></li>
+    </ol>
+  </section>
 </main>
+
+<footer>
+  <div class="container">
+    <p>Os textos de análise foram extraídos dos arquivos originais publicados no encontro. Os downloads incluem o arquivo original e o texto extraído (.txt).</p>
+    <p>Classificação completa: <a href="downloads/classificacao.csv">classificacao.csv</a> · <a href="downloads/classificacao.json">classificacao.json</a></p>
+  </div>
+</footer>
 
 <script id="dados" type="application/json">{"clusters": {"C1": {"nome": "IA na elaboração e revisão de itens", "descricao": "Uso de IA generativa para produzir, revisar e corrigir itens, com validação humana."}, "C2": {"nome": "Predição e pré-testagem com IA", "descricao": "Estimar dificuldade de itens, comparar itens por LLMs e usar respondentes sintéticos ou redes neurais no lugar da pré-testagem."}, "C3": {"nome": "IA na análise e gestão de dados educacionais", "descricao": "Plataformas, dashboards, diagnósticos e formação de equipes para uso de dados e IA."}, "C4": {"nome": "Modelos TRI e estimação de proficiência", "descricao": "Comparação de modelos (Rasch, 1PL, 2PL, 3PL), estimadores de proficiência e softwares."}, "C5": {"nome": "Equalização, escalas e interpretação", "descricao": "Comparabilidade entre escalas e edições, e o sentido pedagógico dos níveis de proficiência."}, "C6": {"nome": "Padrões de desempenho e standard setting", "descricao": "Pontos de corte, descrição de níveis e métodos como Angoff Modificado."}, "C7": {"nome": "Fidedignidade, qualidade de instrumentos e correção", "descricao": "Confiabilidade, discriminação, validade de questionários e monitoramento da correção."}, "C8": {"nome": "Funcionamento de itens, equidade e uso de resultados", "descricao": "DIF, efeito de posição, anomalias em itens e o uso de resultados em políticas e pesquisa."}}, "trabalhos": [{"id": "T01", "titulo": "Da Geracao a Calibracao: protocolo human-in-the-loop para itens gerados por IA", "sessao": "Sessao 1", "cluster": "C1", "arquivo": "01_Sessao_1_IA_Elaboracao_Predicao_Calibracao/01 - Da Geracao a Calibracao protocolo human-in-the-loop para itens gerados por IA.doc", "texto": "analise/textos/T01.txt", "objetivo": "Propor um protocolo human-in-the-loop que integra geração de itens assistida por IA, desenho centrado em evidências, acessibilidade e calibração pela TRI.", "tecnica": "Estudo teórico-metodológico, com base em Evidence-Centered Design e revisão de estudos sobre geração automática de itens e LLMs.", "dados": "Não se aplica: não há coleta empírica.", "resultados": "Protocolo em etapas (geração, desenho, revisão de acessibilidade e calibração), com foco em itens revisáveis e calibráveis.", "conclusao": "A IA deve acelerar operações de linguagem sem substituir a definição do construto, o julgamento de qualidade e a calibração empírica.", "download_original": "downloads/originais/T01%20-%20Da%20Geracao%20a%20Calibracao%20protocolo%20human-in-the-loop%20para%20itens%20gerados%20por%20IA.doc", "download_texto": "downloads/textos/T01%20-%20Da%20Geracao%20a%20Calibracao%20protocolo%20human-in-the-loop%20para%20itens%20gerados%20por%20IA.txt"}, {"id": "T02", "titulo": "Do prompt ao item: analise da elaboracao de itens por IA generativa orientada por matriz de referencia e criterios tecnicos de elaboracao", "sessao": "Sessao 1", "cluster": "C1", "arquivo": "01_Sessao_1_IA_Elaboracao_Predicao_Calibracao/02 - Do prompt ao item analise da elaboracao de itens por IA generativa orientada por matriz de.doc", "texto": "analise/textos/T02.txt", "objetivo": "Analisar a elaboração de itens de Matemática com IA generativa, usando a matriz de referência do SAEB e critérios técnicos como orientadores.", "tecnica": "Abordagem qualitativa, exploratória e analítica, com análise de registros de elaboração e revisão feitos com intervenção especializada.", "dados": "Registros de elaboração e revisão de itens; dois casos representativos (raiz quadrada e pontos notáveis de triângulos).", "resultados": "Correção matemática e estrutura formal não garantem sozinhas a adequação do item; é preciso preservar a relação entre objeto de conhecimento, operação cognitiva e evidência.", "conclusao": "A matriz do SAEB pode servir como prompt técnico estruturante; a qualidade depende de critérios técnicos e julgamento especializado (coelaboração humano-IA).", "download_original": "downloads/originais/T02%20-%20Do%20prompt%20ao%20item%20analise%20da%20elaboracao%20de%20itens%20por%20IA%20generativa%20orientada%20por%20matriz%20de.doc", "download_texto": "downloads/textos/T02%20-%20Do%20prompt%20ao%20item%20analise%20da%20elaboracao%20de%20itens%20por%20IA%20generativa%20orientada%20por%20matriz%20de.txt"}, {"id": "T03", "titulo": "PREDICAO DO PARAMETRO DE DIFICULDADE DA TRI A PARTIR DE TEXTO E METADADOS: abordagem de aprendizado de maquina para pre-testagem automatizada", "sessao": "Sessao 1", "cluster": "C2", "arquivo": "01_Sessao_1_IA_Elaboracao_Predicao_Calibracao/03 - PREDICAO DO PARAMETRO DE DIFICULDADE DA TRI A PARTIR DE TEXTO E METADADOS abordagem de apr.docx", "texto": "analise/textos/T03.txt", "objetivo": "Prever automaticamente o parâmetro de dificuldade (b) da TRI a partir do texto e de metadados de itens de leitura.", "tecnica": "Representações BoW, TF-IDF, Word2Vec e embeddings BERT, com atributos linguísticos e metadados; vários regressores (melhor: BoW com XGBoost); validação cruzada e busca em grade; divisão 70/15/15; calibração por 1PL.", "dados": "5.410 itens de avaliações formativas brasileiras, aplicados entre 2021 e 2024, do 4º ano do EF ao 3º ano do EM.", "resultados": "Teste: MAE 0,4686; RMSE 0,6033; R² 0,5611; Pearson 0,7493. Na validação aplicada, concordância com a TRI de 100%, 60% e 78% nos padrões defasagem, intermediário e avançado.", "conclusao": "Modelos relativamente simples podem apoiar a triagem de itens e o planejamento da pré-testagem, mas não substituem a calibração empírica.", "download_original": "downloads/originais/T03%20-%20PREDICAO%20DO%20PARAMETRO%20DE%20DIFICULDADE%20DA%20TRI%20A%20PARTIR%20DE%20TEXTO%20E%20METADADOS%20abordagem%20de%20apr.docx", "download_texto": "downloads/textos/T03%20-%20PREDICAO%20DO%20PARAMETRO%20DE%20DIFICULDADE%20DA%20TRI%20A%20PARTIR%20DE%20TEXTO%20E%20METADADOS%20abordagem%20de%20apr.txt"}, {"id": "T04", "titulo": "Itens de Prova Parana de Matematica na perspectiva da TCT, TRI e IA", "sessao": "Sessao 1", "cluster": "C2", "arquivo": "01_Sessao_1_IA_Elaboracao_Predicao_Calibracao/04 - Itens de Prova Parana de Matematica na perspectiva da TCT, TRI e IA.pdf", "texto": "analise/textos/T04.txt", "objetivo": "Avaliar a capacidade de um modelo de IA de estimar a dificuldade de 22 itens de Matemática da Prova Paraná 2025.", "tecnica": "Modelo de IA desenvolvido com itens do Enem, considerando características cognitivas; estimativas comparadas à TCT (percentual de acertos) e à TRI.", "dados": "22 itens de Matemática da 1ª edição da Prova Paraná 2025, aplicada à 3ª série do EM.", "resultados": "Houve correspondências e divergências entre as três abordagens.", "conclusao": "A IA oferece informações complementares na elaboração e revisão, sem substituir especialistas, a aplicação aos estudantes ou as análises psicométricas.", "download_original": "downloads/originais/T04%20-%20Itens%20de%20Prova%20Parana%20de%20Matematica%20na%20perspectiva%20da%20TCT%2C%20TRI%20e%20IA.pdf", "download_texto": "downloads/textos/T04%20-%20Itens%20de%20Prova%20Parana%20de%20Matematica%20na%20perspectiva%20da%20TCT%2C%20TRI%20e%20IA.txt"}, {"id": "T05", "titulo": "AlfabetizIA: plataforma de inteligencia territorial para analise de Alfabetizacao", "sessao": "Sessao 2", "cluster": "C3", "arquivo": "02_Sessao_2_Plataformas_Digitais_Gestao_Analise/02 - AlfabetizIA plataforma de inteligencia territorial para analise de Alfabetizacao.pdf", "texto": "analise/textos/T05.txt", "objetivo": "Apresentar o AlfabetizIA, portal de inteligência territorial sobre o Indicador Criança Alfabetizada.", "tecnica": "Plataforma web com análise comparativa, acompanhamento longitudinal e benchmarking municipal (abordagem descritiva e exploratória).", "dados": "Resultados de proficiência, metas e contextos socioeconômicos municipais, integrados em uma base com milhares de dados.", "resultados": "Apresentação da ferramenta; o trabalho não traz resultados empíricos.", "conclusao": "Serve de ponto de partida para formular hipóteses e para análises causais; ajuda gestores a priorizar intervenções.", "download_original": "downloads/originais/T05%20-%20AlfabetizIA%20plataforma%20de%20inteligencia%20territorial%20para%20analise%20de%20Alfabetizacao.pdf", "download_texto": "downloads/textos/T05%20-%20AlfabetizIA%20plataforma%20de%20inteligencia%20territorial%20para%20analise%20de%20Alfabetizacao.txt"}, {"id": "T06", "titulo": "ADEF: desenvolvimento assistido por IA de uma aplicacao para analise educacional do ensino fundamental", "sessao": "Sessao 2", "cluster": "C3", "arquivo": "02_Sessao_2_Plataformas_Digitais_Gestao_Analise/03 - ADEF desenvolvimento assistido por IA de uma aplicacao para analise educacional do ensino.pdf", "texto": "analise/textos/T06.txt", "objetivo": "Apresentar o ADEF, aplicação web com IA generativa para análises comparativas de municípios e unidades federativas.", "tecnica": "Pesquisa aplicada, descritivo-exploratória, com desenvolvimento iterativo por prompts, testes e validações; análises de similaridade, benchmarking e trajetória.", "dados": "Séries históricas de desempenho educacional, variáveis socioeconômicas e financeiras.", "resultados": "Ferramenta funcional com recursos de similaridade, benchmarking e trajetória; experiência de uso em formações com equipes de Secretarias de Educação.", "conclusao": "A IA generativa reduz barreiras ao desenvolvimento de ferramentas analíticas, desde que associada a validação e interpretação contextual.", "download_original": "downloads/originais/T06%20-%20ADEF%20desenvolvimento%20assistido%20por%20IA%20de%20uma%20aplicacao%20para%20analise%20educacional%20do%20ensino.pdf", "download_texto": "downloads/textos/T06%20-%20ADEF%20desenvolvimento%20assistido%20por%20IA%20de%20uma%20aplicacao%20para%20analise%20educacional%20do%20ensino.txt"}, {"id": "T07", "titulo": "Associacao entre o uso de IA e niveis de proficiencia em Matematica e Lingua Portuguesa no Ensino Fundamental", "sessao": "Sessao 2", "cluster": "C3", "arquivo": "02_Sessao_2_Plataformas_Digitais_Gestao_Analise/04 - Associacao entre o uso de IA e niveis de proficiencia em Matematica e Lingua Portuguesa no.doc", "texto": "analise/textos/T07.txt", "objetivo": "Avaliar os impactos do uso de IA por estudantes do Ensino Fundamental.", "tecnica": "Pesquisa exploratória e transversal, com Questionário de Uso de IA e provas de proficiência em língua portuguesa e matemática.", "dados": "4.298 estudantes dos anos finais do EF; questionário de uso de IA e provas de proficiência.", "resultados": "Diferenças de desempenho conforme a frequência de uso: 19 pontos em língua portuguesa e 29 em matemática.", "conclusao": "O uso inadequado da IA está associado a prejuízos no desempenho dos estudantes nas duas disciplinas.", "download_original": "downloads/originais/T07%20-%20Associacao%20entre%20o%20uso%20de%20IA%20e%20niveis%20de%20proficiencia%20em%20Matematica%20e%20Lingua%20Portuguesa%20no.doc", "download_texto": "downloads/textos/T07%20-%20Associacao%20entre%20o%20uso%20de%20IA%20e%20niveis%20de%20proficiencia%20em%20Matematica%20e%20Lingua%20Portuguesa%20no.txt"}, {"id": "T08", "titulo": "Equalizacao entre as escalas de proficiencia do Enem e do Saeb: evidencias de compatibilidade psicometrica", "sessao": "Sessao 3", "cluster": "C5", "arquivo": "03_Sessao_3_Metodos_Psicometricos_Confiabilidade/05 - Equalizacao entre as escalas de proficiencia do Enem e do Saeb evidencias de compatibilida.doc", "texto": "analise/textos/T08.txt", "objetivo": "Investigar a relação entre as escalas do Enem e do Saeb em Matemática e Língua Portuguesa.", "tecnica": "Análise de dimensionalidade, calibração TRI (3PL), procedimentos de equalização e estudos de estabilidade dos parâmetros.", "dados": "Provas experimentais de 30 itens de cada avaliação, aplicadas à mesma amostra de estudantes.", "resultados": "Os itens das duas avaliações podem ser representados por uma única dimensão latente; forte relação linear entre as dificuldades; maior alinhamento em Língua Portuguesa.", "conclusao": "As escalas são estrutural e metricamente compatíveis, permitindo relações de equivalência entre seus resultados, respeitadas as diferenças pedagógicas.", "download_original": "downloads/originais/T08%20-%20Equalizacao%20entre%20as%20escalas%20de%20proficiencia%20do%20Enem%20e%20do%20Saeb%20evidencias%20de%20compatibilida.doc", "download_texto": "downloads/textos/T08%20-%20Equalizacao%20entre%20as%20escalas%20de%20proficiencia%20do%20Enem%20e%20do%20Saeb%20evidencias%20de%20compatibilida.txt"}, {"id": "T09", "titulo": "Consideracoes sobre o Coeficiente de Confiabilidade", "sessao": "Sessao 3", "cluster": "C7", "arquivo": "03_Sessao_3_Metodos_Psicometricos_Confiabilidade/06 - Consideracoes sobre o Coeficiente de Confiabilidade.pdf", "texto": "analise/textos/T09.txt", "objetivo": "Recordar três estimativas clássicas do coeficiente de confiabilidade e apresentar a confiabilidade empírica estimada pela TRI.", "tecnica": "Revisão das estimativas da TCT e aplicação da confiabilidade empírica pela TRI.", "dados": "Dados públicos do Saeb 2023.", "resultados": "As estimativas clássicas exigem correlação entre todos os itens; a abordagem pela TRI não tem essa limitação. O resumo não traz valores numéricos.", "conclusao": "A confiabilidade empírica da TRI é alternativa às estimativas clássicas, que dependem do planejamento do teste.", "download_original": "downloads/originais/T09%20-%20Consideracoes%20sobre%20o%20Coeficiente%20de%20Confiabilidade.pdf", "download_texto": "downloads/textos/T09%20-%20Consideracoes%20sobre%20o%20Coeficiente%20de%20Confiabilidade.txt"}, {"id": "T10", "titulo": "Monitoramento da qualidade da correcao de itens abertos via Rasch multifacetado: Ceara 2025", "sessao": "Sessao 3", "cluster": "C7", "arquivo": "03_Sessao_3_Metodos_Psicometricos_Confiabilidade/07 - Monitoramento da qualidade da correcao de itens abertos via Rasch multifacetado Ceara 2025.pdf", "texto": "analise/textos/T10.txt", "objetivo": "Analisar o comportamento dos corretores da Avaliação Formativa do Ceará 2025.", "tecnica": "Modelagem Rasch multifacetada.", "dados": "9.188 estudantes, 64 corretores e 7 aspectos de correção.", "resultados": "Elevada concordância entre corretores; ajuste adequado para a maioria dos avaliadores e aspectos; poucos casos de desajuste de leniência/severidade.", "conclusao": "O Rasch multifacetado é ferramenta eficaz para monitorar a qualidade da correção e pode subsidiar a validação de correção automatizada por IA.", "download_original": "downloads/originais/T10%20-%20Monitoramento%20da%20qualidade%20da%20correcao%20de%20itens%20abertos%20via%20Rasch%20multifacetado%20Ceara%202025.pdf", "download_texto": "downloads/textos/T10%20-%20Monitoramento%20da%20qualidade%20da%20correcao%20de%20itens%20abertos%20via%20Rasch%20multifacetado%20Ceara%202025.txt"}, {"id": "T11", "titulo": "Questionario de Turma: evidencias de validade interna e associacoes com a aprendizagem", "sessao": "Sessao 3", "cluster": "C7", "arquivo": "03_Sessao_3_Metodos_Psicometricos_Confiabilidade/08 - Questionario de Turma evidencias de validade interna e associacoes com a aprendizagem.doc", "texto": "analise/textos/T11.txt", "objetivo": "Apresentar o desenvolvimento e as evidências de validade do Questionário de Turma, baseado no Visible Learning de Hattie.", "tecnica": "Análise Fatorial Exploratória e consistência interna; Modelo de Resposta Gradual de Samejima para construir índices sintéticos.", "dados": "114.391 observações de turmas do Ensino Fundamental em 12 estados.", "resultados": "Alfa de Cronbach entre 0,814 e 0,890; KMO > 0,82; associação positiva dos índices com as proficiências em Língua Portuguesa e Matemática.", "conclusao": "O instrumento produz medidas consistentes sobre o cotidiano das salas de aula e enriquece as avaliações em larga escala.", "download_original": "downloads/originais/T11%20-%20Questionario%20de%20Turma%20evidencias%20de%20validade%20interna%20e%20associacoes%20com%20a%20aprendizagem.doc", "download_texto": "downloads/textos/T11%20-%20Questionario%20de%20Turma%20evidencias%20de%20validade%20interna%20e%20associacoes%20com%20a%20aprendizagem.txt"}, {"id": "T12", "titulo": "Estabelecendo Padroes de Desempenho para o Ensino Medio", "sessao": "Sessao 4", "cluster": "C6", "arquivo": "04_Sessao_4_Padroes_Desempenho_Indicadores/09 - Estabelecendo Padroes de Desempenho para o Ensino Medio.pdf", "texto": "analise/textos/T12.txt", "objetivo": "Descrever a metodologia para estabelecer os pontos de corte do Enem com o Método de Angoff Modificado.", "tecnica": "Angoff Modificado com painel de juízes; transposição dos resultados para a escala do Enem pelo TS-Score.", "dados": "Painel de 11 a 15 especialistas por área, das cinco regiões do país, nas quatro áreas do Enem.", "resultados": "Os resultados foram transpostos para a escala de proficiência do Enem e evidenciam a confiabilidade do método.", "conclusao": "O método oferece subsídios para aplicação em contextos semelhantes.", "download_original": "downloads/originais/T12%20-%20Estabelecendo%20Padroes%20de%20Desempenho%20para%20o%20Ensino%20Medio.pdf", "download_texto": "downloads/textos/T12%20-%20Estabelecendo%20Padroes%20de%20Desempenho%20para%20o%20Ensino%20Medio.txt"}, {"id": "T13", "titulo": "A Elaboracao da Descricao dos Niveis de Desempenho para o Ensino Medio", "sessao": "Sessao 4", "cluster": "C6", "arquivo": "04_Sessao_4_Padroes_Desempenho_Indicadores/10 - A Elaboracao da Descricao dos Niveis de Desempenho para o Ensino Medio.doc", "texto": "analise/textos/T13.txt", "objetivo": "Apresentar as etapas de elaboração e validação das Descrições dos Padrões de Desempenho do Ensino Médio.", "tecnica": "Análise da BNCC do Ensino Médio e elaboração por grupos de especialistas (docentes de todo o país), como etapa prévia ao Angoff Modificado.", "dados": "BNCC do Ensino Médio e contribuições dos grupos de especialistas.", "resultados": "Documento com descrições pedagógicas dos níveis Abaixo do Básico, Básico, Adequado e Avançado.", "conclusao": "As descrições permitem que gestores, docentes e estudantes entendam o significado de cada nível na escala do Enem.", "download_original": "downloads/originais/T13%20-%20A%20Elaboracao%20da%20Descricao%20dos%20Niveis%20de%20Desempenho%20para%20o%20Ensino%20Medio.doc", "download_texto": "downloads/textos/T13%20-%20A%20Elaboracao%20da%20Descricao%20dos%20Niveis%20de%20Desempenho%20para%20o%20Ensino%20Medio.txt"}, {"id": "T14", "titulo": "Desempenho ou fluxo? Decomposicao da variacao do Ideb entre 2005 e 2025", "sessao": "Sessao 4", "cluster": "C8", "arquivo": "04_Sessao_4_Padroes_Desempenho_Indicadores/11 - Desempenho ou fluxo Decomposicao da variacao do Ideb entre 2005 e 2025.docx", "texto": "analise/textos/T14.txt", "objetivo": "Decompor a variação do Ideb entre 2005 e 2025 em contribuições de desempenho e de fluxo.", "tecnica": "Decomposição pelo valor de Shapley, que reparte o termo de interação em partes iguais; decomposição da variância entre as UFs.", "dados": "Séries do Ideb e do Saeb de 2005 a 2025, por rede e unidade da federação.", "resultados": "Entre 2019 e 2025, o fluxo responde por 94% do crescimento nos anos finais da rede pública e por 96% no EM estadual. A redução da dispersão entre estados é de aprovação, não de proficiência.", "conclusao": "A convergência do Ideb é convergência de aprovação, não de aprendizagem; atribuições alternativas deslocam a resposta em até 12 pontos percentuais sem mudar a conclusão.", "download_original": "downloads/originais/T14%20-%20Desempenho%20ou%20fluxo%20Decomposicao%20da%20variacao%20do%20Ideb%20entre%202005%20e%202025.docx", "download_texto": "downloads/textos/T14%20-%20Desempenho%20ou%20fluxo%20Decomposicao%20da%20variacao%20do%20Ideb%20entre%202005%20e%202025.txt"}, {"id": "T15", "titulo": "Desenvolvimento e validacao de instrumentos para medidas de Condicoes de Oferta da EPT em Minas Gerais", "sessao": "Sessao 4", "cluster": "C7", "arquivo": "04_Sessao_4_Padroes_Desempenho_Indicadores/12 - Desenvolvimento e validacao de instrumentos para medidas de Condicoes de Oferta da EPT em.doc", "texto": "analise/textos/T15.txt", "objetivo": "Apresentar o desenvolvimento e a implementação da avaliação das condições de oferta da EPT na rede estadual de Minas Gerais.", "tecnica": "Construção e validação de instrumentos (pré-teste e ajustes); triangulação de evidências documentais, entrevistas e observação in loco; aplicação em plataforma digital.", "dados": "Documentos, entrevistas e observação in loco de cursos com egressos ofertados em 2026 (Trilhas de Futuro).", "resultados": "O resumo descreve a metodologia de consolidação de medidas e indicadores; não traz resultados numéricos.", "conclusao": "As escolhas metodológicas seguem o SINAEPT e fornecem uma base para consolidar medidas e indicadores da EPT.", "download_original": "downloads/originais/T15%20-%20Desenvolvimento%20e%20validacao%20de%20instrumentos%20para%20medidas%20de%20Condicoes%20de%20Oferta%20da%20EPT%20em.doc", "download_texto": "downloads/textos/T15%20-%20Desenvolvimento%20e%20validacao%20de%20instrumentos%20para%20medidas%20de%20Condicoes%20de%20Oferta%20da%20EPT%20em.txt"}, {"id": "T16", "titulo": "Diagnostico de competencias e habilidades do Enem para os estudantes dos anos finais do Ensino Medio", "sessao": "Poster", "cluster": "C3", "arquivo": "05_Sessao_de_Poster/13 - Diagnostico de competencias e habilidades do Enem para os estudantes dos anos finais do En.pdf", "texto": "analise/textos/T16.txt", "objetivo": "Analisar o uso da IA como apoio à avaliação diagnóstica de estudantes do Ensino Médio.", "tecnica": "Correção pelo gabarito e matriz de desempenho; a IA identificou competências, habilidades e componentes disciplinares de cada questão, com base na Matriz do Enem; análise pedagógica por percentuais.", "dados": "Simulado de 45 questões de Ciências da Natureza do Enem, com 150 estudantes em quatro turmas.", "resultados": "Aproveitamento médio de 39,2%; Biologia 43,4%, Química 39,3%, Física 35,3%; C5 com maior desempenho (49,07%); C7 (34,37%) e C6 (35,38%) com os menores.", "conclusao": "A IA apoia o diagnóstico pedagógico por competência e habilidade. (Conclusão formal não verificada no resumo.)", "download_original": "downloads/originais/T16%20-%20Diagnostico%20de%20competencias%20e%20habilidades%20do%20Enem%20para%20os%20estudantes%20dos%20anos%20finais%20do%20En.pdf", "download_texto": "downloads/textos/T16%20-%20Diagnostico%20de%20competencias%20e%20habilidades%20do%20Enem%20para%20os%20estudantes%20dos%20anos%20finais%20do%20En.txt"}, {"id": "T17", "titulo": "Funcionamento Diferencial dos Itens na Prova Curitiba", "sessao": "Poster", "cluster": "C8", "arquivo": "05_Sessao_de_Poster/14 - Funcionamento Diferencial dos Itens na Prova Curitiba.doc", "texto": "analise/textos/T17.txt", "objetivo": "Investigar a presença de DIF no componente de Matemática da Prova Curitiba, em relação ao nível socioeconômico e à autodeclaração étnico-racial.", "tecnica": "Regressão logística fundamentada na TRI, com critério de magnitude de 0,15 para detectar DIF.", "dados": "Respostas de 11.426 estudantes do 4º ano do EF, na aplicação de maio de 2026; 18 itens.", "resultados": "Nenhum dos 18 itens apresentou DIF igual ou superior ao limite.", "conclusao": "O instrumento demonstra robustez e equidade na mensuração da aprendizagem entre os grupos investigados.", "download_original": "downloads/originais/T17%20-%20Funcionamento%20Diferencial%20dos%20Itens%20na%20Prova%20Curitiba.doc", "download_texto": "downloads/textos/T17%20-%20Funcionamento%20Diferencial%20dos%20Itens%20na%20Prova%20Curitiba.txt"}, {"id": "T18", "titulo": "Calibracao de itens com IA executada localmente aplicada a itens tipo ENEM: comparacao dicotomica", "sessao": "Poster", "cluster": "C2", "arquivo": "05_Sessao_de_Poster/15 - Calibracao de itens com IA executada localmente aplicada a itens tipo ENEM comparacao dico.docx", "texto": "analise/textos/T18.txt", "objetivo": "Propor um procedimento para usar LLMs no posicionamento de itens-alvo em uma escala já existente, com itens de Matemática do Enem.", "tecnica": "Comparações pareadas feitas por IAs executadas localmente (o item-alvo é mais difícil que o âncora?); estimativa dos parâmetros; validação por correlação, viés, MAE, RMSE e acurácia de ordenação.", "dados": "45 itens de 2023 com parâmetros TRI conhecidos (âncoras) e 45 itens de 2024 (alvos); 2.025 comparações por IA.", "resultados": "Estimativas promissoras quando comparadas aos parâmetros oficiais de 2024.", "conclusao": "O procedimento é promissor para apoiar a pré-testagem, reduzindo custo e exposição de itens.", "download_original": "downloads/originais/T18%20-%20Calibracao%20de%20itens%20com%20IA%20executada%20localmente%20aplicada%20a%20itens%20tipo%20ENEM%20comparacao%20dico.docx", "download_texto": "downloads/textos/T18%20-%20Calibracao%20de%20itens%20com%20IA%20executada%20localmente%20aplicada%20a%20itens%20tipo%20ENEM%20comparacao%20dico.txt"}, {"id": "T19", "titulo": "Calibracao de itens com IA executada localmente aplicada a itens tipo SAEB: comparacao dicotomica", "sessao": "Poster", "cluster": "C2", "arquivo": "05_Sessao_de_Poster/16 - Calibracao de itens com IA executada localmente aplicada a itens tipo SAEB comparacao dico.docx", "texto": "analise/textos/T19.txt", "objetivo": "Investigar o uso de IA executada localmente para analisar a dificuldade de itens de Matemática do Saeb.", "tecnica": "Comparações pareadas por modelos de linguagem; matriz de julgamentos; ordenação relativa comparada às informações oficiais de dificuldade.", "dados": "30 itens da edição de 2007 e 30 itens da edição de 2009 do Saeb, da 4ª série do EF.", "resultados": "O resumo indica a comparação da ordenação com os parâmetros oficiais, sem valores numéricos.", "conclusao": "A IA pode contribuir para a análise preliminar da dificuldade, sem substituir os procedimentos psicométricos tradicionais.", "download_original": "downloads/originais/T19%20-%20Calibracao%20de%20itens%20com%20IA%20executada%20localmente%20aplicada%20a%20itens%20tipo%20SAEB%20comparacao%20dico.docx", "download_texto": "downloads/textos/T19%20-%20Calibracao%20de%20itens%20com%20IA%20executada%20localmente%20aplicada%20a%20itens%20tipo%20SAEB%20comparacao%20dico.txt"}, {"id": "T20", "titulo": "Calibracao de itens com IA executada localmente aplicada a itens tipo PISA: comparacao dicotomica", "sessao": "Poster", "cluster": "C2", "arquivo": "05_Sessao_de_Poster/17 - Calibracao de itens com IA executada localmente aplicada a itens tipo PISA comparacao dico.docx", "texto": "analise/textos/T20.txt", "objetivo": "Propor um protocolo reprodutível para pré-calibrar e estimar preliminarmente a dificuldade de 10 itens de Matemática do PISA 2022 com IA.", "tecnica": "Cinco LLMs executados localmente (Ollama/VSCode) em quatro etapas: descrição dos itens, rankings com justificativas, comparações dicotômicas par a par e calibração TRI.", "dados": "10 itens de Matemática do PISA 2022 e os parâmetros e estatísticas oficiais.", "resultados": "O método captura a ordenação empírica de dificuldade (resultados preliminares).", "conclusao": "Caminho promissor para otimizar a pré-testagem automatizada e proteger o sigilo das provas; não substitui a calibração com estudantes.", "download_original": "downloads/originais/T20%20-%20Calibracao%20de%20itens%20com%20IA%20executada%20localmente%20aplicada%20a%20itens%20tipo%20PISA%20comparacao%20dico.docx", "download_texto": "downloads/textos/T20%20-%20Calibracao%20de%20itens%20com%20IA%20executada%20localmente%20aplicada%20a%20itens%20tipo%20PISA%20comparacao%20dico.txt"}, {"id": "T21", "titulo": "Calibracao de itens com IA executada localmente aplicada a itens tipo PND: comparacao dicotomica", "sessao": "Poster", "cluster": "C2", "arquivo": "05_Sessao_de_Poster/18 - Calibracao de itens com IA executada localmente aplicada a itens tipo PND comparacao dicot.docx", "texto": "analise/textos/T21.txt", "objetivo": "Comparar a hierarquia de complexidade gerada por LLM com a ordenação empírica de dificuldade (TRI) em itens de Formação Geral Docente da PND 2025.", "tecnica": "Modelo Qwen2.5-coder:14b executado localmente, com comparação dicotômica.", "dados": "30 itens da PND 2025.", "resultados": "Ainda não apresentados: o resumo indica expectativa de resultados promissores.", "conclusao": "Proposta em andamento; a validação do modelo é etapa futura.", "download_original": "downloads/originais/T21%20-%20Calibracao%20de%20itens%20com%20IA%20executada%20localmente%20aplicada%20a%20itens%20tipo%20PND%20comparacao%20dicot.docx", "download_texto": "downloads/textos/T21%20-%20Calibracao%20de%20itens%20com%20IA%20executada%20localmente%20aplicada%20a%20itens%20tipo%20PND%20comparacao%20dicot.txt"}, {"id": "T22", "titulo": "Avaliacao de dados e IA: criacao de dashboards personalizados para mapeamento de defasagens em habilidades do Enem", "sessao": "Poster", "cluster": "C3", "arquivo": "05_Sessao_de_Poster/19 - Avaliacao de dados e IA criacao de dashboards personalizados para mapeamento de defasagens.docx", "texto": "analise/textos/T22.txt", "objetivo": "Propor uma metodologia de avaliação pós-teste que combina métodos quantitativos e IA para identificar lacunas de aprendizagem no 3º ano do EM.", "tecnica": "Análise estatística de acertos e de distratores; IA para gerar dashboards por aluno e para a turma.", "dados": "Simulado padrão Enem aplicado a uma turma de 3º ano.", "resultados": "Resultados parciais: a visualização das defasagens por habilidade permite identificar lacunas específicas.", "conclusao": "Os dashboards permitem que os docentes ajustem as rotas pedagógicas de forma ágil e baseada em evidências.", "download_original": "downloads/originais/T22%20-%20Avaliacao%20de%20dados%20e%20IA%20criacao%20de%20dashboards%20personalizados%20para%20mapeamento%20de%20defasagens.docx", "download_texto": "downloads/textos/T22%20-%20Avaliacao%20de%20dados%20e%20IA%20criacao%20de%20dashboards%20personalizados%20para%20mapeamento%20de%20defasagens.txt"}, {"id": "T23", "titulo": "Iniciacao Cientifica e Desempenho no ENADE em Psicologia: estimativa via Propensity Score Matching", "sessao": "Poster", "cluster": "C8", "arquivo": "05_Sessao_de_Poster/20 - Iniciacao Cientifica e Desempenho no ENADE em Psicologia estimativa via Propensity Score M.docx", "texto": "analise/textos/T23.txt", "objetivo": "Estimar a associação entre a participação em iniciação científica e a chance de egressos de Psicologia atingirem o quartil superior do ENADE.", "tecnica": "Propensity Score Matching, com pareamento 1:3 e balanceamento das covariáveis.", "dados": "Microdados do ENADE de 2018 e 2022 vinculados ao Censo da Educação Superior (SEDAP/INEP); 46.681 estudantes antes do pareamento; 2.717 com IC pareados a 8.151 sem IC.", "resultados": "Diferença positiva e significativa (p < 0,001): +5,48 p.p. no Componente Específico e +5,28 p.p. na Formação Geral.", "conclusao": "A iniciação científica fortalece competências disciplinares e transversais avaliadas pelo exame.", "download_original": "downloads/originais/T23%20-%20Iniciacao%20Cientifica%20e%20Desempenho%20no%20ENADE%20em%20Psicologia%20estimativa%20via%20Propensity%20Score%20M.docx", "download_texto": "downloads/textos/T23%20-%20Iniciacao%20Cientifica%20e%20Desempenho%20no%20ENADE%20em%20Psicologia%20estimativa%20via%20Propensity%20Score%20M.txt"}, {"id": "T24", "titulo": "Os propositos do Enem", "sessao": "Poster", "cluster": "C8", "arquivo": "05_Sessao_de_Poster/21 - Os propositos do Enem.pdf", "texto": "analise/textos/T24.txt", "objetivo": "Investigar as características psicométricas do Enem em relação ao uso concomitante para seleção, certificação e monitoramento.", "tecnica": "Comparação da dificuldade dos itens com as notas da população; análise de informação e erro-padrão; Optimal Test Design.", "dados": "Itens e notas do Enem da população de candidatos.", "resultados": "Itens difíceis demais para a maioria dos candidatos; para notas entre 400 e 500 o exame fornece pouca informação; essas notas são quase indistinguíveis de padrões aleatórios.", "conclusao": "As características dos itens do Enem terão de mudar substancialmente para atender a todas as finalidades do exame.", "download_original": "downloads/originais/T24%20-%20Os%20propositos%20do%20Enem.pdf", "download_texto": "downloads/textos/T24%20-%20Os%20propositos%20do%20Enem.txt"}, {"id": "T25", "titulo": "Faceis ou dificeis primeiro? Ordem dos itens, fadiga e estimacao da proficiencia com TRI-3PL", "sessao": "Poster", "cluster": "C4", "arquivo": "05_Sessao_de_Poster/22 - Faceis ou dificeis primeiro Ordem dos itens, fadiga e estimacao da proficiencia com TRI-3P.doc", "texto": "analise/textos/T25.txt", "objetivo": "Investigar o impacto da ordem de resolução dos itens na estimação da proficiência quando há fadiga.", "tecnica": "Simulação com TRI 3PL; três estratégias (ordem original, do mais fácil ao mais difícil e o inverso); fadiga modelada como redução linear da proficiência.", "dados": "Dados simulados; não há dados empíricos.", "resultados": "Não há estratégia uniformemente superior: respondentes de menor proficiência são menos prejudicados começando pelos itens fáceis, e os de maior proficiência se saem melhor começando pelos difíceis.", "conclusao": "A ordem dos itens importa e o efeito depende do nível de proficiência do respondente.", "download_original": "downloads/originais/T25%20-%20Faceis%20ou%20dificeis%20primeiro%20Ordem%20dos%20itens%2C%20fadiga%20e%20estimacao%20da%20proficiencia%20com%20TRI-3P.doc", "download_texto": "downloads/textos/T25%20-%20Faceis%20ou%20dificeis%20primeiro%20Ordem%20dos%20itens%2C%20fadiga%20e%20estimacao%20da%20proficiencia%20com%20TRI-3P.txt"}, {"id": "T26", "titulo": "Uso da teoria classica dos testes na eliminacao de itens: coeficientes ponto-bisserial e bisserial", "sessao": "Poster", "cluster": "C7", "arquivo": "05_Sessao_de_Poster/23 - Uso da teoria classica dos testes na eliminacao de itens coeficientes ponto-bisserial e bi.docx", "texto": "analise/textos/T26.txt", "objetivo": "Analisar o comportamento das correlações ponto-bisserial e bisserial como indicadores de discriminação na TCT.", "tecnica": "Simulação Monte Carlo com o modelo 3PL; testes de 25, 50 e 100 itens; amostras de 10 mil, 50 mil e 100 mil respondentes; 15 réplicas por condição.", "dados": "Dados simulados: a ~ U(0,5; 3), b ~ U(-3; 3), c ~ U(0; 0,4), θ ~ N(0,1).", "resultados": "A ponto-bisserial corrigida tem forte associação negativa com |b|; a bisserial reduz essa associação e se relaciona melhor com a discriminação verdadeira. O padrão se mantém nas nove condições.", "conclusao": "Pontos de corte uniformes não devem, sozinhos, determinar a eliminação de itens; dificuldade e conteúdo também devem ser considerados.", "download_original": "downloads/originais/T26%20-%20Uso%20da%20teoria%20classica%20dos%20testes%20na%20eliminacao%20de%20itens%20coeficientes%20ponto-bisserial%20e%20bi.docx", "download_texto": "downloads/textos/T26%20-%20Uso%20da%20teoria%20classica%20dos%20testes%20na%20eliminacao%20de%20itens%20coeficientes%20ponto-bisserial%20e%20bi.txt"}, {"id": "T27", "titulo": "Efeito da posicao dos itens no desempenho: Ciencias Humanas do Enem 2025", "sessao": "Poster", "cluster": "C8", "arquivo": "05_Sessao_de_Poster/24 - Efeito da posicao dos itens no desempenho Ciencias Humanas do Enem 2025.pdf", "texto": "analise/textos/T27.txt", "objetivo": "Investigar o efeito da posição dos itens na prova de Ciências Humanas do Enem 2025.", "tecnica": "Testes de proporções e razões de chances entre as posições mais precoce e mais tardia, nos quatro cadernos; ajuste para múltiplas comparações.", "dados": "Microdados da aplicação regular; 30 itens com acerto médio entre 30% e 70%.", "resultados": "Todos os itens tiveram menor acerto na posição tardia (diferenças de 0,11 a 7,14 p.p.); em 29 dos 30 itens a diferença é significativa.", "conclusao": "Há associação entre posição e desempenho, o que levanta questões sobre a invariância dos itens entre cadernos.", "download_original": "downloads/originais/T27%20-%20Efeito%20da%20posicao%20dos%20itens%20no%20desempenho%20Ciencias%20Humanas%20do%20Enem%202025.pdf", "download_texto": "downloads/textos/T27%20-%20Efeito%20da%20posicao%20dos%20itens%20no%20desempenho%20Ciencias%20Humanas%20do%20Enem%202025.txt"}, {"id": "T28", "titulo": "Equalizacao entre diferentes edicoes de uma avaliacao por julgamento comparativo de itens", "sessao": "Poster", "cluster": "C5", "arquivo": "05_Sessao_de_Poster/25 - Equalizacao entre diferentes edicoes de uma avaliacao por julgamento comparativo de itens.docx", "texto": "analise/textos/T28.txt", "objetivo": "Adaptar o método simplified pairs (Benton, 2021) para equalizar avaliações por julgamento comparativo da dificuldade dos itens.", "tecnica": "Juízes comparam pares de itens de provas diferentes; análise por regressão logística; estudo de simulação com modelo de Rasch.", "dados": "Julgamentos simulados, em condições sem itens comuns nem população equivalente.", "resultados": "Acurácia e precisão do deslocamento estimado avaliadas por simulação (valores não detalhados no resumo).", "conclusao": "O método é uma alternativa viável quando não há sobreposição de itens ou de população.", "download_original": "downloads/originais/T28%20-%20Equalizacao%20entre%20diferentes%20edicoes%20de%20uma%20avaliacao%20por%20julgamento%20comparativo%20de%20itens.docx", "download_texto": "downloads/textos/T28%20-%20Equalizacao%20entre%20diferentes%20edicoes%20de%20uma%20avaliacao%20por%20julgamento%20comparativo%20de%20itens.txt"}, {"id": "T29", "titulo": "Uma revisao de trabalhos sobre IA no CONBRATRI entre 2018 e 2024", "sessao": "Poster", "cluster": "C3", "arquivo": "05_Sessao_de_Poster/26 - Uma revisao de trabalhos sobre IA no CONBRATRI entre 2018 e 2024.doc", "texto": "analise/textos/T29.txt", "objetivo": "Revisar os trabalhos sobre IA publicados nos anais do CONBRATRI entre 2018 e 2024.", "tecnica": "Revisão dos anais do congresso.", "dados": "Anais do CONBRATRI de 2018 a 2024.", "resultados": "Foram encontrados apenas 12 trabalhos no evento de 2024.", "conclusao": "A IA generativa é um campo em consolidação; deve ser instrumento de triagem calibrada, não substituto da validação empírica, com atenção a viés, autoria e regulação.", "download_original": "downloads/originais/T29%20-%20Uma%20revisao%20de%20trabalhos%20sobre%20IA%20no%20CONBRATRI%20entre%202018%20e%202024.doc", "download_texto": "downloads/textos/T29%20-%20Uma%20revisao%20de%20trabalhos%20sobre%20IA%20no%20CONBRATRI%20entre%202018%20e%202024.txt"}, {"id": "T30", "titulo": "Uso critico da IA na analise de dados de avaliacao educacional: formacao com equipes de secretarias de educacao", "sessao": "Poster", "cluster": "C3", "arquivo": "05_Sessao_de_Poster/27 - Uso critico da IA na analise de dados de avaliacao educacional formacao com equipes de sec.pdf", "texto": "analise/textos/T30.txt", "objetivo": "Sistematizar oito edições de formação com IA para equipes de dados e pedagógicas de secretarias, entre setembro de 2025 e abril de 2026.", "tecnica": "Relato descritivo e retrospectivo com base em registros institucionais, produções e formulários de avaliação.", "dados": "200 inscrições e 174 conclusões; formulários de avaliação dos participantes.", "resultados": "Os respondentes destacaram a aplicabilidade, a didática e a utilidade das ferramentas, e pediram mais aprofundamento e continuidade.", "conclusao": "Vale articular conhecimento técnico e pedagógico e tratar a IA como apoio, com validação humana e proteção de dados; os achados não permitem inferir mudanças institucionais.", "download_original": "downloads/originais/T30%20-%20Uso%20critico%20da%20IA%20na%20analise%20de%20dados%20de%20avaliacao%20educacional%20formacao%20com%20equipes%20de%20sec.pdf", "download_texto": "downloads/textos/T30%20-%20Uso%20critico%20da%20IA%20na%20analise%20de%20dados%20de%20avaliacao%20educacional%20formacao%20com%20equipes%20de%20sec.txt"}, {"id": "T31", "titulo": "Analise psicometrica com IA e R: comparacao de estimativas em prova de selecao para o 6o ano", "sessao": "Poster", "cluster": "C4", "arquivo": "05_Sessao_de_Poster/28 - Analise psicometrica com IA e R comparacao de estimativas em prova de selecao para o 6o an.docx", "texto": "analise/textos/T31.txt", "objetivo": "Comparar análises psicométricas de uma implementação própria em Python (com apoio do ChatGPT) e do pacote mirt do R.", "tecnica": "Modelo 2PL e alfa de Cronbach; comparação dos parâmetros de discriminação e dificuldade.", "dados": "Respostas de 971 candidatos a 20 itens de Matemática para ingresso no 6º ano do EF.", "resultados": "Correlação de 0,9998 na discriminação e 0,9963 na dificuldade; alfa de 0,767012 nos dois procedimentos; maior divergência por limite imposto na implementação em Python.", "conclusao": "Há alta concordância, mas são necessárias supervisão especializada, inspeção de código e reprodução em software reconhecido.", "download_original": "downloads/originais/T31%20-%20Analise%20psicometrica%20com%20IA%20e%20R%20comparacao%20de%20estimativas%20em%20prova%20de%20selecao%20para%20o%206o%20an.docx", "download_texto": "downloads/textos/T31%20-%20Analise%20psicometrica%20com%20IA%20e%20R%20comparacao%20de%20estimativas%20em%20prova%20de%20selecao%20para%20o%206o%20an.txt"}, {"id": "T32", "titulo": "Desenvolvimento de instrumentos e escalas de proficiencia para a EPT: modelagem de competencias com TRI", "sessao": "Poster", "cluster": "C4", "arquivo": "05_Sessao_de_Poster/29 - Desenvolvimento de instrumentos e escalas de proficiencia para a EPT modelagem de competen.docx", "texto": "analise/textos/T32.txt", "objetivo": "Apresentar o percurso metodológico e psicométrico da medida de proficiência das Habilidades Gerais e Específicas no piloto da EPT de 2025.", "tecnica": "Cadernos com blocos incompletos; validação híbrida com exclusão de itens; índice D clássico (todo-resto); modelos 1PL, 2PL e 3PL; Análise Fatorial de Informação Completa.", "dados": "16.278 estudantes de dez cursos técnicos.", "resultados": "A premissa de discriminação constante do 1PL foi rejeitada; o mesmo escore bruto leva a proficiências diferentes nos modelos 2PL e 3PL; o 3PL capta o efeito do acerto casual.", "conclusao": "O modelo 3PL torna a avaliação da EPT mais fidedigna.", "download_original": "downloads/originais/T32%20-%20Desenvolvimento%20de%20instrumentos%20e%20escalas%20de%20proficiencia%20para%20a%20EPT%20modelagem%20de%20competen.docx", "download_texto": "downloads/textos/T32%20-%20Desenvolvimento%20de%20instrumentos%20e%20escalas%20de%20proficiencia%20para%20a%20EPT%20modelagem%20de%20competen.txt"}, {"id": "T33", "titulo": "IA e avaliacao autentica na educacao superior: proposta para avaliar competencias em larga escala", "sessao": "Poster", "cluster": "C1", "arquivo": "05_Sessao_de_Poster/30 - IA e avaliacao autentica na educacao superior proposta para avaliar competencias em larga.docx", "texto": "analise/textos/T33.txt", "objetivo": "Construir uma metodologia para avaliar competências diferenciais de nível superior, no contexto do PROVEI do SENAI-SP.", "tecnica": "Pesquisa de desenvolvimento; avaliação autêntica; matrizes ancoradas em quadros de qualificação; estudos de caso (framework PACADI); correção por IA assistida por especialistas.", "dados": "Não há dados empíricos no resumo; a proposta é conceitual e metodológica.", "resultados": "Proposta de um modelo replicável de aferição de competências em larga escala.", "conclusao": "A metodologia pode contribuir para a avaliação da educação superior, desde que testada em escala.", "download_original": "downloads/originais/T33%20-%20IA%20e%20avaliacao%20autentica%20na%20educacao%20superior%20proposta%20para%20avaliar%20competencias%20em%20larga.docx", "download_texto": "downloads/textos/T33%20-%20IA%20e%20avaliacao%20autentica%20na%20educacao%20superior%20proposta%20para%20avaliar%20competencias%20em%20larga.txt"}, {"id": "T34", "titulo": "Comparacao de metodos na estimacao de proficiencias em modelos unidimensionais da TRI", "sessao": "Poster", "cluster": "C4", "arquivo": "05_Sessao_de_Poster/31 - Comparacao de metodos na estimacao de proficiencias em modelos unidimensionais da TRI.doc", "texto": "analise/textos/T34.txt", "objetivo": "Comparar os estimadores de proficiência MAP, EAP, ML, EAPsum e WLE.", "tecnica": "Simulação Monte Carlo no mirt; modelos Rasch, 2PL e 3PL; testes de 25, 50 e 100 itens; estudo condicional em 13 níveis de θ; viés, RMSE e MAE.", "dados": "50.000 respondentes simulados, com θ ~ N(0,1).", "resultados": "Nenhum estimador é universalmente superior; MAP e EAP têm mais frequentemente o menor RMSE, a depender do modelo, do comprimento e do nível de proficiência.", "conclusao": "A escolha do estimador deve considerar o modelo, o comprimento do teste e a faixa de proficiência.", "download_original": "downloads/originais/T34%20-%20Comparacao%20de%20metodos%20na%20estimacao%20de%20proficiencias%20em%20modelos%20unidimensionais%20da%20TRI.doc", "download_texto": "downloads/textos/T34%20-%20Comparacao%20de%20metodos%20na%20estimacao%20de%20proficiencias%20em%20modelos%20unidimensionais%20da%20TRI.txt"}, {"id": "T35", "titulo": "Reducao do numero de itens na estimacao da percepcao de estudantes sobre Ciencia e Tecnologia e Letramento Digital", "sessao": "Poster", "cluster": "C7", "arquivo": "05_Sessao_de_Poster/32 - Reducao do numero de itens na estimacao da percepcao de estudantes sobre Ciencia e Tecnolo.docx", "texto": "analise/textos/T35.txt", "objetivo": "Medir a percepção de estudantes sobre Ciência, Tecnologia e Letramento Digital e verificar se a extensão do instrumento altera as estimativas.", "tecnica": "TRI pelo Modelo de Resposta Gradual para estimar escores; teste de Kruskal-Wallis para comparar as distribuições.", "dados": "Estudantes do 8º e 9º anos do EF da rede pública estadual de São Paulo; quatro versões de um instrumento derivado de uma matriz de 223 itens (B1 com 72, B2 com 76, B3 com 75 e Enquete com 197).", "resultados": "Não houve diferenças estatisticamente significativas entre os grupos.", "conclusao": "As versões reduzidas produzem estimativas comparáveis às do instrumento mais extenso, nas condições investigadas.", "download_original": "downloads/originais/T35%20-%20Reducao%20do%20numero%20de%20itens%20na%20estimacao%20da%20percepcao%20de%20estudantes%20sobre%20Ciencia%20e%20Tecnolo.docx", "download_texto": "downloads/textos/T35%20-%20Reducao%20do%20numero%20de%20itens%20na%20estimacao%20da%20percepcao%20de%20estudantes%20sobre%20Ciencia%20e%20Tecnolo.txt"}, {"id": "T36", "titulo": "Rede de Estimacao Cruzada (CEN): paradigma de IA para calibracao de itens na TRI", "sessao": "Poster", "cluster": "C2", "arquivo": "05_Sessao_de_Poster/33 - Rede de Estimacao Cruzada (CEN) paradigma de IA para calibracao de itens na TRI.docx", "texto": "analise/textos/T36.txt", "objetivo": "Apresentar a Rede de Estimação Cruzada (CEN), que estima simultaneamente parâmetros de pessoas e de itens no modelo 2PL com redes neurais.", "tecnica": "Duas sub-redes (Pessoa e Item), com treino e teste.", "dados": "Dados simulados com 500 respondentes e 60 itens.", "resultados": "Boa recuperação no treino (MSE: z = 0,0971; a = 0,0383; b = 0,0480) e generalização para dados novos sem novo treinamento.", "conclusao": "A CEN é uma ponte promissora entre IA e psicometria, superando limitações computacionais dos métodos clássicos.", "download_original": "downloads/originais/T36%20-%20Rede%20de%20Estimacao%20Cruzada%20%28CEN%29%20paradigma%20de%20IA%20para%20calibracao%20de%20itens%20na%20TRI.docx", "download_texto": "downloads/textos/T36%20-%20Rede%20de%20Estimacao%20Cruzada%20%28CEN%29%20paradigma%20de%20IA%20para%20calibracao%20de%20itens%20na%20TRI.txt"}, {"id": "T37", "titulo": "Impacto e correcao do tamanho do teste no Alfa de Cronbach e Omega de McDonald", "sessao": "Poster", "cluster": "C7", "arquivo": "05_Sessao_de_Poster/34 - Impacto e correcao do tamanho do teste no Alfa de Cronbach e Omega de McDonald.docx", "texto": "analise/textos/T37.txt", "objetivo": "Investigar como o tamanho do teste e o da amostra influenciam as estimativas de Alfa e Ômega.", "tecnica": "Simulação Monte Carlo com o modelo 2PL; aplicação da fórmula de Spearman-Brown para correção do comprimento.", "dados": "Dados simulados, com testes de 25, 50 e 100 itens.", "resultados": "Os dois coeficientes crescem de forma não linear com o número de itens, com ganhos decrescentes; a diferença entre Alfa e Ômega torna-se praticamente nula a partir de 100 itens.", "conclusao": "Alfa e Ômega não devem ser usados sozinhos como critério de eliminação de itens em testes curtos; a correção por Spearman-Brown deve ser usada com cuidado.", "download_original": "downloads/originais/T37%20-%20Impacto%20e%20correcao%20do%20tamanho%20do%20teste%20no%20Alfa%20de%20Cronbach%20e%20Omega%20de%20McDonald.docx", "download_texto": "downloads/textos/T37%20-%20Impacto%20e%20correcao%20do%20tamanho%20do%20teste%20no%20Alfa%20de%20Cronbach%20e%20Omega%20de%20McDonald.txt"}, {"id": "T38", "titulo": "Do numero ao sentido: validade interpretativa na construcao das escalas de proficiencia do Sinaept", "sessao": "Poster", "cluster": "C5", "arquivo": "05_Sessao_de_Poster/35 - Do numero ao sentido validade interpretativa na construcao das escalas de proficiencia do.pdf", "texto": "analise/textos/T38.txt", "objetivo": "Discutir como o Sinaept transforma o número medido em descrição do que o estudante aprendeu.", "tecnica": "Análise documental dos documentos públicos que fundamentam o sistema; referencial de validade de Messick e Kane. Pesquisa em andamento.", "dados": "Documentos públicos do Sinaept, sistema nacional de avaliação da EPT criado em 2025.", "resultados": "Ainda não concluídos (pesquisa em andamento).", "conclusao": "Automatizar a produção de itens torna ainda mais necessária a interpretação pedagógica dos níveis da escala.", "download_original": "downloads/originais/T38%20-%20Do%20numero%20ao%20sentido%20validade%20interpretativa%20na%20construcao%20das%20escalas%20de%20proficiencia%20do.pdf", "download_texto": "downloads/textos/T38%20-%20Do%20numero%20ao%20sentido%20validade%20interpretativa%20na%20construcao%20das%20escalas%20de%20proficiencia%20do.txt"}, {"id": "T39", "titulo": "Inteligencia Artificial Generativa aplicada a avaliacao educacional: gerador automatizado de itens", "sessao": "Poster", "cluster": "C1", "arquivo": "05_Sessao_de_Poster/36 - Inteligencia Artificial Generativa aplicada a avaliacao educacional gerador automatizado d.pdf", "texto": "analise/textos/T39.txt", "objetivo": "Desenvolver um gerador automatizado de itens com IA generativa para a Plataforma de Estudos Personalizados (PEP) do SESI-SP.", "tecnica": "Pesquisa exploratória e aplicada; ciclos de geração, revisão especializada e calibração das instruções do sistema (prompts e regras).", "dados": "Descritores curriculares, critérios pedagógicos e parâmetros técnicos de elaboração de itens; ciclos de geração e revisão.", "resultados": "Preliminares: comandos genéricos favorecem a adequação temática, mas não garantem o alinhamento à habilidade cognitiva; o refinamento de prompts e a validação humana aumentaram a coerência dos itens.", "conclusao": "O gerador tem potencial para apoiar a produção em larga escala, desde que sob critérios técnicos rigorosos, supervisão especializada e aprimoramento contínuo.", "download_original": "downloads/originais/T39%20-%20Inteligencia%20Artificial%20Generativa%20aplicada%20a%20avaliacao%20educacional%20gerador%20automatizado%20d.pdf", "download_texto": "downloads/textos/T39%20-%20Inteligencia%20Artificial%20Generativa%20aplicada%20a%20avaliacao%20educacional%20gerador%20automatizado%20d.txt"}, {"id": "T40", "titulo": "Diferencas entre os modelos de Rasch e Logistico de 1 parametro no Mirt em testes de multipla escolha", "sessao": "Poster", "cluster": "C4", "arquivo": "05_Sessao_de_Poster/37 - Diferencas entre os modelos de Rasch e Logistico de 1 parametro no Mirt em testes de multi.docx", "texto": "analise/textos/T40.txt", "objetivo": "Verificar as consequências das diferenças de parametrização entre Rasch e 1PL no mirt quando os dados são gerados por um modelo 3PL heterogêneo.", "tecnica": "Simulação comparando recuperação da dificuldade e da proficiência, ajuste e erro condicional em 13 pontos de θ.", "dados": "Dados simulados: 25, 50 e 100 itens; 10 mil, 50 mil e 100 mil respondentes; a ∈ [0,5; 3], b ∈ [-3; 3], c ∈ [0; 0,4].", "resultados": "Não apresentados: o trabalho é uma proposta de investigação.", "conclusao": "Pretende esclarecer quando as diferenças de parametrização se tornam diferenças práticas sob má especificação do modelo.", "download_original": "downloads/originais/T40%20-%20Diferencas%20entre%20os%20modelos%20de%20Rasch%20e%20Logistico%20de%201%20parametro%20no%20Mirt%20em%20testes%20de%20multi.docx", "download_texto": "downloads/textos/T40%20-%20Diferencas%20entre%20os%20modelos%20de%20Rasch%20e%20Logistico%20de%201%20parametro%20no%20Mirt%20em%20testes%20de%20multi.txt"}, {"id": "T41", "titulo": "Sistema de aplicacao digital do Metodo Angoff Modificado em sessoes de Standard Setting", "sessao": "Poster", "cluster": "C6", "arquivo": "05_Sessao_de_Poster/38 - Sistema de aplicacao digital do Metodo Angoff Modificado em sessoes de Standard Setting.doc", "texto": "analise/textos/T41.txt", "objetivo": "Apresentar um sistema web para aplicar digitalmente o Método Angoff Modificado em sessões de standard setting.", "tecnica": "Estudo tecnológico, descritivo-analítico, em fase de validação; desenvolvimento de um artefato computacional para coletar dados das plenárias.", "dados": "Dados das plenárias de discussão entre os juízes (sem coleta empírica detalhada no resumo).", "resultados": "O sistema permite rodadas de plenária com fluxo contínuo de informação, métricas de priorização de discussão com identificação do Juiz-Chave e contribui para evidências de validade procedimental.", "conclusao": "É uma ferramenta inédita no contexto nacional, ainda em fase de validação.", "download_original": "downloads/originais/T41%20-%20Sistema%20de%20aplicacao%20digital%20do%20Metodo%20Angoff%20Modificado%20em%20sessoes%20de%20Standard%20Setting.doc", "download_texto": "downloads/textos/T41%20-%20Sistema%20de%20aplicacao%20digital%20do%20Metodo%20Angoff%20Modificado%20em%20sessoes%20de%20Standard%20Setting.txt"}, {"id": "T42", "titulo": "Respondentes sinteticos para pre-testagem, calibracao e equalizacao de itens", "sessao": "Poster", "cluster": "C2", "arquivo": "05_Sessao_de_Poster/39 - Respondentes sinteticos para pre-testagem, calibracao e equalizacao de itens.docx", "texto": "analise/textos/T42.txt", "objetivo": "Desenvolver e validar respondentes sintéticos baseados em IA como complemento à pré-testagem convencional.", "tecnica": "Agentes de LLM configurados com níveis de proficiência e perfis de resposta; comparação com respostas reais por viés, MAE, RMSE, correlações e concordância; equalização com itens de ligação.", "dados": "Provas previamente calibradas, com respostas sintéticas e reais.", "resultados": "Proposta metodológica em andamento; resultados não apresentados.", "conclusao": "Modelo híbrido: agentes sintéticos apoiam a triagem e a priorização; respondentes reais continuam como referência para a calibração definitiva.", "download_original": "downloads/originais/T42%20-%20Respondentes%20sinteticos%20para%20pre-testagem%2C%20calibracao%20e%20equalizacao%20de%20itens.docx", "download_texto": "downloads/textos/T42%20-%20Respondentes%20sinteticos%20para%20pre-testagem%2C%20calibracao%20e%20equalizacao%20de%20itens.txt"}, {"id": "T43", "titulo": "Funcionamento psicometrico anomalo em um item de Matematica do Enem 2025", "sessao": "Poster", "cluster": "C8", "arquivo": "05_Sessao_de_Poster/40 - Funcionamento psicometrico anomalo em um item de Matematica do Enem 2025.pdf", "texto": "analise/textos/T43.txt", "objetivo": "Analisar o funcionamento psicométrico do item 97593 da prova de Matemática do Enem 2025, que foi abandonado por problema de convergência.", "tecnica": "Indicadores da TCT; ajustes exploratórios pelo modelo 3PL; comparação das proficiências de participantes com padrões idênticos nos demais itens.", "dados": "Respostas da aplicação regular, com cadernos reorganizados pela identidade dos itens.", "resultados": "A alternativa A, correta, tem associação negativa com o desempenho; o distrator D é mais atrativo entre os de maior desempenho; diferença de 12,6 pontos de proficiência conforme a alternativa marcada.", "conclusao": "Há funcionamento psicométrico anômalo do item, o que suscita discussão sobre validação, calibração e tratamento de itens atípicos.", "download_original": "downloads/originais/T43%20-%20Funcionamento%20psicometrico%20anomalo%20em%20um%20item%20de%20Matematica%20do%20Enem%202025.pdf", "download_texto": "downloads/textos/T43%20-%20Funcionamento%20psicometrico%20anomalo%20em%20um%20item%20de%20Matematica%20do%20Enem%202025.txt"}, {"id": "T44", "titulo": "IA na revisao de itens de Matematica: aprimoramento da avaliacao SISEDU com apoio da TRI", "sessao": "Poster", "cluster": "C1", "arquivo": "05_Sessao_de_Poster/41 - IA na revisao de itens de Matematica aprimoramento da avaliacao SISEDU com apoio da TRI.pdf", "texto": "analise/textos/T44.txt", "objetivo": "Analisar e revisar a avaliação de Matemática do SISEDU, usada para preparar estudantes do 3º ano do EM para o SPAECE.", "tecnica": "Indicadores de desempenho e TRI (parâmetros a e b); análise dos itens potencialmente problemáticos com apoio de IA e análise pedagógica.", "dados": "26 itens aplicados a 150 estudantes da EEEP Juarez Távora.", "resultados": "O percentual de acertos variou de 12,3% a 84,9%; os itens problemáticos foram revisados com sugestões da IA submetidas à análise pedagógica.", "conclusao": "Revisão conjunta entre IA e análise pedagógica para melhorar a clareza, a coerência e o alinhamento das questões. (Conclusão completa não verificada, pois o resumo está truncado.)", "download_original": "downloads/originais/T44%20-%20IA%20na%20revisao%20de%20itens%20de%20Matematica%20aprimoramento%20da%20avaliacao%20SISEDU%20com%20apoio%20da%20TRI.pdf", "download_texto": "downloads/textos/T44%20-%20IA%20na%20revisao%20de%20itens%20de%20Matematica%20aprimoramento%20da%20avaliacao%20SISEDU%20com%20apoio%20da%20TRI.txt"}]}</script>
 <script>
@@ -99,6 +205,24 @@ input, select { width: 100%; padding: 9px 10px; border: 1px solid var(--borda); 
   var DADOS = JSON.parse(document.getElementById("dados").textContent);
   var CLUSTERS = DADOS.clusters;
   var TRABALHOS = DADOS.trabalhos;
+  var IDS_CLUSTER = Object.keys(CLUSTERS);
+
+  // Paleta da marca. Cada cor vem com a cor de texto que tem contraste suficiente sobre ela.
+  var PALETA = [
+    { cor: "#2a3a66", claro: false },
+    { cor: "#09c1da", claro: true },
+    { cor: "#9ab33a", claro: true },
+    { cor: "#f25071", claro: true },
+    { cor: "#8a4bbf", claro: false },
+    { cor: "#f0a63a", claro: true },
+    { cor: "#6dcff6", claro: true },
+    { cor: "#4d4e53", claro: false }
+  ];
+  function corDo(clusterId) {
+    var i = IDS_CLUSTER.indexOf(clusterId) % PALETA.length;
+    return PALETA[i];
+  }
+
   var CAMPOS = [["objetivo", "Objetivo"], ["tecnica", "Técnica utilizada"], ["dados", "Dados utilizados"],
                 ["resultados", "Resultados"], ["conclusao", "Conclusões"]];
 
@@ -108,44 +232,54 @@ input, select { width: 100%; padding: 9px 10px; border: 1px solid var(--borda); 
     if (texto !== undefined) e.textContent = texto;
     return e;
   }
-
   function sessaoRotulo(s) { return s === "Poster" ? "Sessão de pôster" : s; }
 
-  // KPIs
+  // Indicadores
   var sessoes = {};
   TRABALHOS.forEach(function (t) { sessoes[t.sessao] = true; });
   document.getElementById("kpi-total").textContent = TRABALHOS.length;
-  document.getElementById("kpi-clusters").textContent = Object.keys(CLUSTERS).length;
+  document.getElementById("kpi-clusters").textContent = IDS_CLUSTER.length;
   document.getElementById("kpi-sessoes").textContent = Object.keys(sessoes).length;
   document.getElementById("kpi-downloads").textContent = TRABALHOS.length;
 
-  // Gráfico de barras por cluster
   var contagem = {};
   TRABALHOS.forEach(function (t) { contagem[t.cluster] = (contagem[t.cluster] || 0) + 1; });
   var maximo = Math.max.apply(null, Object.values(contagem));
-  var grafico = document.getElementById("grafico");
-  Object.keys(CLUSTERS).sort(function (a, b) { return contagem[b] - contagem[a]; }).forEach(function (c) {
-    var linha = el("div", { class: "barra-linha" });
-    var botao = el("button", { type: "button", "aria-label": "Filtrar por " + CLUSTERS[c].nome });
-    botao.appendChild(el("span", { class: "rotulo" }, CLUSTERS[c].nome));
-    var trilho = el("span", { class: "trilho" });
-    trilho.appendChild(el("span", { class: "preench" }));
-    trilho.firstChild.style.width = (100 * contagem[c] / maximo).toFixed(1) + "%";
-    botao.appendChild(trilho);
-    botao.appendChild(el("span", { class: "valor" }, String(contagem[c])));
-    botao.addEventListener("click", function () {
-      filtroCluster.value = c; desenhar();
-      document.getElementById("lista").scrollIntoView({ behavior: "smooth" });
+
+  var filtroCluster = document.getElementById("filtro-cluster");
+  var filtroSessao = document.getElementById("filtro-sessao");
+  var busca = document.getElementById("busca");
+  var lista = document.getElementById("lista");
+  var contagemTxt = document.getElementById("contagem");
+  var blocosTema = document.getElementById("clusters");
+
+  // Blocos de tema
+  var botoes = {};
+  IDS_CLUSTER.forEach(function (c) {
+    var p = corDo(c);
+    var b = el("button", { type: "button", class: "cluster", "aria-pressed": "false" });
+    b.style.setProperty("--cor", p.cor);
+    if (p.claro) b.setAttribute("data-claro", "1");
+    b.appendChild(el("span", { class: "numero" }, String(contagem[c] || 0)));
+    b.appendChild(el("span", { class: "nome" }, CLUSTERS[c].nome));
+    var trilho = el("span", { class: "trilho", "aria-hidden": "true" });
+    var barra = el("i");
+    barra.style.width = (100 * (contagem[c] || 0) / maximo).toFixed(1) + "%";
+    trilho.appendChild(barra);
+    b.appendChild(trilho);
+    b.appendChild(el("span", { class: "acao" }, "Ver trabalhos"));
+    b.addEventListener("click", function () {
+      filtroCluster.value = (filtroCluster.value === c) ? "" : c;
+      desenhar();
+      document.getElementById("t-explorar").scrollIntoView({ behavior: "smooth" });
     });
-    linha.appendChild(botao);
-    grafico.appendChild(linha);
+    botoes[c] = b;
+    blocosTema.appendChild(b);
   });
 
   // Filtros
-  var filtroCluster = document.getElementById("filtro-cluster");
-  var filtroSessao = document.getElementById("filtro-sessao");
-  filtroCluster.appendChild(el("option", { value: "" }, "Todos os clusters"));
-  Object.keys(CLUSTERS).forEach(function (c) {
+  filtroCluster.appendChild(el("option", { value: "" }, "Todos os temas"));
+  IDS_CLUSTER.forEach(function (c) {
     filtroCluster.appendChild(el("option", { value: c }, CLUSTERS[c].nome));
   });
   filtroSessao.appendChild(el("option", { value: "" }, "Todas as sessões"));
@@ -153,39 +287,47 @@ input, select { width: 100%; padding: 9px 10px; border: 1px solid var(--borda); 
     filtroSessao.appendChild(el("option", { value: s }, sessaoRotulo(s)));
   });
 
-  var busca = document.getElementById("busca");
-  var lista = document.getElementById("lista");
-  var contagemTxt = document.getElementById("contagem");
-
   function textoBusca(t) {
     return [t.titulo, t.objetivo, t.tecnica, t.dados, t.resultados, t.conclusao].join(" ").toLowerCase();
   }
 
   function cartao(t) {
-    var det = el("details", { class: "cartao" });
-    var resumo = el("summary");
-    var cabeca = el("div", { class: "cabeca" });
-    cabeca.appendChild(el("span", { class: "tit" }, t.titulo));
-    cabeca.appendChild(el("span", { class: "etiqueta" }, t.id));
-    cabeca.appendChild(el("span", { class: "etiqueta" }, CLUSTERS[t.cluster].nome));
-    cabeca.appendChild(el("span", { class: "etiqueta" }, sessaoRotulo(t.sessao)));
-    resumo.appendChild(cabeca);
-    det.appendChild(resumo);
+    var p = corDo(t.cluster);
+    var art = el("article", { class: "trabalho" });
+    art.style.setProperty("--cor", p.cor);
+    art.appendChild(el("div", { class: "faixa", "aria-hidden": "true" }));
 
     var corpo = el("div", { class: "corpo" });
-    var dl = el("dl");
-    CAMPOS.forEach(function (c) {
-      dl.appendChild(el("dt", {}, c[1]));
-      dl.appendChild(el("dd", {}, t[c[0]]));
-    });
-    corpo.appendChild(dl);
+    var meta = el("div", { class: "meta" });
+    var tema = el("span", { class: "chip tema" }, CLUSTERS[t.cluster].nome);
+    tema.style.setProperty("--cor", p.cor);
+    if (p.claro) tema.setAttribute("data-claro", "1");
+    meta.appendChild(tema);
+    meta.appendChild(el("span", { class: "chip" }, sessaoRotulo(t.sessao)));
+    meta.appendChild(el("span", { class: "id" }, t.id));
+    corpo.appendChild(meta);
 
+    corpo.appendChild(el("h3", {}, t.titulo));
+    corpo.appendChild(el("p", { class: "resumo" }, t.objetivo));
+
+    var det = el("details");
+    det.appendChild(el("summary", {}, "Ver detalhes"));
+    var grade = el("div", { class: "detalhes" });
+    CAMPOS.slice(1).forEach(function (c) {
+      var bloco = el("div", { class: "bloco-campo" + (c[0] === "conclusao" ? " largo" : "") });
+      bloco.appendChild(el("h4", {}, c[1]));
+      bloco.appendChild(el("p", {}, t[c[0]]));
+      grade.appendChild(bloco);
+    });
     var downloads = el("div", { class: "downloads" });
-    downloads.appendChild(el("a", { href: t.download_original, download: "" }, "Baixar original"));
-    downloads.appendChild(el("a", { href: t.download_texto, download: "" }, "Baixar texto extraído (.txt)"));
-    corpo.appendChild(downloads);
-    det.appendChild(corpo);
-    return det;
+    downloads.appendChild(el("a", { class: "pill", href: t.download_original, download: "" }, "Baixar original"));
+    downloads.appendChild(el("a", { class: "pill", href: t.download_texto, download: "" }, "Baixar texto (.txt)"));
+    grade.appendChild(downloads);
+    det.appendChild(grade);
+    corpo.appendChild(det);
+
+    art.appendChild(corpo);
+    return art;
   }
 
   function desenhar() {
@@ -193,6 +335,10 @@ input, select { width: 100%; padding: 9px 10px; border: 1px solid var(--borda); 
     var cl = filtroCluster.value, ss = filtroSessao.value;
     var filtrados = TRABALHOS.filter(function (t) {
       return (!cl || t.cluster === cl) && (!ss || t.sessao === ss) && (!termo || textoBusca(t).indexOf(termo) !== -1);
+    });
+    IDS_CLUSTER.forEach(function (c) {
+      var ativo = cl === c;
+      botoes[c].setAttribute("aria-pressed", ativo ? "true" : "false");
     });
     lista.textContent = "";
     if (!filtrados.length) {
@@ -205,6 +351,9 @@ input, select { width: 100%; padding: 9px 10px; border: 1px solid var(--borda); 
   busca.addEventListener("input", desenhar);
   filtroCluster.addEventListener("change", desenhar);
   filtroSessao.addEventListener("change", desenhar);
+  document.getElementById("limpar").addEventListener("click", function () {
+    busca.value = ""; filtroCluster.value = ""; filtroSessao.value = ""; desenhar();
+  });
   desenhar();
 })();
 </script>
