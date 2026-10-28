@@ -1,5 +1,5 @@
 # Gera o dashboard offline e a pasta de downloads a partir de analise/trabalhos.json.
-# Saídas: dashboard/index.html, dashboard/downloads/{originais,textos}/, classificacao.csv e classificacao.json
+# Saídas: dashboard/index.html, dashboard/downloads/originais/, classificacao.csv e classificacao.json
 # O visual fica em analise/dashboard_template.html; este script só preenche o marcador __DADOS__.
 # Uso: python analise/04_gerar_dashboard.py   (só biblioteca padrão)
 import csv, json, os, re, shutil
@@ -11,7 +11,6 @@ TEMPLATE_PATH = os.path.join(BASE, "analise", "dashboard_template.html")
 DASH = os.path.join(BASE, "dashboard")
 DOWN = os.path.join(DASH, "downloads")
 ORIG = os.path.join(DOWN, "originais")
-TXT = os.path.join(DOWN, "textos")
 
 def limpa(nome, n=90):
     nome = re.sub(r'[\\/:*?"<>|]+', " ", nome)
@@ -21,17 +20,14 @@ def nome_base(t):
     return f"{t['id']} - {limpa(t['titulo'])}"
 
 def preparar_downloads(trabalhos):
-    for pasta in (ORIG, TXT):
-        if os.path.isdir(pasta):
-            shutil.rmtree(pasta)
-        os.makedirs(pasta)
+    if os.path.isdir(ORIG):
+        shutil.rmtree(ORIG)
+    os.makedirs(ORIG)
     for t in trabalhos:
         base = nome_base(t)
         ext = os.path.splitext(t["arquivo"])[1].lower()
         t["download_original"] = f"downloads/originais/{quote(base + ext)}"
-        t["download_texto"] = f"downloads/textos/{quote(base + '.txt')}"
         shutil.copy(os.path.join(BASE, t["arquivo"]), os.path.join(ORIG, base + ext))
-        shutil.copy(os.path.join(BASE, t["texto"]), os.path.join(TXT, base + ".txt"))
 
 def gravar_classificacao(dados):
     trabalhos, clusters = dados["trabalhos"], dados["clusters"]

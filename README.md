@@ -13,7 +13,7 @@ Abra [`dashboard/index.html`](dashboard/index.html) no navegador. O arquivo func
 | `baixar_trabalhos.py` | Baixa os arquivos listados no CSV para as pastas das sessões |
 | `analise/` | Scripts, textos extraídos e classificação (ver abaixo) |
 | `dashboard/index.html` | Dashboard final |
-| `dashboard/downloads/` | Cópias dos originais, textos extraídos (.txt) e classificação (CSV e JSON) |
+| `dashboard/downloads/` | Cópias dos originais e classificação (CSV e JSON) |
 
 ## Passos da análise
 
@@ -68,7 +68,7 @@ Grava `analise/trabalhos.json`, com os campos de cada trabalho e a definição d
 ### 5. Geração do dashboard e dos downloads
 `analise/04_gerar_dashboard.py` e `analise/dashboard_template.html`
 
-- Copia os arquivos originais e os textos extraídos para `dashboard/downloads/`, com nomes no padrão `T01 - título`.
+- Copia os arquivos originais para `dashboard/downloads/originais/`, com nomes no padrão `T01 - título`.
 - Grava `classificacao.csv` e `classificacao.json`.
 - Preenche o template HTML com os dados. O dashboard não usa servidor nem bibliotecas externas além da fonte.
 

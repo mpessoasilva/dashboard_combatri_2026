@@ -186,7 +186,7 @@ footer a { color: var(--azul-claro); font-weight: 600; }
       <li><h3>Extração do texto</h3><p>PDFs foram convertidos com pdftotext; DOCX foram lidos do XML do arquivo; DOC foi lido por um leitor próprio, porque o LibreOffice não abriu esses arquivos.</p></li>
       <li><h3>Leitura e registro</h3><p>Para cada trabalho, o resumo e a conclusão foram lidos e os campos objetivo, técnica, dados, resultados e conclusões foram registrados. Dados que o trabalho não informa são indicados como tal.</p></li>
       <li><h3>Temas</h3><p>Os trabalhos foram agrupados em 8 temas a partir dos resumos. Cada trabalho pertence a um único tema. A divisão é uma leitura, não o resultado de um algoritmo de agrupamento.</p></li>
-      <li><h3>Dashboard e downloads</h3><p>Os originais, os textos extraídos e a classificação (CSV e JSON) foram organizados para download, e os dados foram publicados nesta página.</p></li>
+      <li><h3>Dashboard e downloads</h3><p>Os arquivos originais e a classificação (CSV e JSON) foram organizados para download, e os dados foram publicados nesta página.</p></li>
       <li><h3>Verificação</h3><p>Conferimos as contagens e a renderização da página. Filtros e busca não foram testados em navegador real.</p></li>
     </ol>
   </section>
@@ -194,7 +194,7 @@ footer a { color: var(--azul-claro); font-weight: 600; }
 
 <footer>
   <div class="container">
-    <p>Os textos de análise foram extraídos dos arquivos originais publicados no encontro. Os downloads incluem o arquivo original e o texto extraído (.txt).</p>
+    <p>Os textos de análise foram extraídos dos arquivos originais publicados no encontro. Cada trabalho pode ser baixado no arquivo original.</p>
     <p>Classificação completa: <a href="downloads/classificacao.csv">classificacao.csv</a> · <a href="downloads/classificacao.json">classificacao.json</a></p>
   </div>
 </footer>
@@ -321,7 +321,6 @@ footer a { color: var(--azul-claro); font-weight: 600; }
     });
     var downloads = el("div", { class: "downloads" });
     downloads.appendChild(el("a", { class: "pill", href: t.download_original, download: "" }, "Baixar original"));
-    downloads.appendChild(el("a", { class: "pill", href: t.download_texto, download: "" }, "Baixar texto (.txt)"));
     grade.appendChild(downloads);
     det.appendChild(grade);
     corpo.appendChild(det);

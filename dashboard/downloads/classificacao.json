@@ -46,8 +46,7 @@
       "dados": "Não se aplica: não há coleta empírica.",
       "resultados": "Protocolo em etapas (geração, desenho, revisão de acessibilidade e calibração), com foco em itens revisáveis e calibráveis.",
       "conclusao": "A IA deve acelerar operações de linguagem sem substituir a definição do construto, o julgamento de qualidade e a calibração empírica.",
-      "download_original": "downloads/originais/T01%20-%20Da%20Geracao%20a%20Calibracao%20protocolo%20human-in-the-loop%20para%20itens%20gerados%20por%20IA.doc",
-      "download_texto": "downloads/textos/T01%20-%20Da%20Geracao%20a%20Calibracao%20protocolo%20human-in-the-loop%20para%20itens%20gerados%20por%20IA.txt"
+      "download_original": "downloads/originais/T01%20-%20Da%20Geracao%20a%20Calibracao%20protocolo%20human-in-the-loop%20para%20itens%20gerados%20por%20IA.doc"
     },
     {
       "id": "T02",
@@ -61,8 +60,7 @@
       "dados": "Registros de elaboração e revisão de itens; dois casos representativos (raiz quadrada e pontos notáveis de triângulos).",
       "resultados": "Correção matemática e estrutura formal não garantem sozinhas a adequação do item; é preciso preservar a relação entre objeto de conhecimento, operação cognitiva e evidência.",
       "conclusao": "A matriz do SAEB pode servir como prompt técnico estruturante; a qualidade depende de critérios técnicos e julgamento especializado (coelaboração humano-IA).",
-      "download_original": "downloads/originais/T02%20-%20Do%20prompt%20ao%20item%20analise%20da%20elaboracao%20de%20itens%20por%20IA%20generativa%20orientada%20por%20matriz%20de.doc",
-      "download_texto": "downloads/textos/T02%20-%20Do%20prompt%20ao%20item%20analise%20da%20elaboracao%20de%20itens%20por%20IA%20generativa%20orientada%20por%20matriz%20de.txt"
+      "download_original": "downloads/originais/T02%20-%20Do%20prompt%20ao%20item%20analise%20da%20elaboracao%20de%20itens%20por%20IA%20generativa%20orientada%20por%20matriz%20de.doc"
     },
     {
       "id": "T03",
@@ -76,8 +74,7 @@
       "dados": "5.410 itens de avaliações formativas brasileiras, aplicados entre 2021 e 2024, do 4º ano do EF ao 3º ano do EM.",
       "resultados": "Teste: MAE 0,4686; RMSE 0,6033; R² 0,5611; Pearson 0,7493. Na validação aplicada, concordância com a TRI de 100%, 60% e 78% nos padrões defasagem, intermediário e avançado.",
       "conclusao": "Modelos relativamente simples podem apoiar a triagem de itens e o planejamento da pré-testagem, mas não substituem a calibração empírica.",
-      "download_original": "downloads/originais/T03%20-%20PREDICAO%20DO%20PARAMETRO%20DE%20DIFICULDADE%20DA%20TRI%20A%20PARTIR%20DE%20TEXTO%20E%20METADADOS%20abordagem%20de%20apr.docx",
-      "download_texto": "downloads/textos/T03%20-%20PREDICAO%20DO%20PARAMETRO%20DE%20DIFICULDADE%20DA%20TRI%20A%20PARTIR%20DE%20TEXTO%20E%20METADADOS%20abordagem%20de%20apr.txt"
+      "download_original": "downloads/originais/T03%20-%20PREDICAO%20DO%20PARAMETRO%20DE%20DIFICULDADE%20DA%20TRI%20A%20PARTIR%20DE%20TEXTO%20E%20METADADOS%20abordagem%20de%20apr.docx"
     },
     {
       "id": "T04",
@@ -91,8 +88,7 @@
       "dados": "22 itens de Matemática da 1ª edição da Prova Paraná 2025, aplicada à 3ª série do EM.",
       "resultados": "Houve correspondências e divergências entre as três abordagens.",
       "conclusao": "A IA oferece informações complementares na elaboração e revisão, sem substituir especialistas, a aplicação aos estudantes ou as análises psicométricas.",
-      "download_original": "downloads/originais/T04%20-%20Itens%20de%20Prova%20Parana%20de%20Matematica%20na%20perspectiva%20da%20TCT%2C%20TRI%20e%20IA.pdf",
-      "download_texto": "downloads/textos/T04%20-%20Itens%20de%20Prova%20Parana%20de%20Matematica%20na%20perspectiva%20da%20TCT%2C%20TRI%20e%20IA.txt"
+      "download_original": "downloads/originais/T04%20-%20Itens%20de%20Prova%20Parana%20de%20Matematica%20na%20perspectiva%20da%20TCT%2C%20TRI%20e%20IA.pdf"
     },
     {
       "id": "T05",
@@ -106,8 +102,7 @@
       "dados": "Resultados de proficiência, metas e contextos socioeconômicos municipais, integrados em uma base com milhares de dados.",
       "resultados": "Apresentação da ferramenta; o trabalho não traz resultados empíricos.",
       "conclusao": "Serve de ponto de partida para formular hipóteses e para análises causais; ajuda gestores a priorizar intervenções.",
-      "download_original": "downloads/originais/T05%20-%20AlfabetizIA%20plataforma%20de%20inteligencia%20territorial%20para%20analise%20de%20Alfabetizacao.pdf",
-      "download_texto": "downloads/textos/T05%20-%20AlfabetizIA%20plataforma%20de%20inteligencia%20territorial%20para%20analise%20de%20Alfabetizacao.txt"
+      "download_original": "downloads/originais/T05%20-%20AlfabetizIA%20plataforma%20de%20inteligencia%20territorial%20para%20analise%20de%20Alfabetizacao.pdf"
     },
     {
       "id": "T06",
@@ -121,8 +116,7 @@
       "dados": "Séries históricas de desempenho educacional, variáveis socioeconômicas e financeiras.",
       "resultados": "Ferramenta funcional com recursos de similaridade, benchmarking e trajetória; experiência de uso em formações com equipes de Secretarias de Educação.",
       "conclusao": "A IA generativa reduz barreiras ao desenvolvimento de ferramentas analíticas, desde que associada a validação e interpretação contextual.",
-      "download_original": "downloads/originais/T06%20-%20ADEF%20desenvolvimento%20assistido%20por%20IA%20de%20uma%20aplicacao%20para%20analise%20educacional%20do%20ensino.pdf",
-      "download_texto": "downloads/textos/T06%20-%20ADEF%20desenvolvimento%20assistido%20por%20IA%20de%20uma%20aplicacao%20para%20analise%20educacional%20do%20ensino.txt"
+      "download_original": "downloads/originais/T06%20-%20ADEF%20desenvolvimento%20assistido%20por%20IA%20de%20uma%20aplicacao%20para%20analise%20educacional%20do%20ensino.pdf"
     },
     {
       "id": "T07",
@@ -136,8 +130,7 @@
       "dados": "4.298 estudantes dos anos finais do EF; questionário de uso de IA e provas de proficiência.",
       "resultados": "Diferenças de desempenho conforme a frequência de uso: 19 pontos em língua portuguesa e 29 em matemática.",
       "conclusao": "O uso inadequado da IA está associado a prejuízos no desempenho dos estudantes nas duas disciplinas.",
-      "download_original": "downloads/originais/T07%20-%20Associacao%20entre%20o%20uso%20de%20IA%20e%20niveis%20de%20proficiencia%20em%20Matematica%20e%20Lingua%20Portuguesa%20no.doc",
-      "download_texto": "downloads/textos/T07%20-%20Associacao%20entre%20o%20uso%20de%20IA%20e%20niveis%20de%20proficiencia%20em%20Matematica%20e%20Lingua%20Portuguesa%20no.txt"
+      "download_original": "downloads/originais/T07%20-%20Associacao%20entre%20o%20uso%20de%20IA%20e%20niveis%20de%20proficiencia%20em%20Matematica%20e%20Lingua%20Portuguesa%20no.doc"
     },
     {
       "id": "T08",
@@ -151,8 +144,7 @@
       "dados": "Provas experimentais de 30 itens de cada avaliação, aplicadas à mesma amostra de estudantes.",
       "resultados": "Os itens das duas avaliações podem ser representados por uma única dimensão latente; forte relação linear entre as dificuldades; maior alinhamento em Língua Portuguesa.",
       "conclusao": "As escalas são estrutural e metricamente compatíveis, permitindo relações de equivalência entre seus resultados, respeitadas as diferenças pedagógicas.",
-      "download_original": "downloads/originais/T08%20-%20Equalizacao%20entre%20as%20escalas%20de%20proficiencia%20do%20Enem%20e%20do%20Saeb%20evidencias%20de%20compatibilida.doc",
-      "download_texto": "downloads/textos/T08%20-%20Equalizacao%20entre%20as%20escalas%20de%20proficiencia%20do%20Enem%20e%20do%20Saeb%20evidencias%20de%20compatibilida.txt"
+      "download_original": "downloads/originais/T08%20-%20Equalizacao%20entre%20as%20escalas%20de%20proficiencia%20do%20Enem%20e%20do%20Saeb%20evidencias%20de%20compatibilida.doc"
     },
     {
       "id": "T09",
@@ -166,8 +158,7 @@
       "dados": "Dados públicos do Saeb 2023.",
       "resultados": "As estimativas clássicas exigem correlação entre todos os itens; a abordagem pela TRI não tem essa limitação. O resumo não traz valores numéricos.",
       "conclusao": "A confiabilidade empírica da TRI é alternativa às estimativas clássicas, que dependem do planejamento do teste.",
-      "download_original": "downloads/originais/T09%20-%20Consideracoes%20sobre%20o%20Coeficiente%20de%20Confiabilidade.pdf",
-      "download_texto": "downloads/textos/T09%20-%20Consideracoes%20sobre%20o%20Coeficiente%20de%20Confiabilidade.txt"
+      "download_original": "downloads/originais/T09%20-%20Consideracoes%20sobre%20o%20Coeficiente%20de%20Confiabilidade.pdf"
     },
     {
       "id": "T10",
@@ -181,8 +172,7 @@
       "dados": "9.188 estudantes, 64 corretores e 7 aspectos de correção.",
       "resultados": "Elevada concordância entre corretores; ajuste adequado para a maioria dos avaliadores e aspectos; poucos casos de desajuste de leniência/severidade.",
       "conclusao": "O Rasch multifacetado é ferramenta eficaz para monitorar a qualidade da correção e pode subsidiar a validação de correção automatizada por IA.",
-      "download_original": "downloads/originais/T10%20-%20Monitoramento%20da%20qualidade%20da%20correcao%20de%20itens%20abertos%20via%20Rasch%20multifacetado%20Ceara%202025.pdf",
-      "download_texto": "downloads/textos/T10%20-%20Monitoramento%20da%20qualidade%20da%20correcao%20de%20itens%20abertos%20via%20Rasch%20multifacetado%20Ceara%202025.txt"
+      "download_original": "downloads/originais/T10%20-%20Monitoramento%20da%20qualidade%20da%20correcao%20de%20itens%20abertos%20via%20Rasch%20multifacetado%20Ceara%202025.pdf"
     },
     {
       "id": "T11",
@@ -196,8 +186,7 @@
       "dados": "114.391 observações de turmas do Ensino Fundamental em 12 estados.",
       "resultados": "Alfa de Cronbach entre 0,814 e 0,890; KMO > 0,82; associação positiva dos índices com as proficiências em Língua Portuguesa e Matemática.",
       "conclusao": "O instrumento produz medidas consistentes sobre o cotidiano das salas de aula e enriquece as avaliações em larga escala.",
-      "download_original": "downloads/originais/T11%20-%20Questionario%20de%20Turma%20evidencias%20de%20validade%20interna%20e%20associacoes%20com%20a%20aprendizagem.doc",
-      "download_texto": "downloads/textos/T11%20-%20Questionario%20de%20Turma%20evidencias%20de%20validade%20interna%20e%20associacoes%20com%20a%20aprendizagem.txt"
+      "download_original": "downloads/originais/T11%20-%20Questionario%20de%20Turma%20evidencias%20de%20validade%20interna%20e%20associacoes%20com%20a%20aprendizagem.doc"
     },
     {
       "id": "T12",
@@ -211,8 +200,7 @@
       "dados": "Painel de 11 a 15 especialistas por área, das cinco regiões do país, nas quatro áreas do Enem.",
       "resultados": "Os resultados foram transpostos para a escala de proficiência do Enem e evidenciam a confiabilidade do método.",
       "conclusao": "O método oferece subsídios para aplicação em contextos semelhantes.",
-      "download_original": "downloads/originais/T12%20-%20Estabelecendo%20Padroes%20de%20Desempenho%20para%20o%20Ensino%20Medio.pdf",
-      "download_texto": "downloads/textos/T12%20-%20Estabelecendo%20Padroes%20de%20Desempenho%20para%20o%20Ensino%20Medio.txt"
+      "download_original": "downloads/originais/T12%20-%20Estabelecendo%20Padroes%20de%20Desempenho%20para%20o%20Ensino%20Medio.pdf"
     },
     {
       "id": "T13",
@@ -226,8 +214,7 @@
       "dados": "BNCC do Ensino Médio e contribuições dos grupos de especialistas.",
       "resultados": "Documento com descrições pedagógicas dos níveis Abaixo do Básico, Básico, Adequado e Avançado.",
       "conclusao": "As descrições permitem que gestores, docentes e estudantes entendam o significado de cada nível na escala do Enem.",
-      "download_original": "downloads/originais/T13%20-%20A%20Elaboracao%20da%20Descricao%20dos%20Niveis%20de%20Desempenho%20para%20o%20Ensino%20Medio.doc",
-      "download_texto": "downloads/textos/T13%20-%20A%20Elaboracao%20da%20Descricao%20dos%20Niveis%20de%20Desempenho%20para%20o%20Ensino%20Medio.txt"
+      "download_original": "downloads/originais/T13%20-%20A%20Elaboracao%20da%20Descricao%20dos%20Niveis%20de%20Desempenho%20para%20o%20Ensino%20Medio.doc"
     },
     {
       "id": "T14",
@@ -241,8 +228,7 @@
       "dados": "Séries do Ideb e do Saeb de 2005 a 2025, por rede e unidade da federação.",
       "resultados": "Entre 2019 e 2025, o fluxo responde por 94% do crescimento nos anos finais da rede pública e por 96% no EM estadual. A redução da dispersão entre estados é de aprovação, não de proficiência.",
       "conclusao": "A convergência do Ideb é convergência de aprovação, não de aprendizagem; atribuições alternativas deslocam a resposta em até 12 pontos percentuais sem mudar a conclusão.",
-      "download_original": "downloads/originais/T14%20-%20Desempenho%20ou%20fluxo%20Decomposicao%20da%20variacao%20do%20Ideb%20entre%202005%20e%202025.docx",
-      "download_texto": "downloads/textos/T14%20-%20Desempenho%20ou%20fluxo%20Decomposicao%20da%20variacao%20do%20Ideb%20entre%202005%20e%202025.txt"
+      "download_original": "downloads/originais/T14%20-%20Desempenho%20ou%20fluxo%20Decomposicao%20da%20variacao%20do%20Ideb%20entre%202005%20e%202025.docx"
     },
     {
       "id": "T15",
@@ -256,8 +242,7 @@
       "dados": "Documentos, entrevistas e observação in loco de cursos com egressos ofertados em 2026 (Trilhas de Futuro).",
       "resultados": "O resumo descreve a metodologia de consolidação de medidas e indicadores; não traz resultados numéricos.",
       "conclusao": "As escolhas metodológicas seguem o SINAEPT e fornecem uma base para consolidar medidas e indicadores da EPT.",
-      "download_original": "downloads/originais/T15%20-%20Desenvolvimento%20e%20validacao%20de%20instrumentos%20para%20medidas%20de%20Condicoes%20de%20Oferta%20da%20EPT%20em.doc",
-      "download_texto": "downloads/textos/T15%20-%20Desenvolvimento%20e%20validacao%20de%20instrumentos%20para%20medidas%20de%20Condicoes%20de%20Oferta%20da%20EPT%20em.txt"
+      "download_original": "downloads/originais/T15%20-%20Desenvolvimento%20e%20validacao%20de%20instrumentos%20para%20medidas%20de%20Condicoes%20de%20Oferta%20da%20EPT%20em.doc"
     },
     {
       "id": "T16",
@@ -271,8 +256,7 @@
       "dados": "Simulado de 45 questões de Ciências da Natureza do Enem, com 150 estudantes em quatro turmas.",
       "resultados": "Aproveitamento médio de 39,2%; Biologia 43,4%, Química 39,3%, Física 35,3%; C5 com maior desempenho (49,07%); C7 (34,37%) e C6 (35,38%) com os menores.",
       "conclusao": "A IA apoia o diagnóstico pedagógico por competência e habilidade. (Conclusão formal não verificada no resumo.)",
-      "download_original": "downloads/originais/T16%20-%20Diagnostico%20de%20competencias%20e%20habilidades%20do%20Enem%20para%20os%20estudantes%20dos%20anos%20finais%20do%20En.pdf",
-      "download_texto": "downloads/textos/T16%20-%20Diagnostico%20de%20competencias%20e%20habilidades%20do%20Enem%20para%20os%20estudantes%20dos%20anos%20finais%20do%20En.txt"
+      "download_original": "downloads/originais/T16%20-%20Diagnostico%20de%20competencias%20e%20habilidades%20do%20Enem%20para%20os%20estudantes%20dos%20anos%20finais%20do%20En.pdf"
     },
     {
       "id": "T17",
@@ -286,8 +270,7 @@
       "dados": "Respostas de 11.426 estudantes do 4º ano do EF, na aplicação de maio de 2026; 18 itens.",
       "resultados": "Nenhum dos 18 itens apresentou DIF igual ou superior ao limite.",
       "conclusao": "O instrumento demonstra robustez e equidade na mensuração da aprendizagem entre os grupos investigados.",
-      "download_original": "downloads/originais/T17%20-%20Funcionamento%20Diferencial%20dos%20Itens%20na%20Prova%20Curitiba.doc",
-      "download_texto": "downloads/textos/T17%20-%20Funcionamento%20Diferencial%20dos%20Itens%20na%20Prova%20Curitiba.txt"
+      "download_original": "downloads/originais/T17%20-%20Funcionamento%20Diferencial%20dos%20Itens%20na%20Prova%20Curitiba.doc"
     },
     {
       "id": "T18",
@@ -301,8 +284,7 @@
       "dados": "45 itens de 2023 com parâmetros TRI conhecidos (âncoras) e 45 itens de 2024 (alvos); 2.025 comparações por IA.",
       "resultados": "Estimativas promissoras quando comparadas aos parâmetros oficiais de 2024.",
       "conclusao": "O procedimento é promissor para apoiar a pré-testagem, reduzindo custo e exposição de itens.",
-      "download_original": "downloads/originais/T18%20-%20Calibracao%20de%20itens%20com%20IA%20executada%20localmente%20aplicada%20a%20itens%20tipo%20ENEM%20comparacao%20dico.docx",
-      "download_texto": "downloads/textos/T18%20-%20Calibracao%20de%20itens%20com%20IA%20executada%20localmente%20aplicada%20a%20itens%20tipo%20ENEM%20comparacao%20dico.txt"
+      "download_original": "downloads/originais/T18%20-%20Calibracao%20de%20itens%20com%20IA%20executada%20localmente%20aplicada%20a%20itens%20tipo%20ENEM%20comparacao%20dico.docx"
     },
     {
       "id": "T19",
@@ -316,8 +298,7 @@
       "dados": "30 itens da edição de 2007 e 30 itens da edição de 2009 do Saeb, da 4ª série do EF.",
       "resultados": "O resumo indica a comparação da ordenação com os parâmetros oficiais, sem valores numéricos.",
       "conclusao": "A IA pode contribuir para a análise preliminar da dificuldade, sem substituir os procedimentos psicométricos tradicionais.",
-      "download_original": "downloads/originais/T19%20-%20Calibracao%20de%20itens%20com%20IA%20executada%20localmente%20aplicada%20a%20itens%20tipo%20SAEB%20comparacao%20dico.docx",
-      "download_texto": "downloads/textos/T19%20-%20Calibracao%20de%20itens%20com%20IA%20executada%20localmente%20aplicada%20a%20itens%20tipo%20SAEB%20comparacao%20dico.txt"
+      "download_original": "downloads/originais/T19%20-%20Calibracao%20de%20itens%20com%20IA%20executada%20localmente%20aplicada%20a%20itens%20tipo%20SAEB%20comparacao%20dico.docx"
     },
     {
       "id": "T20",
@@ -331,8 +312,7 @@
       "dados": "10 itens de Matemática do PISA 2022 e os parâmetros e estatísticas oficiais.",
       "resultados": "O método captura a ordenação empírica de dificuldade (resultados preliminares).",
       "conclusao": "Caminho promissor para otimizar a pré-testagem automatizada e proteger o sigilo das provas; não substitui a calibração com estudantes.",
-      "download_original": "downloads/originais/T20%20-%20Calibracao%20de%20itens%20com%20IA%20executada%20localmente%20aplicada%20a%20itens%20tipo%20PISA%20comparacao%20dico.docx",
-      "download_texto": "downloads/textos/T20%20-%20Calibracao%20de%20itens%20com%20IA%20executada%20localmente%20aplicada%20a%20itens%20tipo%20PISA%20comparacao%20dico.txt"
+      "download_original": "downloads/originais/T20%20-%20Calibracao%20de%20itens%20com%20IA%20executada%20localmente%20aplicada%20a%20itens%20tipo%20PISA%20comparacao%20dico.docx"
     },
     {
       "id": "T21",
@@ -346,8 +326,7 @@
       "dados": "30 itens da PND 2025.",
       "resultados": "Ainda não apresentados: o resumo indica expectativa de resultados promissores.",
       "conclusao": "Proposta em andamento; a validação do modelo é etapa futura.",
-      "download_original": "downloads/originais/T21%20-%20Calibracao%20de%20itens%20com%20IA%20executada%20localmente%20aplicada%20a%20itens%20tipo%20PND%20comparacao%20dicot.docx",
-      "download_texto": "downloads/textos/T21%20-%20Calibracao%20de%20itens%20com%20IA%20executada%20localmente%20aplicada%20a%20itens%20tipo%20PND%20comparacao%20dicot.txt"
+      "download_original": "downloads/originais/T21%20-%20Calibracao%20de%20itens%20com%20IA%20executada%20localmente%20aplicada%20a%20itens%20tipo%20PND%20comparacao%20dicot.docx"
     },
     {
       "id": "T22",
@@ -361,8 +340,7 @@
       "dados": "Simulado padrão Enem aplicado a uma turma de 3º ano.",
       "resultados": "Resultados parciais: a visualização das defasagens por habilidade permite identificar lacunas específicas.",
       "conclusao": "Os dashboards permitem que os docentes ajustem as rotas pedagógicas de forma ágil e baseada em evidências.",
-      "download_original": "downloads/originais/T22%20-%20Avaliacao%20de%20dados%20e%20IA%20criacao%20de%20dashboards%20personalizados%20para%20mapeamento%20de%20defasagens.docx",
-      "download_texto": "downloads/textos/T22%20-%20Avaliacao%20de%20dados%20e%20IA%20criacao%20de%20dashboards%20personalizados%20para%20mapeamento%20de%20defasagens.txt"
+      "download_original": "downloads/originais/T22%20-%20Avaliacao%20de%20dados%20e%20IA%20criacao%20de%20dashboards%20personalizados%20para%20mapeamento%20de%20defasagens.docx"
     },
     {
       "id": "T23",
@@ -376,8 +354,7 @@
       "dados": "Microdados do ENADE de 2018 e 2022 vinculados ao Censo da Educação Superior (SEDAP/INEP); 46.681 estudantes antes do pareamento; 2.717 com IC pareados a 8.151 sem IC.",
       "resultados": "Diferença positiva e significativa (p < 0,001): +5,48 p.p. no Componente Específico e +5,28 p.p. na Formação Geral.",
       "conclusao": "A iniciação científica fortalece competências disciplinares e transversais avaliadas pelo exame.",
-      "download_original": "downloads/originais/T23%20-%20Iniciacao%20Cientifica%20e%20Desempenho%20no%20ENADE%20em%20Psicologia%20estimativa%20via%20Propensity%20Score%20M.docx",
-      "download_texto": "downloads/textos/T23%20-%20Iniciacao%20Cientifica%20e%20Desempenho%20no%20ENADE%20em%20Psicologia%20estimativa%20via%20Propensity%20Score%20M.txt"
+      "download_original": "downloads/originais/T23%20-%20Iniciacao%20Cientifica%20e%20Desempenho%20no%20ENADE%20em%20Psicologia%20estimativa%20via%20Propensity%20Score%20M.docx"
     },
     {
       "id": "T24",
@@ -391,8 +368,7 @@
       "dados": "Itens e notas do Enem da população de candidatos.",
       "resultados": "Itens difíceis demais para a maioria dos candidatos; para notas entre 400 e 500 o exame fornece pouca informação; essas notas são quase indistinguíveis de padrões aleatórios.",
       "conclusao": "As características dos itens do Enem terão de mudar substancialmente para atender a todas as finalidades do exame.",
-      "download_original": "downloads/originais/T24%20-%20Os%20propositos%20do%20Enem.pdf",
-      "download_texto": "downloads/textos/T24%20-%20Os%20propositos%20do%20Enem.txt"
+      "download_original": "downloads/originais/T24%20-%20Os%20propositos%20do%20Enem.pdf"
     },
     {
       "id": "T25",
@@ -406,8 +382,7 @@
       "dados": "Dados simulados; não há dados empíricos.",
       "resultados": "Não há estratégia uniformemente superior: respondentes de menor proficiência são menos prejudicados começando pelos itens fáceis, e os de maior proficiência se saem melhor começando pelos difíceis.",
       "conclusao": "A ordem dos itens importa e o efeito depende do nível de proficiência do respondente.",
-      "download_original": "downloads/originais/T25%20-%20Faceis%20ou%20dificeis%20primeiro%20Ordem%20dos%20itens%2C%20fadiga%20e%20estimacao%20da%20proficiencia%20com%20TRI-3P.doc",
-      "download_texto": "downloads/textos/T25%20-%20Faceis%20ou%20dificeis%20primeiro%20Ordem%20dos%20itens%2C%20fadiga%20e%20estimacao%20da%20proficiencia%20com%20TRI-3P.txt"
+      "download_original": "downloads/originais/T25%20-%20Faceis%20ou%20dificeis%20primeiro%20Ordem%20dos%20itens%2C%20fadiga%20e%20estimacao%20da%20proficiencia%20com%20TRI-3P.doc"
     },
     {
       "id": "T26",
@@ -421,8 +396,7 @@
       "dados": "Dados simulados: a ~ U(0,5; 3), b ~ U(-3; 3), c ~ U(0; 0,4), θ ~ N(0,1).",
       "resultados": "A ponto-bisserial corrigida tem forte associação negativa com |b|; a bisserial reduz essa associação e se relaciona melhor com a discriminação verdadeira. O padrão se mantém nas nove condições.",
       "conclusao": "Pontos de corte uniformes não devem, sozinhos, determinar a eliminação de itens; dificuldade e conteúdo também devem ser considerados.",
-      "download_original": "downloads/originais/T26%20-%20Uso%20da%20teoria%20classica%20dos%20testes%20na%20eliminacao%20de%20itens%20coeficientes%20ponto-bisserial%20e%20bi.docx",
-      "download_texto": "downloads/textos/T26%20-%20Uso%20da%20teoria%20classica%20dos%20testes%20na%20eliminacao%20de%20itens%20coeficientes%20ponto-bisserial%20e%20bi.txt"
+      "download_original": "downloads/originais/T26%20-%20Uso%20da%20teoria%20classica%20dos%20testes%20na%20eliminacao%20de%20itens%20coeficientes%20ponto-bisserial%20e%20bi.docx"
     },
     {
       "id": "T27",
@@ -436,8 +410,7 @@
       "dados": "Microdados da aplicação regular; 30 itens com acerto médio entre 30% e 70%.",
       "resultados": "Todos os itens tiveram menor acerto na posição tardia (diferenças de 0,11 a 7,14 p.p.); em 29 dos 30 itens a diferença é significativa.",
       "conclusao": "Há associação entre posição e desempenho, o que levanta questões sobre a invariância dos itens entre cadernos.",
-      "download_original": "downloads/originais/T27%20-%20Efeito%20da%20posicao%20dos%20itens%20no%20desempenho%20Ciencias%20Humanas%20do%20Enem%202025.pdf",
-      "download_texto": "downloads/textos/T27%20-%20Efeito%20da%20posicao%20dos%20itens%20no%20desempenho%20Ciencias%20Humanas%20do%20Enem%202025.txt"
+      "download_original": "downloads/originais/T27%20-%20Efeito%20da%20posicao%20dos%20itens%20no%20desempenho%20Ciencias%20Humanas%20do%20Enem%202025.pdf"
     },
     {
       "id": "T28",
@@ -451,8 +424,7 @@
       "dados": "Julgamentos simulados, em condições sem itens comuns nem população equivalente.",
       "resultados": "Acurácia e precisão do deslocamento estimado avaliadas por simulação (valores não detalhados no resumo).",
       "conclusao": "O método é uma alternativa viável quando não há sobreposição de itens ou de população.",
-      "download_original": "downloads/originais/T28%20-%20Equalizacao%20entre%20diferentes%20edicoes%20de%20uma%20avaliacao%20por%20julgamento%20comparativo%20de%20itens.docx",
-      "download_texto": "downloads/textos/T28%20-%20Equalizacao%20entre%20diferentes%20edicoes%20de%20uma%20avaliacao%20por%20julgamento%20comparativo%20de%20itens.txt"
+      "download_original": "downloads/originais/T28%20-%20Equalizacao%20entre%20diferentes%20edicoes%20de%20uma%20avaliacao%20por%20julgamento%20comparativo%20de%20itens.docx"
     },
     {
       "id": "T29",
@@ -466,8 +438,7 @@
       "dados": "Anais do CONBRATRI de 2018 a 2024.",
       "resultados": "Foram encontrados apenas 12 trabalhos no evento de 2024.",
       "conclusao": "A IA generativa é um campo em consolidação; deve ser instrumento de triagem calibrada, não substituto da validação empírica, com atenção a viés, autoria e regulação.",
-      "download_original": "downloads/originais/T29%20-%20Uma%20revisao%20de%20trabalhos%20sobre%20IA%20no%20CONBRATRI%20entre%202018%20e%202024.doc",
-      "download_texto": "downloads/textos/T29%20-%20Uma%20revisao%20de%20trabalhos%20sobre%20IA%20no%20CONBRATRI%20entre%202018%20e%202024.txt"
+      "download_original": "downloads/originais/T29%20-%20Uma%20revisao%20de%20trabalhos%20sobre%20IA%20no%20CONBRATRI%20entre%202018%20e%202024.doc"
     },
     {
       "id": "T30",
@@ -481,8 +452,7 @@
       "dados": "200 inscrições e 174 conclusões; formulários de avaliação dos participantes.",
       "resultados": "Os respondentes destacaram a aplicabilidade, a didática e a utilidade das ferramentas, e pediram mais aprofundamento e continuidade.",
       "conclusao": "Vale articular conhecimento técnico e pedagógico e tratar a IA como apoio, com validação humana e proteção de dados; os achados não permitem inferir mudanças institucionais.",
-      "download_original": "downloads/originais/T30%20-%20Uso%20critico%20da%20IA%20na%20analise%20de%20dados%20de%20avaliacao%20educacional%20formacao%20com%20equipes%20de%20sec.pdf",
-      "download_texto": "downloads/textos/T30%20-%20Uso%20critico%20da%20IA%20na%20analise%20de%20dados%20de%20avaliacao%20educacional%20formacao%20com%20equipes%20de%20sec.txt"
+      "download_original": "downloads/originais/T30%20-%20Uso%20critico%20da%20IA%20na%20analise%20de%20dados%20de%20avaliacao%20educacional%20formacao%20com%20equipes%20de%20sec.pdf"
     },
     {
       "id": "T31",
@@ -496,8 +466,7 @@
       "dados": "Respostas de 971 candidatos a 20 itens de Matemática para ingresso no 6º ano do EF.",
       "resultados": "Correlação de 0,9998 na discriminação e 0,9963 na dificuldade; alfa de 0,767012 nos dois procedimentos; maior divergência por limite imposto na implementação em Python.",
       "conclusao": "Há alta concordância, mas são necessárias supervisão especializada, inspeção de código e reprodução em software reconhecido.",
-      "download_original": "downloads/originais/T31%20-%20Analise%20psicometrica%20com%20IA%20e%20R%20comparacao%20de%20estimativas%20em%20prova%20de%20selecao%20para%20o%206o%20an.docx",
-      "download_texto": "downloads/textos/T31%20-%20Analise%20psicometrica%20com%20IA%20e%20R%20comparacao%20de%20estimativas%20em%20prova%20de%20selecao%20para%20o%206o%20an.txt"
+      "download_original": "downloads/originais/T31%20-%20Analise%20psicometrica%20com%20IA%20e%20R%20comparacao%20de%20estimativas%20em%20prova%20de%20selecao%20para%20o%206o%20an.docx"
     },
     {
       "id": "T32",
@@ -511,8 +480,7 @@
       "dados": "16.278 estudantes de dez cursos técnicos.",
       "resultados": "A premissa de discriminação constante do 1PL foi rejeitada; o mesmo escore bruto leva a proficiências diferentes nos modelos 2PL e 3PL; o 3PL capta o efeito do acerto casual.",
       "conclusao": "O modelo 3PL torna a avaliação da EPT mais fidedigna.",
-      "download_original": "downloads/originais/T32%20-%20Desenvolvimento%20de%20instrumentos%20e%20escalas%20de%20proficiencia%20para%20a%20EPT%20modelagem%20de%20competen.docx",
-      "download_texto": "downloads/textos/T32%20-%20Desenvolvimento%20de%20instrumentos%20e%20escalas%20de%20proficiencia%20para%20a%20EPT%20modelagem%20de%20competen.txt"
+      "download_original": "downloads/originais/T32%20-%20Desenvolvimento%20de%20instrumentos%20e%20escalas%20de%20proficiencia%20para%20a%20EPT%20modelagem%20de%20competen.docx"
     },
     {
       "id": "T33",
@@ -526,8 +494,7 @@
       "dados": "Não há dados empíricos no resumo; a proposta é conceitual e metodológica.",
       "resultados": "Proposta de um modelo replicável de aferição de competências em larga escala.",
       "conclusao": "A metodologia pode contribuir para a avaliação da educação superior, desde que testada em escala.",
-      "download_original": "downloads/originais/T33%20-%20IA%20e%20avaliacao%20autentica%20na%20educacao%20superior%20proposta%20para%20avaliar%20competencias%20em%20larga.docx",
-      "download_texto": "downloads/textos/T33%20-%20IA%20e%20avaliacao%20autentica%20na%20educacao%20superior%20proposta%20para%20avaliar%20competencias%20em%20larga.txt"
+      "download_original": "downloads/originais/T33%20-%20IA%20e%20avaliacao%20autentica%20na%20educacao%20superior%20proposta%20para%20avaliar%20competencias%20em%20larga.docx"
     },
     {
       "id": "T34",
@@ -541,8 +508,7 @@
       "dados": "50.000 respondentes simulados, com θ ~ N(0,1).",
       "resultados": "Nenhum estimador é universalmente superior; MAP e EAP têm mais frequentemente o menor RMSE, a depender do modelo, do comprimento e do nível de proficiência.",
       "conclusao": "A escolha do estimador deve considerar o modelo, o comprimento do teste e a faixa de proficiência.",
-      "download_original": "downloads/originais/T34%20-%20Comparacao%20de%20metodos%20na%20estimacao%20de%20proficiencias%20em%20modelos%20unidimensionais%20da%20TRI.doc",
-      "download_texto": "downloads/textos/T34%20-%20Comparacao%20de%20metodos%20na%20estimacao%20de%20proficiencias%20em%20modelos%20unidimensionais%20da%20TRI.txt"
+      "download_original": "downloads/originais/T34%20-%20Comparacao%20de%20metodos%20na%20estimacao%20de%20proficiencias%20em%20modelos%20unidimensionais%20da%20TRI.doc"
     },
     {
       "id": "T35",
@@ -556,8 +522,7 @@
       "dados": "Estudantes do 8º e 9º anos do EF da rede pública estadual de São Paulo; quatro versões de um instrumento derivado de uma matriz de 223 itens (B1 com 72, B2 com 76, B3 com 75 e Enquete com 197).",
       "resultados": "Não houve diferenças estatisticamente significativas entre os grupos.",
       "conclusao": "As versões reduzidas produzem estimativas comparáveis às do instrumento mais extenso, nas condições investigadas.",
-      "download_original": "downloads/originais/T35%20-%20Reducao%20do%20numero%20de%20itens%20na%20estimacao%20da%20percepcao%20de%20estudantes%20sobre%20Ciencia%20e%20Tecnolo.docx",
-      "download_texto": "downloads/textos/T35%20-%20Reducao%20do%20numero%20de%20itens%20na%20estimacao%20da%20percepcao%20de%20estudantes%20sobre%20Ciencia%20e%20Tecnolo.txt"
+      "download_original": "downloads/originais/T35%20-%20Reducao%20do%20numero%20de%20itens%20na%20estimacao%20da%20percepcao%20de%20estudantes%20sobre%20Ciencia%20e%20Tecnolo.docx"
     },
     {
       "id": "T36",
@@ -571,8 +536,7 @@
       "dados": "Dados simulados com 500 respondentes e 60 itens.",
       "resultados": "Boa recuperação no treino (MSE: z = 0,0971; a = 0,0383; b = 0,0480) e generalização para dados novos sem novo treinamento.",
       "conclusao": "A CEN é uma ponte promissora entre IA e psicometria, superando limitações computacionais dos métodos clássicos.",
-      "download_original": "downloads/originais/T36%20-%20Rede%20de%20Estimacao%20Cruzada%20%28CEN%29%20paradigma%20de%20IA%20para%20calibracao%20de%20itens%20na%20TRI.docx",
-      "download_texto": "downloads/textos/T36%20-%20Rede%20de%20Estimacao%20Cruzada%20%28CEN%29%20paradigma%20de%20IA%20para%20calibracao%20de%20itens%20na%20TRI.txt"
+      "download_original": "downloads/originais/T36%20-%20Rede%20de%20Estimacao%20Cruzada%20%28CEN%29%20paradigma%20de%20IA%20para%20calibracao%20de%20itens%20na%20TRI.docx"
     },
     {
       "id": "T37",
@@ -586,8 +550,7 @@
       "dados": "Dados simulados, com testes de 25, 50 e 100 itens.",
       "resultados": "Os dois coeficientes crescem de forma não linear com o número de itens, com ganhos decrescentes; a diferença entre Alfa e Ômega torna-se praticamente nula a partir de 100 itens.",
       "conclusao": "Alfa e Ômega não devem ser usados sozinhos como critério de eliminação de itens em testes curtos; a correção por Spearman-Brown deve ser usada com cuidado.",
-      "download_original": "downloads/originais/T37%20-%20Impacto%20e%20correcao%20do%20tamanho%20do%20teste%20no%20Alfa%20de%20Cronbach%20e%20Omega%20de%20McDonald.docx",
-      "download_texto": "downloads/textos/T37%20-%20Impacto%20e%20correcao%20do%20tamanho%20do%20teste%20no%20Alfa%20de%20Cronbach%20e%20Omega%20de%20McDonald.txt"
+      "download_original": "downloads/originais/T37%20-%20Impacto%20e%20correcao%20do%20tamanho%20do%20teste%20no%20Alfa%20de%20Cronbach%20e%20Omega%20de%20McDonald.docx"
     },
     {
       "id": "T38",
@@ -601,8 +564,7 @@
       "dados": "Documentos públicos do Sinaept, sistema nacional de avaliação da EPT criado em 2025.",
       "resultados": "Ainda não concluídos (pesquisa em andamento).",
       "conclusao": "Automatizar a produção de itens torna ainda mais necessária a interpretação pedagógica dos níveis da escala.",
-      "download_original": "downloads/originais/T38%20-%20Do%20numero%20ao%20sentido%20validade%20interpretativa%20na%20construcao%20das%20escalas%20de%20proficiencia%20do.pdf",
-      "download_texto": "downloads/textos/T38%20-%20Do%20numero%20ao%20sentido%20validade%20interpretativa%20na%20construcao%20das%20escalas%20de%20proficiencia%20do.txt"
+      "download_original": "downloads/originais/T38%20-%20Do%20numero%20ao%20sentido%20validade%20interpretativa%20na%20construcao%20das%20escalas%20de%20proficiencia%20do.pdf"
     },
     {
       "id": "T39",
@@ -616,8 +578,7 @@
       "dados": "Descritores curriculares, critérios pedagógicos e parâmetros técnicos de elaboração de itens; ciclos de geração e revisão.",
       "resultados": "Preliminares: comandos genéricos favorecem a adequação temática, mas não garantem o alinhamento à habilidade cognitiva; o refinamento de prompts e a validação humana aumentaram a coerência dos itens.",
       "conclusao": "O gerador tem potencial para apoiar a produção em larga escala, desde que sob critérios técnicos rigorosos, supervisão especializada e aprimoramento contínuo.",
-      "download_original": "downloads/originais/T39%20-%20Inteligencia%20Artificial%20Generativa%20aplicada%20a%20avaliacao%20educacional%20gerador%20automatizado%20d.pdf",
-      "download_texto": "downloads/textos/T39%20-%20Inteligencia%20Artificial%20Generativa%20aplicada%20a%20avaliacao%20educacional%20gerador%20automatizado%20d.txt"
+      "download_original": "downloads/originais/T39%20-%20Inteligencia%20Artificial%20Generativa%20aplicada%20a%20avaliacao%20educacional%20gerador%20automatizado%20d.pdf"
     },
     {
       "id": "T40",
@@ -631,8 +592,7 @@
       "dados": "Dados simulados: 25, 50 e 100 itens; 10 mil, 50 mil e 100 mil respondentes; a ∈ [0,5; 3], b ∈ [-3; 3], c ∈ [0; 0,4].",
       "resultados": "Não apresentados: o trabalho é uma proposta de investigação.",
       "conclusao": "Pretende esclarecer quando as diferenças de parametrização se tornam diferenças práticas sob má especificação do modelo.",
-      "download_original": "downloads/originais/T40%20-%20Diferencas%20entre%20os%20modelos%20de%20Rasch%20e%20Logistico%20de%201%20parametro%20no%20Mirt%20em%20testes%20de%20multi.docx",
-      "download_texto": "downloads/textos/T40%20-%20Diferencas%20entre%20os%20modelos%20de%20Rasch%20e%20Logistico%20de%201%20parametro%20no%20Mirt%20em%20testes%20de%20multi.txt"
+      "download_original": "downloads/originais/T40%20-%20Diferencas%20entre%20os%20modelos%20de%20Rasch%20e%20Logistico%20de%201%20parametro%20no%20Mirt%20em%20testes%20de%20multi.docx"
     },
     {
       "id": "T41",
@@ -646,8 +606,7 @@
       "dados": "Dados das plenárias de discussão entre os juízes (sem coleta empírica detalhada no resumo).",
       "resultados": "O sistema permite rodadas de plenária com fluxo contínuo de informação, métricas de priorização de discussão com identificação do Juiz-Chave e contribui para evidências de validade procedimental.",
       "conclusao": "É uma ferramenta inédita no contexto nacional, ainda em fase de validação.",
-      "download_original": "downloads/originais/T41%20-%20Sistema%20de%20aplicacao%20digital%20do%20Metodo%20Angoff%20Modificado%20em%20sessoes%20de%20Standard%20Setting.doc",
-      "download_texto": "downloads/textos/T41%20-%20Sistema%20de%20aplicacao%20digital%20do%20Metodo%20Angoff%20Modificado%20em%20sessoes%20de%20Standard%20Setting.txt"
+      "download_original": "downloads/originais/T41%20-%20Sistema%20de%20aplicacao%20digital%20do%20Metodo%20Angoff%20Modificado%20em%20sessoes%20de%20Standard%20Setting.doc"
     },
     {
       "id": "T42",
@@ -661,8 +620,7 @@
       "dados": "Provas previamente calibradas, com respostas sintéticas e reais.",
       "resultados": "Proposta metodológica em andamento; resultados não apresentados.",
       "conclusao": "Modelo híbrido: agentes sintéticos apoiam a triagem e a priorização; respondentes reais continuam como referência para a calibração definitiva.",
-      "download_original": "downloads/originais/T42%20-%20Respondentes%20sinteticos%20para%20pre-testagem%2C%20calibracao%20e%20equalizacao%20de%20itens.docx",
-      "download_texto": "downloads/textos/T42%20-%20Respondentes%20sinteticos%20para%20pre-testagem%2C%20calibracao%20e%20equalizacao%20de%20itens.txt"
+      "download_original": "downloads/originais/T42%20-%20Respondentes%20sinteticos%20para%20pre-testagem%2C%20calibracao%20e%20equalizacao%20de%20itens.docx"
     },
     {
       "id": "T43",
@@ -676,8 +634,7 @@
       "dados": "Respostas da aplicação regular, com cadernos reorganizados pela identidade dos itens.",
       "resultados": "A alternativa A, correta, tem associação negativa com o desempenho; o distrator D é mais atrativo entre os de maior desempenho; diferença de 12,6 pontos de proficiência conforme a alternativa marcada.",
       "conclusao": "Há funcionamento psicométrico anômalo do item, o que suscita discussão sobre validação, calibração e tratamento de itens atípicos.",
-      "download_original": "downloads/originais/T43%20-%20Funcionamento%20psicometrico%20anomalo%20em%20um%20item%20de%20Matematica%20do%20Enem%202025.pdf",
-      "download_texto": "downloads/textos/T43%20-%20Funcionamento%20psicometrico%20anomalo%20em%20um%20item%20de%20Matematica%20do%20Enem%202025.txt"
+      "download_original": "downloads/originais/T43%20-%20Funcionamento%20psicometrico%20anomalo%20em%20um%20item%20de%20Matematica%20do%20Enem%202025.pdf"
     },
     {
       "id": "T44",
@@ -691,8 +648,7 @@
       "dados": "26 itens aplicados a 150 estudantes da EEEP Juarez Távora.",
       "resultados": "O percentual de acertos variou de 12,3% a 84,9%; os itens problemáticos foram revisados com sugestões da IA submetidas à análise pedagógica.",
       "conclusao": "Revisão conjunta entre IA e análise pedagógica para melhorar a clareza, a coerência e o alinhamento das questões. (Conclusão completa não verificada, pois o resumo está truncado.)",
-      "download_original": "downloads/originais/T44%20-%20IA%20na%20revisao%20de%20itens%20de%20Matematica%20aprimoramento%20da%20avaliacao%20SISEDU%20com%20apoio%20da%20TRI.pdf",
-      "download_texto": "downloads/textos/T44%20-%20IA%20na%20revisao%20de%20itens%20de%20Matematica%20aprimoramento%20da%20avaliacao%20SISEDU%20com%20apoio%20da%20TRI.txt"
+      "download_original": "downloads/originais/T44%20-%20IA%20na%20revisao%20de%20itens%20de%20Matematica%20aprimoramento%20da%20avaliacao%20SISEDU%20com%20apoio%20da%20TRI.pdf"
     }
   ]
 }
