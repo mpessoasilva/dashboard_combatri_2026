@@ -1,0 +1,127 @@
+Impacto e correção do tamanho do teste no Alfa de Cronbach e Ômega de McDonald
+Héliton Tavares¹, Antonio Assis2, Maria Eduarda Alencar3, Welyrson Silva4 
+1 Universidade Federal do Pará, heliton@ufpa.br
+2 Universidade Federal do Pará, ag@aginvestimentos.com.br
+3 Universidade Federal do Pará, maria.alencar@icen.ufpa.br
+4 Universidade Federal do Pará, welyrsoncarlos110905@gmail.com
+
+Resumo
+Os coeficientes Alfa de Cronbach e Ômega de McDonald são amplamente utilizados como indicadores de fidedignidade (confiabilidade) de testes psicométricos e frequentemente empregados como critério de eliminação de itens em processos de construção e refinamento de instrumentos de medida. Contudo, ambos os coeficientes são sensíveis ao número de itens do teste, o que compromete seu uso isolado como critério de decisão em testes muito curtos. Este trabalho investiga, por meio de simulação de Monte Carlo baseada no Modelo Logístico de 2 Parâmetros (ML2) da Teoria de Resposta ao Item, como o tamanho do teste (25, 50 e 100 itens) e o tamanho da amostra de respondentes influenciam as estimativas de Alfa e Ômega. Os resultados confirmam que ambos os coeficientes aumentam de forma não linear com o número de itens, com ganhos marginais decrescentes, e que a diferença entre Alfa e Ômega se reduz conforme o teste cresce, tornando-se praticamente nula a partir de 100 itens. Discute-se a aplicação da fórmula de Spearman-Brown como ferramenta de correção e planejamento de comprimento de teste, propondo diretrizes práticas para o uso responsável desses coeficientes em avaliações educacionais em larga escala.[1][2][3][4]
+Palavras-chave: Fidedignidade; Alfa de Cronbach; Ômega de McDonald; Teoria de Resposta ao Item; Tamanho do teste.
+
+1. Introdução
+A fidedignidade de um teste — a proporção da variância dos escores observados atribuível à variância do escore verdadeiro — é um dos pilares da psicometria clássica e moderna. O coeficiente Alfa de Cronbach, proposto em 1951, permanece o índice mais reportado na literatura em ciências sociais, comportamentais e educacionais, sendo virtualmente universal em relatórios de validação de instrumentos. Sua popularidade decorre da simplicidade de cálculo, que depende apenas das variâncias dos itens e da variância do escore total, sem exigir a especificação de um modelo de mensuração subjacente.[5][2][6]
+Entretanto, o Alfa parte de uma suposição restritiva conhecida como tau-equivalência: todos os itens devem carregar igualmente sobre o traço latente comum, diferindo apenas em erro de medida. Quando essa suposição é violada — o que ocorre na quase totalidade dos testes reais, cujos itens variam em poder discriminativo — o Alfa se torna um limite inferior da fidedignidade verdadeira, subestimando-a sistematicamente. O Ômega de McDonald, derivado de um modelo fatorial congenérico que permite cargas fatoriais desiguais entre itens, foi proposto como alternativa mais realista e tem sido crescentemente recomendado pela literatura metodológica como o "novo padrão-ouro" para estimação de fidedignidade.[7][8][9][4][5]
+Apesar da superioridade teórica do Ômega, estudos de simulação mostram que a vantagem prática sobre o Alfa é modesta quando o número de itens é razoavelmente grande (cinco ou mais) e diminui ainda mais conforme o teste se alonga, chegando a diferenças desprezíveis em testes com muitos itens. Por outro lado, ambos os coeficientes carregam uma limitação estrutural comum: dependem diretamente do número de itens do teste, de modo que testes curtos tendem a apresentar fidedignidade artificialmente baixa mesmo quando os itens são psicometricamente adequados. Essa característica é particularmente problemática quando Alfa e Ômega são utilizados como critério automático de eliminação de itens: em bancos de itens pequenos, itens tecnicamente bons podem ser descartados apenas por efeito do tamanho reduzido do teste, e não por deficiência real de qualidade psicométrica.[1][10][3]
+Este resumo expandido tem como motivação central caracterizar empiricamente essa dependência do tamanho do teste e apontar caminhos de correção, com base na fórmula de Spearman-Brown, historicamente utilizada para prever a fidedignidade de testes de comprimento distinto do original. O objetivo específico é realizar um estudo de simulação com testes sintéticos de diferentes tamanhos (25, 50 e 100 itens) e diferentes volumes de respondentes, gerados sob o Modelo Logístico de 2 Parâmetros (ML2) da Teoria da Resposta ao Item (TRI), a fim de mapear o comportamento conjunto de Alfa e Ômega e orientar o uso criterioso desses indicadores em avaliações educacionais e psicológicas em larga escala.[11][12]
+2. Fundamentação teórica
+2.1 Alfa de Cronbach e Ômega de McDonald
+O Alfa de Cronbach é definido, para um teste com  itens, como
+
+onde  é a variância do item  e  é a variância do escore total. Tecnicamente, as variâncias dos itens () e covariãncias entre os pares de itens ( compõem a matriz de variâncias-covariâncias . Por exemplo, para 3 itens teremos
+
+A variância total é a soma de todos os elementos da matriz, ou seja, , em que V é a soma de todas as covariâncias. O Alfa de Crombach visa obter quando V representa de . Essa expressão é uma estimativa não tendenciosa da fidedignidade apenas quando os itens são tau-equivalentes; sob o modelo congenérico mais realista, em que os itens têm cargas fatoriais  distintas, o Alfa passa a subestimar a fidedignidade verdadeira.[5][7][9]
+O Ômega de McDonald, por sua vez, é estimado a partir de um modelo fatorial de um fator, sendo definido como
+
+em que  é a carga fatorial do item  sobre o fator comum e  é a variância de erro (única) do item. Quando as cargas são aproximadamente iguais, Alfa e Ômega convergem; quanto maior a heterogeneidade das cargas, maior a divergência, com Ômega tipicamente 0,03 a 0,10 pontos acima do Alfa.[9][6][4][5]
+2.2 Dependência do tamanho do teste
+Um resultado clássico da teoria clássica dos testes estabelece que, para um conjunto de itens com correlação inter-item média constante, o Alfa cresce monotonicamente com o número de itens , aproximando-se assintoticamente de 1. Esse crescimento é capturado pela fórmula de Spearman-Brown (Spearman e Brown, 1910), originalmente desenvolvida para corrigir a fidedignidade estimada por metades (split-half) para o comprimento total do teste:[3][13]
+
+em que  é a fidedignidade do teste original e  é o fator multiplicativo de alongamento (ou encurtamento) do teste, assumindo itens paralelos. A forma inversa da fórmula permite estimar quantos itens adicionais — supostamente equivalentes aos existentes — seriam necessários para atingir um nível-alvo de fidedignidade. Meta-análises em contextos educacionais confirmam empiricamente essa relação quase quadrática entre extensão do teste e magnitude do Alfa, mostrando que testes mais longos tendem a exibir coeficientes mais altos independentemente da real qualidade média dos itens.[11][14][15][3]
+3. Metodologia
+O estudo foi conduzido por meio de simulação de Monte Carlo. Bancos de itens sintéticos foram gerados sob o Modelo Logístico de 2 Parâmetros (ML2) da TRI, no qual a probabilidade de acerto do respondente  no item  é dada por
+
+onde  é o parâmetro de discriminação do item,  é o parâmetro de dificuldade e  é a proficiência latente do respondente. Foram definidos três tamanhos de teste (25, 50 e 100 itens), com parâmetros de discriminação sorteados uniformemente no intervalo [0,5; 3] e parâmetros de dificuldade sorteados uniformemente no intervalo [-3; 3], seguindo as especificações fornecidas para o estudo. As proficiências dos respondentes foram geradas a partir de uma distribuição normal padrão , com três volumes amostrais de referência (10 mil, 50 mil e 100 mil respondentes).[16][17]
+A partir das probabilidades de resposta, foram simuladas matrizes de respostas dicotômicas (0/1) via distribuição Bernoulli. Para cada combinação de tamanho de teste e tamanho de amostra, o processo foi repetido 20 vezes (replicações independentes) para obtenção de estimativas médias estáveis do Alfa de Cronbach e do Ômega de McDonald, calculados com o pacote psych do R. 
+4. Resultados
+A Tabela 1 apresenta as médias e desvios-padrão do Alfa de Cronbach e do Ômega de McDonald obtidos nas simulações, para cada combinação de tamanho de teste e volume de respondentes.
+Tabela 1 — Alfa e Ômega médios por tamanho de teste e volume de respondentes
+Nº de itens
+Nº de respondentes
+Alfa (média)
+Alfa (DP)
+Ômega (média)
+Ômega (DP)
+25
+10.000
+0,826
+0,037
+0,829
+0,031
+25
+50.000
+0,831
+0,021
+0,833
+0,019
+25
+100.000
+0,829
+0,019
+0,832
+0,017
+50
+10.000
+0,906
+0,011
+0,907
+0,010
+50
+50.000
+0,906
+0,010
+0,907
+0,009
+50
+100.000
+0,908
+0,007
+0,909
+0,007
+100
+10.000
+0,952
+0,004
+0,953
+0,003
+100
+50.000
+0,952
+0,004
+0,953
+0,003
+100
+100.000
+0,953
+0,003
+0,953
+0,003
+
+O gráfico a seguir ilustra a trajetória crescente e com retornos marginais decrescentes de ambos os coeficientes conforme o teste é alongado de 25 para 100 itens. Três padrões emergem claramente dos resultados. Primeiro, tanto o Alfa quanto o Ômega crescem de forma expressiva e não linear com o número de itens: a passagem de 25 para 50 itens elevou o Alfa médio de aproximadamente 0,83 para 0,91 (ganho de cerca de 8 pontos percentuais), enquanto a passagem de 50 para 100 itens produziu um ganho adicional de apenas cerca de 4,5 pontos percentuais, evidenciando o padrão de retornos marginais decrescentes previsto pela fórmula de Spearman-Brown. Segundo, a diferença entre Ômega e Alfa é sistematicamente pequena e decrescente com o tamanho do teste: no cenário de 25 itens, a diferença média foi de cerca de 0,003 a 0,004; em 100 itens, a diferença caiu para menos de 0,001, corroborando a literatura que aponta convergência entre os dois coeficientes quando o número de itens é grande e as cargas fatoriais médias são moderadas. Terceiro, o tamanho da amostra de respondentes teve efeito comparativamente pequeno sobre as médias dos coeficientes, mas reduziu consistentemente sua variabilidade (desvio-padrão), como esperado em estimadores consistentes — por exemplo, no cenário de 25 itens, o desvio-padrão do Alfa caiu de 0,037 (10 mil respondentes) para 0,019 (100 mil respondentes).[1][10][11][15]
+Figura 1. Evolução do Alfa de Cronbach e do Ômega de McDonald
+
+4.1. Proposta de correção empírica
+Na Figura 2, as simulações foram realizadas com testes variando de 10 a 100 itens, visando identificar com mais detalhes a curva de crescimento do Alfa de Crombach e fazer uma sugestão de correção empírica de acordo com o número de itens do teste. Embora a estabilidade já ocorra antes de 100 itens, podemos usar este valor como referência, e usar . O coeficiente Alfa Corrigido será dado pela expressão abaixo, e está representado pela linha vermelha na Figura 2.
+
+Figura 2. Convergência e correção do Alfa de crombach
+
+Podemos notar que a linha azul representando o Alfa de Crombach ajustado empiricamente é bastante estável, o que deve ocorrer quando a estimativa não depende do tamanho do teste. A linha vermelha corresponde ao ajuste de Spearman-Brown, claramente dependente do tamanho do teste.
+5. Discussão
+Os resultados reforçam empiricamente a preocupação central que motivou este estudo: usar um valor fixo de Alfa ou Ômega (por exemplo, o critério convencional de 0,70 ou 0,80) como regra de corte para eliminação de itens é problemático quando aplicado indiscriminadamente a testes de tamanhos muito diferentes. No cenário simulado com apenas 25 itens, mesmo com parâmetros de discriminação favoráveis (entre 0,5 e 3), a fidedignidade média não superou 0,83, ao passo que testes com 100 itens e os mesmos parâmetros de item facilmente superaram 0,95. Esse padrão sugere que testes curtos podem ser penalizados injustamente por critérios de fidedignidade pensados para testes longos, levando à eliminação de itens tecnicamente adequados apenas em razão do reduzido comprimento do instrumento.[18][3]
+A convergência entre Alfa e Ômega observada em testes com 50 e, sobretudo, 100 itens é consistente com achados prévios de que a vantagem do Ômega sobre o Alfa se concentra em cenários de poucos itens e baixas cargas fatoriais, tornando-se praticamente irrelevante quando o teste é suficientemente extenso. Isso indica que, em bancos de itens robustos, a escolha entre os dois coeficientes tem impacto prático limitado, mas em testes curtos — justamente o cenário mais sensível — a diferença entre os coeficientes se amplia e a interpretação exige mais cautela.[1][10][6][19]
+Como via de correção, a correção proposta neste trabalho apresenta os melhores resultados, sem a mesma sensibilidade ao tamanho do teste. A fórmula de Spearman-Brown oferece um instrumento simples para projetar a fidedignidade esperada caso o teste seja alongado ou encurtado, sob a suposição de itens paralelos. Aplicada de forma inversa, ela também permite estimar quantos itens adicionais equivalentes aos já existentes seriam necessários para atingir um nível-alvo de fidedignidade, oferecendo uma métrica objetiva de planejamento de comprimento de teste em substituição à comparação direta e descontextualizada de coeficientes brutos entre testes de tamanhos distintos. Ressalva-se, contudo, que a fórmula pressupõe itens estatisticamente paralelos (variâncias e correlações inter-item equivalentes), condição nem sempre satisfeita quando os itens adicionados diferem substancialmente em discriminação, como no desenho ML2 aqui simulado.[11][20][12][21]
+6. Conclusões e considerações finais
+O estudo de simulação confirmou que tanto o Alfa de Cronbach quanto o Ômega de McDonald são fortemente sensíveis ao número de itens do teste, crescendo de forma não linear e com retornos marginais decrescentes conforme o teste se alonga. A diferença entre os dois coeficientes, por sua vez, diminui conforme o teste cresce, tornando-se praticamente desprezível em testes de 100 itens neste desenho, mas relevante em testes curtos (25 itens), cenário em que a escolha do coeficiente e a interpretação do valor absoluto exigem maior cautela.[3][11]
+Do ponto de vista prático, os resultados recomendam que a eliminação de itens com base em Alfa ou Ômega não deve seguir limiares fixos e universais, especialmente em testes curtos; em vez disso, sugere-se contextualizar o valor observado por meio de correções de comprimento (Spearman-Brown) ou de referências específicas ao tamanho do teste em avaliação, com a correção empírica proposta neste trabalho. 
+Referências
+CRONBACH, L. J. Coefficient alpha and the internal structure of tests. Psychometrika, v. 16, n. 3, p. 297-334, 1951.
+MCDONALD, R. P. Test theory: A unified treatment. Mahwah, NJ: Lawrence Erlbaum Associates, 1999.
+DUNN, T. J.; BAGULEY, T.; BRUNSDEN, V. From alpha to omega: A practical solution to the pervasive problem of internal consistency estimation. British Journal of Psychology, v. 105, n. 3, p. 399-412, 2014.
+HAYES, A. F.; COUTTS, J. J. Use Omega Rather than Cronbach's Alpha for Estimating Reliability. But…. Communication Methods and Measures, v. 14, n. 1, p. 1-24, 2020.[^4]
+ZHANG, Z.; YUAN, K.-H. Robust Coefficients Alpha and Omega and Confidence Intervals with Outlying and Missing Data. Educational and Psychological Measurement, v. 76, n. 3, p. 387-411, 2016.[^2]
+ORÇAN, F. Comparison of Cronbach's Alpha and McDonald's Omega for Ordinal Data. International Journal of Assessment Tools in Education, v. 10, n. 4, 2023.[^1]
+SPEARMAN, C. Correlation calculated from faulty data. British Journal of Psychology, v. 3, n. 3, p. 271-295, 1910.
+BROWN, W. Some experimental results in the correlation of mental abilities. British Journal of Psychology, v. 3, n. 3, p. 296-322, 1910.
+LORD, F. M.; NOVICK, M. R. Statistical theories of mental test scores. Reading, MA: Addison-Wesley, 1968.
+MALKEWITZ, C. P. et al. Estimating reliability: A comparison of Cronbach's α, McDonald's ωt and the greatest lower bound. Social Sciences & Humanities Open, v. 7, n. 1, 2023.[^22]
+ANDRADE, D. F.; TAVARES, H. R.; VALLE, R. C. Teoria da Resposta ao Item: Conceitos e Aplicações. São Paulo: ABE, 2000.[^17]

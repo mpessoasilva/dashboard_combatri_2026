@@ -1,0 +1,162 @@
+Análise psicométrica com inteligência artificial e R: comparação de estimativas em uma prova de seleção para o 6º ano
+
+Flávia Moraes Simões1 
+
+1 Colégio Militar de Belo Horizonte, flaviamoraessimoes@gmail.com.
+
+	
+	
+	
+	
+	
+
+Resumo
+	Este trabalho compara resultados de análises psicométricas produzidos por uma implementação própria em Python, elaborada e executada com apoio do ChatGPT, e pelo pacote mirt no R. Foram examinadas as respostas de 971 candidatos aos 20 itens de uma prova de Matemática para ingresso no 6º ano do Ensino Fundamental. Compararam-se os parâmetros de discriminação e dificuldade do modelo 2PL e o alfa de Cronbach. As correlações foram de 0,9998 para discriminação e de 0,9963 para dificuldade, com diferenças absolutas médias de 0,0070 e 0,0651, respectivamente. O alfa foi igual a 0,767012 nos dois procedimentos. A maior divergência decorreu do limite () imposto na implementação em Python. Os resultados indicam elevada concordância nas condições examinadas, mas reforçam a necessidade de supervisão especializada, inspeção dos códigos, documentação das configurações e reprodução dos cálculos em implementações estatísticas reconhecidas.
+	Palavras-chave: Teoria da Resposta ao Item; inteligência artificial; psicometria; avaliação educacional; modelo 2PL.
+
+Introdução
+A Psicometria oferece diferentes modelos para produzir e interpretar informações sobre os testes. Na Teoria Clássica dos Testes (TCT), o desempenho é expresso pelo escore total, que, em testes constituídos por itens dicotômicos, corresponde à soma dos itens respondidos corretamente, e a matriz de respostas permite calcular indicadores como proporção de acertos, correlação item-total e consistência interna. A Teoria da Resposta ao Item (TRI), por sua vez, toma o item como unidade básica de análise e relaciona a probabilidade de acerto à habilidade ou proficiência do estudante. Essa relação é representada pela Curva Característica do Item (CCI), que permite examinar o funcionamento de itens com diferentes características ao longo da escala de proficiência (Pasquali, 2003; Soares; Soares; Santos, 2021).
+Entre os modelos empregados para itens dicotômicos, os modelos logísticos de um, dois e três parâmetros diferenciam-se pelas características consideradas. O modelo de um parâmetro contempla a dificuldade; o de dois parâmetros acrescenta a discriminação; e o de três parâmetros inclui também a probabilidade de acerto ao acaso, associado à assíntota inferior da CCI. No modelo logístico de dois parâmetros (2PL), adotado como referência neste estudo, o parâmetro () representa a discriminação do item e está relacionado à inclinação da CCI: quanto maior seu valor, mais acentuada é a mudança na probabilidade de acerto entre respondentes com proficiências próximas. O parâmetro () posiciona o item na escala de proficiência e corresponde ao nível em que a probabilidade de resposta correta é igual a 0,5. 
+Neste estudo, a consistência interna dos escores foi examinada pelo coeficiente alfa de Cronbach, que estima a confiabilidade a partir das relações entre os itens que compõem o teste. Para itens dicotômicos, como os analisados neste estudo, o coeficiente é equivalentes ao KR-20. (Soares; Soares; Santos, 2021).
+O R dispõe de pacotes específicos para a estimação de modelos da TRI, enquanto ferramentas de IA generativa, como o ChatGPT, podem auxiliar na elaboração e execução de códigos para análises estatísticas. Seu uso, contudo, requer supervisão, transparência e verificação dos resultados (UNESCO, 2023). Huang et al. (2024) encontraram elevada consistência entre o ChatGPT-4 e programas estatísticos tradicionais em análises epidemiológicas, mas identificaram limitações em procedimentos avançados. Na Psicometria, Apata e Ajose (2025) compararam estimativas dos modelos 1PL, 2PL e 3PL produzidas pelo ChatGPT-4o e pelo Stata, encontrando proximidade na dificuldade e discrepâncias na discriminação e no acerto ao acaso. 
+Este estudo compara os parâmetros do modelo 2PL e a consistência interna obtidos na análise das 20 questões de matemática de uma prova de seleção de 2024 para o 6º ano do Ensino Fundamental de um colégio público por duas implementações: uma elaborada e executada em Python com apoio do ChatGPT e outra realizada no R com o pacote mirt. Busca-se examinar a proximidade entre os resultados e discutir possibilidades e cuidados relacionados ao uso da IA generativa na análise psicométrica.
+Metodologia
+Neste trabalho, foram examinadas as respostas de 971 candidatos aos 20 itens da prova de 2024, codificadas como 1 para acerto e 0 para erro. Os dados foram disponibilizados mediante autorização institucional, sem identificação dos candidatos e da instituição.
+Na primeira etapa, a planilha em formato xlsx foi inserida em 21 de agosto de 2026, em uma conversa no modo Work do ChatGPT, da OpenAI, utilizando o modelo GPT-5.6 Sol com nível de raciocínio Leve. As solicitações foram apresentadas em linguagem natural, e a ferramenta identificou as linhas correspondentes aos candidatos, desconsiderou cabeçalhos e linhas de totalização e elaborou uma implementação própria dos modelos logísticos da TRI em Python 3.12.13. Os comandos foram simples e genéricos: “Faça a análise psicométrica dessas questões de acordo com a TRI”, anexando o arquivo, e “Gere e apresente separadamente a Curva Característica de cada item”.
+O código, analisado posteriormente ao resultado, foi executado no ambiente computacional disponibilizado pela ferramenta, sem emprego de pacote psicométrico específico. Foram empregados pandas 2.2.3  e openpyxl na leitura e na organização da planilha; NumPy 2.3.5, nas operações matriciais; e SciPy 1.17.0, na distribuição normal, na quadratura e na otimização. A partir do pedido em linguagem natural, o GPT-5.6 Sol gerou um script integrado, e não uma derivação dialogada passo a passo. Para a interpretação dos itens e para a comparação com o R, adotou-se o modelo 2PL. Nesse modelo, a probabilidade de o candidato (), com proficiência ), responder corretamente ao item () foi expressa por:
+
+em que () representa a discriminação e (), a dificuldade do item. O código elaborado pelo GPT-5.6 Sol adotou proficiência com distribuição normal padrão e estimou os parâmetros por máxima verossimilhança marginal, mediante algoritmo EM e quadratura Gauss-Hermite com 41 pontos. A otimização foi realizada pelo método L-BFGS-B, com limites de 0,15 a 4 para () e de −5 a 5 para (), limitantes estes decididos pela IA sem nenhum comando específico no prompt da autora. Essas configurações foram incorporadas pela IA sem terem sido estabelecidas no prompt da autora. Também foram calculados o alfa de Cronbach e os indicadores utilizados na análise dos itens, além de serem geradas as respectivas Curvas Características.  Não foram fornecidos códigos prévios, scripts de outra linguagem ou referências bibliográficas para orientar a programação, e o arquivo não registra fonte externa nem reprodução declarada de pacote. Para promover transparência e replicabilidade, os códigos integrais em Python e no R, a documentação, a matriz de respostas e as figuras estão disponíveis em um único repositório público: https://github.com/simoesfm/conbratri-tri-ia-r.
+Na segunda etapa, foi realizada uma análise independente no R, utilizando o mesmo modelo 2PL e o mesmo método geral de estimação, para comparação com os resultados da implementação em Python. Utilizou-se o R versão 4.6.1, em ambiente macOS com arquitetura ARM64. O pacote readxl foi empregado para importar a planilha; o mirt, para ajustar o modelo 2PL; e o psych, para calcular o alfa de Cronbach. A distribuição da proficiência também foi fixada como normal padrão. As Curvas Características dos Itens também foram geradas separadamente. Os parâmetros de discriminação e dificuldade obtidos pelas duas implementações foram comparados item a item por meio das diferenças absolutas e das correlações de Pearson. Comparou-se também o alfa de . Os códigos utilizados e os arquivos gerados foram mantidos para auditoria e reprodução dos procedimentos.
+Resultados
+A Tabela 1 apresenta os valores obtidos pelo código Python elaborado e executado no ambiente do GPT-5.6 Sol e pelo ajuste realizado no R com o pacote mirt.. Considerando os 20 itens, a correlação de Pearson foi de 0,9998 para a discriminação e de 0,9963 para a dificuldade. A diferença absoluta média entre as estimativas foi de 0,0070 para () e de 0,0651 para (). As correlações indicam forte associação linear entre as estimativas obtidas pelos , enquanto as diferenças absolutas médias permitem examinar a proximidade entre suas magnitudes.
+Tabela 1 – Comparação dos parâmetros estimados em Python com apoio do ChatGPT e no R
+Item
+(a) – IA
+(a) – R
+(b) – IA
+(b) – R
+Item
+(a) – IA
+(a) – R
+(b) – IA
+(b) – R
+1
+0,5548
+0,5524
+1,9492
+1,9773
+11
+1,0000
+0,9966
+0,4480
+0,4696
+2
+1,0729
+1,0672
+0,9527
+0,9775
+12
+1,4031
+1,3988
+0,5410
+0,5630
+3
+0,5349
+0,5322
+−0,1077
+−0,0884
+13
+0,7474
+0,7444
+1,1785
+1,2031
+4
+0,9667
+0,9634
+1,3832
+1,4080
+14
+0,6986
+0,6956
+0,2361
+0,2570
+5
+0,3961
+0,3388
+5,0000
+5,8537
+15
+0,2275
+0,2264
+2,0603
+2,0891
+6
+0,9273
+0,9223
+0,9738
+0,9988
+16
+0,9269
+0,9228
+0,8596
+0,8833
+7
+2,3365
+2,3284
+0,8695
+0,8934
+17
+0,2737
+0,2731
+−3,7389
+−3,7280
+8
+0,7926
+0,7901
+1,4546
+1,4793
+18
+1,4002
+1,3941
+0,8961
+0,9201
+9
+1,4810
+1,4757
+0,6836
+0,7064
+19
+0,2831
+0,2817
+2,6181
+2,6509
+10
+2,6170
+2,6027
+0,3532
+0,3755
+20
+1,5770
+1,5706
+0,5859
+0,6085
+Fonte: Elaborada pela autora com base nos resultados produzidos em Python e no R.
+A maior divergência ocorreu no item 5. Na implementação em Python por meio da IA, foram estimados () e (), enquanto o mirt produziu () e (). Conforme explicitado na metodologia, o primeiro procedimento restringiu, sem a determinação explícita, por decisão da IA, a dificuldade ao intervalo ). Realizou-se uma análise de sensibilidade excluindo o item 5 apenas do cálculo das medidas de comparação, sem alterar o ajuste original dos modelos. Nessa análise, a correlação passou a 0,999999 para a discriminação e a 1,000000, quando arredondada para seis casas decimais, para a dificuldade. As diferenças absolutas médias diminuíram para 0,0044 em () e 0,0236 em (). Esses resultados mostram que a discrepância global foi concentrada no item que atingiu o limite imposto e que, nos outros 19 itens, as estimativas apresentam associação linear praticamente perfeita e diferenças reduzidas de magnitude.
+Figura 1 – Curvas Características dos Itens 5 e 10 estimadas em Python e no R
+
+Fonte: Elaborada pela autora.
+A proximidade também pode ser examinada pelas Curvas Características dos Itens. Para a representação gráfica, foram selecionados os itens 5 e 10. O item 5 permite visualizar o efeito da restrição estabelecida para a dificuldade na implementação em Python. Já o item 10 foi escolhido por apresentar elevada discriminação e parâmetros muito próximos nos dois procedimentos. No item 5, as duas curvas indicaram dificuldade extrema e baixa discriminação, apesar da diferença associada à restrição computacional. No item 10, as curvas praticamente coincidiram e apresentaram elevada inclinação, confirmando a proximidade entre as estimativas dos dois procedimentos. Assim, embora a restrição computacional explique a diferença numérica entre os valores de dificuldade do Item 5, ambas as análises convergem na caracterização geral do item como extremamente difícil e pouco discriminativo. A sobreposição visual é compatível com as pequenas diferenças observadas entre as estimativas.
+A consistência interna também apresentou resultado coincidente: o alfa de Cronbach foi igual a 0,767012 nos dois procedimentos, ou 0,767 quando arredondado. Como as duas implementações utilizaram a mesma matriz de respostas e a mesma expressão para o coeficiente, essa igualdade evidencia que o cálculo foi reproduzido de forma coincidente para os dados analisados. O resultado não constitui, isoladamente, uma validação da análise realizada com apoio da IA, mas complementa a proximidade observada entre as estimativas dos parâmetros do modelo 2PL.
+Discussão
+Os resultados evidenciaram elevada proximidade entre as estimativas das duas implementações, além de coincidência no alfa de Cronbach. Essa proximidade deve ser considerada à luz das escolhas metodológicas comuns, pois ambas utilizaram a mesma matriz, o modelo 2PL, proficiência com distribuição normal padrão e estimação por máxima verossimilhança marginal. Assim, a implementação própria em Python, elaborada com apoio do ChatGPT, reproduziu de forma muito próxima os resultados do mirt. A principal divergência localizada foi no item 5. A implementação em Python limitou superiormente o parâmetro de dificuldade a (b = 5), enquanto o pacote mirt estimou (b = 5,8537). Essa restrição não foi definida pela autora no prompt fornecido ao ChatGPT. A solicitação, formulada em linguagem natural, consistiu em analisar psicometricamente a avaliação contida no arquivo, calcular os parâmetros da TRI e classificar os resultados, sem estabelecer modelo, método de estimação, valores iniciais ou limites para os parâmetros. Tais configurações foram definidas pelo código elaborado pela própria IA, que impôs o intervalo de −5 a 5 para (b). Apesar da diferença numérica, o item apresentou dificuldade extrema e baixa discriminação nos dois procedimentos, preservando-se a caracterização psicométrica geral do item. 
+A elevada proximidade aproxima-se dos resultados de Huang et al. (2024), embora os autores tenham analisado procedimentos estatísticos distintos da TRI. Já em uma comparação diretamente relacionada à TRI, Apata e Ajose (2025) encontraram proximidade nas estimativas de dificuldade do modelo 1PL produzidas pelo ChatGPT-4o e pelo Stata, mas observaram discrepâncias mais acentuadas na discriminação do 2PL e no parâmetro de acerto ao acaso do 3PL. No presente estudo, a proximidade no 2PL foi consideravelmente mais elevada. A comparação entre os resultados, entretanto, requer cautela. É possível considerar que o desenvolvimento recente dos modelos de IA e de seus ambientes de execução tenha contribuído para uma produção mais consistente de códigos estatísticos. Essa possibilidade é apenas uma hipótese, uma vez que este estudo utilizou o GPT-5.6 Sol, com nível de raciocínio Leve, enquanto Apata e Ajose (2025) empregaram o ChatGPT-4o e encontraram discrepâncias mais acentuadas. Entretanto, a maior proximidade observada não pode ser atribuída exclusivamente à evolução do modelo, pois as pesquisas utilizaram diferentes bases de dados, quantidades de itens, parametrizações e procedimentos de estimação. Estudos controlados, com os mesmos dados, prompts, modelos e configurações computacionais, seriam necessários para isolar os efeitos da evolução tecnológica.
+A interação em linguagem natural foi utilizada para a leitura da planilha, a organização da matriz de respostas e a elaboração da implementação em Python. Entretanto, a auditoria mostrou que algumas decisões relevantes, como os limites impostos aos parâmetros, a quantidade de pontos de quadratura e os critérios de convergência, foram incorporadas ao código sem terem sido solicitadas explicitamente pela pesquisadora. Essas escolhas somente se tornaram plenamente visíveis com a inspeção do código e a comparação dos resultados. A recomendação da Unesco (2023) quanto à supervisão humana, à transparência e à verificação das produções de IA mostra-se, portanto, particularmente pertinente às análises quantitativas. Ainda, os resultados indicam que a IA pode apoiar a elaboração de códigos e a exploração inicial dos dados, mas suas produções requerem inspeção e verificação, bem como conhecimento psicométrico para avaliar as escolhas e limitações da análise. As conclusões restringem-se à prova, modelo 2PL à implementação produzida nas condições examinadas.
+Conclusões e Considerações Finais
+Os resultados mostram que, nas condições examinadas, o código elaborado com apoio do GPT-5.6 Sol foi capaz de reproduzir com elevada proximidade as estimativas de uma implementação no R. A proximidade observada, entretanto, ocorreu em condições nas quais foram utilizadas a mesma matriz, o mesmo modelo e pressupostos e métodos de estimação semelhantes. Por isso, não pode ser interpretada como validação geral da ferramenta nem como evidência de que qualquer análise psicométrica produzida por IA apresentará resultados equivalentes aos de programas especializados.
+A experiência mostrou que a interação em linguagem natural possibilitou, no caso examinado, a organização de dados, a elaboração de códigos e a produção inicial de informações sobre a avaliação. Para professores e equipes pedagógicas, esses recursos podem apoiar a interpretação do funcionamento dos itens e a elaboração de devolutivas sobre os instrumentos aplicados. Esse uso, contudo, deve ser acompanhado de supervisão especializada, documentação das configurações, inspeção dos códigos e reprodução dos cálculos em implementações estatísticas reconhecidas.
+Referências
+APATA, Olukayode E.; AJOSE, Segun. Comparing traditional and AI-based IRT estimation: an empirical study. SSRN, 21 dez. 2025. DOI: https://doi.org/10.2139/ssrn.5955314. Disponível em: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5955314. Acesso em: 25 ago. 2026.
+HUANG, Yeen; WU, Ruipeng; HE, Juntao; XIANG, Yingping. Evaluating ChatGPT-4.0’s data analytic proficiency in epidemiological studies: a comparative analysis with SAS, SPSS, and R. Journal of Global Health, v. 14, art. 04070, 2024. DOI: https://doi.org/10.7189/jogh.14.04070.
+PASQUALI, Luiz. Psicometria: teoria dos testes na Psicologia e na Educação. Petrópolis: Vozes, 2003.
+SOARES, Denilson Junio Marques; SOARES, Talita Emidio Andrade; SANTOS, Wagner dos. Análise da qualidade psicométrica da prova de Matemática do Exame Nacional do Ensino Médio brasileiro de 2018. Actualidades Investigativas en Educación, v. 21, n. 1, p. 1–29, 2021. DOI: https://doi.org/10.15517/aie.v21i1.42338.
+UNESCO. Guidance for generative AI in education and research. Paris: UNESCO, 2023. Disponível em: https://unesdoc.unesco.org/ark:/48223/pf0000386693. Acesso em: 25 ago. 2026.

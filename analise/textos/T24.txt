@@ -1,0 +1,225 @@
+Os propósitos do ENEM
+
+Ewout ter Haar1, Gabriel Franco Dutra Leite2, Isac de Oliveira Silveira3, Pedro Henrique
+Casquel Ramires4, Samuel dos Anjos Souza5
+
+1
+    Instituto de Física – Universidade de São Paulo <ewout@usp.br>
+2
+    Instituto de Física – Universidade de São Paulo <gabriel.dutra@usp.br>
+3
+    Instituto de Física – Universidade de São Paulo <isac.olivsilveira@gmail.com>
+4
+    Instituto de Física – Universidade de São Paulo <casquel@usp.br>
+5
+    Instituto de Química – Universidade de São Paulo <samuel.dos.anjos@usp.br>
+
+Resumo
+      Investigamos as características psicométricas do ENEM em relação a um uso
+      concomitante dos propósitos da avaliação de seleção, certificação e
+      monitoramento. Comparamos a dificuldade dos itens com as notas da população
+      e mostramos que os itens do ENEM são difíceis demais para a grande maioria
+      dos candidatos, levando a incertezas padrão nas notas e intervalos de confiança
+      muito grandes. Mostramos que para notas entre 400 e 500 o ENEM fornece
+      pouca informação e que as notas são praticamente indistinguíveis daquelas
+      geradas por padrões de resposta aleatórios. Desta forma, usar o ENEM na para
+      fins de avaliação do ensino público brasileiro desconsideraria informações
+      relevantes sobre alunos com desempenho próximo ou abaixo da média. O uso de
+      Optimal Test Design mostra que as características dos itens do ENEM terão que
+      mudar substancialmente para atender a todos as finalidades demandadas do
+      exame.
+
+    Palavras-chave: ENEM; Curvas de Informação; Incerteza de medida; Optimal Test
+Design.
+                                               Os propósitos do ENEM
+
+1​   Introdução
+        Diferentes avaliações padronizadas têm seus diversos propósitos, como
+monitoramento das suas redes, regulação, responsabilização, seleção e direcionamento de
+alunos ou para fins formativos e diagnósticos. No Brasil, o ENADE vai acumular seu
+tradicional papel de regulação e monitoramento de cursos de graduação com uma nova
+funcionalidade de seleção de indivíduos para concursos (para cursos de licenciatura e
+medicina). No estado de São Paulo, o SARESP teve uma mudança parecida em 2023,
+acumulando a função de vestibular para as instituições de ensino superior públicas do estado.
+Nesta contribuição focaremos no ENEM, que desde 2009 teve como propósito principal a
+seleção de indivíduos para o ensino superior e que até 2016 (e a partir de 2025) acumula o de
+certificação do ensino médio. A partir de 2026 o exame substituirá o SAEB no 3° ano do
+ensino médio, virando um exame censitário e acumulando mais um propósito, o de
+monitoramento (MEC, 2026) e há chamadas para que sirva ainda para fins de
+responsabilização (FERNANDES; PAZELLO; SCORZAFAVE, 2024).
+Tabela 1. Uma classificação 2x2 de tipos de avaliação, indicando o propósito de avaliações pelas suas
+consequências e unidade de análise, com exemplos.
+
+                    Menos consequências                            Mais consequências
+
+    Grupos          Monitoramento                                  Regulação e responsabilização
+                      ●​ SAEB, SARESP, ENADE                          ●​ ENADE, SARESP
+                      ●​ ENEM > 2026
+
+    Indivíduos      Formativo e diagnóstico                        Seleção e certificação
+                       ●​ Sala de aula                                 ●​ ENEM, ENADE > 2024
+                                                                       ●​ SARESP > 2023
+Traduzido e adaptado de (HO, 2021) pelo autor.
+
+        É possível usar um único exame para múltiplos propósitos? A referência “Padrões de
+Avaliações Educacionais e Psicológicos” expressa dúvidas: “A maioria dos testes
+educacionais irão servir melhor uma finalidade do que outras; e quanto mais finalidades um
+teste educacional deve servir, quanto menos é provável que vá servir estas finalidades de
+forma efetiva”. (AERA; APA; NCME, 2014, p. 188), (tradução do autor). A mesma
+referência localiza o alvo da validação de testes no uso e interpretação dos resultados. As
+evidências de validade, portanto, se referem ao propósito do teste. A Tabela 1 mostra uma
+forma de classificar avaliações em termos do seu principal propósito, mostrando que cada vez
+mais, os mesmos exames são usados para múltiplos propósitos. Nesta contribuição
+mobilizamos uma perspectiva psicométrica que expõe as dificuldades que isso implica para
+fins de validade e confiabilidade destas avaliações.
+
+2​   Metodologia
+        A divulgação pelo INEP dos parâmetros TRI dos itens do ENEM, junto dos
+microdados, permite análises das propriedades psicométricas do exame. O banco de itens
+utilizado contém aproximadamente 1600 itens para cada área do conhecimento da prova:
+Linguagens, Códigos e suas Tecnologias (LC), Matemática e suas Tecnologias (MT),
+Ciências da Natureza e suas Tecnologias (CN), Ciências Humanas e suas Tecnologias (CH)).
+Primeiro, reproduzimos as notas divulgados pelo INEP usando Python1 ou bibliotecas de
+
+1
+    Veja https://atp.github.io/enem/TRI.html
+                                           Os propósitos do ENEM
+
+código aberto como o pacote mirt (CHALMERS, 2012) a partir dos padrões de resposta nos
+microdados (Figura 1, esquerda). A reprodução das notas ENEM2 traz também a incerteza
+padrão de cada nota, definida como o desvio padrão da distribuição posterior da nota (o INEP
+usa o método EAP (Expected a Posteriori) para calcular as notas). As incertezas condicionais
+são uma das contribuições deste trabalho, já que as incertezas não são divulgadas pelo INEP.
+       Com os parâmetros TRI dos itens, podemos caracterizar as provas do ENEM por meio
+das suas curvas de informação (DE ANDRADE; TAVARES; DA CUNHA VALLE, 2000).
+Calculamos a informação (dos itens e do teste) do modelo 3PL:
+                                           2
+                                         𝑎𝑖 𝑄𝑖(𝑃𝑖−𝑐𝑖)
+                                                       2                45
+                               𝐼𝑖(θ) =             2       e 𝐼𝑡𝑜𝑡𝑎𝑙(θ) = ∑ 𝐼𝑖(θ)
+                                           𝑃𝑖(1−𝑐𝑖)                     𝑖=1
+
+                                                                                      𝑎(𝑏−θ)
+com 𝑄 = 1 − 𝑃 e 𝑃 = 𝑃(θ; 𝑎, 𝑏, 𝑐) = 𝑐 + (1 − 𝑐)/(1 + 𝑒                       ). O valor
+σ = 1/ 𝐼(θ) pode ser interpretado como incerteza padrão (condicional). Na Figura 1
+(direita) mostramos a boa concordância desta curva com as incertezas calculadas pelo pacote
+mirt. As diferenças para notas baixas é devido ao efeito de shrinkage da multiplicação pelo
+prior normal do cálculo EAP da nota usado pelo INEP.
+Figura 1. Esquerda: notas e incertezas da prova CN de 2022 (amostra de 2000 notas). Direita: as
+incertezas padrão condicionais conforme calculado pela curva de informação do teste (linha) e pela
+largura da distribuição posterior (pontos).
+
+                      Fonte: elaborado pelos autores a partir dos microdados do ENEM.
+
+        Para uma prova de seleção ou credenciamento, onde é preciso distinguir bem entre
+indivíduos, a informação do teste deve ser suficientemente alta em determinadas
+proficiências. Um exame que visa avaliar de forma precisa toda a população participante deve
+ter uma curva de informação que é apreciável para todos os possíveis níveis de proficiência
+dessa população. Vamos avaliar o banco de itens históricos do ENEM sob a ótica da
+informação fornecida em vários níveis de proficiência, e sua possibilidade de produzir curvas
+de informação “achatadas” por meio de “Optimal Test Design” (OTD) (van der Linden,
+2016). Esta metodologia permite, dado um certo banco de itens, especificar uma curva de
+informação desejada e escolher, do banco, os itens que minimizem as distâncias até a curva
+
+2
+ Para transformar as notas na escala TRI N(0,1) para a escala ENEM é necessário usar os seguintes constantes
+de deslocamento (média) e escala (desvio padrão). MT: 500,0 e 129,7; CN: 501,1 e 113,1; CH: 501,4 e 112,3;
+LC: 500,0 e 108,1
+                                        Os propósitos do ENEM
+
+desejada. Usamos uma implementação de otimização linear (MILP, ou mixed integer linear
+programming) usando o pacote scipy.milp (HUANGFU; HALL, 2018).
+
+3​   Resultados
+        As incertezas padrão grandes para candidatos com notas próximas ou abaixo da média
+da população (Figura 1), já indicam que o atual ENEM é um instrumento inadequado para
+fins de avaliação sistêmica ou certificação. O banco de itens usados contém questões difíceis
+demais para a grande maioria da população de candidatos (que ainda pode ser enviesado para
+proficiências maiores, por causa da auto-seleção). A média do parâmetro de dificuldade b
+neste banco de aproximadamente 1600 itens por área varia de (1,8±0,9) para a área de MT até
+(0,7±0,8) para LC na escala TRI, enquanto o parâmetro de discriminação a é (2,1±0,8) para
+todos as àreas.
+Figura 2: Uma “mapa de Wright” comparando as dificuldades dos itens com a distribuição das notas
+dos candidatos.
+
+                    Fonte: elaborado pelos autores a partir dos microdados do ENEM.
+
+        Ao exemplo dos autores do relatório técnico da PISA (OECD, 2024, p. 295),
+calculamos a proficiência em que a probabilidade de resposta é 65% (“RP65”) para os itens
+do ENEM, a partir dos parâmetros da TRI fornecidos pelo INEP. No modelo 3PL usado para
+o ENEM, esta medida para a dificuldade dos itens é menos ambígua do que usar o parâmetro
+de dificuldade diretamente. A Figura 2 compara os itens da prova CN de 2022 com a
+distribuição das habilidades na população usando uma visualização chamada “mapa de
+Wright” (BRIGGS, 2019; WRIGHT, 1997), mostrando que a grande maioria dos itens está
+bem acima da proficiência da população.
+        Dois resultados relevantes para o propósito de certificação são mostrados na Figura 3.
+A certificação é dada para quem obtém 450 pontos em todas as provas (e 500 na Redação).
+Entretanto, uma fração grande de padrões de resposta aleatórios geram essa pontuação,
+devido a quantidade de itens difíceis e a metodologia EAP para calcular a nota (Figura 3,
+esquerda). Vemos na Figura 3 (direita) que a informação da prova em 450 pontos, que deveria
+ser apreciável, está muito baixa, e, aparentemente, sem relação com o fato da política pública
+estar em vigor (antes de 2017) ou não (após 2017). É notável o valor baixo da informação,
+não passando de 4 para MT e CN, comparado com 20-30 para notas por volta de 700 (Figura
+4) e tendo incertezas padrão maior do que meio desvio padrão (mais que 50 pontos).
+Figura 3. Esquerda: notas obtidas por simulação de respondentes aleatórios (chance de 0.2 de acerto).
+Direita: a informação do ENEM em 450 pontos (prova principal) entre 2009 e 2025. A linha
+                                        Os propósitos do ENEM
+
+pontilhada representa o momento em que o ENEM deixou de certificar o ensino médio (voltou em
+2025).
+
+                    Fonte: elaborado pelos autores a partir dos microdados do ENEM.
+
+Um exame que atende os três propósitos: seleção, certificação e monitoramento deve fornecer
+informação suficiente em todo o intervalo de proficiências da população avaliada. A Figura 4
+(esquerda) mostra que os exames analisados fornecem pouca informação para os candidatos
+com uma proficiência média ou abaixo dela. Para fins de argumentação, podemos especificar
+que estaríamos satisfeitos com uma informação mínima de 16 (0,25 desvios padrão de
+incerteza) entre − 1 < θ < 2 e perguntar se é possível, em princípio, construir uma prova
+assim com itens do banco de itens utilizados. Na Figura 4 (direita) mostramos que o
+algoritmo MILP consegue escolher 45 dos 1600 itens da área CN quando os pontos de
+controle começam em -0,5. Porém o problema não é viável para as áreas de MT, CN e CH se
+fixamos a informação mínima em 16 para θ >− 1, simplesmente porque não há itens
+suficientes com b < 0.
+Figura 4. Esquerda: 20 curvas de informação, cada uma selecionando aleatoriamente uma amostra de
+45 itens do banco histórico de itens da área CN. Direita: uma curva de informação usando 45 itens do
+mesmo banco, escolhido pelo algoritmo MILP, com uma especificação que a informação mínima
+deveria ser 16 em algumas proficiências de controle de -0,5 até 2.
+                                        Os propósitos do ENEM
+
+                    Fonte: elaborado pelos autores a partir dos microdados do ENEM.
+
+4​   Considerações Finais
+
+        Mostramos que provas montadas a partir da série histórica dos itens do ENEM não
+são adequadas para avaliações com três propósitos concomitantes: seleção, certificação e
+monitoramento, uma vez que não fornecem informação suficiente para todos os níveis de
+proficiência da população avaliada. Seria possível encomendar e incluir itens mais fáceis nos
+exames, mas isso, inevitavelmente, viria às custas da informação na região de altas
+proficiências, tornando o processo de seleção ainda mais sujeito às incertezas de medida.
+Desta forma, construir itens com alta discriminação (mais informativos) e baixa dificuldade é
+urgente para assegurar a qualidade da avaliação para fins de monitoramento e ainda mais para
+responsabilização.
+
+5​   Referências
+AERA; APA; NCME. Standards for educational and psychological testing. Washington, DC:
+American Educational Research Association, 2014.
+BRIGGS, D. C. Interpreting and visualizing the unit of measurement in the Rasch Model.
+Measurement, v. 146, p. 961–971, nov. 2019.
+CHALMERS, R. P. mirt: A Multidimensional Item Response Theory Package for the R
+Environment. Journal of Statistical Software, v. 48, n. 6, 2012.
+DE ANDRADE, D. F.; TAVARES, H. R.; DA CUNHA VALLE, R. Teoria da Resposta ao Item: conceitos
+e aplicações. ABE, São Paulo, 2000.
+FERNANDES, R.; PAZELLO, E. T.; SCORZAFAVE, L. G. Exames de Ingresso no Ensino Superior,
+Viés de Seleção e Accountability Educacional: Uma Análise do ENEM. 2024.
+HO,       A.    Questions      to      ask     about      educational     tests.   Disponível em:
+<https://scholar.harvard.edu/files/andrewho/files/testquestions.pdf>.
+HUANGFU, Q., HALL, J. A. J.. Parallelizing the dual revised simplex method, Mathematical
+Programming Computation, 10 (1), 119-142, 2018. DOI: 10.1007/s12532-017-0130-5
+MEC. PORTARIA MEC No 422, DE 15 DE MAIO DE 2026 - DOU - Imprensa Nacional. Disponível em:
+<https://www.in.gov.br/web/dou/-/portaria-mec-n-422-de-15-de-maio-de-2026-706288933>.
+OECD. PISA 2022 Technical Report. [s.l.] OECD, 2024.
+VAN DER LINDEN, Wim J. Optimal Test Design. In: VAN DER LINDEN, Wim J. (Org.). Handbook of item
+response theory. Boca Raton: CRC Press, Taylor & Francis Group, 2016. v. 3.
+WRIGHT, B. D. A History of Social Science Measurement. Educational Measurement:
+Issues and Practice, v. 16, n. 4, p. 33–45, 1997.

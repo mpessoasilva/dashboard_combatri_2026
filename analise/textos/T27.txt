@@ -1,0 +1,229 @@
+Efeito da posição dos itens no desempenho:
+              evidências da prova de Ciências Humanas do Enem 2025
+
+          Priscilla Araujo Alcici Jorge1, Gabriel Augusto Martins Rodrigues2
+                               Denilson Junio Marques Soares3
+
+               1
+                   Universidade Federal de Minas Gerais; prialcici@gmail.com
+          2
+              Universidade Federal de Minas Gerais; gabriel.estped@gmail.com
+          3
+              Instituto Federal de Minas Gerais; denilson.marques@ifmg.edu.br
+
+                                          Resumo
+    Este estudo investiga o efeito da posição dos itens na prova de Ciências
+    Humanas e suas Tecnologias do Enem 2025. Foram analisados os microdados da
+    aplicação regular, considerando os quatro cadernos de prova e os 30 itens com
+    percentual médio de acerto entre 30% e 70%. Para cada item, compararam-se os
+    percentuais de acerto nas posições mais precoce e mais tardia, mediante testes de
+    proporções e razões de chances. Todos os itens apresentaram menor percentual
+    de acerto na posição tardia, com diferenças entre 0,11 e 7,14 pontos percentuais;
+    em 29 dos 30 itens, as diferenças foram estatisticamente significativas após
+    ajuste para múltiplas comparações. O percentual médio de acerto apresentou
+
+    resultados indicam associação entre posição e desempenho e suscitam questões
+    sobre a invariância do funcionamento dos itens entre cadernos do Enem.
+
+    Palavras-chave: Enem; efeito de posição; psicometria; invariância dos itens.
+
+1   Introdução
+       Na aplicação regular do Exame Nacional do Ensino Médio (Enem), cada área do
+conhecimento é apresentada em quatro cadernos, nos quais os mesmos itens podem
+ocupar posições distintas. Essa característica da montagem das provas permite examinar
+o efeito de posição (item position effect), definido pela associação entre a posição
+ocupada pelo item no teste e o desempenho dos participantes (Leary e Dorans, 1985;
+Alexandrowicz e Matschinger, 2008).
+        A existência desse efeito constitui uma questão psicométrica porque pressupõe
+que o funcionamento do item pode variar em razão de sua localização na prova. Se um
+mesmo item apresenta probabilidades de acerto distintas conforme a posição ocupada,
+sua dificuldade observada não depende apenas das características do item e da
+proficiência dos participantes. Essa variação coloca em questão a invariância do
+                                                 1
+funcionamento dos itens entre cadernos e pode introduzir uma fonte de variância não
+relacionada ao construto avaliado, com implicações para a validade das interpretações
+dos resultados (Leary e Dorans, 1985; Hohensinn et al., 2008).
+        Nesse contexto, pergunta-se: a posição ocupada por um mesmo item nos
+diferentes cadernos do Enem 2025 está associada ao desempenho dos participantes? O
+objetivo deste estudo é investigar o efeito da posição dos itens na prova de Ciências
+Humanas e suas Tecnologias do Enem 2025, considerando a direção e a magnitude das
+diferenças nos percentuais de acerto entre as posições ocupadas nos diferentes cadernos.
+
+2    Metodologia
+       Trata-se de um estudo quantitativo, realizado a partir dos microdados do Enem de
+2025, disponibilizados pelo Instituto Nacional de Estudos e Pesquisas Educacionais
+Anísio Teixeira (Inep) (Brasil, 2026). Foram analisados os participantes presentes na
+aplicação regular da prova de Ciências Humanas e suas Tecnologias, totalizando
+3.368.961 respondentes, distribuídos de forma praticamente uniforme entre os quatro
+cadernos de prova, conforme indicado na Tabela 1.
+
+    Tabela 1: Distribuição dos participantes segundo o caderno da prova de Ciências
+                                Humanas do Enem 2025
+
+                    Caderno            Código               N                %
+                      Azul               1447            842.168           25,00
+                    Amarelo              1448            842.935           25,02
+                     Branco              1449            842.112           25,00
+                      Verde              1450            841.746           24,99
+                      Total                -             3.368.961         100,00
+         Fonte: Elaboração própria com base nos microdados do Enem 2025.
+
+        A análise explorou a variação da posição dos mesmos itens entre os diferentes
+cadernos de prova. Para cada item, foram identificadas as posições ocupadas nos quatro
+cadernos e determinadas sua posição mais precoce, sua posição mais tardia e a amplitude
+entre essas posições. Como critério analítico, foram selecionados os itens com percentual
+médio de acerto entre 30% e 70%, faixa adotada para representar itens de dificuldade
+intermediária. Esse recorte busca reduzir a influência de efeitos de piso e teto, uma vez
+que itens com percentuais de acerto muito baixos ou muito elevados apresentam menor
+margem para variação do desempenho e, consequentemente, podem dificultar a
+identificação de diferenças associadas à posição do item.
+       Para cada item selecionado, foram comparados os percentuais de acerto no
+caderno em que ocupava sua posição mais precoce e naquele em que ocupava sua
+posição mais tardia. A diferença foi expressa em pontos percentuais, permitindo avaliar
+sua magnitude e direção. A igualdade entre as proporções de acerto foi examinada por
+                                                     2
+meio de teste de comparação de proporções, adotando-se nível de significância de 5%.
+Os valores de p foram ajustados para múltiplas comparações pelo procedimento de
+Benjamini-Hochberg (BH). Considerando o elevado tamanho amostral, a significância
+estatística foi interpretada conjuntamente com a magnitude das diferenças e com a razão
+de chances (odds ratio OR), acompanhada de intervalo de confiança de 95%.
+       Adicionalmente, examinou-se, por meio do coeficiente de correlação de
+Spearman, a associação entre o percentual médio de acerto e a magnitude absoluta da
+diferença observada entre as posições. Todas as análises foram realizadas com o auxílio
+do software R (R Core Team, 2026).
+
+3    Resultados
+        Foram analisados 30 itens de Ciências Humanas com percentual médio de acerto
+entre 30% e 70%. Em todos eles, o percentual de acerto foi menor quando o item ocupou
+sua posição
+percentuais (p.p.), sendo estatisticamente significativas, após o ajuste para múltiplas
+comparações, em 29 dos 30 itens (96,7%).
+       A maior diferença foi observada no item 140583, cujo percentual de acerto
+passou de 64,48%, na posição 1, para 57,35%, na posição 12, uma redução de 7,14 p.p.
+A razão de chances foi de 1,350 (IC95%: 1,342 1,359), correspondendo a odds de acerto
+35,0% maiores na posição mais precoce. Na sequência, as maiores diferenças foram
+
+único item sem diferença estatisticamente significativa foi o 140518, com 52,11% de
+
+        Quanto à magnitude das diferenças, sete itens (23,3%) apresentaram variação
+inferior a 1 p.p.; 15 (50,0%), entre 1 e menos de 3 p.p.; sete (23,3%), entre 3 e menos de
+5 p.p.; e um (3,3%), diferença igual ou superior a 5 p.p. Assim, 23 itens (76,7%)
+apresentaram redução de pelo menos 1 p.p. e oito (26,7%), de pelo menos 3 p.p.
+conforme indicado na Tabela 2.
+
+Tabela 2: Distribuição dos itens segundo a magnitude da diferença no percentual de
+                 acerto entre as posições mais precoce e mais tardia
+       Magnitude da diferença          Critério      N° de Itens        %
+              Muito pequena                     < 1 p.p.                7                 23,3
+                 Pequena                      1 a < 3 p.p.             15                 50,0
+                 Moderada                     3 a < 5 p.p.              7                 23,3
+                 Elevada                       >= 5p.p.                 1                  3,3
+                  Total                            -                   30                100,00
+Fonte: Elaboração própria com base nos microdados do Enem 2025/Inep.
+Nota: As categorias foram definidas operacionalmente neste estudo, com finalidade descritiva, a partir do
+valor absoluto da diferença, em pontos percentuais, entre os percentuais de acerto observados nas posições
+precoce e tardia.
+
+                                                        3
+        Entre os 30 itens analisados, o percentual médio de acerto apresentou associação
+
+0,011), conforme apresentado no Gráfico 1. Itens com maiores percentuais médios de
+acerto tenderam, portanto, a apresentar maiores diferenças absolutas entre as posições
+precoce e tardia.
+ Gráfico 1: Relação entre o percentual médio de acerto e a magnitude da diferença
+            entre posições nos itens de Ciências Humanas do Enem 2025
+
+Fonte: Elaboração própria com base nos microdados do Enem 2025/Inep.
+
+3.1   Discussão
+        Os resultados mostram que a posição ocupada pelo item esteve associada ao
+desempenho dos participantes. Todos os itens analisados apresentaram menor percentual
+de acerto quando posicionados mais tardiamente, com diferenças de até 7,14 pontos
+percentuais. Esse resultado é compatível com o efeito de posição (item position effect)
+descrito na literatura, segundo o qual o desempenho em um mesmo item pode variar
+conforme sua localização no teste (Leary e Dorans, 1985; Alexandrowicz e Matschinger,
+2008).
+        No Enem, Barichello, Guimarães e Figueiredo Filho (2022) encontraram
+resultado semelhante na prova de Matemática de 2016, com redução da proporção de
+respostas corretas à medida que os itens eram apresentados mais próximos do final da
+prova. Embora esse padrão possa estar associado a processos como fadiga e pressão de
+tempo (time pressure), tais mecanismos não foram mensurados neste estudo e não
+podem ser identificados a partir dos resultados obtidos.
+         A magnitude das diferenças variou entre os itens. O único item sem diferença
+estatisticamente significativa foi apresentado nas posições 36 e 44, ambas no último
+tercil da prova. Caso processos associados à progressão no teste incidam sobre o
+desempenho, a localização tardia do item nas duas condições pode reduzir o contraste
+entre elas. Essa interpretação sugere que a análise do efeito de posição pode considerar a
+                                                 4
+localização do item ao longo da prova, e não apenas a distância entre as posições que ele
+ocupa nos diferentes cadernos. Essa hipótese, contudo, não pode ser testada diretamente
+com os dados utilizados.
+        A magnitude das diferenças apresentou associação positiva com o percentual
+                             p = 0,011), indicando que itens com maior percentual de
+acerto tenderam a apresentar maiores diferenças entre as posições precoce e tardia. Esse
+resultado mostra que a variação associada à posição não ocorreu com a mesma
+magnitude em todos os itens. A heterogeneidade dos efeitos entre itens também é
+observada na literatura sobre efeitos de posição, que aponta que as características dos
+itens podem interferir na forma como seu funcionamento se altera ao longo do teste
+(Alexandrowicz e Matschinger, 2008; Hohensinn et al., 2008).
+        Do ponto de vista psicométrico, o principal resultado é que o desempenho em um
+mesmo item variou conforme sua localização no caderno. Se a probabilidade de acerto
+depende, em alguma medida, da posição ocupada, a dificuldade empiricamente
+observada pode refletir não apenas as características do item e a proficiência dos
+participantes, mas também uma condição de sua apresentação.
+         Essa questão remete à invariância do funcionamento dos itens entre formas de
+prova, uma das implicações psicométricas discutidas na literatura sobre efeitos de
+posição (Leary e Dorans, 1985; Hohensinn et al., 2008). No contexto do Enem, Franklin
+et al. (2016) identificaram variações no parâmetro de dificuldade de itens apresentados
+em diferentes posições nos cadernos. A posição pode, nesse sentido, constituir uma fonte
+de variância não relacionada ao construto (construct-irrelevant variance). Seus efeitos
+sobre os parâmetros da TRI, as proficiências estimadas e a validade das interpretações
+dos resultados, contudo, não foram examinados neste estudo.
+
+4   Conclusões e Considerações Finais
+        Os resultados mostram que o percentual de acerto dos itens de Ciências Humanas
+do Enem 2025 variou em função da posição ocupada nos diferentes cadernos, com
+menor desempenho nas posições mais tardias em todos os itens analisados. O achado
+suscita questões sobre a invariância do funcionamento dos itens entre formas de prova.
+       O estudo foi realizado com uma única área e uma única edição do Enem e não
+examinou possíveis repercussões das diferenças observadas sobre os parâmetros dos
+itens e as proficiências estimadas pela TRI. Além disso, a análise dos microdados
+permite identificar a associação entre posição e desempenho, mas não determinar os
+mecanismos que produzem essa associação.
+        Estudos futuros podem estender a análise às demais áreas e a outras edições do
+Enem, de modo a verificar a ocorrência e a estabilidade do padrão em diferentes
+aplicações. Também podem investigar se as diferenças associadas à posição se refletem
+nos parâmetros dos itens e nas proficiências estimadas pela TRI. A utilização de dados
+de tempo de resposta, padrões de omissão e outros indicadores do comportamento dos
+participantes ao longo da prova, bem como de delineamentos que controlem a posição
+dos itens, pode contribuir para examinar mecanismos como fadiga (fatigue) e pressão de
+tempo (time pressure). Esses desdobramentos permitem ampliar a investigação das
+relações entre posição, invariância dos itens e comparabilidade dos resultados.
+                                               5
+5   Referências
+
+ALEXANDROWICZ, R.; MATSCHINGER, H. Estimation of item location effects by
+means of the generalized logistic regression model: a simulation study and an
+application. Psychology Science Quarterly, 2008.
+BARICHELLO, L.; GUIMARÃES, R. S.; FIGUEIREDO FILHO, D. B. A formatação
+da prova afeta o desempenho dos estudantes? Evidências do Enem (2016). Educação e
+Pesquisa, São Paulo, v. 48, e241713, 2022.
+BRASIL. Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira (Inep).
+Microdados do Exame Nacional do Ensino Médio (Enem) 2025. Brasília, DF: Inep,
+2026. Disponível em: https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-
+abertos/microdados/enem. Acesso em: 15 ago. 2026.
+FRANKLIN, L. M.; SOUSA, L. A. de; PONTES JUNIOR, J. A. de F.; TROMPIERI
+FILHO, N. Efeito de posição na dificuldade dos itens do Enem. In: REUNIÃO DA
+ASSOCIAÇÃO BRASILEIRA DE AVALIAÇÃO EDUCACIONAL (ABAVE). Anais...
+[S. l.]: ABAVE, 2016.
+HOHENSINN, C.; KUBINGER, K. D.; REIF, M.; HOLOCHER-ERTL, S.;
+KHORRAMDEL, L.; FREBORT, M. Examining item-position effects in large-scale
+assessment using the Linear Logistic Test Model. Psychology Science Quarterly, v. 50,
+n. 3, 2008.
+LEARY, L. F.; DORANS, N. J. Implications for altering the context in which test items
+appear: a historical perspective on an immediate concern. Review of Educational
+Research, v. 55, n. 3, p. 387-413, 1985.
+R CORE TEAM. R: a language and environment for statistical computing. Vienna: R
+Foundation for Statistical Computing, 2026.
+
+                                             6

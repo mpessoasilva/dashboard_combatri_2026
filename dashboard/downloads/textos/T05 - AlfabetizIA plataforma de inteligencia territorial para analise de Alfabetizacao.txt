@@ -1,0 +1,189 @@
+​                                    ​
+
+       Alfabetizia: plataforma de inteligência territorial para análise de
+                                Alfabetização
+
+           Carlos E. R. Santos1, Mozart N. Ramos 2, Larissa P. Maciel3, SARTORI, P. D.
+                                  R.4, Leomar D. Silva5
+
+       1
+           Cátedra Sérgio Henrique Ferreira do Instituto de Estudos Avançados da USP-
+Polo Ribeirão Preto, carlosedrs@alumni.usp.br
+       2
+           Cátedra Sérgio Henrique Ferreira do Instituto de Estudos Avançados da USP-
+Polo Ribeirão Preto, mozartnramos@gmail.com
+       3
+           Cátedra Sérgio Henrique Ferreira do Instituto de Estudos Avançados da USP-
+Polo Ribeirão Preto, larissa.maciel@alumni.usp.br
+       4
+           Cátedra Sérgio Henrique Ferreira do Instituto de Estudos Avançados da USP-
+Polo Ribeirão Preto, pedro.sartori@usp.br
+       5
+           Cátedra Sérgio Henrique Ferreira do Instituto de Estudos Avançados da USP-
+Polo Ribeirão Preto, leomar.silva@alumni.usp.br
+
+                                        Resumo
+O Indicador Criança Alfabetizada é fundamental para o monitoramento das metas
+nacionais de alfabetização; contudo, sua usabilidade enfrenta obstáculos decorrentes da
+dispersão entre dados educacionais, demográficos e geográficos. Este trabalho apresenta
+o Alfabetizia, um portal de inteligência territorial desenhado para superar a
+fragmentação dessas informações. A plataforma vai além da visualização descritiva de
+dados, oferecendo um ecossistema analítico que integra resultados de proficiência, metas
+e contextos socioeconômicos em uma interface unificada. Por meio de recursos de
+análise comparativa, acompanhamento longitudinal e benchmarking municipal, o
+sistema permite que gestores identifiquem desigualdades territoriais e priorizem
+intervenções fundamentadas em evidências. Com uma base de dados que processa
+milhares de dados municipais, o Alfabetizia consolida uma experiência de diagnóstico
+exploratório, auxiliando na formulação de hipóteses e na qualificação do debate
+educacional, gerando um ponto de partida para análises causais aprofundadas.
+
+     Palavras-chave: avaliação educacional; alfabetização; visualização de dados; análise
+territorial; gestão educacional.
+                                                1
+​   ​
+
+        1
+        Plataforma de inteligência territorial para análise de Alfabetização
+
+1​   Introdução
+        O Compromisso Nacional Criança Alfabetizada instituiu uma ação federativa para
+assegurar a alfabetização ao final do 2º ano do ensino fundamental e explicita a articulação
+dos sistemas de avaliação como suporte à tomada de decisão nas redes e escolas (BRASIL,
+2023). Nesse contexto, a Pesquisa Alfabetiza Brasil estabeleceu em 743 pontos da escala do
+Sistema de Avaliação da Educação Básica (Saeb) o padrão nacional de alfabetização. A partir
+desse corte, o Indicador Criança Alfabetizada passou a expressar o percentual de estudantes
+que alcançam o padrão, com resultados municipais e estaduais e metas anuais de 2024 até
+2030 (INEP, 2026).
+
+        A divulgação pública do indicador amplia a capacidade de acompanhamento da
+política, mas não elimina uma dificuldade operacional: resultados, metas, atributos
+socioeconômicos e geometrias territoriais permanecem distribuídos em arquivos e portais
+distintos. Para gestores municipais e estaduais, essa fragmentação torna mais complexa a
+consulta de um valor isolado para perguntas comparativas, como: onde se concentram os
+menores resultados? Quais municípios avançaram entre edições? Quem atingiu a meta?
+Territórios com perfis demográficos semelhantes apresentam desempenhos distintos?
+
+        A geovisualização interativa é adequada a esse problema porque combina visão geral,
+filtragem e detalhamento sob demanda (SHNEIDERMAN, 1996). Quando articulada a
+procedimentos analíticos, ela também pode apoiar o raciocínio espaço-temporal e a
+formulação de hipóteses para decisão, sem confundir exploração visual com evidência causal
+(ANDRIENKO et al., 2007). Com essa perspectiva, foi desenvolvido o Alfabetizia, um portal
+web que integra avaliação educacional, contexto demográfico e representação territorial.
+
+2​  Metodologia
+       Trata-se de pesquisa aplicada, de caráter descritivo-exploratório, materializada no
+desenvolvimento de um produto tecnológico. A camada educacional utiliza as planilhas
+públicas de resultados e metas da Avaliação da Alfabetização disponibilizadas pelo Inep
+(INEP, 2026b). A camada contextual reúne dados de população, produto interno bruto (PIB),
+PIB per capita, Índice de Desenvolvimento Humano, escolarização e mortalidade infantil
+consultados na base Cidades e Estados (IBGE, 2026). A dimensão espacial utiliza malhas
+municipais do IBGE, vinculadas por códigos de município (IBGE, 2024).
+
+        Durante a preparação, os arquivos tabulares foram convertidos para CSV, seus
+identificadores e categorias foram normalizados e os valores decimais foram padronizados.
+Os dados de municípios foram ligadas pelo código municipal do IBGE (identificador único) e
+submetidas a regras de unicidade. O modelo relacional organiza estados, municípios,
+indicadores, metas e matrículas; migrações Alembic registraram a evolução do esquema.
+Valores ausentes são mantidos como nulos e são apresentados como “não informado”,
+evitando sua transformação em zero.
+        A aplicação possui três camadas. No backend, Python, FastAPI e SQLAlchemy
+fornecem uma API REST com consultas de localização, mapa, ranking, metas e agregações.
+No frontend, React e TypeScript coordenam filtros de unidade federativa, ano e rede; D3.js
+renderiza mapas coropléticos sobre as malhas municipais.
+        Plataforma de inteligência territorial para análise de Alfabetização
+
+        O portal implementa quatro modos cartográficos: níveis de alfabetização, atingimento
+de metas, evolução em pontos percentuais e seleção de municípios por faixas de PIB, PIB per
+capita, população e IDH.
+
+        As análises incluem ranking, variação temporal, comparação indicador–meta e
+correlação de Pearson. O módulo de relatório permite definir estado, período e rede; sua
+projeção temporal é uma extrapolação linear identificada como cenário, não como previsão.
+A verificação técnica compreendeu a auditoria das chaves, a inspeção dos fluxos e a
+compilação de produção do frontend. Avaliações de usabilidade com usuários finais ainda
+não foram realizadas.
+
+3​   Resultados e Discussão
+       O resultado principal é um protótipo funcional que consolida em uma interface
+integrada (Figura 1), dados educacionais, demográficos e territoriais. A base de dados atual
+contém 11.133 observações do Indicador Criança Alfabetizada para 2023, 2024 e 2025,
+associadas a 3.715 municípios de 15 unidades federativas que está sendo atualizada
+gradualmente priorizando estados parceiros de interesse para o projeto. O banco também
+reúne 24.935 registros municipais de metas entre 2024 e 2030. As malhas de municípios
+estão disponíveis para as 27 unidades federativas, permitindo ampliar a cobertura à medida
+que novas cargas educacionais forem incorporadas.
+
+                           Figura 1. Página inicial da plataforma
+        No mapa, cores representam os cinco níveis do indicador, o cumprimento de metas ou
+a direção da mudança temporal; municípios sem observação recebem codificação neutra
+(Figura 1). A seleção de um território abre um painel com resultado, participação na
+avaliação, posição, metas futuras e atributos contextuais. A lista ordenada e a busca textual
+permitem passar da visão estadual para o cenário municipal, enquanto o modo de
+similaridade possibilita comparar localidades em faixas socioeconômicas definidas pelo
+usuário, exemplo: Filtrar municípios com PIB entre 50 e 100 bilhões de reais. Esse
+encadeamento operacionaliza a sequência visão geral, filtro e detalhe e reduz a necessidade
+        Plataforma de inteligência territorial para análise de Alfabetização
+
+de conciliar manualmente planilhas e arquivos geográficos, permite que todos os outros 3
+modos de visualização sejam aplicados somente nesses municípios similares, seja por faixa
+de pib, pib per capita, recorte populacional, IDH, ou outros indicadores que serão
+considerados no futuro.
+        A página Estatísticas complementa o mapa com distribuições por nível, participação
+de matrículas, proporção de municípios que atingiram a meta, séries temporais e associações
+entre alfabetização, PIB per capita, IDH e composição das matrículas. O Relatório
+parametrizado identifica grupos abaixo de um limiar, resume perfis populacionais, de IDH e
+escolarização e calcula cenários de trajetória até uma meta escolhida. Assim, o Alfabetizia
+não apenas mostra “quanto” cada município obteve, mas favorece perguntas sobre “onde”,
+“quando” e “em quais contextos” ocorrem diferenças.
+        Esses recursos possuem valor diagnóstico, mas exigem leitura responsável.
+Correlação não implica causalidade; resultados municipais não autorizam inferências sobre
+estudantes individuais; e os indicadores demográficos podem ter anos de referência distintos.
+A cobertura educacional ainda é parcial e a camada detalhada de matrículas está disponível
+prioritariamente para São Paulo. Também faltam testes com gestores e pesquisadores para
+medir entendibilidade, tempo de tarefa e utilidade para tomada de decisões.
+
+4​   Conclusões e Considerações Finais
+        O Alfabetizia demonstra a viabilidade de transformar dados públicos dispersos da
+avaliação da alfabetização em um ambiente integrado de exploração territorial. Sua
+contribuição está na combinação de rastreabilidade dos dados, consultas reprodutíveis, mapas
+interativos e análises descritivas orientadas a problemas de gestão educacional. O protótipo
+pode apoiar a identificação de desigualdades, o acompanhamento de metas e a seleção
+fundamentada de casos para investigação, fornecendo subsídios para avaliações pedagógicas
+locais ou desenhos causais.
+       Como próximos passos, propõem-se completar a cobertura nacional, automatizar
+controles de qualidade e proveniência, realizar estudos de usabilidade com os públicos-alvo e
+documentar protocolos de interpretação. A estrutura também oferece base para recursos
+futuros de inteligência artificial, como consulta em linguagem natural e síntese de
+informações assistidas.
+
+5​ Referências
+ANDRIENKO, G.; ANDRIENKO, N.; JANKOWSKI, P.; KEIM, D.; KRAAK, M.-J.;
+MACEACHREN, A.; WROBEL, S. Geovisual analytics for spatial decision support: setting
+the research agenda. International Journal of Geographical Information Science, v. 21, n. 8, p.
+839–857, 2007. DOI: 10.1080/13658810701349011.
+BRASIL. Decreto nº 11.556, de 12 de junho de 2023. Institui o Compromisso Nacional
+Criança Alfabetizada. Diário Oficial da União: Brasília, DF, 13 jun. 2023. Disponível em:
+https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/d11556.htm. Acesso em:
+16 ago. 2026.
+        Plataforma de inteligência territorial para análise de Alfabetização
+
+IBGE — INSTITUTO BRASILEIRO DE GEOGRAFIA E ESTATÍSTICA. Cidades e
+Estados.      Rio       de      Janeiro:       IBGE,       2026.     Disponível em:
+https://www.ibge.gov.br/cidades-e-estados/. Acesso em: 16 ago. 2026.
+IBGE — INSTITUTO BRASILEIRO DE GEOGRAFIA E ESTATÍSTICA. Malhas
+territoriais  2024.      Rio    de     Janeiro:    IBGE,       2024.      Disponível     em:
+https://www.ibge.gov.br/geociencias/organizacao-do-territorio/malhas-territoriais/15774-malh
+as.html. Acesso em: 16 ago. 2026.
+INEP — INSTITUTO NACIONAL DE ESTUDOS E PESQUISAS EDUCACIONAIS
+ANÍSIO TEIXEIRA. Avaliação da Alfabetização. Brasília, DF: Inep, 2026a. Disponível em:
+https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/avaliacao-d
+a-alfabetizacao. Acesso em: 16 ago. 2026.
+INEP — INSTITUTO NACIONAL DE ESTUDOS E PESQUISAS EDUCACIONAIS
+ANÍSIO TEIXEIRA. Resultados da Avaliação da Alfabetização. Brasília, DF: Inep, 2026b.
+Disponível                                                                             em:
+https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/avaliacao-d
+a-alfabetizacao/resultados. Acesso em: 16 ago. 2026.
+SHNEIDERMAN, B. The eyes have it: a task by data type taxonomy for information
+visualizations. In: IEEE SYMPOSIUM ON VISUAL LANGUAGES, 1996, Boulder.
+Proceedings [...]. Los Alamitos: IEEE Computer Society Press, 1996. p. 336–343. DOI:
+10.1109/VL.1996.545307.

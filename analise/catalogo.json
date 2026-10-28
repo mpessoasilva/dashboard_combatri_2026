@@ -1,0 +1,354 @@
+[
+  {
+    "id": "T01",
+    "titulo": "Da Geracao a Calibracao: protocolo human-in-the-loop para itens gerados por IA",
+    "sessao": "Sessao 1",
+    "linha_csv": 1,
+    "arquivo": "01_Sessao_1_IA_Elaboracao_Predicao_Calibracao/01 - Da Geracao a Calibracao protocolo human-in-the-loop para itens gerados por IA.doc",
+    "outras_versoes_identicas_ou_distintas": []
+  },
+  {
+    "id": "T02",
+    "titulo": "Do prompt ao item: analise da elaboracao de itens por IA generativa orientada por matriz de referencia e criterios tecnicos de elaboracao",
+    "sessao": "Sessao 1",
+    "linha_csv": 2,
+    "arquivo": "01_Sessao_1_IA_Elaboracao_Predicao_Calibracao/02 - Do prompt ao item analise da elaboracao de itens por IA generativa orientada por matriz de.doc",
+    "outras_versoes_identicas_ou_distintas": []
+  },
+  {
+    "id": "T03",
+    "titulo": "PREDICAO DO PARAMETRO DE DIFICULDADE DA TRI A PARTIR DE TEXTO E METADADOS: abordagem de aprendizado de maquina para pre-testagem automatizada",
+    "sessao": "Sessao 1",
+    "linha_csv": 3,
+    "arquivo": "01_Sessao_1_IA_Elaboracao_Predicao_Calibracao/03 - PREDICAO DO PARAMETRO DE DIFICULDADE DA TRI A PARTIR DE TEXTO E METADADOS abordagem de apr.docx",
+    "outras_versoes_identicas_ou_distintas": []
+  },
+  {
+    "id": "T04",
+    "titulo": "Itens de Prova Parana de Matematica na perspectiva da TCT, TRI e IA",
+    "sessao": "Sessao 1",
+    "linha_csv": 4,
+    "arquivo": "01_Sessao_1_IA_Elaboracao_Predicao_Calibracao/04 - Itens de Prova Parana de Matematica na perspectiva da TCT, TRI e IA.pdf",
+    "outras_versoes_identicas_ou_distintas": []
+  },
+  {
+    "id": "T05",
+    "titulo": "AlfabetizIA: plataforma de inteligencia territorial para analise de Alfabetizacao",
+    "sessao": "Sessao 2",
+    "linha_csv": 5,
+    "arquivo": "02_Sessao_2_Plataformas_Digitais_Gestao_Analise/02 - AlfabetizIA plataforma de inteligencia territorial para analise de Alfabetizacao.pdf",
+    "outras_versoes_identicas_ou_distintas": []
+  },
+  {
+    "id": "T06",
+    "titulo": "ADEF: desenvolvimento assistido por IA de uma aplicacao para analise educacional do ensino fundamental",
+    "sessao": "Sessao 2",
+    "linha_csv": 6,
+    "arquivo": "02_Sessao_2_Plataformas_Digitais_Gestao_Analise/03 - ADEF desenvolvimento assistido por IA de uma aplicacao para analise educacional do ensino.pdf",
+    "outras_versoes_identicas_ou_distintas": []
+  },
+  {
+    "id": "T07",
+    "titulo": "Associacao entre o uso de IA e niveis de proficiencia em Matematica e Lingua Portuguesa no Ensino Fundamental",
+    "sessao": "Sessao 2",
+    "linha_csv": 7,
+    "arquivo": "02_Sessao_2_Plataformas_Digitais_Gestao_Analise/04 - Associacao entre o uso de IA e niveis de proficiencia em Matematica e Lingua Portuguesa no.doc",
+    "outras_versoes_identicas_ou_distintas": []
+  },
+  {
+    "id": "T08",
+    "titulo": "Equalizacao entre as escalas de proficiencia do Enem e do Saeb: evidencias de compatibilidade psicometrica",
+    "sessao": "Sessao 3",
+    "linha_csv": 8,
+    "arquivo": "03_Sessao_3_Metodos_Psicometricos_Confiabilidade/05 - Equalizacao entre as escalas de proficiencia do Enem e do Saeb evidencias de compatibilida.doc",
+    "outras_versoes_identicas_ou_distintas": []
+  },
+  {
+    "id": "T09",
+    "titulo": "Consideracoes sobre o Coeficiente de Confiabilidade",
+    "sessao": "Sessao 3",
+    "linha_csv": 9,
+    "arquivo": "03_Sessao_3_Metodos_Psicometricos_Confiabilidade/06 - Consideracoes sobre o Coeficiente de Confiabilidade.pdf",
+    "outras_versoes_identicas_ou_distintas": []
+  },
+  {
+    "id": "T10",
+    "titulo": "Monitoramento da qualidade da correcao de itens abertos via Rasch multifacetado: Ceara 2025",
+    "sessao": "Sessao 3",
+    "linha_csv": 10,
+    "arquivo": "03_Sessao_3_Metodos_Psicometricos_Confiabilidade/07 - Monitoramento da qualidade da correcao de itens abertos via Rasch multifacetado Ceara 2025.pdf",
+    "outras_versoes_identicas_ou_distintas": []
+  },
+  {
+    "id": "T11",
+    "titulo": "Questionario de Turma: evidencias de validade interna e associacoes com a aprendizagem",
+    "sessao": "Sessao 3",
+    "linha_csv": 11,
+    "arquivo": "03_Sessao_3_Metodos_Psicometricos_Confiabilidade/08 - Questionario de Turma evidencias de validade interna e associacoes com a aprendizagem.doc",
+    "outras_versoes_identicas_ou_distintas": []
+  },
+  {
+    "id": "T12",
+    "titulo": "Estabelecendo Padroes de Desempenho para o Ensino Medio",
+    "sessao": "Sessao 4",
+    "linha_csv": 12,
+    "arquivo": "04_Sessao_4_Padroes_Desempenho_Indicadores/09 - Estabelecendo Padroes de Desempenho para o Ensino Medio.pdf",
+    "outras_versoes_identicas_ou_distintas": []
+  },
+  {
+    "id": "T13",
+    "titulo": "A Elaboracao da Descricao dos Niveis de Desempenho para o Ensino Medio",
+    "sessao": "Sessao 4",
+    "linha_csv": 13,
+    "arquivo": "04_Sessao_4_Padroes_Desempenho_Indicadores/10 - A Elaboracao da Descricao dos Niveis de Desempenho para o Ensino Medio.doc",
+    "outras_versoes_identicas_ou_distintas": []
+  },
+  {
+    "id": "T14",
+    "titulo": "Desempenho ou fluxo? Decomposicao da variacao do Ideb entre 2005 e 2025",
+    "sessao": "Sessao 4",
+    "linha_csv": 14,
+    "arquivo": "04_Sessao_4_Padroes_Desempenho_Indicadores/11 - Desempenho ou fluxo Decomposicao da variacao do Ideb entre 2005 e 2025.docx",
+    "outras_versoes_identicas_ou_distintas": []
+  },
+  {
+    "id": "T15",
+    "titulo": "Desenvolvimento e validacao de instrumentos para medidas de Condicoes de Oferta da EPT em Minas Gerais",
+    "sessao": "Sessao 4",
+    "linha_csv": 15,
+    "arquivo": "04_Sessao_4_Padroes_Desempenho_Indicadores/12 - Desenvolvimento e validacao de instrumentos para medidas de Condicoes de Oferta da EPT em.doc",
+    "outras_versoes_identicas_ou_distintas": []
+  },
+  {
+    "id": "T16",
+    "titulo": "Diagnostico de competencias e habilidades do Enem para os estudantes dos anos finais do Ensino Medio",
+    "sessao": "Poster",
+    "linha_csv": 16,
+    "arquivo": "05_Sessao_de_Poster/13 - Diagnostico de competencias e habilidades do Enem para os estudantes dos anos finais do En.pdf",
+    "outras_versoes_identicas_ou_distintas": []
+  },
+  {
+    "id": "T17",
+    "titulo": "Funcionamento Diferencial dos Itens na Prova Curitiba",
+    "sessao": "Poster",
+    "linha_csv": 17,
+    "arquivo": "05_Sessao_de_Poster/14 - Funcionamento Diferencial dos Itens na Prova Curitiba.doc",
+    "outras_versoes_identicas_ou_distintas": []
+  },
+  {
+    "id": "T18",
+    "titulo": "Calibracao de itens com IA executada localmente aplicada a itens tipo ENEM: comparacao dicotomica",
+    "sessao": "Poster",
+    "linha_csv": 18,
+    "arquivo": "05_Sessao_de_Poster/15 - Calibracao de itens com IA executada localmente aplicada a itens tipo ENEM comparacao dico.docx",
+    "outras_versoes_identicas_ou_distintas": []
+  },
+  {
+    "id": "T19",
+    "titulo": "Calibracao de itens com IA executada localmente aplicada a itens tipo SAEB: comparacao dicotomica",
+    "sessao": "Poster",
+    "linha_csv": 19,
+    "arquivo": "05_Sessao_de_Poster/16 - Calibracao de itens com IA executada localmente aplicada a itens tipo SAEB comparacao dico.docx",
+    "outras_versoes_identicas_ou_distintas": []
+  },
+  {
+    "id": "T20",
+    "titulo": "Calibracao de itens com IA executada localmente aplicada a itens tipo PISA: comparacao dicotomica",
+    "sessao": "Poster",
+    "linha_csv": 20,
+    "arquivo": "05_Sessao_de_Poster/17 - Calibracao de itens com IA executada localmente aplicada a itens tipo PISA comparacao dico.docx",
+    "outras_versoes_identicas_ou_distintas": []
+  },
+  {
+    "id": "T21",
+    "titulo": "Calibracao de itens com IA executada localmente aplicada a itens tipo PND: comparacao dicotomica",
+    "sessao": "Poster",
+    "linha_csv": 21,
+    "arquivo": "05_Sessao_de_Poster/18 - Calibracao de itens com IA executada localmente aplicada a itens tipo PND comparacao dicot.docx",
+    "outras_versoes_identicas_ou_distintas": []
+  },
+  {
+    "id": "T22",
+    "titulo": "Avaliacao de dados e IA: criacao de dashboards personalizados para mapeamento de defasagens em habilidades do Enem",
+    "sessao": "Poster",
+    "linha_csv": 22,
+    "arquivo": "05_Sessao_de_Poster/19 - Avaliacao de dados e IA criacao de dashboards personalizados para mapeamento de defasagens.docx",
+    "outras_versoes_identicas_ou_distintas": []
+  },
+  {
+    "id": "T23",
+    "titulo": "Iniciacao Cientifica e Desempenho no ENADE em Psicologia: estimativa via Propensity Score Matching",
+    "sessao": "Poster",
+    "linha_csv": 23,
+    "arquivo": "05_Sessao_de_Poster/20 - Iniciacao Cientifica e Desempenho no ENADE em Psicologia estimativa via Propensity Score M.docx",
+    "outras_versoes_identicas_ou_distintas": []
+  },
+  {
+    "id": "T24",
+    "titulo": "Os propositos do Enem",
+    "sessao": "Poster",
+    "linha_csv": 24,
+    "arquivo": "05_Sessao_de_Poster/21 - Os propositos do Enem.pdf",
+    "outras_versoes_identicas_ou_distintas": []
+  },
+  {
+    "id": "T25",
+    "titulo": "Faceis ou dificeis primeiro? Ordem dos itens, fadiga e estimacao da proficiencia com TRI-3PL",
+    "sessao": "Poster",
+    "linha_csv": 25,
+    "arquivo": "05_Sessao_de_Poster/22 - Faceis ou dificeis primeiro Ordem dos itens, fadiga e estimacao da proficiencia com TRI-3P.doc",
+    "outras_versoes_identicas_ou_distintas": []
+  },
+  {
+    "id": "T26",
+    "titulo": "Uso da teoria classica dos testes na eliminacao de itens: coeficientes ponto-bisserial e bisserial",
+    "sessao": "Poster",
+    "linha_csv": 26,
+    "arquivo": "05_Sessao_de_Poster/23 - Uso da teoria classica dos testes na eliminacao de itens coeficientes ponto-bisserial e bi.docx",
+    "outras_versoes_identicas_ou_distintas": []
+  },
+  {
+    "id": "T27",
+    "titulo": "Efeito da posicao dos itens no desempenho: Ciencias Humanas do Enem 2025",
+    "sessao": "Poster",
+    "linha_csv": 27,
+    "arquivo": "05_Sessao_de_Poster/24 - Efeito da posicao dos itens no desempenho Ciencias Humanas do Enem 2025.pdf",
+    "outras_versoes_identicas_ou_distintas": []
+  },
+  {
+    "id": "T28",
+    "titulo": "Equalizacao entre diferentes edicoes de uma avaliacao por julgamento comparativo de itens",
+    "sessao": "Poster",
+    "linha_csv": 28,
+    "arquivo": "05_Sessao_de_Poster/25 - Equalizacao entre diferentes edicoes de uma avaliacao por julgamento comparativo de itens.docx",
+    "outras_versoes_identicas_ou_distintas": []
+  },
+  {
+    "id": "T29",
+    "titulo": "Uma revisao de trabalhos sobre IA no CONBRATRI entre 2018 e 2024",
+    "sessao": "Poster",
+    "linha_csv": 29,
+    "arquivo": "05_Sessao_de_Poster/26 - Uma revisao de trabalhos sobre IA no CONBRATRI entre 2018 e 2024.doc",
+    "outras_versoes_identicas_ou_distintas": []
+  },
+  {
+    "id": "T30",
+    "titulo": "Uso critico da IA na analise de dados de avaliacao educacional: formacao com equipes de secretarias de educacao",
+    "sessao": "Poster",
+    "linha_csv": 30,
+    "arquivo": "05_Sessao_de_Poster/27 - Uso critico da IA na analise de dados de avaliacao educacional formacao com equipes de sec.pdf",
+    "outras_versoes_identicas_ou_distintas": []
+  },
+  {
+    "id": "T31",
+    "titulo": "Analise psicometrica com IA e R: comparacao de estimativas em prova de selecao para o 6o ano",
+    "sessao": "Poster",
+    "linha_csv": 31,
+    "arquivo": "05_Sessao_de_Poster/28 - Analise psicometrica com IA e R comparacao de estimativas em prova de selecao para o 6o an.docx",
+    "outras_versoes_identicas_ou_distintas": []
+  },
+  {
+    "id": "T32",
+    "titulo": "Desenvolvimento de instrumentos e escalas de proficiencia para a EPT: modelagem de competencias com TRI",
+    "sessao": "Poster",
+    "linha_csv": 32,
+    "arquivo": "05_Sessao_de_Poster/29 - Desenvolvimento de instrumentos e escalas de proficiencia para a EPT modelagem de competen.docx",
+    "outras_versoes_identicas_ou_distintas": []
+  },
+  {
+    "id": "T33",
+    "titulo": "IA e avaliacao autentica na educacao superior: proposta para avaliar competencias em larga escala",
+    "sessao": "Poster",
+    "linha_csv": 33,
+    "arquivo": "05_Sessao_de_Poster/30 - IA e avaliacao autentica na educacao superior proposta para avaliar competencias em larga.docx",
+    "outras_versoes_identicas_ou_distintas": []
+  },
+  {
+    "id": "T34",
+    "titulo": "Comparacao de metodos na estimacao de proficiencias em modelos unidimensionais da TRI",
+    "sessao": "Poster",
+    "linha_csv": 34,
+    "arquivo": "05_Sessao_de_Poster/31 - Comparacao de metodos na estimacao de proficiencias em modelos unidimensionais da TRI.doc",
+    "outras_versoes_identicas_ou_distintas": []
+  },
+  {
+    "id": "T35",
+    "titulo": "Reducao do numero de itens na estimacao da percepcao de estudantes sobre Ciencia e Tecnologia e Letramento Digital",
+    "sessao": "Poster",
+    "linha_csv": 35,
+    "arquivo": "05_Sessao_de_Poster/32 - Reducao do numero de itens na estimacao da percepcao de estudantes sobre Ciencia e Tecnolo.docx",
+    "outras_versoes_identicas_ou_distintas": []
+  },
+  {
+    "id": "T36",
+    "titulo": "Rede de Estimacao Cruzada (CEN): paradigma de IA para calibracao de itens na TRI",
+    "sessao": "Poster",
+    "linha_csv": 36,
+    "arquivo": "05_Sessao_de_Poster/33 - Rede de Estimacao Cruzada (CEN) paradigma de IA para calibracao de itens na TRI.docx",
+    "outras_versoes_identicas_ou_distintas": []
+  },
+  {
+    "id": "T37",
+    "titulo": "Impacto e correcao do tamanho do teste no Alfa de Cronbach e Omega de McDonald",
+    "sessao": "Poster",
+    "linha_csv": 37,
+    "arquivo": "05_Sessao_de_Poster/34 - Impacto e correcao do tamanho do teste no Alfa de Cronbach e Omega de McDonald.docx",
+    "outras_versoes_identicas_ou_distintas": []
+  },
+  {
+    "id": "T38",
+    "titulo": "Do numero ao sentido: validade interpretativa na construcao das escalas de proficiencia do Sinaept",
+    "sessao": "Poster",
+    "linha_csv": 38,
+    "arquivo": "05_Sessao_de_Poster/35 - Do numero ao sentido validade interpretativa na construcao das escalas de proficiencia do.pdf",
+    "outras_versoes_identicas_ou_distintas": []
+  },
+  {
+    "id": "T39",
+    "titulo": "Inteligencia Artificial Generativa aplicada a avaliacao educacional: gerador automatizado de itens",
+    "sessao": "Poster",
+    "linha_csv": 39,
+    "arquivo": "05_Sessao_de_Poster/36 - Inteligencia Artificial Generativa aplicada a avaliacao educacional gerador automatizado d.pdf",
+    "outras_versoes_identicas_ou_distintas": []
+  },
+  {
+    "id": "T40",
+    "titulo": "Diferencas entre os modelos de Rasch e Logistico de 1 parametro no Mirt em testes de multipla escolha",
+    "sessao": "Poster",
+    "linha_csv": 40,
+    "arquivo": "05_Sessao_de_Poster/37 - Diferencas entre os modelos de Rasch e Logistico de 1 parametro no Mirt em testes de multi.docx",
+    "outras_versoes_identicas_ou_distintas": []
+  },
+  {
+    "id": "T41",
+    "titulo": "Sistema de aplicacao digital do Metodo Angoff Modificado em sessoes de Standard Setting",
+    "sessao": "Poster",
+    "linha_csv": 41,
+    "arquivo": "05_Sessao_de_Poster/38 - Sistema de aplicacao digital do Metodo Angoff Modificado em sessoes de Standard Setting.doc",
+    "outras_versoes_identicas_ou_distintas": []
+  },
+  {
+    "id": "T42",
+    "titulo": "Respondentes sinteticos para pre-testagem, calibracao e equalizacao de itens",
+    "sessao": "Poster",
+    "linha_csv": 42,
+    "arquivo": "05_Sessao_de_Poster/39 - Respondentes sinteticos para pre-testagem, calibracao e equalizacao de itens.docx",
+    "outras_versoes_identicas_ou_distintas": []
+  },
+  {
+    "id": "T43",
+    "titulo": "Funcionamento psicometrico anomalo em um item de Matematica do Enem 2025",
+    "sessao": "Poster",
+    "linha_csv": 43,
+    "arquivo": "05_Sessao_de_Poster/40 - Funcionamento psicometrico anomalo em um item de Matematica do Enem 2025.pdf",
+    "outras_versoes_identicas_ou_distintas": []
+  },
+  {
+    "id": "T44",
+    "titulo": "IA na revisao de itens de Matematica: aprimoramento da avaliacao SISEDU com apoio da TRI",
+    "sessao": "Poster",
+    "linha_csv": 44,
+    "arquivo": "05_Sessao_de_Poster/41 - IA na revisao de itens de Matematica aprimoramento da avaliacao SISEDU com apoio da TRI.pdf",
+    "outras_versoes_identicas_ou_distintas": []
+  }
+]

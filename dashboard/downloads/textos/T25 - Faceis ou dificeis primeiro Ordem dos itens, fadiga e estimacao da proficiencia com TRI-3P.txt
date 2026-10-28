@@ -1,0 +1,90 @@
+Fáceis ou difíceis primeiro? Ordem dos itens, fadiga e estimação da proficiência com TRI-3PL
+
+Vanessa Rufino da Silva1, George Lucas Moraes Pezzott2, Paulo Sergio Panse Silveira3, José Oliveira Siqueira4 
+
+1Programa de Pós-Graduação em Bioestatística, UEM-PR, pg56021@uem.br
+2Programa de Pós-Graduação em Bioestatística, UEM-PR, glmpezzott@uem.br
+3Departamento de Patologia, FMUSP_SP, silveira@usp.br
+4Departamento de Patologia, FMUSP_SP, siqueira@usp.br
+
+Resumo
+Este trabalho investiga o impacto da ordem de resolução dos itens sobre a estimação da proficiência em avaliações educacionais na presença de fadiga. Por meio de simulação baseada no modelo logístico de três parâmetros da Teoria da Resposta ao Item (TRI), foram comparadas três estratégias: responder aos itens na ordem original, dos mais fáceis para os mais difíceis e dos mais difíceis para os mais fáceis. A fadiga foi representada por redução linear da proficiência ao longo do teste, com diferentes momentos de início e intensidades. Os resultados indicam que não existe estratégia uniformemente superior. Respondentes com menor proficiência tendem a ser menos prejudicados ao iniciar pelos itens mais fáceis, enquanto os de maior proficiência apresentam melhores resultados iniciando pelos mais difíceis.
+
+Palavras-chave: Psicometria; Medição Educacional; Teoria de Resposta ao Item; Fadiga Mental; Simulação por Computador.
+
+Introdução
+A Teoria da Resposta ao Item (TRI) constitui uma das principais abordagens psicométricas para a construção, calibração e análise de instrumentos de avaliação educacional, permitindo relacionar a probabilidade de resposta a um item à proficiência latente do respondente por meio de modelos probabilísticos. Entre seus modelos mais conhecidos se encontra o modelo logístico de três parâmetros (3PL), no qual a probabilidade de acerto depende da discriminação e dificuldade do item, do parâmetro de acerto ao acaso e da proficiência do respondente (Lord 1980).
+Por outro lado, estudos sobre item position effects mostram que a posição ocupada por um item pode afetar sua probabilidade de acerto, sendo frequentemente observado um aumento aparente da dificuldade dos itens quando apresentados nas partes finais do teste. Esse fenômeno tem sido associado, entre outros fatores, à fadiga, à redução do esforço e a restrições de tempo (Kingston and Dorans 1984; Weirich, Hecht, and Böhme 2014).
+Evidências empíricas também foram encontradas em avaliações brasileiras de larga escala, ao analisarem mais de quatro milhões de respostas do Enem de 2016, verificaram redução na proporção de acertos à medida que um mesmo item era apresentado em posições mais avançadas do teste, com efeitos observados em diferentes níveis de desempenho dos estudantes.
+Apesar de existirem na literatura extensões da TRI destinadas a incorporar efeitos relacionados à posição dos itens, à fadiga e ao esforço do respondente (Debeer and Janssen 2013; Wise and DeMars 2006), uma situação prática de particular interesse ocorre quando a avaliação é corrigida por um modelo convencional da TRI, que não considera explicitamente esses efeitos. Nesse caso, ainda que a proficiência efetivamente manifestada pelo estudante diminua ao longo da realização da prova, o modelo de correção assume proficiência constante para todas as respostas. Surge, então, uma questão prática ainda pouco explorada: diante da presença de fadiga, qual estratégia de ordenação das respostas minimiza seu impacto sobre a estimação da proficiência quando o teste é corrigido pelo modelo 3PL convencional?
+Diante disso, o presente trabalho tem como objetivo investigar, por meio de um estudo de simulação, qual estratégia de ordenação dos itens é mais favorável à estimação da proficiência em avaliações educacionais na presença de fadiga, considerando que a correção é realizada pelo modelo logístico de três parâmetros (3PL) sem incorporar explicitamente esse efeito.
+Objetivos
+	Investigar o efeito da ordem de resolução dos itens sobre a estimação da proficiência, na presença de fadiga, em testes corrigidos pelo modelo 3PL.
+Metodologia
+Modelo logístico de três parâmetros
+	Considere um teste composto por  EMBED   itens, em que  EMBED   representa a resposta do indivíduo  EMBED   ao item i, assumindo valor 1 para acerto e 0 para erro. No modelo logístico de três parâmetros (3PL), a probabilidade de acerto é dada por
+ EMBED  
+em que  EMBED   é o parâmetro de discriminação, relacionado à capacidade do item de diferenciar indivíduos com diferentes níveis de proficiência;  EMBED   é o parâmetro de dificuldade, sendo que maiores valores indicam itens mais difíceis; e  EMBED   é o parâmetro de acerto ao acaso, associado à probabilidade de acerto por indivíduos com baixa proficiência. O parâmetro latente  EMBED   representa a proficiência do indivíduo  EMBED  , de modo que maiores valores de  EMBED   indicam maior domínio da habilidade avaliada (Lord, 1980).
+Incorporação da fadiga na probabilidade de acerto
+Neste estudo, optou-se por representar a fadiga por meio de uma redução gradual da proficiência  EMBED  , em vez de aumentar a dificuldade  EMBED   dos itens apresentados nas posições finais do teste. No modelo 3PL, a probabilidade de acerto depende da diferença entre a proficiência e a dificuldade,  EMBED  . Assim, uma redução de  EMBED   em uma quantidade  EMBED   produz efeito equivalente, sobre essa diferença, a um aumento de mesma magnitude em  EMBED  .
+Para incorporar a fadiga no estudo, seja  EMBED   a proporção respondida do teste alcançada na posição  EMBED  , e seja  EMBED   a proporção a partir da qual a fadiga começa a atuar. A proficiência efetiva do indivíduo  EMBED   utilizada para gerar a resposta ao item na posição  EMBED   é definida por:
+ EMBED  
+em que  EMBED   representa a perda máxima (ao final do teste) de proficiência provocada pela fadiga. Dessa forma, antes de  EMBED   não há alteração da proficiência e, após esse ponto, a perda aumenta linearmente até atingir  EMBED   no último item. Foram considerados diferentes momentos para o início da fadiga, expressos como porcentagens do teste, permitindo avaliar desde cenários de fadiga presente ao longo de toda a avaliação até o cenário sem fadiga  EMBED  .
+Estratégias de respostas
+O estudo de simulação considera três estratégias para a ordem de resolução dos itens: E1 - Ordem: o respondente realiza a prova seguindo a ordem original de apresentação, considerando-se que itens fáceis e difíceis estão distribuídos aleatoriamente ao longo do teste; E2 - Fácil-Difícil: os itens são respondidos em ordem crescente de dificuldade, iniciando pelos mais fáceis e deixando os mais difíceis para o final; E3 - Difícil-Fácil: os itens são respondidos em ordem decrescente de dificuldade, iniciando pelos mais difíceis e deixando os mais fáceis para o final.
+Para garantir a comparabilidade entre as estratégias, em cada réplica são utilizados exatamente os mesmos itens, modificando-se apenas sua ordem de resolução. Nas estratégias E2 e E3, o ordenamento é realizado a partir do parâmetro de dificuldade  EMBED   gerado para cada item: valores crescentes de  EMBED   definem a estratégia E2 e valores decrescentes definem a E3. Dessa forma, é possível avaliar isoladamente o efeito da ordem de resolução dos itens sobre o desempenho e a estimação da proficiência na presença de fadiga.
+Cenários de simulação
+	Foram simulados testes com  EMBED  , cujos parâmetros foram gerados independentemente segundo  EMBED  ,  EMBED   e  EMBED  
+	Consideraram-se nove níveis de proficiência,  EMBED   com 200 bancos de itens independentes para cada valor de  EMBED  . A fadiga foi simulada com início em  EMBED   do teste, sendo 100% o cenário sem fadiga, e perdas máximas de proficiência  EMBED  . Por brevidade do texto e pela similaridade dos resultados, são apresentados apenas os resultados para  EMBED   e  EMBED  . As respostas foram geradas pelo modelo 3PL utilizando a proficiência efetiva definida em (1), enquanto  EMBED   foi estimado pelo EAP, via pacote catR, utilizando o modelo 3PL convencional, que ignora a fadiga. A comparação entre as estratégias foi realizada pela média das estimativas e pelo viés,  EMBED   e  EMBED  . Os parâmetros dos itens foram considerados conhecidos.
+Resultados e Discussão
+Os resultados da Tabela 1 mostram que, de modo geral, quanto mais cedo se inicia a fadiga, menor tende a ser o número de acertos, sendo esse efeito dependente do nível de proficiência e da estratégia adotada. Para respondentes com baixa proficiência, a estratégia E2 (Fácil–Difícil) tende a ser menos afetada pela fadiga, enquanto, para aqueles com alta proficiência, a estratégia E3 (Difícil–Fácil) apresenta melhores resultados.
+A Figura 1 apresenta os resultados para perda máxima  EMBED  . Os painéis superiores mostram o viés das estimativas em relação à proficiência verdadeira, enquanto os painéis inferiores apresentam o efeito da fadiga sobre a estimação, definido pela diferença  EMBED  .
+Nos painéis superiores, mesmo no cenário sem fadiga, observa-se viés nos extremos da escala, com valores positivos para  EMBED   negativos e negativos para  EMBED   elevados. Esse comportamento é compatível com o shrinkage do estimador EAP sob a priori  EMBED  , que tende a deslocar estimativas extremas em direção à média. Os painéis inferiores permitem isolar melhor o impacto da fadiga, sendo valores negativos indicativos de redução da proficiência estimada em relação ao cenário sem fadiga. Para  EMBED  , E2 (Fácil-Difícil) apresenta, em geral, menor redução de  EMBED  , enquanto E3 (Difícil-Fácil) é mais afetada. Para proficiências elevadas, especialmente  EMBED  , esse comportamento se inverte, e E3 tende a apresentar menor perda na proficiência estimada. Além disso, o efeito da fadiga diminui à medida que seu início é postergado.
+Conclusões e Considerações Finais
+Os resultados do estudo de simulação indicam que não existe uma estratégia de ordenação universalmente ótima na presença de fadiga. A estratégia mais favorável depende da proficiência: indivíduos de menor proficiência tendem a ser menos prejudicados ao iniciar pelos itens mais fáceis, enquanto, para os de maior proficiência, iniciar pelos mais difíceis tende a preservar melhor o desempenho e a estimação da proficiência. Assim, a ordem de resolução pode ser relevante em avaliações extensas quando a fadiga não é incorporada ao modelo de estimação. Do ponto de vista prático, a escolha entre essas estratégias exige conhecimento prévio sobre a dificuldade dos itens. Embora o respondente possa tentar classificá-los durante a prova, isso demandaria leitura prévia e tempo. Uma alternativa seria organizar os itens segundo níveis esperados de dificuldade na elaboração do teste, permitindo ao respondente escolher entre iniciar pelo começo ou pelo final da prova.
+Como perspectiva de continuidade, pretende-se investigar o uso de Inteligência Artificial como ferramenta auxiliar na classificação preliminar da dificuldade dos itens e, consequentemente, em sua ordenação. Ressalta-se que essa classificação não substitui a calibração pela TRI e a estimação do parâmetro de dificuldade  EMBED  . Estudos futuros poderão avaliar a concordância entre a dificuldade previamente atribuída por métodos de IA e aquela posteriormente estimada pela TRI, bem como seus efeitos sobre as estratégias de resolução na presença de fadiga.
+Tabela 1: Número médio de acertos segundo o nível de habilidade, o início da fadiga e a estratégia de resolução, com I = 50 e δ = 1.
+                       Início da	Habilidade verdadeira do respondente (θ)	
+                         fadiga   Estratégia    −2	1.5	−1	−0.5	0	0.5	1	1.5	2
+0%	E1	14.2	16.1	18.5	21.7	25.8	30.2	33.6	38.0	41.4
+0%	E2	15.0	17.3	19.2	22.7	26.4	29.6	33.5	37.2	40.1
+0%	E3	12.8	15.1	17.5	21.0	25.2	30.2	34.9	39.0	42.4
+50%	E1	14.9	17.3	19.8	24.0	27.7	32.0	36.1	39.8	42.5
+50%	E2	15.6	18.2	21.1	25.2	28.6	32.2	35.8	38.9	42.0
+50%	E3	14.0	15.9	19.4	22.8	27.7	32.9	37.3	40.8	43.5
+75%	E1	15.6	17.7	20.9	24.6	28.8	33.1	36.7	40.4	43.1
+75%	E2	16.0	18.2	21.6	25.2	29.9	33.4	36.6	39.6	42.7
+      75%	E3	14.4	16.8	20.4	23.9	29.2	33.5	37.5	41.2	43.8
+    Sem fadiga	-	15.9	18.6	22.0	25.8	30.2	34.2	38.1	41.5	44.2
+ SHAPE 
+0%	E1	4.17	5.42	6.23	7.32	8.21	8.80	9.25	9.46	9.70
+0%	E2	5.11	6.18	7.08	8.14	8.64	9.21	9.57	9.73	9.76
+0%	E3	3.52	4.57	5.43	6.68	7.54	8.44	9.02	9.23	9.55
+50%	E1	4.75	5.66	6.61	7.74	8.37	9.04	9.43	9.61	9.73
+50%	E2	5.07	6.38	7.39	8.29	8.79	9.35	9.52	9.74	9.82
+50%	E3	3.71	4.39	5.54	6.54	7.74	8.57	9.18	9.39	9.60
+75%	E1	4.92	6.00	7.03	7.92	8.66	9.14	9.39	9.72	9.80
+75%	E2	5.22	6.28	7.17	8.20	8.92	9.24	9.55	9.70	9.89
+75%	E3	3.83	4.84	5.83	7.11	8.10	8.77	9.26	9.46	9.69
+Sem fadiga	-	5.12	6.33	7.42	8.18	8.85	9.24	9.54	9.76	9.82
+ SHAPE 
+0%	E1	2.10	2.32	2.26	2.42	2.71	3.38	3.55	4.73	5.62
+0%	E2	2.20	2.31	2.13	2.46	2.50	2.64	3.30	3.88	4.89
+0%	E3	2.06	2.22	2.42	2.56	3.06	3.74	4.50	5.66	6.52
+50%	E1	2.11	2.28	2.35	2.68	2.90	3.54	4.29	5.22	6.22
+50%	E2	2.17	2.07	2.30	2.57	2.51	3.02	3.46	4.08	5.32
+50%	E3	2.18	2.12	2.55	2.76	3.04	3.67	4.60	5.60	6.68
+75%	E1	2.45	2.26	2.42	2.68	3.16	3.73	4.44	5.28	6.50
+75%	E2	2.16	2.20	2.29	2.32	2.71	3.20	3.48	4.39	5.44
+75%	E3	2.18	2.22	2.55	2.56	3.15	3.71	4.64	5.76	6.86
+    Sem fadiga	-	2.24	2.32	2.56	2.82	3.13	3.69	4.64	5.76	6.91
+ SHAPE 
+
+Figura 1: Viés e efeito da fadiga sobre a estimação EAP da proficiência para perda máxima  EMBED  , segundo o início da fadiga e a estratégia de resolução.
+
+Referências
+Debeer, Dries, and Rianne Janssen. 2013. “Modeling Item-Position Effects Within an IRT Framework.” Journal of Educational Measurement 50 (2): 164–85.  HYPERLINK "https://doi.org/10.1111/jedm.12009"https://doi.org/10.1111/jedm.12009.
+Kingston, Neal M., and Neil J. Dorans. 1984. “Item Location Effects and Their Implications for IRT Equating and Adaptive Testing.” Applied Psychological Measurement 8 (2): 147–54.  HYPERLINK "https://doi.org/10.1177/014662168400800202"https://doi.org/10.1177/014662168400800202.
+Lord, Frederic M. 1980. Applications of Item Response Theory to Practical Testing Problems. Hillsdale, NJ: Lawrence Erlbaum Associates.
+Weirich, Sebastian, Martin Hecht, and Katrin Böhme. 2014. “Modeling Item Position Effects Using Generalized Linear Mixed Models.” Applied Psychological Measurement 38 (7): 535–48.  HYPERLINK "https://doi.org/10.1177/0146621614534955"https://doi.org/10.1177/0146621614534955.
+Wise, Steven L., and Christine E. DeMars. 2006. “An Application of Item Response Time: The Effort-Moderated IRT Model.” Journal of Educational Measurement 43 (1): 19–38.  HYPERLINK "https://doi.org/10.1111/j.1745-3984.2006.00002"https://doi.org/10.1111/j.1745-3984.2006.00002

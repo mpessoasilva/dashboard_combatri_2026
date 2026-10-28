@@ -1,0 +1,105 @@
+Do número ao sentido: a validade interpretativa na construção das escalas de
+                               proficiência do Sinaept
+                   Lunna Chaves Costa1, Alexandre da Silva Ferry2
+     1
+         Instituto Federal do Norte de Minas Gerais (IFNMG); Programa de Pós-
+          Graduação em Educação Tecnológica (PPGET), CEFET-MG. E-mail:
+                               lunna.chaves@ifnmg.edu.br
+    2
+     Centro Federal de Educação Tecnológica de Minas Gerais (CEFET-MG),
+    Programa de Pós-Graduação em Educação Tecnológica (PPGET). E-mail:
+                         alexandreferry@cefetmg.br
+                                        Resumo
+    O Brasil passou a contar, em 2025, com um sistema nacional de avaliação para a
+    Educação Profissional e Tecnológica: o Sinaept. Ele avalia o desempenho dos
+    estudantes a partir de matrizes de referência e de escalas de proficiência. Este
+    trabalho olha para os documentos públicos que fundam esse sistema e pergunta
+    como ele transforma o resultado medido em uma descrição do que o estudante
+    aprendeu. A ideia central é simples: o número, sozinho, não diz o sentido
+    pedagógico do nível. Essa passagem do número ao sentido é uma interpretação,
+    e faz parte da validade da escala, na linha de Messick e Kane. Como o congresso
+    trata da geração e da calibração de itens com Inteligência Artificial, argumenta-
+    se que automatizar a produção de itens torna essa interpretação ainda mais
+    necessária. A pesquisa está em andamento e se apoia em análise documental.
+     Palavras-chave: Sinaept. Validade interpretativa. Escalas de proficiência. Matrizes
+de referência. Educação Profissional e Tecnológica.
+
+        1      Introdução
+        Por muito tempo, a Educação Profissional e Tecnológica (EPT) não teve um
+sistema nacional de avaliação próprio. Isso mudou com a criação do Sinaept, pelo
+Decreto nº 12.603, de 2025, dentro da Política Nacional de EPT e em linha com a Lei nº
+14.645, de 2023, e com as Diretrizes Curriculares Nacionais da EPT. O sistema se apoia
+em matrizes de referência e descritores de habilidades, sobre os quais são construídas as
+escalas de proficiência.
+        O tema deste congresso é a geração e a calibração de itens com Inteligência
+Artificial. Vale trazer aqui uma observação: a Inteligência Artificial acelera a produção
+do número, mas não produz o sentido. Traduzir o resultado em aprendizagem continua
+sendo um trabalho de interpretação. Quanto mais rápido se produzem itens, mais
+importante fica ler bem o que cada nível significa.
+        O problema que orienta o trabalho é este: a ancoragem estatística coloca o item
+em um ponto da escala, mas não explica, sozinha, o que aquele nível significa em termos
+pedagógicos. Para tratar disso, adota-se a ideia de validade como argumento
+interpretativo, tal como propõem Messick (1989) e Kane (2013).
+       O objetivo geral é entender como a fundamentação teórico-metodológica e as
+matrizes de referência do Sinaept preveem a passagem do desempenho medido para a
+descrição pedagógica dos níveis de proficiência. Como objetivos específicos, pretende-
+se verificar se a interpretação pedagógica aparece como parte da validação ou apenas
+como etapa posterior, e discutir o que isso significa para a área de Edificações e para o
+uso conjunto de itens dicotômicos e politômicos.
+
+       2       Metodologia
+       A pesquisa é qualitativa, do tipo documental, e está em andamento. As fontes são
+apenas documentos públicos: a fundamentação teórico-metodológica divulgada pelo
+Inep, as matrizes de referência e seus descritores, o Decreto nº 12.603/2025, a Lei nº
+14.645/2023 e as Diretrizes Curriculares Nacionais da EPT. Trabalhar só com material
+público evita a restrição de acesso aos microdados do estudo-piloto, ainda não liberados.
+        A análise usa a lente da validade interpretativa (Messick, 1989; Kane, 2013).
+Com ela, percorre-se a cadeia que vai do item ao descritor e do descritor ao nível, para
+identificar em que ponto a interpretação pedagógica entra, ou deixa de entrar, no
+desenho do sistema.
+
+       3        Resultados
+       Os resultados são preliminares, como convém a uma pesquisa em andamento. A
+primeira leitura mostra que o Sinaept já traz descritores ligados às habilidades esperadas
+dos concluintes. Esse é um bom ponto de partida, porque aproxima a medida da
+descrição da aprendizagem.
+       Ainda assim, há uma distância entre o lugar em que a estatística coloca o item e
+aquilo que o descritor informa. O descritor nomeia a habilidade, mas não detalha o que o
+estudante daquele nível de fato compreende e realiza. É nesse intervalo que se encontra a
+passagem do número ao sentido.
+
+        3.1    Discussão
+        Para Messick e Kane, a validade não termina na qualidade da medida: ela
+depende do argumento que sustenta a interpretação e o uso dos resultados. Quando a
+Inteligência Artificial passa a gerar muitos itens, ler os níveis com cuidado deixa de ser
+um detalhe e vira um gargalo do processo. Como o Sinaept está começando, há uma boa
+oportunidade de incluir essa interpretação já no desenho da escala, e não como remendo
+posterior.
+       Na área de Edificações, isso pesa mais. Tarefas como ler e elaborar projetos têm
+respostas parciais, com graus de execução. O uso conjunto de itens dicotômicos e
+politômicos amplia a informação disponível, mas também exige interpretar essas
+gradações de sentido, e não apenas contar acertos e erros.
+
+        4       Conclusões e Considerações Finais
+        A análise preliminar indica que a interpretação pedagógica dos níveis não é um
+enfeite, e sim parte da validade da escala. O momento inicial do Sinaept é uma janela
+para incluir essa interpretação desde já, no próprio desenho do sistema. A pesquisa segue
+para a análise das matrizes específicas, com atenção à área de Edificações, onde a
+combinação de itens dicotômicos e politômicos torna a questão mais urgente.
+        5      Referências
+        BRASIL. Decreto nº 12.603, de 28 de agosto de 2025. Institui a Política Nacional
+de Educação Profissional e Tecnológica e o Sistema Nacional de Avaliação da Educação
+Profissional e Tecnológica (Sinaept). Brasília, DF: Presidência da República, 2025.
+       BRASIL. Lei nº 14.645, de 2 de agosto de 2023. Altera a Lei nº 9.394/1996
+(LDB) quanto à organização da Educação Profissional e Tecnológica. Brasília, DF:
+Presidência da República, 2023.
+        CONSELHO NACIONAL DE EDUCAÇÃO (Brasil). Resolução CNE/CP nº 1,
+de 5 de janeiro de 2021. Diretrizes Curriculares Nacionais Gerais para a Educação
+Profissional e Tecnológica. Brasília, DF: CNE, 2021.
+      INSTITUTO NACIONAL DE ESTUDOS E PESQUISAS EDUCACIONAIS
+ANÍSIO TEIXEIRA (Inep). Avaliação da educação profissional e tecnológica:
+fundamentação teórico-metodológica. Brasília, DF: Inep, 2025.
+       KANE, M. T. Validating the interpretations and uses of test scores. Journal of
+Educational Measurement, v. 50, n. 1, p. 1-73, 2013.
+     MESSICK, S. Validity. In: LINN, R. L. (Ed.). Educational measurement. 3. ed.
+New York: American Council on Education; Macmillan, 1989. p. 13-103.

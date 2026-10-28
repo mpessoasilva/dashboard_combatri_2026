@@ -1,0 +1,96 @@
+Calibração de itens com uso de IA executada localmente aplicada a itens tipo ENEM: comparação dicotômica
+Aureliano Santos1, Adriel Saraiva2, Lorrana Rodrigues3, Sene Sissé4, Héliton Tavares 5 
+
+1 Universidade Federal do Pará (UFPA) e aurelianovilar55@gmail.com
+2 Universidade Federal do Pará (UFPA) e adriel7542@gmail.com
+3 Universidade Federal do Pará (UFPA) e lorranabarbara38@gmail.com
+4 Universidade Federal do Pará (UFPA) e Sisses5011@gmail.com
+5 Universidade Federal do Pará (UFPA), heliton@ufpa.br
+
+Resumo
+
+A calibração de itens novos exige pré-testagem com respondentes e constitui etapa relevante das avaliações em larga escala e concursos públicos.  No entanto, essa etapa é extremamente onerosa e gera possíveis problemas de segurança, com exposições públicas de itens do pré-teste. Este trabalho propõe um procedimento para investigar o uso de modelos de linguagem de grande porte como apoio ao posicionamento de itens em uma escala já existente, com aplicação a itens de Matemática do ENEM. Quarenta e cinco itens de 2023, com parâmetros TRI conhecidos, foram utilizados como âncoras e 45 itens de 2024 como itens-alvo. Utilizou-se de sistemas de Inteligência Artificial (IA) executados localmente, diretamente no computador do usuário, para realizarem comparações pareadas, respondendo apenas se cada item-alvo é mais difícil que cada item-âncora. Este procedimento gerou 2.025 comparações por cada IA avaliada, que foram usadas para gerar estimativas do parâmetro de dificuldade dos itens-alvo. As estimativas foram validadas pelos parâmetros oficiais de 2024 por correlação, viés, MAE, RMSE e acurácia de ordenação, mostrando resultados promissores.
+
+Palavras-chave: Inteligência artificial; Teoria de Resposta ao Item; dificuldade de itens; ENEM; calibração.
+1 Introdução
+Avaliações educacionais em larga escala, como o Exame Nacional do Ensino Médio (ENEM), o Sistema de Avaliação da Educação Básica (Saeb), o Exame Nacional de Desempenho dos Estudantes (Enade), a Prova Nacional Docente (PND) e o Exame Nacional para Certificação de Competências de Jovens e Adultos (Encceja), dependem de processos técnicos que incluem elaboração, revisão, pré-testagem, análise psicométrica, montagem de instrumentos e interpretação das escalas. Entre essas etapas, a pré-testagem e a calibração de itens têm importância especial porque permitem estimar propriedades psicométricas necessárias para a construção de provas comparáveis e para a interpretação do desempenho.
+Na Teoria da Resposta ao Item (TRI), a dificuldade de um item não é definida apenas por uma taxa bruta de acerto. Nos modelos logísticos, o parâmetro “b” localiza o item na escala latente e se articula com outros parâmetros, como a discriminação “a” e, no modelo de três parâmetros, o acerto casual “c” (ANDRADE, TAVARES, VALLE, 2000). A obtenção de estimativas estáveis requer dados de respondentes e desenho de pré-teste adequado. Em avaliações de grande escala, essa operação envolve logística, tempo, controle de exposição, análise de qualidade e custo, o que motiva a investigação de métodos auxiliares para antecipar o comportamento provável de itens novos (LORD, 1980; HAMBLETON; SWAMINATHAN; ROGERS, 1991).
+Com a expansão recente dos modelos de linguagem de grande porte (Large Language Models - LLMs) se abriu uma linha de pesquisa voltada à previsão de dificuldade de itens a partir do próprio conteúdo. Estudos recentes indicam que LLMs podem produzir estimativas com associação moderada ou alta com dificuldades empíricas, sobretudo quando a tarefa é estruturada e quando informações linguísticas e cognitivas são explicitamente extraídas.
+O contexto do ENEM é particularmente adequado para um estudo de validação retrospectiva e uso de IA (Inteligência Artificial) como instrumento auxiliar de pré-calibração. Os microdados disponibilizados pelo Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira (INEP) reúnem provas, gabaritos e informações sobre os itens, e as edições de 2023 e 2024 permitem construir um experimento em que um conjunto de itens é tratado como banco de referência e outro como conjunto novo, embora seus parâmetros reais sejam posteriormente revelados para validação. Esse desenho reproduz, em escala controlada, a situação de cold start: posicionar um item ainda não pré-testado em relação a itens cuja dificuldade já é conhecida.
+Trabalhos recentes tornam essa expectativa empiricamente plausível. Veeramani et al. (2024) mostraram que uma pipeline baseada em LLM e características linguísticas pode melhorar a previsão de dificuldade em avaliações educacionais. Estudos posteriores com modelos de linguagem e algoritmos supervisionados indicaram correlações elevadas quando a IA é usada para extrair atributos cognitivos e linguísticos, embora a estimativa direta tenda a ser menos precisa. Particularmente relevante para esta proposta é o benchmark de Brant, Kühn e Pang (2026), realizado com 1.031 questões do ENEM e parâmetros oficiais de TRI. Os autores observaram correlações de ordenação moderadas nos melhores modelos, mas também tendência sistemática de subestimação da dificuldade e queda de desempenho em itens multimodais. Esse resultado sugere que a IA pode ser útil como mecanismo de triagem ou pré-posicionamento, porém deve ser calibrada e avaliada antes de qualquer uso operacional.
+
+2 Objetivos
+Propor e avaliar uma metodologia de pré-calibração assistida por IA processada localmente para posicionar itens novos de Matemática do ENEM em relação a um conjunto de itens previamente calibrados, utilizando comparações dicotômicas de dificuldade produzidas por sistemas de IA e validando as estimativas obtidas contra os parâmetros TRI oficiais. 
+
+3 Metodologia
+3.1 Delineamento e base de itens
+Foram utilizados dois conjuntos de 45 itens de Matemática. O Grupo 1 foi formado pelos 45 itens da edição 2023 e funciona como banco de âncoras, com os respectivos parâmetros ,  e  considerados conhecidos. O Grupo 2 será formado pelos 45 itens de 2024 e foi tratado, durante a etapa de previsão, como conjunto de itens sem parâmetros. Os parâmetros oficiais de 2024 foram mantidos separados e utilizados somente na validação final. Esse procedimento evita vazamento de informação e permite avaliar se o método recupera, ao menos aproximadamente, o posicionamento real dos itens-alvo.
+
+3.2 Aplicações de IA local
+A principal e mais evidente vantagem da execução de modelos de inteligência artificial rodando localmente é a segurança dos dados. Como todo o processamento de texto e documentos ocorre sem sair do computador, informações confidenciais e arquivos pessoais nunca entram em contato com servidores externos. Isso elimina o risco de vazamentos e garante que as informações digitadas não sejam utilizadas para treinar modelos públicos de terceiros, nem os itens novos serão usados em eventuais simulados de testes solicitados por usuários diversos.
+
+3.2.1 Ollama
+Dentre as ferramentas de uso de modelos de inteligência artificial destaca-se o Ollama. Ele tornou-se uma das ferramentas mais populares para quem deseja executar modelos de linguagem de grande porte (LLMs) diretamente no próprio computador. A sua proposta principal é simplificar o processo de instalação e gerenciamento desses sistemas, permitindo que qualquer pessoa transforme sua máquina em um servidor local de inteligência artificial sem dependência da nuvem e garantindo segurança total e funcionamento offline.
+
+3.3 Comparação pareada dicotômica
+Cada item j do Grupo 2 foi comparado com cada item k do Grupo 1. Assim, para cada IA serão realizadas 45 × 45 = 2.025 comparações; considerando cinco IAs, o experimento principal produzirá 10.125 julgamentos dicotômicos. Em cada par (A,B), a IA receberá os dois itens em ordem aleatorizada e responderá apenas qual deles é mais difícil para a população-alvo do ENEM, sem acesso aos parâmetros psicométricos. 
+
+3.4 Quantificação dos julgamentos e estimativa de dificuldade
+Serão ajustados os modelos logísticos da Teoria da Resposta ao Item (TRI) e o modelo de Bradley-Terry (BRADLEY, TERRY, 1952), no qual a probabilidade de um item ser julgado mais difícil depende da diferença entre dificuldades latentes. Os parâmetros deste modelo são estimados por Máxima verossimilhança e se assemelha à estimação via Teoria da Resposta ao Item (TRI).
+
+3.5 Critérios de validação
+As previsões serão comparadas com o parâmetro b oficial dos itens de 2024. Serão calculados: correlação de Pearson, correlação de Spearman, viés médio, erro absoluto médio (MAE), raiz do erro quadrático médio (RMSE) e coeficiente de determinação. Também será calculada a acurácia das comparações pareadas em relação à ordenação indicada pelos b oficiais.
+
+Tabela 1: Estrutura do experimento de comparação dicotômica.
+Etapa
+Unidade
+Quantidade
+Produto
+Âncoras
+Itens ENEM 2023
+45
+b conhecido
+Alvos
+Itens ENEM 2024
+45
+b oculto até validação
+Comparações por IA
+45 × 45
+2.025
+0/1: alvo mais difícil
+Cinco IAs
+5 × 2.025
+10.125
+matriz de julgamentos
+Validação
+45 itens-alvo
+45
+b previsto × b oficial
+Elaborado pelo(s) autor(es)
+ 
+4 Resultados e Discussão
+A pesquisa avançou com a execução bem-sucedida dos modelos de inteligência artificial em ambiente local, com esse progresso, avaliou-se o conteúdo de cada questão e foi possível analisar suas características texto-estruturais. A partir dessa análise, foi construído um ranking com base no nível de complexidade cognitiva e de resolução exigido por cada item. Nessa ordenação, a primeira posição representa a questão de maior complexidade, enquanto a posição N indica o item de menor complexidade. Esse ranking gerado por cada IA possibilita uma comparação direta com os dados oficiais do ENEM usando o parâmetro de dificuldade  da TR. Adicionalmente, foi realizada uma avaliação par a par entre os itens utilizando as IAs atribuindo-se o valor 0 quando a questão  é identificada como mais fácil que a questão , e 1 caso contrário. 
+Atualmente, o trabalho está concentrado na aplicação dos modelos mais citados anteriormente, com o objetivo de obter estimativas do parâmetro de dificuldade da TRI que se aproximem ainda mais dos resultados oficiais divulgados pelo INEP.
+
+5 Conclusão
+Este estudo propõe um protocolo reprodutível para investigar o uso de IA no posicionamento preliminar de itens novos em avaliações educacionais. O trabalho utiliza itens de Matemática do ENEM 2023 como âncoras, itens de 2024 como alvos e cinco sistemas de IA como julgadores de comparações dicotômicas. A conversão das respostas em percentis e, posteriormente, em valores da escala b cria uma ponte entre análise semântica por IA e calibração psicométrica tradicional.
+A hipótese central é que os sistemas de IA consigam reproduzir parte relevante da ordenação empírica das dificuldades, mas com precisão insuficiente para substituir uma calibração TRI baseada em respostas de estudantes. A metodologia precisa ser testada em diversos tipos de itens, para garantir que a metodologia tenha amplitude para cobrir desde níveis iniciais da educação básica, passando pela educação superior e finalizando em concursos públicos. Com isso, será possível construir várias escalas de desempenho, garantindo comparabilidade no tempo, com itens de qualidade e sem preocupação com o fator segurança.
+
+Referências
+BRADLEY, R. A.; TERRY, M. E. Rank analysis of incomplete block designs: I. The method of paired comparisons. Biometrika, v. 39, n. 3/4, p. 324-345, 1952.
+
+BRANT, T.; KÜHN, J.; PANG, J. Estimating Exam Item Difficulty with LLMs: A Benchmark on Brazil's ENEM Corpus. arXiv:2602.06631, 2026.
+
+BULUT, O.; GORGUN, G.; TAN, B. Item Difficulty and Response Time Prediction with Large Language Models: An Empirical Analysis of USMLE Items. In: Proceedings of the 19th Workshop on Innovative Use of NLP for Building Educational Applications. 2024.
+
+HAMBLETON, R. K.; SWAMINATHAN, H.; ROGERS, H. J. Fundamentals of Item Response Theory. Newbury Park: Sage, 1991.
+
+INEP. Microdados do Exame Nacional do Ensino Médio (Enem). Brasília: Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira, 2026.
+
+LORD, F. M. Applications of Item Response Theory to Practical Testing Problems. Hillsdale, NJ: Lawrence Erlbaum Associates, 1980.
+
+PETERS, S. et al. Text-Based Approaches to Item Difficulty Modeling in Large-Scale Assessments: A Systematic Review. arXiv:2509.23486, 2025.
+
+SCARLATOS, A. et al. SMART: Simulated Students Aligned with Item Response Theory for Question Difficulty Prediction. In: Proceedings of EMNLP 2025. p. 25071-25094, 2025.
+
+VEERAMANI, H.; THAPA, S.; SHANKAR, N. B.; ALWAN, A. Large Language Model-based Pipeline for Item Difficulty and Response Time Estimation for Educational Assessments. In: Proceedings of the 19th Workshop on Innovative Use of NLP for Building Educational Applications. 2024.

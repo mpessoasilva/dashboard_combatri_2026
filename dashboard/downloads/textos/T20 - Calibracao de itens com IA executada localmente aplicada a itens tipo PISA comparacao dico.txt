@@ -1,0 +1,64 @@
+Calibração de itens com uso de IA locais aplicada a itens do PISA: avaliação  dicotômica dos itens
+Sene Sissé1, Adriel Saraiva2, Lorrana Rodrigues3, Aureliano Santos4, Héliton Tavares 5 
+
+1 Universidade Federal do Pará (UFPA) e Sisses5011@gmail.com
+2 Universidade Federal do Pará (UFPA) e adriel7542@gmail.com
+3 Universidade Federal do Pará (UFPA) e lorranabarbara38@gmail.com
+4 Universidade Federal do Pará (UFPA) e aurelianovilar55@gmail.com
+5 Universidade Federal do Pará (UFPA), heliton@ufpa.br
+
+Resumo
+
+A garantia de qualidade em avaliações educacionais de grande escala exige ciclos rigorosos de pré-testagem e calibração via Teoria da Resposta ao Item (TRI), processos que envolvem alto custo financeiro, complexidade logística e risco de exposição do banco de itens. Este trabalho propõe um protocolo metodológico reprodutível para a pré-calibração e estimativa preliminar de dificuldade de 10 itens de Matemática do PISA 2022 utilizando inteligência artificial (IA). Para assegurar o sigilo e a segurança dos dados, cinco modelos de linguagem de grande porte (LLMs) foram executados localmente via Ollama e VSCode. A abordagem estruturou-se em quatro etapas: descrição texto-estrutural dos itens, criação de rankings de complexidade com justificativas analíticas, avaliações dicotômicas par a par (0 ou 1) entre as questões e calibração por modelos da TRI a partir da base unificada gerada pelas IAs. A validação consistiu no confronto das estimativas com os parâmetros e estatísticas oficiais do PISA 2022. Embora os resultados sejam preliminares e as IAs não substituam a calibração tradicional com estudantes, o método demonstra capacidade de capturar a ordenação empírica de dificuldade, sinalizando um caminho promissor para otimizar a pré-testagem automatizada e proteger o sigilo das provas. 
+Palavras-chave: Inteligência artificial; Teoria de Resposta ao Item; PISA; Calibração.
+1 Introdução
+
+A garantia de qualidade em avaliações educacionais de grande escala  como ENEM, Saeb, Enade, PND e Encceja  sustenta-se em um rigoroso ciclo técnico que engloba desde a concepção e revisão de itens até a pré-testagem, análise psicométrica e consolidação das escalas de proficiência. Nesse fluxo, a pré-testagem e a calibração de itens destacam-se como etapas críticas, pois fornecem os parâmetros empíricos necessários para estruturar provas equitativas, comparáveis e pedagogicamente interpretáveis. 
+Sob a ótica da Teoria da Resposta ao Item (TRI), a dificuldade de um item supera o mero cálculo da taxa de acertos. Em modelos logísticos, o parâmetro de dificuldade () situa o item na mesma escala do traço latente do examinando, atuando de forma integrada à discriminação (a) e ao acerto ao acaso (c) no modelo de três parâmetros (ANDRADE; TAVARES; VALLE, 2000). A obtenção de estimativas robustas para esses parâmetros exige desenhos amostrais bem delimitados e logística complexa. Diante do elevado custo financeiro, do tempo consumido e do risco de exposição do banco de itens envolvidos na pré-testagem tradicional, ganha relevância a busca por métodos alternativos capazes de predizer o comportamento psicométrico de novos itens (LORD, 1980; HAMBLETON; SWAMINATHAN; ROGERS, 1991).
+Nesse cenário, o avanço dos modelos de linguagem de grande porte (Large Language Models — LLMs) impulsionou novas investigações focadas na predição da dificuldade de itens com base em seu conteúdo textual. Evidências científicas recentes demonstram que os LLMs conseguem estimar com precisão moderada a alta a dificuldade empírica de um item, especialmente quando submetidos a comandos estruturados que incorporam atributos linguísticos e cognitivos do enunciado.
+No âmbito internacional, o Programa Internacional de Avaliação de Estudantes (PISA), coordenado pela OCDE, destaca-se como uma das maiores referências globais em avaliação educacional padronizada. Desenhado para avaliar o domínio de estudantes de 15 anos em leitura, matemática e ciências, o PISA fundamenta suas análises na Teoria da Resposta ao Item (TRI) especificamente no modelo logístico de 2 parâmetros, usado a partir da edição 2015, para garantir que as habilidades dos estudantes e as propriedades dos itens sejam alinhadas em uma escala internacional contínua e comparável ao longo das edições. Contudo, devido à escala transnacional do exame, a fase de aplicação piloto (field trial) envolve uma logística extremamente complexa, demandando expressivos recursos financeiros, amostras gigantescas de alunos em dezenas de países e rígidos protocolos para evitar o vazamento e a exposição das questões antes do teste principal.
+É nesse cenário de alta complexidade operacional que a inteligência artificial (IA) e os modelos de linguagem emergem como ferramentas promissoras para a pré-calibração e estimação prévia de parâmetros nos itens do PISA.
+2 Objetivos
+Desenvolver e validar uma metodologia de pré-calibração de itens do PISA por meio da aplicação de 5 modelos inteligência artificial executada localmente, combinando comparações par a par da dificuldade estimada por LLMs, modelagem pela Teoria da Resposta ao Item (TRI) a partir de dados sintéticos (simulados) e a subsequente validação das estimativas em relação aos parâmetros oficiais do exame.
+
+3 Metodologia
+3.1 Base de itens PISA
+	A estrutura do banco de dados utilizado neste trabalho é composta de itens de matemática do PISA 2022, os itens abordam quatro áreas essenciais do conteúdo matemático (quantidade, incerteza e dados, mudança e relacionamentos, e espaço e forma) articuladas em cenários das esferas pessoal, ocupacional, social e científica. Ao todo, essa amostragem do documento público é composta por 10 itens distribuídos em 4 unidades de contexto ("Compra de carro", "Venda de DVDs", "Caminhão de mudança" e "Roletas"), os quais servirão de base para as análises desenvolvidas a seguir. 
+
+3.2 Executando  IA localmente
+A principal vantagem do processamento local de modelos de inteligência artificial reside na garantia absoluta da privacidade e segurança dos dados. Como todo o fluxo de informações e documentos é executado estritamente no ambiente do usuário, elimina-se a necessidade de tráfego de dados confidenciais para servidores externos. Essa abordagem impede vazamentos, assegura que as informações inseridas não sejam incorporadas ao treinamento de modelos públicos e preserva o sigilo dos novos itens, evitando sua exposição indevida ou reutilização em simulações por terceiros.
+
+3.2.1 Ollama e Vscode
+Dentre as ferramentas de uso de modelos de inteligência artificial destaca-se o Ollama e o Vscode. O Ollama tornou-se uma das ferramentas mais populares para executar e gerenciar modelos de linguagem (LLMs) diretamente no computador, de forma offline e segura. Quando integrado ao VSCode via extensões, transforma o ambiente de desenvolvimento em um assistente local de inteligência artificial, permitindo processar textos e códigos com total privacidade e sem dependência da nuvem. 
+
+3.4 Construção dos dados e critérios de validação
+A metodologia adotada para a construção e validação do banco de dados baseia-se no uso de 5 modelos de Inteligência Artificial (IA) para analisar as 10 questões do PISA 2022 em quatro etapas integradas. Inicialmente, a cada IA é empregada para descrever o conteúdo e as características texto-estruturais de cada item, detalhando os conceitos e as competências matemáticas exigidas. Em seguida, elabora-se um ranking ordenado pelo nível de complexidade cognitiva e de resolução dos exercícios, acompanhado das devidas justificativas analíticas que explicam a posição atribuída a cada item. Na sequência, realiza-se uma avaliação par a par entre os itens, atribuindo-se o valor 1 quando o primeiro item é mais difícil que o segundo, e o valor 0 quando é mais fácil. Por fim, os resultados e ordenações gerados pela inteligência artificial são confrontados com as estatísticas e os parâmetros oficiais de desempenho disponibilizados pelo PISA, permitindo avaliar a acurácia do modelo em mensurar a dificuldade real dos itens.
+
+3.5 Modelo da Teoria da resposta ao Item
+
+A partir das matrizes de avaliação dicotômicas (0 ou 1) geradas pelas 5 LLMs executadas via Ollama, será construída uma base de dados consolidada que unifica as respostas obtidas. Com essa base unificada, serão aplicados modelos da Teoria da Resposta ao Item (TRI) com o objetivo de calibrar e obter as estimativas dos parâmetros dos 10 itens — como a facilidade/dificuldade e o poder de discriminação —, permitindo quantificar com precisão o comportamento e a concordância preditiva dos modelos estatísticos e de IA em relação ao instrumento oficial do PISA 2022.
+ 
+4 Resultados e Discussão
+Os resultados numéricos obtidos nesta etapa estão em fase de desenvolvimento e possuem caráter preliminar, dado que o foco principal reside no desenvolvimento metodológico e no estabelecimento do fluxo de estimativa do banco. Espera-se que os diferentes modelos do Ollama consigam capturar e replicar, ao menos parcialmente, o padrão e a ordenação empírica de dificuldade dos itens do PISA 2022, embora não apresentem a precisão necessária para substituir a calibração tradicional fundamentada nas respostas reais dos estudantes. Por conseguinte, prevê-se que o desempenho das estimativas oscile segundo a arquitetura da LLM empregada, a área de conteúdo matemático avaliada e a presença de marcadores texto-estruturais específicos, tais como a densidade do contexto, o nível de abstração da linguagem e a complexidade da resolução exigida em cada item.
+
+5 Conclusão
+Este estudo propõe um protocolo reprodutível para investigar o uso de modelos de Inteligência Artificial no posicionamento e estimativa preliminar de dificuldade de itens em avaliações internacionais. O trabalho utiliza como base as 10 questões de Matemática do PISA 2022 e cinco LLMs locais executadas via Ollama como julgadoras de comparações dicotômicas entre os itens. A conversão dessas avaliações pareadas em matrizes consolidadas e a posterior aplicação de modelos da Teoria da Resposta ao Item (TRI) criam uma ponte direta entre a análise texto-estrutural efetuada pela IA e a parametrização psicométrica dos itens.
+O foco central do estudo é que os sistemas de IA sejam capazes de capturar e reproduzir a ordenação empírica de dificuldade das tarefas matemáticas do PISA, ainda que com precisão limitada para substituir a calibração obtida com as respostas dos estudantes de 15 anos. A consolidação dessa metodologia busca testar a sensibilidade dos modelos linguísticos a diferentes dimensões do letramento matemático e contextos do mundo real, permitindo vislumbrar um fluxo automatizado de pré-testagem de itens. Com isso, torna-se possível otimizar a montagem de bancos de itens calibrados com menor custo operacional e maior controle sobre o sigilo dos itens.
+A pesquisa contempla, em etapas posteriores, o posicionamento de um conjunto de itens novos com outro conjunto de itens efetivamente calibrados, gerando estimativas dos parâmetros dos itens de forma mais acurada. No caso do PISA, esta metodologia poderá ser aplicada a itens em versões considerando os diversos idiomas envolvidos no exame, avaliando ainda mais a estabilidade da metodologia.
+
+Referências
+ADAMS, Raymond J.; WU, Margaret L. PISA 2000 Technical Report. Paris: OECD Publishing, 2002. 
+
+Andrade, D.F., Tavares, H.R., Valle, R.C. (2000). Teoria da Resposta ao Item: Conceitos e Aplicações. Associação Brasileira de Estatística: São Paulo.
+
+BRADLEY, R. A.; TERRY, M. E. Rank analysis of incomplete block designs: I. The method of paired comparisons. Biometrika, v. 39, n. 3/4, p. 324-345, 1952.
+
+BRANT, T.; KÜHN, J.; PANG, J. Estimating Exam Item Difficulty with LLMs: A Benchmark on Brazil's ENEM Corpus. arXiv:2602.06631, 2026.
+
+BULUT, O.; GORGUN, G.; TAN, B. Item Difficulty and Response Time Prediction with Large Language Models: An Empirical Analysis of USMLE Items. In: Proceedings of the 19th Workshop on Innovative Use of NLP for Building Educational Applications. 2024.
+
+HAMBLETON, R. K.; SWAMINATHAN, H.; ROGERS, H. J. Fundamentals of Item Response Theory. Newbury Park: Sage, 1991.
+
+LORD, F. M. Applications of Item Response Theory to Practical Testing Problems. Hillsdale, NJ: Lawrence Erlbaum Associates, 1980.
+
+OECD. PISA 2022 Assessment and Analytical Framework. Paris: OECD Publishing, 2023. DOI: https://doi.org/10.1787/dfe0bf9c-en.

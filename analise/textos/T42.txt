@@ -1,0 +1,91 @@
+Respondentes sintéticos para pré-testagem, calibração e equalização de itens em avaliações educacionais em larga escala
+Hugo Kenji Pereira Harada1, Augusto Venâncio Neto2, Thiago Ferreira Miranda3, Miguel Monteiro de Souza4, Heliton Ribeiro Tavares5
+
+1 Adaptativa Inteligência Educacional Ltda. hugo.harada@adaptativa.com.br
+2 Universidade Federal do Rio Grande do Norte. augusto@dimap.ufrn.br
+3 Tribunal de Justiça do Amapá (TJAP). thiagofm.pa@gmail.com
+4 Universidade Federal do Pará. souza.miguel.m@gmail.com
+5 Universidade Federal do Pará. heliton@ufpa.br
+Resumo
+A pré-testagem é essencial para estimar parâmetros psicométricos e incorporar itens novos a escalas de proficiência, mas envolve custos logísticos, financeiros e operacionais elevados. Este trabalho propõe desenvolver e validar respondentes sintéticos baseados em modelos de inteligência artificial como instrumento complementar à pré-testagem convencional. Agentes serão configurados para representar diferentes níveis de proficiência e perfis de resposta, sendo submetidos a provas previamente calibradas. A validação abrangerá estabilidade da proficiência entre instrumentos, recuperação dos parâmetros de dificuldade, discriminação e acerto casual, curvas características e funções de informação, funcionamento dos distratores e equalização com itens de ligação. Serão comparadas respostas sintéticas e reais por viés, MAE, RMSE, correlações, concordância e indicadores psicométricos. Propõe-se, ao final, um modelo híbrido em que agentes sintéticos apoiem triagem e priorização, mantendo respondentes reais como referência para calibração definitiva e validação prospectiva.
+Palavras-chave: respondentes sintéticos; inteligência artificial; Teoria da Resposta ao Item; pré-testagem; equalização.
+
+1 Introdução
+A avaliação educacional em larga escala depende de instrumentos capazes de produzir medidas comparáveis entre provas, populações e períodos. A Teoria da Resposta ao Item (TRI) oferece modelos que relacionam a probabilidade de resposta às características dos itens e à proficiência dos respondentes, permitindo construir escalas, calibrar bancos de itens e realizar procedimentos de ligação e equalização (LORD, 1980; ANDRADE; TAVARES; VALLE, 2000; KOLEN; BRENNAN, 2014).
+Antes de integrar um banco operacional, itens novos precisam ser submetidos a evidências empíricas. A pré-testagem permite verificar dificuldade, discriminação, acerto casual, ajuste ao modelo, funcionamento dos distratores e comportamento em diferentes grupos. Além disso, quando itens novos são administrados conjuntamente com itens de parâmetros conhecidos, estes funcionam como âncoras para posicionar os novos itens na escala de referência. O documento que fundamenta este trabalho destaca, entretanto, que a pré-testagem mobiliza escolas, estudantes, equipes, sistemas de aplicação e processamento, constituindo uma das etapas mais onerosas da avaliação.
+O avanço dos modelos de linguagem de grande porte (LLMs) cria uma possibilidade ainda experimental: construir agentes que respondam a itens como estudantes simulados. A proposta não consiste apenas em perguntar a uma IA se um item é fácil ou difícil. O objetivo é gerar uma população de respondentes sintéticos com níveis de habilidade distintos, obter uma matriz de respostas e submetê-la aos mesmos procedimentos psicométricos utilizados com dados reais.
+Resultados recentes tornam a investigação plausível, mas também recomendam cautela. Scarlatos et al. (2025) propuseram o SMART, que alinha estudantes simulados a níveis de habilidade definidos por TRI e utiliza milhares de respostas artificiais para estimar dificuldade de itens. Em 2026, Acquaye et al. simularam turmas de estudantes de diferentes proficiências em itens de Matemática e encontraram correlações de até 0,82 entre dificuldades estimadas por simulação e dificuldades observadas em avaliações reais. Esses achados sugerem potencial para pré-calibração, mas não demonstram equivalência geral entre agentes e estudantes.
+A literatura sobre respondentes sintéticos em outros domínios reforça a necessidade de validação psicométrica rigorosa. Estudos de 2026 mostram que LLMs podem reproduzir médias ou padrões agregados e, simultaneamente, falhar na reprodução de diferenças individuais, dispersões e estruturas latentes. Portanto, uma população sintética não deve ser considerada válida porque suas respostas parecem plausíveis; é necessário testar se ela preserva relações psicométricas relevantes e se suas previsões generalizam para itens inéditos.
+1.1 Objetivo
+Desenvolver e validar uma metodologia baseada em respondentes sintéticos para apoiar a pré-testagem, a calibração e a equalização de itens em avaliações educacionais fundamentadas na TRI, comparando sistematicamente respostas e parâmetros obtidos com populações sintéticas e reais.
+
+2 Metodologia
+2.1 Delineamento geral
+Será conduzida pesquisa aplicada, quantitativa, metodológica e computacional, organizada em validação retrospectiva e prospectiva. Na etapa retrospectiva serão utilizadas provas já aplicadas, com respostas reais e parâmetros psicométricos conhecidos. Parte dos itens terá seus parâmetros mantidos disponíveis como âncoras, enquanto os parâmetros dos demais serão ocultados e posteriormente recuperados a partir das respostas sintéticas. Na etapa prospectiva, itens inéditos serão inicialmente administrados aos agentes e depois a estudantes reais.
+2.2 Construção da população sintética
+Cada agente receberá uma proficiência de referência e um conjunto controlado de características relacionadas ao processo de resposta, como domínio de conteúdos, compreensão linguística, atenção, persistência e estratégia de resolução. A proficiência será tratada como traço relativamente estável entre provas pertencentes à mesma escala. A resposta não será totalmente determinística: serão realizadas repetições independentes ou mecanismos estocásticos para permitir variabilidade entre agentes de mesma proficiência.
+A distribuição de proficiência da população sintética será inicialmente ajustada à distribuição empírica da avaliação de referência. Posteriormente serão criados desenhos balanceados, com quantidades semelhantes de agentes nas regiões baixa, média e alta da escala, para verificar se a recuperação dos parâmetros depende da composição da amostra. O protocolo registrará modelo de IA, versão, data, prompt, temperatura, presença de memória, recursos multimodais e demais configurações, pois atualizações do modelo podem alterar o comportamento dos agentes.
+2.3 Estabilidade da proficiência
+A primeira evidência de validade será a estabilidade intra-agente. Cada respondente sintético será submetido a diferentes provas históricas pertencentes à mesma escala. As respostas serão pontuadas por TRI e comparadas à proficiência de referência do agente. Serão calculados viés, MAE, RMSE, correlação intraclasse, dispersão intra-agente, cobertura pelos erros-padrão e proporção de estimativas dentro de intervalos de tolerância. A análise será estratificada por região da escala.
+2.4 Recuperação retrospectiva de parâmetros
+Em uma prova com 45 itens, por exemplo, poderão ser selecionados 15 itens de ligação e 30 itens tratados como novos. Os parâmetros dos itens comuns serão fixados na calibração e os demais estimados exclusivamente a partir das respostas sintéticas. O experimento será repetido variando número e composição das âncoras, tamanho da população sintética e distribuição de proficiência. Serão avaliados os parâmetros a, b e c quando o modelo adotado os contemplar.
+
+2.5 Comparação psicométrica
+A recuperação dos parâmetros será avaliada por correlação de Pearson e Spearman, viés médio, MAE, RMSE, coeficientes de concordância e diferenças de ordenação dos itens. Uma correlação elevada isoladamente não será interpretada como evidência suficiente, pois estimativas podem manter o ranking e apresentar deslocamento ou compressão sistemática da escala. Por isso, serão examinados também gráficos de Bland-Altman, regressão entre parâmetros sintéticos e reais e erros condicionados à dificuldade do item.
+Para cada item serão comparadas as curvas características e as funções de informação obtidas nas duas populações. Poderá ser calculada a distância integrada entre curvas ao longo de uma grade de proficiência, por exemplo de -4 a 4. O impacto prático das diferenças será avaliado recalculando proficiências de respondentes reais com parâmetros derivados da calibração sintética e comparando-as às proficiências obtidas com os parâmetros oficiais.
+2.6 Distratores e padrões de resposta
+Em itens de múltipla escolha, a análise não será restrita ao acerto. Serão comparadas as proporções de escolha de cada alternativa, a presença de distratores não funcionais, omissões e a variação da atratividade dos distratores ao longo de θ. Modelos politômicos ou curvas empíricas de escolha poderão ser utilizados para verificar se agentes de baixa e alta proficiência selecionam alternativas incorretas de maneira semelhante aos estudantes reais.
+2.7 Equalização e itens de ligação
+A capacidade de equalização será investigada variando a quantidade de itens comuns, sua cobertura da escala e sua qualidade psicométrica. Para cada configuração será estimada a transformação ou calibração na escala de referência e medido o erro dos parâmetros recuperados. O objetivo é identificar a quantidade e a composição mínima de âncoras que permitem posicionamento sintético aceitável, sem confundir a função de ligação com evidência de validade dos próprios agentes.
+Dimensão
+Comparação
+Indicadores
+Finalidade
+Proficiência
+θ referência × θ estimado
+Viés, MAE, RMSE, ICC
+Estabilidade
+Itens
+Parâmetros sintéticos × reais
+r, ρ, viés, RMSE
+Recuperação
+Curvas
+CCI/FI sintéticas × reais
+Distância integrada
+Equivalência funcional
+Distratores
+Frequências/curvas por alternativa
+Diferenças e divergências
+Realismo de resposta
+Equalização
+Diferentes conjuntos de âncoras
+Erro na escala comum
+Robustez da ligação
+Tabela 1: Principais dimensões da validação psicométrica.
+
+3 Resultados esperados e hipóteses
+Como o estudo ainda será executado, os resultados não são antecipados como evidências observadas. A hipótese central é que agentes sintéticos adequadamente alinhados à proficiência consigam recuperar parte relevante da ordenação e da dificuldade dos itens, mas apresentem discrepâncias maiores em propriedades que dependem de padrões humanos de erro, tais como discriminação, acerto casual e funcionamento dos distratores. Essa expectativa é coerente com resultados recentes em que simulações baseadas em LLM produziram estimativas úteis de dificuldade, mas não perfeitas.
+Espera-se que o desempenho seja heterogêneo ao longo da escala. Agentes muito proficientes podem apresentar efeito teto e modelos muito capazes podem resolver itens que são difíceis para estudantes reais, reduzindo artificialmente a dificuldade estimada. Por outro lado, instruir diretamente um nível de proficiência não garante que o modelo responda de acordo com esse nível. O trabalho SMART mostrou justamente que o alinhamento entre habilidade instruída e comportamento simulado é um componente central do problema.
+A estabilidade longitudinal constitui outro teste decisivo. Um agente configurado em determinado nível deverá produzir proficiências próximas quando submetido a provas diferentes da mesma escala. Grande variação entre instrumentos indicará que a persona não representa um traço latente estável, mas reage excessivamente ao conteúdo ou ao contexto do prompt. A análise intra-agente permitirá distinguir essa instabilidade de simples erro de medida.
+3.1 Validação prospectiva
+A etapa mais forte do estudo será prospectiva. Depois que prompts, arquitetura e critérios de aceitação forem definidos exclusivamente com dados históricos, itens inéditos serão respondidos pelos agentes e seus parâmetros previstos antes da aplicação real. Somente depois da pré-testagem empírica as previsões serão comparadas aos parâmetros obtidos com estudantes. Essa separação temporal reduz o risco de vazamento de informação e fornece evidência genuína de generalização.
+4 Discussão
+O uso de respondentes sintéticos altera a pergunta tradicional sobre IA em avaliação. Em vez de perguntar se o modelo consegue resolver uma questão, pergunta-se se uma população artificial consegue reproduzir a relação probabilística entre proficiência e resposta observada entre estudantes. Essa diferença é fundamental: uma IA pode acertar muitos itens e ainda ser um péssimo modelo psicométrico de estudantes. A validade deve ser julgada pela recuperação da estrutura de respostas, e não pela plausibilidade textual da persona.
+Evidências externas reforçam essa cautela. Pesquisas recentes com surveys mostram que personas de LLM podem aproximar médias agregadas, mas reproduzem apenas modestamente diferenças individuais; outros estudos encontraram distorções de relações demográficas e estruturas psicométricas. Embora questionários de opinião sejam diferentes de testes educacionais, esses resultados demonstram que grandes volumes de respostas sintéticas não eliminam viés de modelo. Ao contrário, podem produzir estimativas extremamente precisas de uma população artificial incorreta.
+Por essa razão, o produto pretendido é um fluxo híbrido. Itens poderiam passar por revisão técnica, aplicação sintética, análise preliminar, classificação de risco e priorização. Itens claramente problemáticos seriam revisados antes de consumir amostra humana; itens promissores seguiriam para uma pré-testagem empírica potencialmente menor e mais eficiente. A calibração definitiva e decisões de alto impacto permaneceriam ancoradas em evidências provenientes de estudantes reais.
+
+5 Conclusões e Considerações Finais
+A proposta organiza a investigação de respondentes sintéticos como um problema de validação psicométrica, e não apenas de geração de respostas. O protocolo combina estabilidade de proficiência, recuperação de parâmetros, comparação de curvas, análise de distratores, equalização e validação prospectiva. Esse conjunto de evidências permite estabelecer em quais condições a simulação pode ser útil e em quais condições deve ser rejeitada.
+Caso os resultados sejam favoráveis, a contribuição mais imediata será apoiar triagem e planejamento de pré-testes, reduzindo aplicações desnecessárias e direcionando respondentes reais para os itens que efetivamente necessitam de evidência empírica. A substituição integral da pré-testagem não é assumida como objetivo inicial. O ganho científico está justamente em quantificar a distância entre populações sintéticas e reais e definir limites operacionais de uso.
+Como continuidade, o estudo poderá comparar diferentes famílias de LLMs, estratégias de alinhamento de habilidade, tamanhos de população sintética, modelos de TRI, áreas do conhecimento e formatos de item. Também será necessário estabelecer governança de versões, segurança de itens sigilosos, proteção de dados, prevenção de memorização de questões públicas e auditoria de vieses produzidos pelas personas.
+6 Referências
+ACQUAYE, C.; HUANG, Y. T.; CARPUAT, M.; RUDINGER, R. Take Out Your Calculators: Estimating the Real Difficulty of Question Items with LLM Student Simulations. Findings of ACL 2026, p. 36246-36267, 2026. DOI: 10.18653/v1/2026.findings-acl.1807.
+ANDRADE, D. F.; TAVARES, H. R.; VALLE, R. C. Teoria da Resposta ao Item: conceitos e aplicações. São Paulo: Associação Brasileira de Estatística, 2000.
+BAKER, F. B.; KIM, S. H. The Basics of Item Response Theory Using R. Cham: Springer, 2017.
+CHEN, Z.; ZHU, D.; ZHENG, L. N. When Synthetic Users Fail: A Cross-Domain Benchmark of LLM-Simulated Human Survey Responses. arXiv:2607.26348, 2026.
+DE AYALA, R. J. The Theory and Practice of Item Response Theory. New York: Guilford Press, 2009.
+EMBRETSON, S. E.; REISE, S. P. Item Response Theory for Psychologists. Mahwah: Lawrence Erlbaum Associates, 2000.
+GORDON, A. et al. Do Richer Personas Improve LLM Survey Simulation? A Fidelity Paradox. SSRN, 2026.
+KOLEN, M. J.; BRENNAN, R. L. Test Equating, Scaling, and Linking: Methods and Practices. 3. ed. New York: Springer, 2014.
+LORD, F. M. Applications of Item Response Theory to Practical Testing Problems. Hillsdale: Lawrence Erlbaum Associates, 1980.
+SCARLATOS, A.; FERNANDEZ, N.; ORMEROD, C.; LOTTRIDGE, S.; LAN, A. SMART: Simulated Students Aligned with Item Response Theory for Question Difficulty Prediction. Proceedings of EMNLP 2025, p. 25071-25094, 2025. DOI: 10.18653/v1/2025.emnlp-main.1274.

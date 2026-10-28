@@ -1,0 +1,222 @@
+Monitoramento da Qualidade da Correção de Itens Abertos via Modelo Rasch
+             Multifacetado: Aplicação à Avaliação Formativa do Ceará 2025
+               Gabriela Paschoal da Silva 1, Jaqueline Lamas da Silva 2, Davi Loures Paiva3,
+                                            Wellington Silva 4
+
+1
+    Fundação Centro de Políticas Públicas e Avaliação da Educação – CAEd/UFJF;
+gabriela.paschoal@fundacaocaed.org.br
+2
+    Universidade de São Paulo - USP; jaqueline.lamas@usp.br
+3
+    Fundação Centro de Políticas Públicas e Avaliação da Educação – CAEd/UFJF;
+davi.paiva@fundacaocaed.org.br
+4
+    Fundação Centro de Políticas Públicas e Avaliação da Educação – CAEd/UFJF;
+wellington.silva@fundacaocaed.org.br
+
+                                          Resumo
+
+      A consistência na correção de itens de resposta construída é fator essencial para
+      a qualidade das medidas educacionais produzidas, uma vez que variações de
+      severidade ou diferenças de concordância entre corretores podem introduzir
+      variabilidade indesejada nas pontuações. Nesse contexto, o presente trabalho
+      teve como objetivo analisar o comportamento de corretores da Avaliação
+      Formativa do Ceará 2025 via modelagem Rasch multifacetada. Ao total, foram
+      considerados 9.188 estudantes, 64 corretores e 7 aspectos de correção. Os
+      resultados evidenciaram elevados níveis de concordância entre os corretores,
+      ajuste adequado para a maior parte dos avaliadores e dos aspectos considerados,
+      e apenas poucos casos de desajuste com respeito à leniência/severidade. Por fim,
+      concluiu-se que a modelagem Rasch multifacetada constitui uma ferramenta
+      eficaz para o monitoramento da qualidade da correção em avaliações
+      educacionais, podendo também subsidiar, em estudos futuros, a validação e o
+      monitoramento de sistemas automatizados de correção baseados em inteligência
+      artificial.
+
+      Palavras-chave: modelo rasch multifacetado; correção de itens de resposta
+      construída; severidade de corretores; avaliação educacional.
+
+                                                    1
+          Monitoramento da Qualidade da Correção de Itens Abertos via Modelo Rasch Multifacetado:
+                          Aplicação à Avaliação Formativa do Ceará 2025
+
+1   Introdução
+
+    Segundo Linacre (1994), uma nota em avaliação pode ser compreendida como produto da
+interação entre elementos independentes, tais como alunos, itens e corretores. No caso de itens
+de resposta construída, a atribuição de escores depende do julgamento dos avaliadores, de
+modo que aspectos como as diferenças no grau de severidade (ou leniência), a concordância
+entre corretores ou a consistência da correção podem comprometer a qualidade e a
+comparabilidade das medidas produzidas. Nesse contexto, a modelagem Rasch multifacetada
+constitui uma importante ferramenta para investigar quantitativamente o comportamento dos
+corretores, permitindo estimar parâmetros relacionados à severidade, à concordância entre
+avaliadores e à dificuldade dos aspectos avaliados (Eckes, 2015).
+
+    Além do trabalho de avaliadores humanos, o emprego de sistemas baseados em
+inteligência artificial (IA) para apoio à correção de itens abertos tem se tornado cada vez mais
+frequente. Em termos da modelagem multifacetada, uma possibilidade seria incluir a IA na
+faceta dos corretores, de maneira a comparar esse sistema com os avaliadores humanos no que
+diz respeito à severidade e a concordância. Assim, abordagens fundamentadas na modelagem
+Rasch multifacetada apresentam potencial para subsidiar a validação e o monitoramento tanto
+de corretores humanos quanto de sistemas automatizados de correção.
+
+    Diante desse cenário, o presente estudo utiliza o modelo Rasch multifacetado para
+analisar o comportamento dos corretores de um item aberto da Avaliação Formativa do Ceará
+2025, investigando aspectos relacionados ao ajuste, à severidade/leniência e à concordância
+entre esses profissionais, com o intuito de avaliar a qualidade das correções. Adicionalmente,
+discute-se o potencial dessa abordagem para aplicações futuras em contextos de IA na
+avaliação educacional.
+
+2   Objetivos
+    Considerando as pontuações atribuídas por corretores humanos a um item aberto da
+Avaliação Formativa do Ceará 2025, bem como 7 aspectos utilizados no processo de correção,
+este estudo teve por objetivo analisar o ajuste dos corretores ao modelo Rasch multifacetado,
+buscando reunir evidências que permitissem validar (ou invalidar) a qualidade e a consistência
+do processo de correção. Além disso, objetivou-se obter e analisar as estimativas das
+competências individuais dos alunos (notas ou proficiências), da severidade (ou leniência) dos
+avaliadores, da concordância entre os corretores e da dificuldade dos aspectos avaliados, de
+
+X CONBRATRI 26 a 28 de Outubro de 2026, São Paulo-SP                                       Pág. 2
+                                                                                                P
+                                                                                         ág. 2
+          Monitoramento da Qualidade da Correção de Itens Abertos via Modelo Rasch Multifacetado:
+                          Aplicação à Avaliação Formativa do Ceará 2025
+
+modo a caracterizar as diferentes facetas envolvidas no processo de avaliação (são elas:
+alunos, corretores e aspectos de pontuação) e fornecer subsídios para o monitoramento e o
+aprimoramento contínuo da qualidade da correção de itens abertos em avaliações em larga
+escala.
+
+3   Metodologia
+
+    O presente estudo foi conduzido em três amostras diferentes, todas provenientes da
+Avaliação Formativa do Ceará 2025. As amostras consistiam em planilhas contendo as
+seguintes colunas de informações: código identificador do aluno, código identificador do
+corretor, código do item, além de colunas para os aspectos avaliados com as respectivas
+pontuações atribuídas pelos corretores. A formação de três conjuntos (ou amostras) ocorreu
+devido à ordem temporal de chegada dos dados. Os conjuntos foram compostos de forma que
+os alunos que tiveram seus testes corrigidos por apenas um corretor dentro de uma mesma
+amostra fossem desconsiderados. Ao total, foram contabilizados 9.188 alunos e 64 corretores
+únicos. Os corretores consideraram 7 aspectos de correção: (1) adequação à proposta, (2)
+tipologia textual, (3) uso da página, (4) ortografia, (5) pontuação, (6) coesão e (7)
+segmentação. Cada aspecto podia receber uma nota de 1 a 4. Então, utilizando o software
+FACETS (versão 3.71.4), foi feito o ajuste dos dados via modelagem Rasch multifacetada –
+dessa forma, foi possível obter e analisar as estimativas para as competências dos alunos, a
+severidade dos corretores e a dificuldade dos aspectos pontuados.
+
+    Para o estudo da concordância entre avaliadores, foram considerados os valores obtidos
+para a concordância observada e para a concordância esperada – o ideal é que a observada
+seja maior que a esperada, e quanto mais próxima de 100% a observada estiver, mais
+próximos os avaliadores estão de estarem trabalhando como um único corretor padrão
+(Linacre, 2014). Além disso, considerando as estatísticas InfitMS e OutfitMS – Infit Mean
+Square e Outfit Mean Square, respectivamente –, realizamos o estudo do ajuste dos corretores
+à modelagem proposta. Valores acima de 2 para essas estatísticas indicam corretores que
+distorcem ou degradam o sistema de medida (Linacre, 2014). Dessa forma, os avaliadores que
+se mostraram desajustados tiveram suas correções revisadas pela equipe responsável.
+
+     Com respeito ao estudo da severidade dos corretores, foram considerados apenas aqueles
+que apareceram em todos os três conjuntos de dados – isto é, 57 avaliadores ao todo –, com o
+
+X CONBRATRI 26 a 28 de Outubro de 2026, São Paulo-SP                                       Pág. 3
+                                                                                                P
+                                                                                         ág. 3
+           Monitoramento da Qualidade da Correção de Itens Abertos via Modelo Rasch Multifacetado:
+                           Aplicação à Avaliação Formativa do Ceará 2025
+
+intuito de viabilizar a comparabilidade entre amostras. Para esses profissionais, foram
+analisados os gráficos de dispersão da severidade e o quantitativo de redações corrigidas, além
+de realizada a classificação em “leniente”, “moderado” ou “severo” com base nos tercis da
+distribuição da severidade. A intenção com essas análises foi caracterizar o perfil de cada
+corretor e verificar se haveria consistência para esse perfil entre as amostras.
+
+4   Resultados e Discussão
+    Dos 57 corretores em comum entre as amostras, apenas 2 apresentaram desajuste pelo
+critério das estatísticas InfitMS e OutfitMS – ou seja, apenas 2 corretores apresentaram valores
+maiores ou iguais a 2 para essas estatísticas (são eles: corretor 37 e corretor 56). A Figura 1
+apresenta a distribuição dos corretores por faixa de InfitMS e OutfitMS, considerando as
+estimativas obtidas para cada amostra (um indivíduo se repete entre os que se mostraram
+desajustados, resultando em apenas 2 desajustados). Esses corretores tiveram seus processos
+de correção revisados.
+
+    Com relação à concordância entre os corretores, obtivemos que eles estão bem alinhados,
+pois os valores obtidos para a concordância observada em cada amostra (62%, 60% e 58%,
+respectivamente) foram maiores que aqueles obtidos para a concordância esperada (57%, 54%
+e 52%). Nos gráficos da Figura 2, é possível conferir a classificação de cada corretor em
+leniente, moderado ou severo de acordo com os tercis da distribuição da severidade, além de
+conferir como essa estimativa varia entre amostras para cada corretor.
+
+        Figura 1 – Distribuição dos corretores em comum entre amostras por categorias de
+                                       InfitMS e OutfitMS.
+
+X CONBRATRI 26 a 28 de Outubro de 2026, São Paulo-SP                                        Pág. 4
+                                                                                                 P
+                                                                                          ág. 4
+          Monitoramento da Qualidade da Correção de Itens Abertos via Modelo Rasch Multifacetado:
+                          Aplicação à Avaliação Formativa do Ceará 2025
+
+     Figura 2 – Gráficos com as severidades dos corretores (identificados por números de 1 a
+                                     57) nas três amostras.
+
+    Os sete aspectos avaliados também se mostraram bem ajustados ao modelo (InfitMS e
+OutfitMS menores que 2), com parâmetros de dificuldade variando de -1,5 a 1,97 nas três
+amostras, sendo o aspecto 1 (adequação à proposta) o mais fácil e o aspecto 5 (pontuação), o
+mais difícil em todos os casos. Os aspectos 2 (tipologia textual), 4 (ortografia) e 6 (coesão)
+apresentaram estimativas intermediárias e próximas para a dificuldade – a Figura 3 apresenta
+as estimativas obtidas para cada amostra.
+
+           Figura 3 – Dificuldade estimada para cada aspecto e erro-padrão associado.
+
+    Por fim, as proficiências apresentaram distribuições normais e simétricas em torno das
+médias 1,75 (amostra 1), 1,36 (amostra 2) e 0,98 (amostra 3), o que sugere um alinhamento
+entre as competências dos alunos e as dificuldades dos aspectos avaliados.
+
+5   Conclusão
+       Os resultados indicam que o processo de correção da Avaliação Formativa do Ceará
+2025 apresenta evidências de consistência e adequação ao modelo Rasch multifacetado, com a
+maior parte dos corretores apresentando comportamento ajustado, elevados níveis de
+concordância e estabilidade na severidade entre as amostras. Os poucos casos de desajuste
+
+X CONBRATRI 26 a 28 de Outubro de 2026, São Paulo-SP                                       Pág. 5
+                                                                                                P
+                                                                                         ág. 5
+          Monitoramento da Qualidade da Correção de Itens Abertos via Modelo Rasch Multifacetado:
+                          Aplicação à Avaliação Formativa do Ceará 2025
+
+foram identificados e encaminhados para revisão, demonstrando o potencial da modelagem
+como ferramenta de monitoramento da qualidade da correção. Além disso, o bom ajuste dos
+aspectos avaliados reforça a validade das medidas obtidas. Dessa forma, o modelo Rasch
+multifacetado se mostrou uma abordagem eficaz para avaliar a qualidade do processo de
+correção, subsidiando ações de formação, acompanhamento e aprimoramento contínuo dos
+corretores em avaliações educacionais em larga escala.
+    Adicionalmente, os resultados reforçam o potencial desta abordagem para aplicações
+futuras envolvendo sistemas automatizados de correção baseados em inteligência artificial. À
+medida que esses sistemas passam a integrar processos avaliativos, torna-se fundamental
+dispor de métodos capazes de monitorar sua consistência, identificar padrões de severidade ou
+leniência e avaliar sua concordância em relação aos critérios de correção estabelecidos. Nesse
+contexto, a modelagem Rasch multifacetada apresenta-se como uma estratégia promissora
+para validar e acompanhar o desempenho desses sistemas, permitindo inclusive a
+incorporação da IA na faceta dos corretores em estudos futuros. Em última análise, o uso
+conjunto da inteligência artificial e da modelagem Rasch multifacetada viabiliza correções
+mais ágeis, sob contínuo monitoramento, preservando a qualidade das medidas produzidas.
+
+6   Referências
+ECKES, T. Introduction to Many-Facet Rasch Measurement: Analyzing and Evaluating
+Rater-Mediated Assessments. 2. rev. and updated ed. Frankfurt am Main; Berlin; Bern;
+Bruxelles; New York; Oxford; Wien: Peter Lang GmbH, Internationaler Verlag der
+Wissenschaften, 2015.
+
+LINACRE, J. M. A user’s guide to FACETS Rasch-model computer programs: program
+manual 3.71.4. Chicago: Winsteps.com, 2014. Disponível em: https://www.winsteps.com.
+Acesso em 11 ago. 2026.
+
+LINACRE, J.M. Many-facet Rasch measurement. 2. ed. Chicago: MESA Press, 1994.
+
+MASTERS, G. N. A Rasch model for partial credit scoring. Psychometrika, v. 47, n. 2, p.
+149-174, 1982. DOI: https://doi.org/10.1007/BF02296272
+
+MYFORD, C. M.; WOLFE, E. W. Detecting and measuring rater effects using many-facet
+Rasch measurement: Part I. Journal of Applied Measurement, [s.l.], v. 4, p. 386–422, 2003.
+
+X CONBRATRI 26 a 28 de Outubro de 2026, São Paulo-SP                                       Pág. 6
+                                                                                                P
+                                                                                         ág. 6

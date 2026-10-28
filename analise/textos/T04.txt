@@ -1,0 +1,238 @@
+Itens de Prova Paraná de Matemática na perspectiva da TCT, TRI e IA.
+
+           Raphael Fernandes Corrêa1, Edy Célia Coelho2, Anderfabio O. dos Santos3,
+                   Jussielli de Oliveira4, Fernando Moretti F. Nabarro5
+
+       1
+           MBA, Secretaria de Estado da Educação, Curitiba, Paraná, Brasil e
+raphacorrea@gmail.com
+       2
+           Doutora, Secretaria de Estado da Educação, Curitiba, Paraná, Brasil e
+edyceliacoelho@gmail.com
+       3
+           Mestre, Secretaria de Estado da Educação, Curitiba, Paraná, Brasil e
+anderfabio.santos@escola.pr.gov.br
+       4
+           Mestre, Secretaria de Estado da Educação, Curitiba, Paraná, Brasil e
+jussielli.oliveira@escola.pr.gov.br
+       5
+           Mestre, Secretaria de Estado da Educação, Curitiba, Paraná, Brasil e
+fernando.nabarro@escola.pr.gov.br
+
+                                        Resumo
+    Este estudo analisou a capacidade de um modelo de inteligência artificial (IA) de
+    estimar, a dificuldade de 22 itens de Matemática da primeira edição da Prova
+    Paraná 2025, aplicada à 3.ª série do Ensino Médio. Desenvolvido a partir de itens
+    do Exame Nacional do Ensino Médio, o modelo considerou características
+    cognitivas das questões, e suas estimativas foram comparadas ao percentual de
+    acertos da Teoria Clássica dos Testes e ao parâmetro de dificuldade da Teoria de
+    Resposta ao Item. Os resultados revelaram correspondências e divergências entre
+    as três abordagens, indicando que a IA pode oferecer informações
+    complementares durante a elaboração e a revisão dos instrumentos, sem substituir
+    o julgamento de especialistas, a aplicação aos estudantes ou as análises
+    pedagógicas e psicométricas.
+
+     Palavras-chave: Dificuldade do Item; Teoria Clássica dos Testes; Teoria de Resposta
+ao Item; Inteligência artificial.
+
+                                                1
+                Itens de Prova Paraná de Matemática na perspectiva da TCT, TRI e IA.
+
+1       Introdução
+      A avaliação educacional subsidia a reflexão sobre os processos de ensino e aprendizagem
+(PENIN; MARTÍNEZ, 2009) e, em sua dimensão diagnóstica, permite verificar a presença ou
+ausência das habilidades necessárias à continuidade das aprendizagens (SANT’ANNA, 2024).
+Nesse contexto, a Prova Paraná integra o Sistema de Avaliação da Educação Básica do Paraná
+(SAEP) e, em 2025, foi realizada em duas edições, sendo aplicada para 98 192 estudantes, o
+que corresponde a 87% de participação e confere maior robustez aos resultados, avaliando
+habilidades das Matrizes de Referência dos diferentes componentes e etapas de ensino.
+      Na análise dos itens, a Teoria Clássica dos Testes (TCT) fornece indicadores de
+interpretação direta, como o percentual de acertos, enquanto a Teoria de Resposta ao Item (TRI)
+examina seu funcionamento pelos parâmetros de discriminação, dificuldade e probabilidade de
+acerto ao acaso; ambas, porém, só produzem evidências após a aplicação. A dificuldade
+importa para a composição do instrumento, pois provas com itens predominantemente muito
+fáceis ou muito difíceis cobrem mal os níveis de proficiência; sem pré-testagem, ela é estimada
+por julgamentos técnicos e pedagógicos.
+       Métodos de inteligência artificial (IA) podem acrescentar informações a esse processo
+ao analisar as demandas cognitivas dos itens e estimar sua dificuldade antes da aplicação. O
+uso recente da IA na avaliação educacional inclui a geração, a revisão e a análise de itens (HAO
+et al., 2024; SAYIN; GIERL, 2024). A dificuldade estimada pela IA não equivale a um
+parâmetro psicométrico nem substitui a aplicação aos estudantes, mas pode constituir
+informação complementar durante a elaboração.
+       Diante disso, este estudo analisa a capacidade de um modelo de IA de estimar a
+dificuldade de 22 itens de Matemática da primeira edição da Prova Paraná 2025, aplicada à
+3.ª série do Ensino Médio. As estimativas são comparadas ao percentual de acertos da TCT e
+ao parâmetro de dificuldade do modelo 3PL da TRI, para verificar a correspondência entre as
+medidas e discutir possibilidades e limitações da IA na revisão prévia de itens.
+
+2    Metodologia
+      Este estudo, quantitativo e exploratório, tomou como unidades de análise os 22 itens de
+Matemática da primeira edição da Prova Paraná 2025, aplicada à 3.ª série do Ensino Médio, e
+as respostas de estudantes, elaborados com base na Matriz de Referência e sem pré-teste ou
+calibração prévia.
+      A dificuldade foi examinada por três perspectivas. Na TCT, o índice de dificuldade é a
+proporção de respostas corretas: quanto menor, maior a dificuldade no grupo avaliado. Para a
+classificação, adotaram-se os intervalos de Cerdá (1978): muito difícil (0,05–0,25), difícil
+(0,25–0,45), médio (0,45–0,55), fácil (0,55–0,75) e muito fácil (0,75–0,95).
+      Na TRI, empregou-se o Modelo Logístico de Três Parâmetros (3PL) (BIRNBAUM,
+1968), estimado no R com o pacote mirt (CHALMERS, 2012), obtendo-se os parâmetros de
+discriminação (a), dificuldade (b) e acerto ao acaso (c). A comparação concentrou-se no b, em
+que valores mais elevados indicam maior dificuldade; a e c caracterizam complementarmente
+o funcionamento dos itens.
+      A terceira medida foi produzida por um modelo preditivo desenvolvido com 705 itens de
+Matemática das edições regulares do Exame Nacional do Ensino Médio (ENEM) entre 2009 e
+2025, exceto 2020 (INEP, 2025). Adotaram-se os parâmetros oficiais como referência;
+paralelamente, o grupo desenvolveu uma recalibração do 3PL por rede neural rasa (BASTOS,
+
+ X CONBRATRI 26 a 28 de Outubro de 2026, São Paulo-SP                                     Pág. 2
+                Itens de Prova Paraná de Matemática na perspectiva da TCT, TRI e IA.
+
+2024), não utilizada nos resultados aqui reportados. Cada item foi representado por seis
+características da demanda de resolução (FISCHER, 1973; DE BOECK; WILSON, 2004):
+número de passos, nível de abstração, carga de leitura, cálculo intensivo, dependência de figura
+e relevância do contexto. Os descritores foram atribuídos por um modelo de linguagem de
+grande escala (Claude Opus 5), operado com esforço de raciocínio estendido, que resolvia cada
+item antes de contabilizar as etapas, em ordem aleatorizada e sem acesso aos parâmetros
+calibrados. Padronizados, serviram de variáveis explicativas em uma regressão ridge (HOERL;
+KENNARD, 1970), tendo como variável dependente a dificuldade relativa dos itens do ENEM
+— a combinação é linear e regularizada, e não uma rede neural: o aprendizado profundo
+restringe-se à leitura e à codificação do enunciado.
+      A generalização foi avaliada por leave-one-year-out: em cada rodada, os itens de uma
+edição completa do ENEM eram excluídos do treinamento e usados na validação, de modo que
+suas dificuldades fossem estimadas por um modelo sem contato prévio com eles. Em seguida,
+validou-se externamente com os 22 itens da Prova Paraná, ausentes do treinamento.
+      Por utilizarem escalas distintas, as medidas da TCT, da TRI e do modelo preditivo foram
+comparadas principalmente pela ordenação dos itens, com a correlação de postos de Spearman
+e a proporção de pares corretamente ordenados. Examinou-se também a concordância entre as
+categorias de dificuldade da TCT e da TRI e, individualmente, os casos de maior convergência
+e divergência.
+
+3   Resultados
+     A Tabela 1 apresenta o comportamento dos 22 itens: na TCT, as proporções de respostas
+em cada alternativa, o percentual de acertos e a classificação de dificuldade; na TRI, os
+parâmetros a, b e c, com as respectivas classificações.
+          Tabela 1: Resultados dos itens de Matemática segundo a TCT e a TRI
+
+      Os 22 itens distribuíram-se entre diferentes níveis de dificuldade, não havendo itens
+classificados como muito fáceis. Entre TCT e TRI, 12 itens (54,5%) receberam a mesma
+
+ X CONBRATRI 26 a 28 de Outubro de 2026, São Paulo-SP                                     Pág. 3
+                Itens de Prova Paraná de Matemática na perspectiva da TCT, TRI e IA.
+
+classificação e 10 (45,5%) foram classificados em categorias distintas, sempre próximas, sem
+oposição entre os extremos de dificuldade.
+      Orientadas no mesmo sentido de dificuldade, as duas medidas apresentaram correlação
+de Spearman de ρ = 0,965, evidenciando elevada correspondência na ordenação dos 22 itens
+(Figura 2a).
+      Quanto à discriminação, 14 itens foram classificados como de discriminação muito alta,
+quatro como alta e quatro como moderada, não sendo identificados itens com discriminação
+baixa ou inadequada. O parâmetro c, associado à probabilidade de acerto ao acaso, situou-se
+entre 0,00 e 0,29, conforme a Figura 1.
+                       Figura 1: Curva Característica do Item (CCI)
+
+       Incorporadas à análise as estimativas do modelo de IA e considerando que as três medidas
+utilizam escalas distintas, a comparação foi realizada pela ordenação dos itens. A correlação
+da IA foi de ρ = 0,520 com o parâmetro b da TRI e de ρ = 0,457 com o percentual de acertos
+da TCT; na validação externa, o modelo apresentou 70% de ordenação correta dos pares de
+itens.
+      A Figura 2 (b) apresenta a posição relativa dos 22 itens nos três ordenamentos. No eixo
+horizontal, estão os itens conforme sua localização na Tabela 1, enquanto o eixo vertical indica
+sua posição no ordenamento de dificuldade.
+
+     Figura 2 – (a) Relação entre o                  Figura 2 – (b) Ordenação dos 22 itens
+percentual de acertos (TCT) e o                      segundo a dificuldade indicada pela TCT,
+parâmetro de dificuldade b (TRI);                    pela TRI e pela IA.
+
+     A comparação individual mostra situações de grande proximidade entre os três
+ordenamentos: o MT31281PR25 ocupou a 3.ª posição pela TCT, a 2.ª pela TRI e a 2.ª pela IA,
+
+ X CONBRATRI 26 a 28 de Outubro de 2026, São Paulo-SP                                     Pág. 4
+                 Itens de Prova Paraná de Matemática na perspectiva da TCT, TRI e IA.
+
+e o MT31271PR24, as posições 2, 3 e 5. No outro extremo, o MT31192PR25 ficou em 22.º,
+20.º e 22.º.
+      Também foram registradas diferenças acentuadas. O MT31201PR25, com 19,78% de
+acertos e b = 2,21, ocupou a primeira posição pela TCT e pela TRI, mas a 17.ª pela IA; o
+MT31Hd272PR25 ocupou as posições 11, 10 e 21. Em sentido inverso, o MT31292PR25 foi
+o 13.º pela TCT, o 8.º pela TRI e o 3.º pela IA.
+
+3.1   Discussão
+       A comparação entre TCT e TRI apresentou elevada consistência (ρ = 0,965), indicando
+ordenação semelhante dos itens quanto à dificuldade; as diferenças pontuais entre categorias
+não alteraram a identificação dos itens mais e menos difíceis. A predominância de itens com
+discriminação alta ou muito alta indica capacidade de diferenciar estudantes situados em
+distintos níveis de proficiência.
+      Em relação à IA, as correlações foram inferiores às observadas entre TCT e TRI, com
+ρ = 0,520 em relação ao parâmetro b da TRI e ρ = 0,457 em relação à TCT. A validação externa
+apresentou 70% de ordenação correta dos pares de itens. Esses resultados indicam aproximação
+entre a dificuldade prevista pela IA e aquela observada após a aplicação, mas revelam que essa
+capacidade de antecipação não ocorreu de maneira uniforme entre os itens.
+       As divergências decorrem, em parte, da natureza distinta das medidas: TCT e TRI partem
+das respostas efetivamente produzidas pelos estudantes, ao passo que a IA estima previamente
+a dificuldade a partir das características dos itens. Número de passos, abstração, carga de leitura,
+presença de cálculos, figuras e contexto contribuem para a previsão, mas não explicam
+isoladamente a dificuldade, que também depende do conhecimento e da estratégia necessários
+à resolução.
+      A análise estatística pode ainda ser ampliada pela interpretação pedagógica dos itens: a
+articulação entre percentual de acertos, parâmetros da TRI, comportamento dos distratores e
+habilidade avaliada permite levantar hipóteses sobre os processos de resolução e sobre os
+conhecimentos ainda não consolidados, perspectiva particularmente relevante em uma
+avaliação de caráter diagnóstico (SANT’ANNA, 1995).
+      Os resultados sugerem, portanto, papel complementar da IA em etapa anterior à aplicação:
+durante a elaboração e a revisão, ela pode auxiliar na identificação prévia de questões cuja
+dificuldade estimada esteja distante do nível pretendido. As divergências encontradas mostram,
+porém, que a IA não deve substituir as análises psicométricas baseadas nas respostas dos
+estudantes, e sim atuar como fonte adicional de evidências.
+      Entre as limitações do estudo, destacam-se o número reduzido de itens utilizados na
+validação externa, composto por 22 questões, e a possibilidade de viés decorrente da anotação
+dos descritores dos itens externos não ter ocorrido de forma completamente independente dos
+parâmetros calibrados. Assim, a ampliação da quantidade de itens, a realização de anotações
+independentes e a aplicação do modelo em diferentes edições da avaliação são necessárias para
+verificar a estabilidade dos resultados.
+
+  4 Conclusões e Considerações Finais
+      Este estudo comparou a dificuldade de 22 itens de Matemática da Prova Paraná sob três
+perspectivas: a TCT, a TRI e um modelo de IA que estima a dificuldade antes da aplicação. A
+forte relação entre TCT e TRI (ρ = 0,965) contrasta com a aproximação moderada da IA
+(ρ = 0,520 com a TRI e ρ = 0,457 com a TCT, além de 70% de pares corretamente ordenados),
+próxima em parte dos itens e divergente em outros.
+
+ X CONBRATRI 26 a 28 de Outubro de 2026, São Paulo-SP                                        Pág. 5
+                Itens de Prova Paraná de Matemática na perspectiva da TCT, TRI e IA.
+
+      A IA não substitui a análise pedagógica, a revisão técnica nem as análises psicométricas
+já realizadas pela Coordenação de Avaliação (CAV), mas acrescenta uma informação hoje
+indisponível: uma estimativa de dificuldade obtida ainda durante a elaboração, capaz de
+sinalizar itens distantes do nível pretendido antes que integrem o instrumento. A ampliação do
+número de itens, a realização de anotações independentes e a aplicação do modelo em outras
+edições são os próximos passos para verificar a estabilidade das relações encontradas.
+
+ 5 Referências
+BASTOS, L. M. Deep IRT: an application of deep learning methods to Item Response Theory.
+Dissertação (Mestrado em Estatística) – Universidade de Brasília, Brasília, 2024.
+BIRNBAUM, A. Some latent trait models and their use in inferring an examinee’s ability. In:
+LORD, F. M.; NOVICK, M. R. Statistical Theories of Mental Test Scores. Reading: Addison-
+Wesley, 1968.
+CHALMERS, R. P. mirt: a multidimensional item response theory package for the R
+environment. Journal of Statistical Software, v. 48, n. 6, p. 1–29, 2012.
+DE BOECK, P.; WILSON, M. (Eds.). Explanatory Item Response Models: a generalized linear
+and nonlinear approach. New York: Springer, 2004.
+FISCHER, G. H. The linear logistic test model as an instrument in educational research. Acta
+Psychologica, v. 37, n. 6, p. 359–374, 1973.
+HAO, J.; VON DAVIER, A. A.; YANEVA, V.; LOTTRIDGE, S. M.; VON DAVIER, M.;
+HARRIS, D. J. Transforming Assessment: The Impacts and Implications of Large Language
+Models and Generative AI. Educational Measurement: Issues and Practice, v. 43, n. 2, p. 16–
+29, 2024. DOI: https://doi.org/10.1111/emip.12602
+HOERL, A. E.; KENNARD, R. W. Ridge regression: biased estimation for nonorthogonal
+problems. Technometrics, v. 12, n. 1, p. 55–67, 1970.
+INSTITUTO NACIONAL DE ESTUDOS E PESQUISAS EDUCACIONAIS ANÍSIO
+TEIXEIRA (INEP). Microdados do ENEM: edições de 2009 a 2025. Brasília: INEP, 2025.
+PENIN, Sônia; MARTÍNEZ, Miguel. Profissão docente: pontos e contrapontos. São Paulo:
+Summus, p. 23-24, 2009.
+SANT’ANNA, I. M. Por que avaliar? Como avaliar? Critérios e instrumentos. Petrópolis:
+Vozes, 1995.
+SAYIN, A.; GIERL, M. J. Using OpenAI GPT to Generate Reading Comprehension Items.
+Educational Measurement: Issues and Practice, Hoboken, v. 43, n. 1, p. 5–18, 2024.
+Disponível em: https://doi.org/10.1111/emip.12590.
+
+ X CONBRATRI 26 a 28 de Outubro de 2026, São Paulo-SP                                   Pág. 6

@@ -1,0 +1,102 @@
+Relação entre Iniciação Científica e Desempenho no ENADE em Psicologia: uma estimativa associativa via Propensity Score Matching com dados administrativos nacionais
+
+Marie van Deursen1, Daniel F. Nunes2, Felipe Rafael Souza3, Leonardo Fernandes Martins4
+ 
+1 Pontifícia Universidade Católica do Rio de Janeiro (PUC-Rio) — mariedeursen@gmail.com
+2 Instituto Federal Goiano (IFgoiano); Universidade de Brasília (UnB) — danielfreitasnunes@gmail.com
+3 evakub — felipe.souza@evakub.com
+4 Universidade Federal de Juiz de Fora (UFJF) — leomartinsjf@gmail.com
+
+Resumo
+Este estudo estima, via Propensity Score Matching (PSM), a associação entre a participação em iniciação científica (IC) e a probabilidade de egressos de Psicologia no Brasil (edições 2018 e 2022) alcançarem o quartil superior do ENADE. Com microdados do  Exame Nacional de Desempenho dos Estudantes (ENADE) vinculados ao Censo da Educação Superior (SEDAP/INEP), de uma amostra pré-matching de 46.681 estudantes (2.717 com IC; 43.964 sem IC), foram pareados 2.717 estudantes com IC e 8.151 sem IC (razão 1:3), com balanceamento das covariáveis observadas incluídas no modelo (SMD ≈ 0 pós-matching). Os resultados indicam uma diferença positiva e estatisticamente significativa, associada à IC, na probabilidade de pertencimento ao quartil superior em ambos os componentes do exame (Componente Específico: 5,48%; Formação Geral: 5,28%; p < 0,001). Os achados sugerem que a IC fortalece competências disciplinares e transversais avaliadas no exame e é consistente com a literatura internacional sobre práticas educacionais de alto impacto.
+Palavras-chave: iniciação científica; ENADE; Propensity Score Matching; avaliação educacional; Psicologia.
+
+Introdução
+A iniciação científica (IC) é reconhecida como uma das práticas educacionais de maior impacto no ensino superior, associada ao aprofundamento do domínio disciplinar, ao desenvolvimento de habilidades de pesquisa e ao maior engajamento acadêmico (KUH, 2008). No Brasil, a produção de evidências associativas em desfechos acadêmicos objetivos permanece escassa na área da psicologia.
+O Exame Nacional de Desempenho dos Estudantes (ENADE) constitui o instrumento mais abrangente de avaliação de rendimento acadêmico de concluintes no Brasil. Estruturado em Componente Específico (CE) e Formação Geral (FG), o exame foi concebido para viabilizar comparações entre instituições e ao longo do tempo (BRITO, 2008), ainda que sua comparabilidade longitudinal seja objeto de críticas metodológicas na literatura (VERHINE; DANTAS; SOARES, 2006). A Psicologia representa um campo de interesse particular: há forte heterogeneidade institucional, alta concentração feminina (≈ 93% do estudantes) e distribuição desigual dos programas de IC entre tipos de IES, com participação consideravelmente maior em IES federais (17,6% vs 8,0% nas privadas).
+Estudos anteriores documentaram associação positiva entre IC e desempenho no ENADE. Marques e Cunha (2021) já haviam aplicado Propensity Score Matching (PSM) para estimar esse efeito, porém de forma agregada para todas as áreas do conhecimento, sem focalizar cursos específicos nem incorporar explicitamente o tipo de IES como covariável de pareamento; o relatório do Centro de Gestão e Estudos Estratégicos (2017), por sua vez, tem caráter descritivo. Estudantes que participam da IC tendem a ser mais motivados, provenientes de instituições com maior suporte à pesquisa e de famílias com maior escolaridade, características que, por si só, indicam melhor desempenho no exame. O PSM permite construir um grupo de comparação observacionalmente equivalente ao grupo tratado, minimizando esse viés (STUART, 2010; HO et al., 2007).
+Objetivos
+Estimar o efeito marginal (AME) da participação em IC sobre a probabilidade de pertencimento ao quartil superior no Componente Específico (CE) e na Formação Geral (FG) do ENADE, entre egressos de Psicologia.
+Metodologia
+Foram utilizados os microdados do ENADE 2018 e 2022, vinculados individualmente ao Censo da Educação Superior (Censup), acessados em ambiente seguro SEDAP/INEP. A amostra foi restrita a concluintes presenciais de Psicologia com nota válida no exame. A variável de tratamento foi a participação em iniciação científica (IC), identificada a partir do campo “IN_BOLSA_PESQUISA”(variável que sinaliza se o participante fez IC com ou sem bolsa),do Censup: estudantes com qualquer registro nessa variável, com e sem bolsa, foram classificados como participantes de IC (IC = 1); os demais, como não participantes (IC = 0).  A amostra pré-matching totalizou 46.681 estudantes (2.525 com IC; 43.964 sem IC). Os estudantes com IC eram significativamente mais frequentes em IES federais (17,6% vs 8,0%) e tinham pais mais escolarizados, gerando desequilíbrio substancial nas covariáveis (SMD de até 0,317 no propensity score).
+O PSM foi implementado via regressão logística com estimando ATT, algoritmo nearest neighbor 1:3, caliper de 0,20 desvios-padrão e sem reposição (pacote MatchIt; HO et al., 2011; R CORE TEAM, 2026). As covariáveis de pareamento foram: escolaridade dos pais, tipo de IES (federal, privada, pública outras) e tipo de escola no ensino médio. A amostra pareada totalizou 10.868 observações (2.525 com IC; 7.567 sem IC). O balanceamento pós-pareamento foi verificado por diferenças padronizadas (SMD; limiar |d| < 0,10) via pacote cobalt (GREIFER, 2026), todos os SMDs foram reduzidos a zero (Tabela 1 e Figura 1).
+Para o desfecho binário (pertencimento ao quartil superior no CE e na FG), foram estimados modelos quasibinomial com efeitos marginais médios via avg_comparisons() (pacote marginaleffects; AREL-BUNDOCK; GREIFER; HEISS, 2024). Todas as análises foram realizadas em R (R CORE TEAM, 2026).
+Tabela 1. Balanceamento das covariáveis antes e após o PSM.
+
+Covariável
+SMD pré-matching
+SMD pós-matching
+Tipo de IES: Federal
++0,253
+0,000
+Tipo de IES: Privada
+−0,275
+0,000
+Tipo de IES: Pública (outras)
++0,087
+0,000
+Escolaridade pais: Nenhum
+−0,098
+0,000
+Escolaridade pais: Ambos
++0,071
+0,000
+Escolaridade pais: Um
++0,054
+0,000
+Escola EM: Privada
+−0,062
+0,000
+Nota: SMD = diferença padronizada de médias. Pós-matching: SMD ≈ 0 em todas as covariáveis.
+Fonte: elaborado pelas autoras a partir de microdados do ENADE vinculados ao Censo da Educação Superior (INEP/SEDAP).
+
+Resultados 
+A Tabela 2 apresenta as estimativas AME para os dois desfechos analisados. Após o pareamento por escore de propensão sobre as covariáveis observadas, a IC esteve associada a uma diferença positiva e estatisticamente significativa na probabilidade de pertencimento ao quartil superior do ENADE em ambos os componentes.
+Tabela 2. Efeito marginal estimado da IC sobre a probabilidade de pertencimento ao quartil superior do ENADE (amostra matched via PSM).
+
+Desfecho
+AME
+EP
+IC 95%
+p-valor
+n
+CE — quartil superior (pp)
+5,48%
+0,92
+[3,68; 7,27]
+< 0,001
+10.092
+FG — quartil superior (pp)
+5,28%
+0,93
+[3,45; 7,11]
+< 0,001
+10.095
+Nota: AME = Average Marginal Effect (quasibinomial). EP = erro-padrão clusterizado por subclasse. pp = pontos percentuais. IC 95% robusto. 
+Fonte: elaborado pelos autores a partir de microdados do ENADE vinculados ao Censo da Educação Superior (INEP/SEDAP).
+A Figura 1 sintetiza as proporções no quartil superior por grupo.
+
+Figura 1. Proporção de egressos no quartil superior do ENADE por grupo (Com IC: 28,1%; Sem IC: 24,2%; amostra matched).
+Fonte: elaborado pelas autoras a partir de microdados do ENADE vinculados ao Censo da Educação Superior (INEP/SEDAP).
+Discussão
+A magnitude semelhante da associação em CE e FG é teoricamente relevante. O CE avalia conhecimentos disciplinares específicos de Psicologia (teorias, metodologia, avaliação psicológica), ao passo que a FG avalia competências transversais (leitura crítica, argumentação, análise de conjuntura). O fato de a IC estar associada a diferenças positivas em ambas as dimensões sugere que a experiência de pesquisa pode estar relacionada tanto ao domínio conceitual da área quanto a habilidades de raciocínio analítico de aplicação ampla, consistente com a literatura internacional sobre IC como prática de alto impacto (KUH, 2008; LINN et al., 2015).
+Esses resultados são coerentes com Marques e Cunha (2021), que, utilizando PSM em amostra agregada de todas as áreas avaliadas pelo Enade, estimaram efeitos de 0,21 a 0,31 desvios-padrão a favor dos bolsistas de IC. O relatório do CGEE (2017), embora não trate diretamente do desempenho no ENADE, indica que ex-bolsistas de IC concluíram a graduação mais cedo e apresentam maior probabilidade de concluir mestrado e doutorado, evidência complementar do valor formativo do programa. Internacionalmente, Russell, Hancock e McCullough (2007) documentam que a participação em pesquisa de graduação está associada a maior compreensão do processo de pesquisa, aumento do interesse por carreiras científicas e maior confiança e clareza quanto à trajetória acadêmica, ganhos que plausivelmente se refletem no desempenho em instrumentos de avaliação utilizados. 
+Conclusão
+Este estudo fornece evidências quase-experimentais as quais sugerem de que a participação em IC produz associação positiva e significativa sobre a probabilidade de egressos de Psicologia alcançarem o quartil superior do ENADE, com incremento de aproximadamente 5,4 pontos percentuais no Componente Específico e 5,3 pontos percentuais na Formação Geral. Os resultados reforçam a importância dos programas de IC como política formativa no ensino superior brasileiro e indicam que o ENADE pode ser utilizado como desfecho objetivo para avaliação de impacto desses programas em escala nacional. Estudos futuros devem investigar heterogeneidades por tipo de IES, região e modalidade de bolsa, e examinar se as associações se sustentam em janelas temporais mais longas.
+Referências
+AREL-BUNDOCK, V.; GREIFER, N.; HEISS, A. How to interpret statistical models using marginaleffects for R and Python. Journal of Statistical Software, v. 111, n. 9, p. 1-32, 2024.
+BRASIL. Centro de Gestão e Estudos Estratégicos (CGEE). Avaliação do Programa Institucional de Bolsas de Iniciação Científica (PIBIC). Brasília: CNPq/CGEE, 2017.
+BRITO, M. R. F. O SINAES e o ENADE: da concepção à implantação. Avaliação (Campinas),
+v. 13, n. 3, p. 841-850, 2008.
+GREIFER, N. cobalt: covariate balance tables and plots. R package version 5.0.0, 2026. Disponível em: <https://ngreifer.github.io/cobalt/>.
+HO, D. E. et al. Matching as nonparametric preprocessing for reducing model dependence in parametric causal inference. Political Analysis, v. 15, n. 3, p. 199-236, 2007.
+HO, D. E.; IMAI, K.; KING, G.; STUART, E. A. MatchIt: nonparametric preprocessing for parametric causal inference. Journal of Statistical Software, v. 42, n. 8, p. 1-28, 2011.
+KUH, G. D. High-impact educational practices: What they are, who has access to them, and why they matter. Washington, DC: Association of American Colleges and Universities, 2008.
+LINN, M. C. et al. Undergraduate research experiences: Impacts and opportunities. Science, v.
+347, n. 6222, p. 1261757, 2015.
+MARQUES, F. C.; CUNHA, M. S. Impactos da iniciação científica sobre o desempenho estudantil no Enade 2015-2017. Estudos em Avaliação Educacional, v. 32, p. e06744, 2021.
+R CORE TEAM. R: a language and environment for statistical computing. Versão 4.6.1. Vienna, Austria: R Foundation for Statistical Computing, 2026. Disponível em: <https://www.R-project.org/>.
+RUSSELL, S. H.; HANCOCK, M. P.; McCULLOUGH, J. Benefits of undergraduate research experiences. Science, v. 316, n. 5824, p. 548-549, 2007.
+STUART, E. A. Matching methods for causal inference: A review and a look forward.
+Statistical Science, v. 25, n. 1, p. 1-21, 2010.
+VERHINE, R. E.; DANTAS, L. M. V.; SOARES, J. F. Do Provão ao ENADE: uma análise comparativa dos exames nacionais utilizados no Ensino Superior Brasileiro. Ensaio: Avaliação e Políticas Públicas em Educação, v. 14, n. 52, p. 291-310, 2006.

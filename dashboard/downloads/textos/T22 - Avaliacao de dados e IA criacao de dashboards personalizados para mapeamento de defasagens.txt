@@ -1,0 +1,62 @@
+AVALIAÇÃO DE DADOS E INTELIGÊNCIA ARTIFICIAL: CRIAÇÃO DE DASHBOARDS PERSONALIZADOS PARA O MAPEAMENTO DE DEFASAGENS EM HABILIDADES DO ENEM
+
+Diego de Souza Moreira¹; 
+Cassiano Caon Amorim²;
+
+¹ Universidade Federal de Juiz de Fora, diego.moreira@ufjf.br
+² Universidade Federal de Juiz de Fora, cassianocaon.amorim@ufjf.br
+
+Resumo
+
+O acompanhamento do desenvolvimento de habilidades e competências exigidas pelo Exame Nacional do Ensino Médio (ENEM) é um desafio no 3º ano do Ensino Médio. Este trabalho propõe uma metodologia de avaliação pós-teste que alia métodos quantitativos e Inteligência Artificial (IA). Após a aplicação de um simulado padrão ENEM, realizou-se a análise estatística dos acertos e, fundamentalmente, dos distratores, buscando identificar as lacunas de aprendizagem de uma turma de 3º ano. Utilizando algoritmos de IA, os dados brutos foram processados para o desenvolvimento de dashboards personalizados por aluno e para a turma como um todo. Os resultados parciais demonstram que a visualização clara da defasagem em habilidades específicas, impulsionada pela análise automatizada via IA, permite aos docentes repensar e ajustar as rotas pedagógicas de forma ágil e baseada em evidências, otimizando a preparação para avaliações de larga escala.
+
+Palavras-chave: Avaliação Educacional; Inteligência Artificial; Dashboards Educacionais; Análise de Distratores; ENEM.
+
+1 Introdução
+
+A avaliação educacional em larga escala no Brasil, notadamente o Exame Nacional do Ensino Médio (ENEM), fundamenta-se em uma matriz de referência focada em habilidades e competências. A utilização de itens de múltipla escolha nesse contexto exige um cuidado ímpar com a elaboração de distratores, que não são meras alternativas incorretas, mas sim mapeamentos de erros conceituais plausíveis ou estágios de desenvolvimento cognitivo incompletos (ANDRADE; TAVARES; VALLE, 2000). 
+
+No contexto da sala de aula do 3º ano do Ensino Médio, aplicar simulados e obter apenas a pontuação bruta (Teoria Clássica dos Testes) é insuficiente para uma intervenção pedagógica eficaz. Faz-se necessária uma análise mais profunda das respostas aos itens, compreendendo quais habilidades não foram consolidadas. Historicamente, essa análise quantitativa granular demandava um esforço hercúleo do corpo docente. Contudo, o advento de ferramentas de Inteligência Artificial (IA) integradas à análise de dados educacionais tem revolucionado esse cenário (LUCKIN et al., 2016) e (HWANG, Gwo-Jen et al, 2021).
+
+Alinhado ao tema do X CONBRATRI, este trabalho investiga o uso da IA não apenas na geração, mas na interpretação de resultados de itens calibrados. A pesquisa aborda a importância da avaliação de dados pós-aplicação de testes, utilizando a IA para automatizar a análise estatística de distratores e gerar dashboards interativos. Essa abordagem visa democratizar o acesso aos dados educacionais para professores e alunos, transformando números abstratos em rotas pedagógicas personalizadas.
+
+2 Objetivos
+
+O objetivo geral deste trabalho é avaliar o impacto da utilização de análise de dados e Inteligência Artificial na interpretação de resultados de simulados padrão ENEM em uma turma de 3º ano do Ensino Médio. 
+Como objetivos específicos, destacam-se:
+a) Mapear o desenvolvimento das habilidades e competências da matriz do ENEM por meio da análise quantitativa de acertos e erros (distratores);
+b) Utilizar ferramentas de IA para processar os dados estatísticos e gerar dashboards personalizados de desempenho;
+c) Identificar as defasagens de aprendizagem individuais e do grupo para propor o planejamento de rotas pedagógicas baseadas em evidências.
+
+3 Metodologia
+
+A pesquisa, de caráter quantitativo-qualitativo, foi desenvolvida com uma turma do 3º ano do Ensino Médio de uma escola particular da cidade de Juiz de Fora -MG. A intervenção foi dividida em três etapas principais:
+
+1. Aplicação do Instrumento: Utilizou-se um simulado estruturado aos moldes do ENEM na área de Matemática e suas Tecnologias, cobrindo áreas de conhecimento específicas. Os itens possuíam distratores previamente mapeados para erros conceituais específicos, permitindo que a escolha de uma alternativa incorreta indicasse a exata lacuna na habilidade avaliada.
+
+2. Tratamento e Análise de Dados: As respostas foram tabuladas e submetidas a uma análise estatística descritiva (índices de facilidade e discriminação). O foco centrou-se na análise de frequência dos distratores (frequência de escolha).
+
+3. Integração com Inteligência Artificial e Dashboards: Os dados anonimizados foram inseridos em um ambiente de Business Intelligence (como Power BI/Looker) no caso em HTML produzido via prompts de códigos de programação usando a LLM Gemini do GOOGLE, programado para correlacionar o distrator escolhido com a habilidade não desenvolvida. A IA foi responsável por gerar e estruturar dashboards que apresentam, visualmente, o nível de proficiência de cada aluno e da turma, indicando as habilidades prioritárias para revisão (MIAO, HOLMES, 2023). .
+
+4 Resultados e Discussão
+
+A análise preliminar dos dados demonstrou que a avaliação baseada apenas no "certo ou errado" oculta necessidades urgentes de aprendizagem. 
+O uso da IA permitiu compilar esses dados massivos em dashboards individuais. Para os alunos, o dashboard serviu como uma ferramenta de autorregulação da aprendizagem, pois substituiu o clássico valor numérico que representa uma nota genérica por um mapeamento por habilidades das possíveis defasagens apresentadas pelo estudante. 
+Para o professor, para a gestão escolar e pedagógica o painel consolidado da turma revelou que ela apresentava defasagens em conceitos e pré-requisitos essenciais. Com base nessas evidências estruturadas pela IA, a equipe pedagógica pôde repensar as rotas de ensino, abandonando aulas expositivas genéricas em prol de oficinas de nivelamento focadas nos distratores mais atrativos, otimizando o tempo restrito do 3º ano do Ensino Médio.
+
+5 Conclusão
+
+A experiência evidenciou que a aplicação de testes no formato do ENEM deve ir além do ranqueamento. A análise quantitativa aprofundada dos distratores, quando aliada ao poder de processamento da Inteligência Artificial, mostra-se uma ferramenta poderosa para a avaliação formativa. 
+A automação da geração de dashboards por meio da IA rompe a barreira técnica que frequentemente impede os professores de utilizarem métodos quantitativos em seu dia a dia (SELWYN, 2019). Conclui-se que o uso dessas tecnologias permite um diagnóstico preciso das defasagens, viabilizando uma personalização real do ensino e o repensar das rotas pedagógicas no momento crítico que é o final da Educação Básica.
+
+6 Referências
+
+ANDRADE, D. F. de; TAVARES, H. R.; VALLE, R. C. Teoria da Resposta ao Item: conceitos e aplicações. São Paulo: Associação Brasileira de Estatística, 2000.
+
+BRASIL. Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira (Inep). Matriz de Referência Enem. Brasília: Inep, 2009.
+
+HWANG, Gwo-Jen et al. Artificial intelligence in education: the three paradigms. Computers and Education: Artificial Intelligence, [S. l.], v. 2, p. 100021, 2021.
+LUCKIN, R. et al. Intelligence Unleashed: An argument for AI in Education. London: Pearson, 2016. Disponível em: <https://www.pearson.com>. Acesso em: 15 ago. 2026.
+
+MIAO, Fengchun; HOLMES, Wayne. Guidance for generative AI in education and research. Paris: UNESCO, 2023. Disponível em: unesco.org. Acesso em: 31 ago. 2026.
+SELWYN, Neil. Should robots replace teachers? AI and the future of education. Cambridge: Polity Press, 2019.

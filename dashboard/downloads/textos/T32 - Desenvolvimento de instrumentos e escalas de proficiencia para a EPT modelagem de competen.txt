@@ -1,0 +1,149 @@
+DESENVOLVIMENTO DE INSTRUMENTOS E ESCALAS DE PROFICIÊNCIA PARA A EDUCAÇÃO PROFISSIONAL E TECNOLÓGICA (EPT): MODELAGEM DE COMPETÊNCIAS COM A TEORIA DA RESPOSTA AO ITEM
+Juliano Anderson Pacheco1, Dalton Francisco de Andrade2, Adriano Ferreti Borgatto3, Leonardo Morais4
+
+1 Universidade Federal de Santa Catarina (UFSC) - juliano.pacheco@posgrad.ufsc.br
+2 Universidade Federal de Santa Catarina (UFSC) - dalton.andrade@ufsc.br
+3 Universidade Federal de Santa Catarina (UFSC) - adriano.borgatto@ufsc.br
+4 Universidade Federal de Santa Catarina (UFSC) - leonardo.morais@ifsc.edu.br
+
+Resumo
+Este trabalho apresenta o percurso metodológico e psicométrico da medida de proficiência das Habilidades Gerais e Específicas da avaliação piloto da Educação Profissional e Tecnológica (EPT) de 2025. A amostra contemplou 16.278 estudantes de dez cursos técnicos, submetidos a cadernos de prova com design de blocos incompletos, itens gerais e específicos. Utilizou-se uma rotina de validação híbrida com iterações por exclusão de itens, acoplada ao modelo 1PL da TRI para calcular o índice de discriminação clássico (D) sem a influência do item analisado (todo-resto). A premissa de discriminação constante do modelo 1PL foi rejeitada empiricamente e confirmada pelas cargas fatoriais distintas obtidas na Análise Fatorial de Informação Completa (FIFA). A transição para os modelos 2PL e 3PL revelou que o mesmo escore bruto resulta em proficiências () heterogêneas. O modelo 3PL demonstrou-se superior ao mensurar, além da discriminação, o impacto do acerto casual, consolidando uma avaliação mais fidedigna à EPT.
+Palavras-chave: Teoria da Resposta ao Item; Educação Profissional; Discriminação de Itens; Acerto Casual.
+
+Introdução
+A Educação Profissional e Tecnológica (EPT) no Brasil tem passado por expressivas transformações nas últimas décadas, impulsionada pela expansão das políticas públicas federais (como o Pronatec e o Novo Ensino Médio) e pela institucionalização de sistemas de acompanhamento estatístico, a exemplo da Plataforma Nilo Peçanha (PNP) (BRASIL, 2024). Contudo, historicamente, a modalidade carece de uma cultura consolidada de avaliação padronizada em larga escala, que seja capaz de capturar suas especificidades formativas (MORAES et al., 2020).
+Diferentemente do ensino médio regular, de caráter predominantemente propedêutico, a EPT exige a mensuração do "saber-fazer", isto é, a integração entre as competências gerais teóricas e as habilidades técnicas aplicadas (LE BOTERF, 2003). Desenvolver avaliações robustas para este segmento impõe desafios psicométricos com maior complexidade (KORB, 2019). A Teoria Clássica dos Testes (TCT), embora de fácil comunicação pedagógica, mostra-se limitada diante da aplicação de múltiplos cadernos, com diferentes dificuldades, e na ponderação do peso específico de cada item. Este trabalho propõe uma metodologia integrada de calibração e análise de escalas para o componente de Habilidades Gerais e Específicas da avaliação piloto da EPT de 2025 aplicada pelo Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira vinculado ao Ministério da Educação (INEP/MEC), comparando as modelagens clássicas e modernas de mensuração educacional (ANDRADE, TAVARES e VALLE, 2000).
+Objetivos
+O objetivo geral deste estudo é avaliar e propor o modelo psicométrico da Teoria da Resposta ao Item (TRI) mais adequado para a estimação da proficiência dos estudantes de EPT a partir dos dados do teste piloto de 2025.
+Os objetivos específicos compreendem:
+1. Analisar as propriedades clássicas e a variação empírica do índice de discriminação dos itens gerais utilizando uma rotina de validação cruzada com iterações por exclusão de itens;
+2. Investigar as limitações estatísticas do modelo logístico de 1 parâmetro (1PL) frente à heterogeneidade dos dados do teste;
+3. Comparar o ajuste e o comportamento das estimativas de habilidade () sob os modelos logísticos de 2 e 3 parâmetros (2PL e 3PL), avaliando o impacto do parâmetro de acerto casual (chute) nas estimativas finais de proficiência.
+Metodologia
+O estudo analisou as Habilidades Gerais e Específicas avaliadas no teste piloto da EPT em 2025 por intermédio da Plataforma Digital TAO do Centro de Políticas Públicas e Avaliação da Educação da Universidade Federal de Juiz de Fora (CAED/UFJF). O banco de dados representa os cadernos de prova compostos com 6 itens de conhecimentos gerais e 26 itens específicos aplicados sob um delineamento de blocos incompletos (BI) em dez cursos técnicos: Administração, Agropecuária, Desenvolvimento de Sistemas, Edificações, Eletromecânica, Eletrotécnica, Enfermagem, Informática, Química e Segurança do Trabalho, que juntos totalizam uma amostra de 16.278 estudantes. Cada curso contou com 6 tipos de cadernos rotacionados em 6 blocos, contendo 6 itens Gerais por caderno, compostos com 2 Blocos Gerais (bg) com 3 itens cada, totalizando 18 itens Gerais. Já para os itens Específicos, os cadernos possuem 26 itens, compostos por 2 Blocos Específicos (be) de 13 itens com as especificidades de cada curso, que totalizam 78 itens. No Quadro 1 está o delineamento dos 6 cadernos de prova compostos por blocos incompletos, forma de distribuição dos 18 itens Gerais e dos 78 Específicos.
+Quadro 1: Delineamento dos Cadernos de Prova.
+
+O fluxo metodológico estruturou-se em três etapas computacionais principais utilizando a linguagem R e o pacote especializado mirt (CHALMERS, 2012). Para a execução desse fluxo metodológico, foram utilizados os 78 Itens Gerais do curso técnico em Química para fins de atingimento dos objetivos específicos. Esses são os passos do fluxo metodológico proposto:
+- Rotina híbrida com iterações por exclusão de itens, acoplada ao modelo 1PL para Discriminação: para eliminar o efeito de autocorrelação parte-todo (no qual o item avaliado contamina a própria estimativa do traço latente), implementou-se um algoritmo iterativo de exclusão de item. Para cada item i dos 18 analisados do curso em questão, o item foi ocultado e calibrou-se um modelo de 1 parâmetro (1PL) com os 17 restantes para estimar as habilidades dos alunos. Segmentou-se a amostra em grupo inferior (Pinf) com os 27% percentil menores (≤ P27) e superior (Psup) com os 27% percentil maiores (≥ P73) diretamente na escala latente de proficiência. O índice de discriminação corrigido foi obtido por D = Psup - Pinf.
+- Avaliação do Modelo 1PL e Análise FIFA: ajustou-se o modelo 1PL de linha de base e extraíram-se as cargas fatoriais de cada item por meio de uma Análise Fatorial de Informação Completa (FIFA) (MISLEVY, 1986). A dispersão entre o escore bruto de acertos e a proficiência latente (), estimada via EAP, foi avaliada para demonstrar as limitações de assumir mesma discriminação para todos os itens.
+- Calibração Incremental (2PL e 3PL): incorporou-se uma priori Log-Normal para estabilizar a discriminação no modelo 2PL. Efetuou-se a exclusão de itens problemáticos, com base em critérios baseados nas estimativas dos parâmetros, consolidando somente itens válidos para cada curso. Em seguida, calibrou-se o modelo 3PL adicionando uma priori Normal na escala Logit para o parâmetro de acerto casual (c), comparando o ajuste global dos modelos via testes formais de hipótese (ANOVA) e indicadores de informação (AIC e BIC).
+Resultados e Discussão
+A rotina de validação híbrida com iterações por exclusão de itens, usando a proficiência estimada a partir do modelo 1PL para calcular o índice de discriminação clássico (D) sem a influência do item analisado, revelou que a discriminação dos itens varia mesmo em questões com a mesma dificuldade, assim a premissa de mesma discriminação para todos os itens no modelo 1PL não é sustentável, conforme apresentado na Tabela 1. Sob a modelagem do 1PL, indivíduos com o mesmo número de acertos brutos receberam exatamente a mesma estimativa de proficiência (), ignorando o peso discriminatório diferencial dos itens.
+Tabela 1: Variação da Discriminação em função da Dificuldade dos Itens.
+Grupos do % Acerto
+Mínimo
+Média
+Máximo
+Amplitude
+Muito Difícil [0-20] %
+-0,044
+0,131
+0,391
+0,435
+Difícil ]20-40] %
+-0,142
+0,169
+0,386
+0,528
+Médio ]40-60] %
+0,134
+0,308
+0,489
+0,355
+Fácil ]60-80] %
+0,095
+0,300
+0,387
+0,292
+Muito Fácil [80-100] %
+0,047
+0,187
+0,337
+0,290
+Geral
+-0,142
+0,214
+0,489
+0,631
+A transição para o modelo de 2 parâmetros (2PL) flexibilizou a inclinação das Curvas Características dos Itens (CCI), permitindo identificar os itens com forte poder de discriminação, bem como os itens com baixa discriminação, que contribuem com diferentes pesos para a definição do traço latente. Sob o modelo 2PL, estudantes com o mesmo escore bruto de acertos apresentaram estimativas de proficiência bastante distintas. Na Tabela 2 tem-se uma amostra de alunos com 5 acertos que tiveram a mesma proficiência no modelo 1PL, mas que com um modelo 2PL, a proficiência é distinta entre eles. Este resultado empírico comprova que a consideração das discriminações individuais é mandatória para garantir uma avaliação mais fidedigna.
+Tabela 2: Variação da Discriminação em função da Dificuldade dos Itens.
+ID_Respondente
+Proficiencia_TCT
+Theta_1PL
+Theta_2PL
+1445
+5
+-1,0811
+-1,7577
+1605
+5
+-1,0811
+-1,6239
+1691
+5
+-1,0811
+-1,5758
+1554
+5
+-1,0811
+-1,4131
+1645
+5
+-1,0811
+-1,2244
+1617
+5
+-1,0811
+-1,1554
+1450
+5
+-1,0811
+-1,0793
+Contudo, a análise visual dos resíduos empíricos do modelo 2PL nas faixas inferiores de proficiência indicou que alunos de baixa habilidade apresentavam taxas de acerto observadas em itens difíceis superiores às probabilidades teóricas projetadas. Esse comportamento atípico confirmou a presença do acerto casual (chute) no teste digital, conforme amostra apresentada na Tabela 3. Nessa tabela tem uma amostra de alunos que tinham baixa probabilidade de acertar um item difícil.
+Tabela 3: Alunos com baixa proficiência que acertaram item difícil.
+ID_Respondente
+Theta_2PL
+Item
+Dificuldade_b
+Probabilidade_Esperada_Acerto
+70120
+-2,2775
+QUIM_2025081
+1,6069
+0,009
+20150
+-1,6138
+QUIM_2025081
+1,6069
+0,020
+10110
+-1,2518
+QUIM_2025081
+1,6069
+0,030
+50160
+-1,1537
+QUIM_2025081
+1,6069
+0,034
+20120
+-0,8824
+QUIM_2025081
+1,6069
+0,046
+50190
+-0,7551
+QUIM_2025081
+1,6069
+0,054
+O ajuste do modelo 3PL contornou essa distorção psicométrica ao isolar matematicamente o parâmetro de acerto casual (c). A superioridade estatística do modelo 3PL foi corroborada por testes comparativos de ajuste global (ANOVA) e pela redução consistente nos critérios de informação (AIC e BIC) em relação ao 2PL. Como evidência prática, ao analisar estudantes de um mesmo curso técnico submetidos ao mesmo caderno de prova com o mesmo escore de acertos, o modelo 3PL estimou proficiências altamente diferenciadas. Na prática um estudante A, que acertou itens fáceis/médios e os mais difíceis de forma consistente obteve uma maior estimativa de proficiência, enquanto o estudante B, que errou itens de média complexidade, mas acertou fortuitamente as questões mais difíceis, teve sua estimativa de proficiência ajustada, uma vez que o modelo 3PL levou em consideração o efeito estatístico do acerto casual.
+Conclusões e Considerações Finais
+Este estudo demonstrou a importância da modelagem psicométrica de múltiplos parâmetros para a consolidação de um sistema de avaliação robusto na Educação Profissional e Tecnológica (EPT). Os dados empíricos invalidaram o modelo 1PL ao demonstrar a quebra da premissa de discriminação constante e evidenciaram o viés provocado pelo acerto casual quando desconsiderado no modelo 2PL. O modelo logístico de 3 parâmetros (3PL) consolidou-se como a estrutura psicométrica ideal para a avaliação piloto de 2025, oferecendo estimativas de proficiência mais fidedignas ao penalizar padrões de respostas inconsistentes marcados pelo acerto casual. As análises e o fluxo computacional desenvolvidos neste estudo estabelecem uma metodologia sistemática de calibração que tem o intuito de ser referência para futuras edições das avaliações das áreas técnicas específicas do INEP.
+Referências
+BRASIL. Ministério da Educação. Secretaria de Educação Profissional e Tecnológica. Plataforma Nilo Peçanha (PNP). Brasília: MEC/SETEC, 2024. Disponível em: Plataforma Nilo Peçanha. Acesso em: 12 ago. 2026.
+CHALMERS, R. P. mirt: A Multidimensional Item Response Theory Package for the R Environment. Journal of Statistical Software, v. 48, n. 6, p. 1-29, 2012.
+ANDRADE, D. F.; TAVARES, H. R.; VALLE, R. C. Teoria da Resposta ao Item: Conceitos e Aplicações. São Paulo: ABE, 2000.
+LE BOTERF, G. Desenvolvendo Competências dos Profissionais. 3ª edição. Porto Alegre: Artmed, 2003.
+KORB, T., A Avaliação do Domínio Psicomotor da Aprendizagem: Estudo para Construção de Escala de Proficiência na Educação Profissional. Dissertação de Mestrado Profissional, UFSC, 2019.
+MISLEVY, R. J. Recent developments in the factor analysis of categorical variables. Journal of Educational Statistics, v. 11, n. 1, p. 3-31, 1986.
+MORAES, G. H. et al. Avaliação da Educação Profissional e Tecnológica: um campo em construção. Brasília: Inep, 2020.

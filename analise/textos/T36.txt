@@ -1,0 +1,79 @@
+Rede de Estimação Cruzada (CEN): Um Paradigma de Inteligência Artificial para Calibração de Itens na Teoria de Resposta ao Item
+
+Leandro Furtado de Santana 1, Valcir João da Cunha Farias 2 , Sérgio Silva Santos3, Heliton Ribeiro Tavares 4 
+
+1 PPGME/UFPA. E-mail: leafursan.ppgme@gmail.com
+2 PPGME/UFPA. E-mail: valcir@ufpa.br
+3 PPGME/UFPA, E-mail: sergiosilvasantos2612@gmail.com
+4 PPGME/UFPA. E-mail: heliton@ufpa.br
+
+Resumo
+	A calibração precisa de parâmetros e a estimação de habilidades na Teoria de Resposta ao Item (TRI) enfrentam limitações em métodos tradicionais, como alta carga computacional. Este trabalho apresenta a Rede de Estimação Cruzada (CEN), um paradigma baseado em redes neurais artificiais que estima simultaneamente parâmetros de pessoas e itens no modelo de dois parâmetros. A CEN possui duas sub-redes: Pessoa (PN) e Item (IN). Com dados simulados com 500 respondentes e 60 itens, a CEN foi avaliada com dados para treino e teste. Os resultados mostraram excelente recuperação nos dados de treino (MSE: z=0,0971; a=0,0383; b=0,0480) e demonstraram capacidade de generalização para novos dados teste sem re-treino. A CEN constitui uma ponte promissora entre inteligência artificial e psicometria, superando limitações computacionais e de suposições dos métodos clássicos.
+
+Palavras-chave: Inteligência Artificial; Redes Neurais; Teoria de Resposta ao Item; Calibração de Itens; Estimação de Parâmetros; Modelo 2PL.
+Introdução
+A Teoria de Resposta ao Item (TRI) tem se consolidado como um dos principais arcabouços teóricos para a modelagem de dados provenientes de testes educacionais e psicológicos. Os modelos da TRI assumem que a probabilidade de um respondente acertar um item é função de sua habilidade latente e das características do item, como dificuldade e discriminação. Essa relação é expressa matematicamente e, para sua aplicação prática, requer a estimação precisa dos parâmetros envolvidos.
+A estimação de parâmetros na TRI é um desafio central. Métodos tradicionais como a Estimação de Máxima Verossimilhança Conjunta (JMLE), a Estimação de Máxima Verossimilhança Marginal (MMLE) combinada com o algoritmo EM (MMLE-EM), e métodos Bayesianos via Cadeias de Markov Monte Carlo (MCMC) têm sido amplamente utilizados. Embora eficazes, esses métodos apresentam limitações significativas. O MMLE-EM, por exemplo, pode ser computacionalmente intensivo e requer múltiplas integrações numéricas, especialmente em modelos multidimensionais. O MCMC, embora flexível, pode ser ineficiente computacionalmente.
+Nos últimos anos, as Redes Neurais Artificiais (RNAs) têm emergido como ferramentas poderosas para a aproximação de funções e modelagem de relações complexas em dados (Abiodun Et al., 2018). Sua capacidade de auto-aprendizado, adaptabilidade e modelagem de não-linearidades as tornam candidatas promissoras para superar algumas das limitações dos métodos tradicionais de estimação na TRI. Estudos recentes têm explorado a aplicação de RNAs na estimação de parâmetros, como o uso de autoencoders variacionais (Urban; Bauer, 2021) e o Deep-IRT (Tsutsumi Et al., 2021). No entanto, esses paradigmas ainda apresentam limitações, como a incapacidade de estimar parâmetros para novos itens ou a necessidade de rótulos conhecidos durante o treinamento.
+Zhang e Chen (2024) propuseram um novo paradigma chamado Rede de Estimação Cruzada (Cross Estimation Network - CEN) que supera essas limitações. A CEN é composta por duas sub-redes: a Rede da Pessoa (PN), que estima a habilidade de um respondente a partir de seu padrão de respostas, e a Rede do Item (IN), que estima a discriminação e dificuldade de um item a partir do padrão de respostas a esse item. 
+Este trabalho tem como objetivo implementar e avaliar o paradigma CEN utilizando dados simulados, demonstrando seu potencial como ferramenta para calibração de itens e estimação de parâmetros na TRI.
+Metodologia
+2.1 Geração de Dados Simulados
+Os dados foram gerados utilizando o modelo logístico de dois parâmetros (2PL), que é o foco do estudo original da CEN. Seguindo a metodologia do artigo original, os parâmetros verdadeiros foram sorteados das seguintes distribuições: Habilidades (z) com Distribuição normal padrão N(0,1); Dificuldades (b) com distribuição normal padrão N(0,1); Discriminações (a) com distribuição uniforme U(0.2,2). Para este estudo, adotamos um cenário de tamanho moderado: N = 500 respondentes e M = 60 itens. Este cenário é uma das nove combinações utilizadas no estudo original e permite uma avaliação equilibrada do desempenho do método. A geração dos dados foi implementada em Python, onde para cada par pessoa-item, a probabilidade de acerto foi calculada e, em seguida, uma resposta binária (0 ou 1) foi sorteada de uma distribuição Bernoulli.
+2.2 Arquitetura da CEN
+A CEN é composta por três componentes principais integrados de forma coerente. A Rede da Pessoa (PN) processa o padrão de respostas individuais, representado por cada linha da matriz de respostas, e estima a habilidade  do respondente. Trata-se de uma rede neural feedforward com uma camada oculta cujo tamanho é definido como , onde  é o número de itens, utilizando ativação sigmoide para introduzir não-linearidade, seguida por uma camada de saída linear. Adicionalmente, uma camada de Batch Normalization é aplicada à saída para padronizar a escala de z, contornando o problema clássico de indeterminação de escala inerente à TRI.
+A Rede do Item , por sua vez, processa o padrão de respostas a cada item, correspondente às colunas da matriz, estimando os parâmetros de discriminação  e dificuldade . Sua arquitetura também é feedforward, com camada oculta de tamanho  – sendo  o número de respondentes – e ativação sigmoide, culminando em uma camada de saída com dois nós lineares responsáveis por a e b. Por fim, a camada TRI combina as saídas da  e da  –  e  – para calcular a probabilidade de acerto segundo o modelo 2PL. Essa camada não possui parâmetros treináveis, atuando exclusivamente para conferir interpretabilidade psicométrica às estimativas geradas pelas sub-redes.
+A entrada da CEN é uma matriz bidimensional formada pela linha da pessoa e pela coluna do item. Para cada elemento  da matriz de respostas, a entrada é o par , e o rótulo é o próprio .
+2.3 Implementação e Treinamento e Avaliação de Desempenho
+A implementação da CEN foi realizada em Python, utilizando a biblioteca TensorFlow. Seguindo as recomendações de Zhang e Chen (2024), adotamos a versão CEN_1H_NL (uma camada oculta com não-linearidade), que demonstrou bom desempenho nos experimentos originais. Deste modo, os dados foram preparados na forma matricial, resultando em 30.000 pares de entradas (500 respondentes × 60 itens). O conjunto de dados foi dividido em treino (80%) e validação (20%). Os parâmetros de treinamento foram configurados seguindo as recomendações do artigo original.
+A avaliação do desempenho da CEN foi conduzida em duas tarefas distintas. Na primeira, denominada EvalTrain, avaliou-se o ajuste do modelo aos dados de treino, procedimento análogo à estimação tradicional de parâmetros na TRI. Nessa tarefa, a Rede da Pessoa  e a Rede do Item  são aplicadas diretamente à matriz de respostas original utilizada no treinamento, estimando os parâmetros de habilidade, discriminação e dificuldade para os mesmos dados que serviram de base para o aprendizado da rede.
+Na segunda tarefa, chamada EvalTest, investigou-se a capacidade de generalização das redes treinadas, ou seja, sua habilidade em estimar parâmetros para novos dados sem qualquer re-treino ou iterações adicionais. Para tanto, gerou-se um novo conjunto de dados com as mesmas características da amostra original – 500 respondentes e 60 itens. As redes  e  já treinadas foram então aplicadas diretamente a esses dados inéditos. As métricas de avaliação utilizadas foram o Erro Quadrático Médio (MSE) e o Viés (Bias).
+Resultados
+3.2 Recuperação de Parâmetros - Treino
+A Tabela 1 apresenta os resultados da recuperação de parâmetros na tarefa EvalTrain. Os três parâmetros apresentaram MSE baixo e Bias próximo de zero, indicando uma excelente recuperação.
+Tabela 1: Métricas de recuperação de parâmetros - Treino.
+Parâmetros
+MSE
+Bias
+Habilidade 
+0.0917
+- 0.0585
+Discriminação 
+0.0383
+ 0.0101
+Dificuldade 
+0.0480
+- 0.1055
+A Figura 1 apresenta os gráficos de dispersão comparando os valores verdadeiros e estimados para cada parâmetro. A proximidade dos pontos à linha diagonal  confirma a qualidade da recuperação.
+Figura 1: Recuperação de parâmetros para (A) Habilidade (z), (B) Discriminação (a) e (C) Dificuldade (b).
+
+A 				  B				    C
+3.3 Recuperação de Parâmetros - Teste
+A Tabela 2 apresenta os resultados da recuperação de parâmetros na tarefa EvalTest. Conforme esperado, os MSEs são maiores que na tarefa EvalTrain, pois a rede está generalizando para novos dados. Ainda assim, os resultados demonstram a capacidade da CEN de estimar parâmetros para novos dados sem necessidade de re-treino, atuando como um verdadeiro “agente inteligente”.
+Tabela 2: Métricas de recuperação de parâmetros - Teste.
+Parâmetros
+MSE
+Bias
+Habilidade 
+0.1115
+0.0876
+Discriminação 
+0.3967
+0.3747
+Dificuldade 
+0.5012
+0.4637
+
+Figura 2: Comparação da recuperação de parâmetros entre as tarefas EvalTrain e EvalTest.
+
+A Figura 2 apresenta a comparação do desempenho entre as tarefas EvalTrain e EvalTest. Observa-se que, embora a recuperação seja menos precisa na tarefa EvalTest, a estrutura geral dos relacionamentos é preservada, indicando que a rede aprendeu padrões generalizáveis.
+3.4 Discussão e Conclusões
+Os resultados obtidos neste estudo demonstram que a CEN é capaz de recuperar os parâmetros do modelo 2PL nos dados de treino (EvalTrain), com MSEs inferiores a 0,092 para todos os parâmetros. Este desempenho é comparável ao dos métodos tradicionais, como o MMLE-EM, conforme reportado por Zhang e Chen (2024). 
+A CEN demonstrou excelente recuperação dos parâmetros nos dados utilizados durante o treinamento. Entretanto, a avaliação em uma nova matriz de respostas revelou uma redução substancial na precisão das estimativas. Na tarefa de teste, os valores de MSE aumentaram, indicando que a generalização para novos padrões de resposta, especialmente no caso dos parâmetros dos itens, constitui um desafio maior para a rede.
+Comparando com os paradigmas existentes de aplicação de RNAs à TRI, a CEN apresenta vantagens significativas. A CEN não requer parâmetros conhecidos como rótulos durante o treinamento, pode ser aplicada a novos itens e pode estimar parâmetros para novas pessoas e novos itens baseando-se em padrões de resposta, e não em identidades fixas (Zhang; Chen, 2024).
+A implementação da CEN é modular e segue os princípios de plug-and-play, permitindo sua adaptação para outros modelos TRI, como o modelo de Rasch, o modelo 3PL ou modelos politômicos e multidimensionais. Essa flexibilidade torna a rede uma ferramenta versátil para a calibração de itens em diferentes contextos avaliativos.
+Referências
+ABIODUN, O. I.; JANTAN, A.; OMOLARA, A. E.; DADA, K. V.; MOHAMED, N. A.; ARSHAD, H. State-of-the-art in artificial neural network applications: a survey. Heliyon, [S.L.], v. 4, n. 11, nov. 2018. Elsevier BV. Disponível em: http://dx.doi.org/10.1016/j.heliyon.2018.e00938. Acesso em 21 de ago 2026.
+TSUTSUMI, E.; KINOSHITA, R.; UENO, M. Deep Item Response Theory as a Novel Test Theory Based on Deep Learning. Electronics, [S.L.], v. 10, n. 9, 25 abr. 2021. Disponível em: http://dx.doi.org/10.3390/electronics10091020. Acesso em 18 de ago. de 2026.
+URBAN, C. J.; BAUER, D. J. A deep learning algorithm for high-dimensional exploratory item factor analysis. Psychometrika, v. 86, n. 1, p. 1-29, 2021.
+ZHANG, L.; CHEN, P. A neural network paradigm for modeling psychometric data and estimating IRT model parameters: cross estimation network. Behavior Research Methods, [S.L.], v. 56, n. 7, p. 7026-7058, 12 abr. 2024. Disponível em: http://dx.doi.org/10.3758/s13428-024-02406-3. Acesso em 21 de ago. 2026.

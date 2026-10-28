@@ -1,0 +1,260 @@
+Considerações sobre o Coeficiente de Confiabilidade
+
+                    Ruben Klein1, Thales Akira Ricarte2, Alice Nabiça Moraes3
+
+       1
+           Fundação Cesgranrio, ruben@cesgranrio.org.br ou kleinrub@gmail.com
+       2
+           Fundação Cesgranrio, thales.ricarte@cesgranrio.org.br
+       3
+           Fundação Cesgranrio, alicemoraes@cesgranrio.org.br ou
+alicennmoraes@gmail.com
+
+                                         Resumo
+       O coeficiente de confiabilidade ou fidedignidade é uma estatística da Teoria
+Clássica dos Testes que mede a precisão ou qualidade de um teste. Neste artigo
+recordamos três estimativas clássicas do coeficiente. Chama-se a atenção de que só podem
+ser aplicadas se houver correlação entre todos os itens do teste, o que depende do
+planejamento do teste. Pode-se também calcular uma confiabilidade empírica estimada
+pela Teoria de Resposta ao Item, que em princípio não tem esta limitação. Faz-se uma
+aplicação com os dados públicos do Saeb 2023.
+
+    Palavras-chave: Coeficiente de confiabilidade, fidedignidade, escore verdadeiro,
+confiabilidade empírica
+
+                                                1
+                            Considerações sobre o Coeficiente de Confiabilidade
+
+1   Introdução
+       O coeficiente de confiabilidade ou fidedignidade é uma estatística da Teoria Clássica
+dos Testes que mede a precisão ou qualidade de um teste. É muito usado para se verificar a
+adequabilidade do teste. Este coeficiente envolve a noção de escore verdadeiro, ver Lord &
+Novick 1968, Klein 2005.
+        O coeficiente de confiabilidade ou fidedignidade é definido como o quadrado da
+correlação entre o escore observado e o escore verdadeiro (variável latente não observada).
+Obviamente não podemos usar essa definição diretamente, pois o escore verdadeiro não é
+conhecido. Este coeficiente costuma aumentar com o número de itens.
+       Apresentam-se as estimativas clássicas alpha de Cronbach, Guttman’s G6 e McDonald
+ômega total, com as fórmulas apresentadas na seção de metodologia. Apresenta-se também a
+confiabilidade empírica obtida pela Teoria de Resposta ao Item
+        O objetivo do trabalho é mostrar a diferença entre a confiabilidade para todos os itens
+do teste, caso os alunos respondessem a todos e a confiabilidade de cada caderno, o cuidado no
+cálculo da variância do escore total do aluno, introduzir a confiabilidade empírica e
+exemplificar com dados reais disponibilizados pelo INEP do Saeb 2023 do 5º EF de
+Matemática.
+        A aplicação feita utiliza os dados públicos do teste de matemática para os alunos do 5º
+ano do ensino fundamental, que utiliza um planejamento de blocos incompletos balanceados
+(BIB) que garante a correlação entre quaisquer dois itens. Calcula-se a confiabilidade para o
+teste total e para cada caderno de teste e a confiabilidade empírica. Mostra-se que as
+confiabilidades dos cadernos são semelhantes, importante para a adequabilidade do teste. Estas
+confiabilidades são menores que a confiabilidade do teste total. A confiabilidade empírica,
+neste caso, foi semelhante a de cada caderno.
+
+2    Metodologia
+        Na teoria clássica dos testes, o escore observado X é modelado por X = T + E, onde T
+é o escore verdadeiro e E o erro de medida. Supõe-se que T e E são não correlacionados e que
+a média do erro E é zero.
+
+        Tem-se que cov(X, T) = 𝑉𝑉(𝑇𝑇)
+        e que
+
+         coeficiente de confiabilidade = cor(X, T)2               =    cov(X, T)2 ��𝑉𝑉(𝑋𝑋)𝑉𝑉(𝑇𝑇)�
+                                                                  =    𝑉𝑉(𝑇𝑇)⁄𝑉𝑉(𝑋𝑋)              (1)
+                                                                  =    1 − (𝑉𝑉(𝐸𝐸)⁄𝑉𝑉(𝑋𝑋)).
+
+       Seja 𝑋𝑋 = �𝑋𝑋𝑖𝑖𝑖𝑖 �, 𝑖𝑖 = 1, … , 𝑛𝑛, 𝑗𝑗 = 1, … , 𝐽𝐽, 𝑛𝑛 o número de indivíduos, 𝐽𝐽 o número de
+variáveis (itens) e 𝑋𝑋𝑖𝑖𝑖𝑖 é o escore do indivíduo 𝑖𝑖 na variável (item) 𝑗𝑗, 𝑋𝑋𝑖𝑖 = ∑𝑗𝑗 𝑋𝑋𝑖𝑖𝑖𝑖 é o escore total
+do indivíduo 𝑖𝑖 e 𝑋𝑋𝑗𝑗 = �𝑋𝑋1𝑗𝑗 , 𝑋𝑋2𝑗𝑗 , … , 𝑋𝑋𝑛𝑛𝑛𝑛 � vetor da variável 𝑗𝑗.
+
+        Seja 𝑉𝑉a matriz 𝐽𝐽 × 𝐽𝐽 de covariância de �𝑋𝑋1 , … , 𝑋𝑋𝐽𝐽 �,
+
+       Seja 𝑉𝑉𝑋𝑋 a variância de 𝑋𝑋 = (𝑋𝑋1 , 𝑋𝑋2 , … , 𝑋𝑋𝑛𝑛 ), que é conhecida, pois. 𝑋𝑋𝑖𝑖 é conhecido, o
+problema é estimar 𝑉𝑉(𝑇𝑇) ou 𝑉𝑉(𝐸𝐸).
+
+ X CONBRATRI 26 a 28 de Outubro de 2026, São Paulo-SP                                                 Pág. 2
+                                 Considerações sobre o Coeficiente de Confiabilidade
+
+        Observação: 𝑉𝑉𝑋𝑋 tem que ser calculado a partir da matriz de covariância, 𝑉𝑉𝑋𝑋 = 𝑠𝑠𝑠𝑠𝑠𝑠(𝑉𝑉),
+se os dados não forem completos, por exemplo, se houver item não apresentado a um indivíduo.
+A matriz de covariância é calculada pelas observações completas por par.
+("pairwise.complete.obs")
+      Há várias estimativas do coeficiente de confiabilidade. A mais comum é o alpha de
+Cronbach dado por
+
+          𝑎𝑎𝑎𝑎𝑎𝑎ℎ𝑎𝑎 𝑑𝑑𝑑𝑑 𝐶𝐶𝐶𝐶𝐶𝐶𝐶𝐶𝐶𝐶𝐶𝐶𝐶𝐶ℎ = (𝐽𝐽⁄(𝐽𝐽 − 1))(1 − 𝑡𝑡𝑡𝑡(𝑉𝑉)⁄𝑉𝑉𝑋𝑋 )) (2)
+
+          Observe que 𝑡𝑡𝑡𝑡(𝑉𝑉) = ∑ 𝑉𝑉�𝑋𝑋𝑗𝑗 � .
+
+          Temos também Guttman’s Lambda 6 (G6) dada por:
+
+       𝐺𝐺6 = 1 − �∑ 𝑒𝑒𝑗𝑗2 ⁄𝑉𝑉𝑋𝑋 � onde 𝑒𝑒𝑗𝑗2 = 1 − 𝑟𝑟𝑠𝑠2𝑠𝑠𝑠𝑠 , em que o 𝑟𝑟𝑠𝑠2𝑠𝑠𝑠𝑠 é o quadrado da correlação
+múltipla da variável j nas outras variáveis. O 𝑟𝑟𝑠𝑠2𝑠𝑠𝑠𝑠 é um limite inferior para a comunalidade do
+item.
+
+      Outra estimativa é o ômegat 𝜔𝜔𝑡𝑡 (ômega total) de McDonald que estima o erro usando a
+comunalidade do item j. Usamos uma dimensão.
+
+                                          𝜔𝜔𝑡𝑡 = 1 − �∑ 𝑒𝑒𝑗𝑗2 ⁄𝑉𝑉𝑋𝑋 �, 𝑒𝑒𝑗𝑗2 = 1 − ℎ𝑗𝑗2        (3)
+
+        A função ômega do pacote psych (Revelle, 2019) para o R, calcula estas 3 estimativas.
+A função alpha do psych também calcula o alpha e o G6, mas não o ômega total. Observe que
+tanto a função alpha e a função ômega do psych exigem que haja correlação entre todas as
+variáveis. Isto acontece no Saeb regular pelo planejamento por BIB (blocos incompletos
+balanceados). Mas não ocorre em alguns planejamentos incompletos não balanceados.
+        Estas definições podem ser vistas no manual do psych nas descrições da função alpha
+e da função ômega.
+      Pode-se também calcular empiricamente o coeficiente de confiabilidade pela Teoria de
+Resposta ao Item (TRI), utilizando-se a equação (1) da definição do coeficiente.
+
+        O escore verdadeiro 𝑇𝑇𝑖𝑖 do indivíduo 𝑖𝑖 é definido pela esperança de 𝑋𝑋𝑖𝑖 (que é uma
+variável aleatória). No caso da TRI, é comum estimar a proficiência Ө pela esperança a
+posteriori de 𝑋𝑋𝑖𝑖 , dado a priori e os parâmetros estimados.
+
+          Logo 𝑉𝑉(𝑇𝑇) = 𝑉𝑉(Ө).
+
+          𝑉𝑉(𝑋𝑋) = 𝑉𝑉(𝑇𝑇) + 𝑉𝑉(𝐸𝐸) e portanto precisamos estimar 𝑉𝑉(𝐸𝐸).
+       O erro padrão a posteriori estimado é o erro de 𝑇𝑇𝑖𝑖 = Ө𝑖𝑖 , cuja distribuição é suposta ter
+média 0 (zero). Logo pode-se estimar 𝑉𝑉(𝐸𝐸𝑖𝑖 ) por 𝐸𝐸(𝐸𝐸𝑖𝑖2 ) (esperança do quadrado do erro).
+
+Então
+
+𝑉𝑉(𝑋𝑋) = 𝑉𝑉𝑉𝑉𝑉𝑉𝑉𝑉â𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛 𝑑𝑑𝑑𝑑 𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝ê𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛 + 𝑚𝑚é𝑑𝑑𝑑𝑑𝑑𝑑 𝑑𝑑𝑑𝑑 𝑞𝑞𝑞𝑞𝑞𝑞𝑞𝑞𝑞𝑞𝑞𝑞𝑞𝑞𝑞𝑞 𝑑𝑑𝑑𝑑 𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒 𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝ã𝑜𝑜   (4)
+
+3   Resultados
+        Aplicamos estas definições para calcular o coeficiente de confiabilidade no exemplo
+abaixo.
+
+ X CONBRATRI 26 a 28 de Outubro de 2026, São Paulo-SP                                                                 Pág. 3
+                         Considerações sobre o Coeficiente de Confiabilidade
+
+       Exemplo: Dados públicos do Saeb 2023 no 5º ano da disciplina de matemática (MT05).
+       Do arquivo MICRODADOS_SAEB_2023\DADOS\TS_ALUNO_5EF.CSV extraímos
+os dados dos alunos do 5º ano da disciplina de matemática. A seguir, consideramos somente os
+alunos com peso amostral > 0 (zero), com os quais as estatísticas de desempenho são
+calculadas.
+        Deste arquivo construímos a matriz das observações para podermos rodar o psych. Para
+cada aluno, construímos um vetor único de respostas dos 77 itens da prova. Itens não
+apresentados foram recodificados com o símbolo 9. Lembra-se que o Saeb 2023 de MT05 tem
+22 cadernos, 21 regulares e um macrotipo. Todo caderno tem somente 22 itens. Os cadernos
+foram montados a partir de um planejamento de blocos incompletos balanceados (BIB) com 7
+blocos de 11 itens, cada caderno é formado por 2 blocos, e cada bloco aparece 3 vezes em cada
+uma das 2 posições. Além disso, cada par de blocos aparece em um e somente um caderno.
+Isso garante que há correlação entre todos os itens. Todos os itens são de múltipla escolha.
+        A partir dos vetores dos alunos, criamos as 77 variáveis com os escores 0 = errado, 1 =
+certo e NA não apresentado. Nesta matriz. cada linha é um aluno com os seus 77 “escores”.
+      Calculamos as confiabilidades clássicas com a função ômega do psych tanto para o teste
+completo, como para cada caderno. Utilizou-se somente 1 fator para o cálculo do ômega total.
+
+         O arquivo dos alunos também fornece a proficiência                          estimada     𝐹𝐹 =
+𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃_𝑀𝑀𝑀𝑀 e seu erro padrão 𝐸𝐸𝐸𝐸 = 𝐸𝐸𝐸𝐸𝐸𝐸𝐸𝐸_𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃_𝑀𝑀𝑀𝑀.
+       Pode-se, portanto, calcular o coeficiente de confiabilidade empírico diretamente pela
+fórmula, de novo para todos os alunos e para os alunos de cada caderno.
+
+       coeficiente de confiabilidade empírico = 𝑉𝑉(𝐹𝐹) / (𝑉𝑉(𝐹𝐹) + 𝐸𝐸(𝐸𝐸𝐸𝐸2 )) (5)
+       O pacote mirt (Chalmers, 2012), calcula esta confiabilidade empírica para todos os
+alunos através da rotina empirical_rxx, mas é necessário ter o objeto mirt da calibração.
+        A tabela 1 fornece os valores das confiabilidades clássicas e da empírica, onde caderno
+0, inclui todos os itens.
+     Tabela 1: Valores de alpha, G6, ômega total e empírica para os dados dos alunos
+de MT05 com peso positivo.
+
+                         caderno      alpha         G6     omega empírica
+                               0      0.943      0.947      0.943  0.843
+                               1      0.837      0.837      0.839  0.855
+                               2      0.824      0.827      0.827  0.856
+                               3      0.809      0.810      0.812  0.842
+                               4      0.797      0.797      0.800  0.820
+                               5      0.824      0.823      0.827  0.830
+                               6      0.840      0.840      0.842  0.849
+                               7      0.840      0.840      0.842  0.847
+                               8      0.834      0.835      0.836  0.852
+                               9      0.815      0.816      0.818  0.846
+                              10      0.805      0.807      0.808  0.838
+                              11      0.826      0.826      0.829  0.840
+
+ X CONBRATRI 26 a 28 de Outubro de 2026, São Paulo-SP                                           Pág. 4
+                        Considerações sobre o Coeficiente de Confiabilidade
+
+                             12     0.813      0.814      0.816      0.832
+                             13     0.848      0.847      0.849      0.840
+                             14     0.832      0.834      0.834      0.856
+                             15     0.826      0.826      0.829      0.837
+                             16     0.812      0.814      0.814      0.844
+                             17     0.832      0.833      0.834      0.850
+                             18     0.819      0.820      0.821      0.838
+                             19     0.823      0.822      0.826      0.819
+                             20     0.840      0.842      0.842      0.857
+                             21     0.825      0.827      0.828      0.854
+                             22     0.815      0.819      0.818      0.846
+
+        Observa-se que os valores para o caderno 0 (zero), com todos os itens são maiores,
+como esperado para as estatísticas clássicas do que para os de cada um dos cadernos, mas não
+para a empírica. As 4 estimativas para os cadernos são muito próximas.
+        A Tabela 3 mostra que a média das confiabilidades empíricas é aproximadamente igual
+a confiabilidade empírica dos cadernos. Isto é razoável no Saeb, pois os respondentes de cada
+caderno regular são amostras equivalentes dos alunos e esses cadernos têm comportamentos
+semelhantes.
+       A Tabela 2 fornece um resumo da distribuição dos alpha nos cadernos de 1 a 22.
+                 Tabela 2: Distribuição dos alpha nos cadernos de 1 a 22.
+
+                      Min.   1st Qu. Median          Mean 3rd Qu.         Max.
+                     0.797    0.815   0.825          0.824  0.833         0.848
+
+       A Tabela 3 fornece um resumo da distribuição dos das confiabilidades empíricas nos
+cadernos de 1 a 22.
+       Tabela 3: Distribuição das confiabilidades empíricas nos cadernos de 1 a 22.
+
+                      Min.   1st Qu. Median          Mean 3rd Qu.         Max.
+                     0.819    0.838   0.845          0.843  0.851         0.857
+
+3.1   Discussão
+        O coeficiente de confiabilidade de um teste fornece a informação da qualidade do teste.
+Em geral considera-se excelente se for maior que 0.90, bom se estiver entre 0.80 e 0.90,
+razoável se estiver entre 0.70 e 0.80, baixo se estiver entre 0.60 e 0.70, ruim se estiver entre
+0.50 e 0.60 e inaceitável se for menor que 0.5, ver George & Mallery 2003.
+       Portanto os coeficientes dos testes de cada aluno podem ser considerados bons e se o
+aluno pudesse fazer o teste com os 77 itens, teria um teste excelente.
+       Chamamos a atenção de que os coeficientes de confiabilidade clássicos só podem ser
+calculados caso haja correlação entre todos os itens e que a variância da variável escore total
+tem que ser calculada através da matriz de covariância dos escores totais dos alunos.
+
+ X CONBRATRI 26 a 28 de Outubro de 2026, São Paulo-SP                                   Pág. 5
+                        Considerações sobre o Coeficiente de Confiabilidade
+
+         Por exemplo, se formos calcular o alpha pela fórmula calculando 𝑉𝑉(𝑋𝑋) =
+                             2
+∑𝑖𝑖�𝑋𝑋𝑖𝑖 − 𝑚𝑚𝑚𝑚𝑚𝑚𝑚𝑚𝑚𝑚(𝑋𝑋𝑖𝑖 )� / (𝑛𝑛 − 1) , obteríamos alpha = 0.272 e não 0.943.
+
+4    Conclusões e Considerações Finais
+        Todos os coeficientes de confiabilidade dos itens dos cadernos de teste do Saeb 2023
+de MT05 são considerados bons e têm pouca variabilidade. Os coeficientes de confiabilidade
+clássicos foram praticamente iguais para todos os cadernos. Deve-se, também, calcular a
+confiabilidade empírica pela Teoria de Resposta ao Item.
+        Neste caso, a confiabilidade empírica foi semelhante às confiabilidades empíricas dos
+cadernos e, também por caderno, às confiabilidades clássicas. Ela tem uma vantagem, pois
+pode ser calculada, mesmo que o planejamento de blocos incompletos não garanta poder
+calcular a correlação de quaisquer dois itens.
+       No Saeb, considera-se, itens não respondidos no final do bloco de um caderno, como
+sendo não apresentados, a variância da variável escore total não pode ser calculada pela fórmula
+usual da variância, mas sim através da matriz de covariância dos itens.
+
+5   Referências
+
+       Chalmers, R.P. MIRT (2012). A Multidimensional Item Response Theory Package for
+the R Environment. Journal of Statistical Software, Volume 48, Issue 6.
+      Cronbach, L. J. (1951). Coefficient alpha and the internal structure of tests.
+Psychometrika, 16(3), 297-334.
+       George, D.; Mallery, P. (2003). SPSS for Windows Step by Step: A Simple Guide and
+Reference. 11.0 Update4. ed. Boston: Allyn & Bacon.
+      Guttman, L. (1945). A basis for analyzing test-retest reliability. Psychometrika, 10(4),
+255-282.
+      Klein, R. (2005). Testes de Rendimento Escolar. Em Dimensões da Avaliação
+Educacional, org. Alberto de Mello e Souza, Editora Vozes, p.110-138.
+       McDonald, R. P. (1999). Test theory: A unified treatment. Psychology Press.
+      R Development Core Team (2013). R: A language and environment for statistical
+computing. R Foundation for Statistical Computing, Vienna, Austria. ISBN 3-900051-07-0,
+URL http://www.R-project.org/.
+      Revelle,W. (2019) Package psych manual for R. https://personality-project.org/r/psych-
+manual.pdf
+
+ X CONBRATRI 26 a 28 de Outubro de 2026, São Paulo-SP                                   Pág. 6
